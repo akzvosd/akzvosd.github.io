@@ -109,26 +109,78 @@
         </section>
         <!-- форма -->
         <section>
-            <h3 class="text--center">Заказать картину художника</h3>
-            <form action="/action_page.php" class="form--repro">
-                <div class="form--repro__item">
-                    <label for="artist">Введите фамилию художника и название работы</label>
-                    <input type="text" id="artist" name="artist" placeholder="Ван Гог Лунная ночь" required>
-                </div>
-                <div class="form--repro__item">
-                    <label for="name">Как вас зовут</label>
-                    <input type="text" id="name" name="user_name" placeholder="Вася" required>
-                </div>
-                <div class="form--repro__item">
-                    <label for="tel">Номер телефона</label>
-                    <input type="tel" id="tel" name="tel" placeholder="+7 900 100 20 10" required>
-                </div>
-                <div class="form--repro__item">
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" name="email" placeholder="imagine@mail.ru" required>
-                </div>
-                <input type="submit" class="btn primary" value="Отправить заявку">
-            </form>
+        <h3 class="text--center">Заказать репродукцию</h3>    
+            <div class="tab row">
+                <button class="tablinks col-md-4" onclick="openTab(event, 'picture')" id="defaultOpen">По названию картины</button>
+                <button class="tablinks col-md-4" onclick="openTab(event, 'photo')">По вашей фотографии</button>
+                <button class="tablinks col-md-4" onclick="openTab(event, 'subject')">По теме</button>
+              </div>
+            
+            <div id="picture" class="tabcontent">
+                <form action="/action_page.php" class="form--repro">
+                        <div class="form--repro__item">
+                            <label for="artist">Введите фамилию художника и/или название работы</label>
+                            <input type="text" id="artist" name="artist" placeholder="Ван Гог Лунная ночь" required>
+                        </div>
+                        <div class="form--repro__item">
+                            <label for="name">Как вас зовут</label>
+                            <input type="text" id="name" name="user_name" placeholder="Вася" required>
+                        </div>
+                        <div class="form--repro__item">
+                            <label for="tel">Номер телефона</label>
+                            <input type="tel" id="tel" name="tel" placeholder="+7 900 100 20 10" required>
+                        </div>
+                        <div class="form--repro__item">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" placeholder="imagine@mail.ru" required>
+                        </div>
+                        <input type="submit" class="btn primary" value="Отправить заявку">
+                </form>
+              </div>
+              
+            <div id="photo" class="tabcontent">
+                <form action="/action_page.php" class="form--repro">
+                    <div class="form--repro__item">
+                        <input type="file" name="fileToUpload" id="fileToUpload" accept=".jpg, .jpeg, .png"  >
+                    </div>
+                    <div class="form--repro__item">
+                        <label for="name">Как вас зовут</label>
+                        <input type="text" id="name" name="user_name" placeholder="Вася" required>
+                    </div>
+                    <div class="form--repro__item">
+                        <label for="tel">Номер телефона</label>
+                        <input type="tel" id="tel" name="tel" placeholder="+7 900 100 20 10" required>
+                    </div>
+                    <div class="form--repro__item">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="imagine@mail.ru" required>
+                    </div>
+                    <input type="submit" class="btn primary" value="Отправить заявку">
+                </form>
+            </div>
+              
+            <div id="subject" class="tabcontent">
+                    <form action="/action_page.php" class="form--repro">
+                        <p style="background: #ffd14a; width:max-content; margin-bottom: 16px; padding: 4px 8px;">Укажите тему, и мы пришлём вам подборку репродукций</p>   
+                        <div class="form--repro__item">
+                            <label for="artist">Укажите тему</label>
+                            <input type="text" id="artist" name="artist" placeholder="Цветы" required>
+                        </div>
+                        <div class="form--repro__item">
+                            <label for="name">Как вас зовут</label>
+                            <input type="text" id="name" name="user_name" placeholder="Вася" required>
+                        </div>
+                        <div class="form--repro__item">
+                            <label for="tel">Номер телефона</label>
+                            <input type="tel" id="tel" name="tel" placeholder="+7 900 100 20 10" required>
+                        </div>
+                        <div class="form--repro__item">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" placeholder="imagine@mail.ru" required>
+                        </div>
+                        <input type="submit" class="btn primary" value="Отправить заявку">
+                    </form>
+            </div>
         </section>
     
     <footer>
@@ -167,21 +219,21 @@
             </div>
         </section>
     </footer>
-    <script src="js/script.js"></script>
-    <script src="js/slider.js"></script>
-    <script src="js/swiper.js"></script>
-    <script>
-        var swiper = new Swiper('.swiper-container');
-    </script>
-    <script>
-        function myFunction() {
-        var x, i;
-        x = document.querySelectorAll('#card--hidden');
-        for (i = 0; i < x.length; i++) {
-        x[i].style.display='block';
-        }
-        document.getElementById('button--hidden').style.display='none';
-        }
-    </script>
+<script>
+function openTab(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+document.getElementById("defaultOpen").click();
+</script>
 </body>
 </html>

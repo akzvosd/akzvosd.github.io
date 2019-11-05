@@ -8,13 +8,43 @@
     object-fit: cover;
 }
 
+.tab {
+    overflow: hidden;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.tab button {
+    background-color: rgb(255, 236, 192);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.4s;
+}
+
+.tab button:hover {
+    background-color: rgb(255, 236, 192)
+}
+
+.tab button.active {
+    background-color: #FFD164;
+}
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+}
+
 .form--repro {
     margin: auto;
+    margin-top: 36px;   
     width: 32rem;
 }
 
 .form--repro__item {
-    margin-bottom: 16px;
+    margin-bottom: 24px;
 }
 
 .form--repro__item label {
@@ -46,6 +76,8 @@ form .btn {
     margin-top: 8px;
 }
 
-input::placeholder {
-    color: #a6a6a6;
+input[type=file] {
+    border: 0;
+    margin: 0;
+    padding: 0;
 }
