@@ -4,7 +4,7 @@ section {
 
 .reproductions {
     background-image: linear-gradient(to left, rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.9)), url("img/repro.jpg");
-    background-size: 100%;
+    background-size: cover;
 }
 
 .repro--h3 {
