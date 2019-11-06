@@ -24,7 +24,7 @@
 }
 
 .tab button:hover {
-    text-decoration: underline;
+    background: rgb(255, 226, 158);
 }
 
 .tab button.active {
