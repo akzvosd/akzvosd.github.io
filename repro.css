@@ -37,6 +37,10 @@ section {
     color: #131313;
 }
 
+.tab--text {
+    background: #FFD164; width:max-content; margin-bottom: 16px; padding: 4px 8px;
+}
+
 .tabcontent {
     display: none;
     padding: 48px 0 48px;
@@ -88,3 +92,33 @@ input[type=file] {
     margin: 0;
     padding: 0;
 }
+
+.col-md-4 {
+    margin-bottom: 16px;
+}
+
+@media only screen and (max-width: 900px) {
+    .hero-text h5 {
+        margin-top: 16px;
+    }
+
+    .form--repro {
+        margin: auto; 
+        width: 100%;
+    }
+
+    .tab button {
+        background: rgb(230, 230, 230);
+    }
+
+    .tabcontent {
+        border: 0;
+        padding: 32px 16px;
+        background: rgb(255, 230, 173);
+    }
+
+    .tab--text {
+        background: rgb(230, 191, 101); width:100%; margin-bottom: 16px; padding: 4px 8px;
+    }
+    
+    }
