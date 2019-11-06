@@ -1,0 +1,48 @@
+/* delivery */
+.delivery {
+    margin-top: 64px;
+    margin-bottom: 120px;
+    padding: 64px 0;
+}
+
+.delivery--red {
+    background: white;
+    position: relative;
+}
+
+.delivery--red::before {
+    content: '';
+    position: absolute;
+    height: 230px;
+    width: 100%;
+    top: 47%;
+    background:#FFD164;
+}
+
+.delivery--button {
+    margin-bottom: 32px;
+}
+
+.delivery h5 {
+    margin-bottom: 32px;
+}
+
+.delivery .col {
+    padding-left: 0;
+    padding-right: 24px;
+}
+
+.delivery button {
+    margin-right: 16px;
+}
+
+@media only screen and (max-width: 900px) {
+/* delivery */
+     .delivery {padding: 0 16px 64px 16px;}
+     .delivery button {margin-right:0;margin-bottom:16px;}
+     .delivery figure {margin-bottom: 32px;margin-left: -16px;margin-right: -16px;}
+     .delivery figure img {height: 320px;object-fit: cover;}
+     .delivery--red::before {
+         display: none;
+     }
+}
