@@ -11,30 +11,32 @@
 .tab {
     overflow: hidden;
     width: 100%;
-    border-radius: 8px;
 }
 
 .tab button {
-    background-color: rgb(255, 236, 192);
     border: none;
     outline: none;
     cursor: pointer;
     padding: 14px 16px;
     transition: 0.4s;
+    font-size: 1.2rem;
+    color: #818181;
 }
 
 .tab button:hover {
-    background-color: rgb(255, 236, 192)
+    text-decoration: underline;
 }
 
 .tab button.active {
     background-color: #FFD164;
+    color: #131313;
 }
 
 .tabcontent {
     display: none;
-    padding: 6px 12px;
+    padding: 12px 0 48px;
     border-top: none;
+    border: 20px solid #FFD164;
 }
 
 .form--repro {
@@ -56,9 +58,10 @@
 .form--repro__item input {
     width: 100%;
     padding: 16px 24px;
-    border: 1px solid #dcdcdc;
+    border: 0;
     border-radius: 8px;
     font-size: 1.2rem;
+    border: 1px solid #818181;
 }
 
 .form--repro__item input:focus {
