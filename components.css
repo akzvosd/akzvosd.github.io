@@ -26,7 +26,7 @@ a{color:inherit; text-decoration: none;}
 .primary:hover {background: #ffba1a; border: 2px solid #ffba1a; transition: 0.4s;}
 .secondary {border: 2px solid #e6e6e6; background: #e6e6e6; color: #949494}
 .secondary:hover {background: #cccccc; border: 2px solid #cccccc; color: #4d4d4d; transition: 0.4s;} 
-.alternative {background: #6394FF; border: 2px solid #6394FF; color: #fff}
+.alternative {background: #6394FF; border: 2px solid #6394FF; color: #fff; box-shadow: 2px 4px 32px rgba(99, 148, 255, 0.6)}
 .alternative:hover {background: #3374ff;    border: 2px solid #3374ff; transition: 0.4s;}
 .line {border: 2px solid #0f0f0f; color: #0f0f0f;}
 .line:hover {background: #0f0f0f; color: #fff; transition: 0.4s}
