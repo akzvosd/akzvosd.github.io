@@ -23,11 +23,12 @@
     transition: 0.4s;
     font-size: 1.2rem;
     color: whitesmoke;
-    background: rgb(81, 121, 207);
+    background: rgb(0, 0, 0, .7);
 }
 
 .tab button:hover {
-    background: rgb(255, 226, 158);
+    background: #FFD164;
+    color: #131313;
 }
 
 .tab button.active {
@@ -88,6 +89,8 @@ section h3 {
     margin-top: 0; 
     margin-bottom: 0;
     color: white;
+    background-color:rgb(14, 50, 129); 
+    background-image: url(img/form--bg.jpg);
 }
 
 .form h3 {
@@ -115,17 +118,17 @@ input[type=file] {
     }
 
     .tab button {
-        background: rgb(230, 230, 230);
+        background: rgb(0, 0, 0, .7);
     }
 
     .tabcontent {
         border: 0;
         padding: 32px 16px;
-        background: rgb(255, 230, 173);
+        background: white;
     }
 
     .tab--text {
-        background: rgb(230, 191, 101); width:100%; margin-bottom: 16px; padding: 4px 8px;
+        width: 100%;
     }
 
     .form--button {

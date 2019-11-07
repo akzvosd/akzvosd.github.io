@@ -127,20 +127,25 @@
 <section class="section--wide">
             <h3 class="text--center repro--h3">Как мы это делаем?</h3>  
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <img src="img/svg/repro1.svg" alt="Картина в компьютере" class="image image--repro__svg">
                     <h5 class="text--center" style="margin-bottom: 0;"><span style="background: #FFD164;">1. Оцифровка</span></h5>
                     <p class="text--center">Мы находим оригинал и переводим его в цифровой формат нужного качества.</p> 
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <img src="img/svg/repro2.svg" alt="Пример репродукции Ван Гог" class="image image--repro__svg">
                     <h5 class="text--center" style="margin-bottom: 0;"><span style="background: #FFD164;">2. Печать</span></h5>
                     <p class="text--center">Печатаем репродукцию на холсте. <br>Размер холста указывает заказчик.</p> 
                 </div> 
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <img src="img/svg/repro3.svg" alt="Пример" class="image image--repro__svg">
-                    <h5 class="text--center" style="margin-bottom: 0;"><span style="background: #FFD164;">3.  Оформление</span></h5>
-                    <p class="text--center">Репродукцию оформляем в багет (рамку). <br> Вы имеете право отказаться.</p>
+                    <h5 class="text--center" style="margin-bottom: 0;"><span style="background: #FFD164;">3. Оформление</span></h5>
+                    <p class="text--center">Репродукцию оформляем в багет (рамку). Вы имеете право отказаться.</p>
+                </div>
+                <div class="col-md-3">
+                    <img src="img/svg/repro4.svg" alt="Пример" class="image image--repro__svg">
+                    <h5 class="text--center" style="margin-bottom: 0;"><span style="background: #FFD164;">4. Доставка</span></h5>
+                    <p class="text--center">Оборачиваем картину в крафт<br> и отправляем вам.</p>
                 </div>
             </div>   
 </section>
@@ -160,7 +165,7 @@
     </div>
     <div class="col-md-6">
         <div class="review--card row align-items-center">
-                <img src="img/review_babushka.jpg" alt="Карточка_1" class="review--card__img col-md-4">
+                <img src="img/review_natalya.jpg" alt="Карточка_1" class="review--card__img col-md-4">
                 <div class="card--text col-md-8">   
                     <p>Спасибо за прекрасную работу. Спасибо за оперативность. Спасибо за праздничное настроение . Работу делали к дню рождения внучки. Надеемся на дальнейшее сотрудничество.</p>
                     <small>Екатерина Шкаврон</small>
@@ -171,7 +176,7 @@
 <div class="row" style="margin-top: 16px">
                 <div class="col-md-6">
                     <div class="review--card row align-items-center">
-                        <img src="img/review_babushka.jpg" alt="Карточка_1" class="review--card__img col-md-4">
+                        <img src="img/review_natalya.jpg" alt="Карточка_1" class="review--card__img col-md-4">
                         <div class="card--text col-md-8">   
                             <p>Заказывали картину для нашей компании в небольшую приемную. Предложили варианты картинок, все сделали качественно и в срок. Спасибо!</p>
                             <small>Наталья Кузьмина</small>
@@ -234,7 +239,7 @@
     </div>        
 </section>
 <!-- форма --> 
-<section class="section--bg form" style="background-color:rgb(14, 50, 129); background-image: url(img/form--bg.jpg);">
+<section class="section--bg form">
     <section>   
     <h3 class="text--center repro--h3">Заказать репродукцию</h3>
     <div class="tab row">
@@ -268,7 +273,7 @@
     <div id="photo" class="tabcontent">
         <form action="/action_page.php" class="form--repro">
             <div class="form--repro__item">
-                <input type="file" name="fileToUpload" id="fileToUpload" accept=".jpg, .jpeg, .png"  >
+                <input type="file" multiple="multiple" name="fileToUpload" id="fileToUpload" accept=".jpg, .jpeg, .png"  >
             </div>
             <div class="form--repro__item">
                 <label for="name">Как вас зовут</label>

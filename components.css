@@ -191,7 +191,8 @@ section img {
 .section--bg {
     background-color: #FFD164;
     max-width: 100%;
-    padding: 96px 0 96px 0;
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 
 .section--wide {
