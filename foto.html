@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- geo дописать условие по бесплатной доставке -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){ 
+        ymaps.ready(function(){ 
+        var geolocation = ymaps.geolocation; 
+        $('#tow').html(geolocation.city); 
+        $('#mobile--town').html(geolocation.city); 
+        if (geolocation.city == 'Санкт-Петербург') {
+            document.getElementById("townDelivery").style.display = "block";
+        }
+        else if (geolocation.city == 'Великий Новгород') {
+            document.getElementById("townPrice").style.display = "block";
+        }
+        else {
+            alert('Вы не из Новгорода или Питера');
+        }
+        }); 
+        }); 
+    </script>
+    <!-- geo -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="repro.css">
+    <link rel="stylesheet" href="review.css">
+    <link rel="stylesheet" href="delivery.css">
+    <link rel="stylesheet" href="youtube.css">
+    <link rel="stylesheet" href="foto.css">
+    <link rel="stylesheet" href="bootstrap-grid.css">
+    <link rel="stylesheet" href="swiper.css">
+    <title>Imagine — Студия Картин</title>
+</head>
+<body>
+    <div class="mobile--geo">
+    <span id="mobile--town"></span> Доставка бесплатная
+    </div>
+    <div class="mobile--menu" onclick="openNav()">
+            <a href="#" class="mobile--menu__icon"></a>
+    </div>
+    <div id="myNav" class="mobile--overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="mobile--overlay-content">
+            <a href="#">То-то</a>
+            <a href="#">Сё-то</a>
+            <a href="#">Ещё что-то</a>
+            <a href="#">Кнопка</a>
+        </div>
+    </div>
+
+    <header class="row align-items-center">
+        <div class="col-md-auto"><img src="img/logotype.png" alt="Логотип"></div>
+        <div class="col" style="flex-grow: 0;">
+            <img src="img/svg/geo.svg" alt="Гео">  
+        </div>
+        <div class="col" style="padding-left: 0px;">
+            <span id="tow" class="townGeo"></span> <span id="townDelivery" style="background: #ffd14a; display: block; width: max-content; display: none;">Доставка бесплатная</span>
+            <span id="townPrice" style="display: none;">Доставка: 100р</span>
+        </div>
+        <div class="col" style="text-align: right;"><a  href="tel:+79082930097">+7 908 293-00-97</a></div>
+        <div class="col-md-auto" style="text-align: right;"><button class="btn line">Заказать звонок</button></div>
+    </header>
+    <div class="subheader" role="navigation" aria-label="Main">
+        <div class="row align-items-center">
+            <div class="col-md-6 subheader--left">
+                <nav>
+                    <a href="index.html">Портреты</a>
+                    <a href="reproductions.html">Репродукции</a>
+                    <a href="panno.html">Панно</a>
+                    <a href="foto.html" class="subheader--active">Фото на холсте</a>
+                    <a href="#">Доп. услуги</a>
+                </nav>
+            </div>
+            <div class="col-md-6 subheader--right">
+                <nav>
+                    <a href="#">Цены</a>
+                    <a href="#">Оплата</a>
+                    <a href="#">Доставка</a>
+                    <a href="#">Оптом</a>
+                    <a href="#">Контакты</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+        <main>  
+            <!-- hero -->
+            <div class="hero-image foto">
+                    <div class="hero-text">
+                            <div class="hero-text__list">
+                                <h3>Любое фото на холсте</h3>
+                                <h5>Присылайте нам любую фотографию,<br>и мы напечатаем её на холсте.</h5>
+                                <a href="#form"><button class="btn primary">Прислать фото</button></a>
+                            </div>
+                    </div>
+            </div>
+        </main>
+<!-- репродукции -->
+<section class="section--wide">
+    <div class="row">
+            <div class="col-md-4">
+                <img src="img/repro/repro.jpg" alt="Девушка с репродукцией" class="image">
+            </div>
+            <div class="col-md-4">
+                <img src="img/repro/repro.jpg" alt="Девушка с репродукцией" class="image">
+            </div>
+            <div class="col-md-4">
+                <img src="img/repro/repro.jpg" alt="Девушка с репродукцией" class="image">
+            </div>
+    </div>
+    <div class="row">
+            <div class="col-md-4">
+                <img src="img/repro/repro.jpg" alt="Девушка с репродукцией" class="image">
+            </div>
+            <div class="col-md-4">
+                <img src="img/repro/repro.jpg" alt="Девушка с репродукцией" class="image">
+            </div>
+            <div class="col-md-4">
+                <img src="img/repro/repro.jpg" alt="Девушка с репродукцией" class="image">
+            </div>
+    </div>
+</section>   
+<!-- как -->  
+<section class="section--wide">
+            <h3 class="text--center repro--h3">Как мы это делаем?</h3>  
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="img/svg/foto.svg" alt="Картина в компьютере" class="image image--repro__svg">
+                    <h5 class="text--center" style="margin-bottom: 0;"><span style="background: #FFD164;">1. Фотография</span></h5>
+                    <p class="text--center">Вы присылаете нам фотографию(-ии). <br> Мы их обрабатываем и готовим к печати.</p> 
+                </div>
+                <div class="col-md-4">
+                    <img src="img/svg/repro2.svg" alt="Пример репродукции Ван Гог" class="image image--repro__svg">
+                    <h5 class="text--center" style="margin-bottom: 0;"><span style="background: #FFD164;">2. Печать</span></h5>
+                    <p class="text--center">Печатаем репродукцию на холсте. <br>Размер холста указывает заказчик.</p> 
+                </div> 
+                <div class="col-md-4">
+                    <img src="img/svg/repro3.svg" alt="Пример" class="image image--repro__svg">
+                    <h5 class="text--center" style="margin-bottom: 0;"><span style="background: #FFD164;">3.  Оформление</span></h5>
+                    <p class="text--center">Репродукцию оформляем в багет (рамку). <br> Вы имеете право отказаться.</p>
+                </div>
+            </div>   
+</section>
+<!-- отзывы -->
+<section class="review section--wide" style="padding:0;">
+<h3 class="text--center repro--h3" style="margin-bottom: -8px;">Отзывы</h3>
+<h5 class="text--center">Один из принципов нашей компании только настоящие отзывы</h5>
+        <div class="row" style="margin-top: 16px">
+                <div class="col-md-6">
+                    <div class="review--card row align-items-center">
+                        <img src="img/review_natalya.jpg" alt="Карточка_1" class="review--card__img col-md-4">
+                        <div class="card--text col-md-8">   
+                            <p>Заказывали картину для нашей компании в небольшую приемную. Предложили варианты картинок, все сделали качественно и в срок. Спасибо!</p>
+                            <small>Наталья Кузьмина, Санкт-Петербург</small>
+                        </div>    
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="review--card row align-items-center">
+                            <img src="img/review_babushka.jpg" alt="Карточка_1" class="review--card__img col-md-4">
+                            <div class="card--text col-md-8">   
+                                <p>Спасибо за прекрасную работу. Спасибо за оперативность. Спасибо за праздничное настроение . Работу делали к дню рождения внучки. Надеемся на дальнейшее сотрудничество.</p>
+                                <small>Екатерина Шкаврон, Псков</small>
+                            </div>    
+                    </div>
+                </div>
+        </div>
+        <div class="row" style="margin-top: 16px">
+                <div class="col-md-6">
+                    <div class="review--card row align-items-center">
+                        <img src="img/review_natalya.jpg" alt="Карточка_1" class="review--card__img col-md-4">
+                        <div class="card--text col-md-8">   
+                            <p>Заказывали картину для нашей компании в небольшую приемную. Предложили варианты картинок, все сделали качественно и в срок. Спасибо!</p>
+                            <small>Наталья Кузьмина</small>
+                        </div>    
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="review--card row align-items-center">
+                            <img src="img/review_babushka.jpg" alt="Карточка_1" class="review--card__img col-md-4">
+                            <div class="card--text col-md-8">   
+                                <p>Спасибо за прекрасную работу. Спасибо за оперативность. Спасибо за праздничное настроение . Работу делали к дню рождения внучки. Надеемся на дальнейшее сотрудничество.</p>
+                                <small>Екатерина Шкаврон</small>
+                            </div>    
+                    </div>
+                </div>
+        </div>
+        <div class="button--center">
+            <button class="btn alternative">
+                <img src="img/svg/vklogo.svg" alt="Логотип ВК" class="img--noradius">
+                <span style="vertical-align: middle;">Посмотреть отзывы в VK</span>
+            </button>
+        </div>
+</section>
+<!-- youtube -->
+<div class="youtube--video text--center">
+    <h3>Процесс работы</h3>
+    <iframe width="100%"
+    src="https://www.youtube.com/embed/tgbNymZ7vqY">
+    </iframe>  
+</div>
+<!-- доставка -->
+<section class="section--bg" style="margin-bottom: 0; margin-top: -8px;">
+    <div class="section--wide delivery" style="margin: auto;">
+    <h3 class="text--center repro--h3" style="margin-bottom: 0;">Доставка в любой город России</h3>
+    <h5 class="text--center">Получите готовый портрет в наших фирменных отделах <br>или в пункте выдачи возле Вашего дома</h5>
+    <div class="text--center delivery--button">
+        <button class="btn line">Адреса фирменных отделов</button>
+        <button class="btn line">Подробнее о доставке</button>
+    </div>
+        <div class="row" style="margin-top: 40px;">
+                <div class="col-md-4">
+                    <figure>
+                        <img src="img/delivery--spb.png" alt="Точка в СПб" class="image">
+                        <figcaption>Санкт-Петербург, ТРК «ЛиговЪ», 2 этаж</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-4">
+                    <figure>
+                        <img src="img/delivery--vn.png" alt="Точка в Великом Новгороде" class="image">
+                        <figcaption>Великий Новгород, ТД «Русь», 1 этаж</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-4">   
+                    <figure>
+                        <img src="img/delivery--psk.png" alt="Точка во Пскове" class="image">
+                        <figcaption>Псков, ТЦ «Максимус», 1 этаж</figcaption>
+                    </figure>
+                </div> 
+        </div>
+    </div>        
+</section>
+<!-- форма --> 
+<div id="form"></div>
+<section style="margin-top: 120px;">   
+    <h3 class="text--center repro--h3">Заказать фотографию на доске</h3>
+        <form action="/action_page.php" class="form--repro">
+            <div class="form--repro__item">
+                <input type="file" name="fileToUpload" id="fileToUpload" accept=".jpg, .jpeg, .png"  >
+            </div>
+            <div class="form--repro__item">
+                <label for="name">Как вас зовут</label>
+                <input type="text" id="name" name="user_name" placeholder="Вася" required>
+            </div>
+            <div class="form--repro__item">
+                <label for="tel">Номер телефона</label>
+                <input type="tel" id="tel" name="tel" placeholder="+7 900 100 20 10" required>
+            </div>
+            <div class="form--repro__item">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="imagine@mail.ru" required>
+            </div>
+            <input type="submit" class="btn alternative form--button" value="Отправить заявку">
+        </form>
+</section>
+<footer>
+        <section class="section--wide">
+            <div class="row">
+                <div class="col-md-3">
+                    <p class="text--bold">Картины</p>
+                    <p>Портреты по фото</p>
+                    <p>Печать фото на холсте</p>
+                    <p>Репродукции</p>
+                    <p>Модульное панно</p>
+                </div>
+                <div class="col-md-3">
+                    <p class="text--bold">Доп. услуги</p>
+                    <p>Реставрация старых фото</p>
+                    <p>Ретушь</p>
+                    <p>Сертификаты</p>
+                    <p>Идеи подарков</p>
+                    <p>Багет</p>
+                    <p>Упаковка</p>
+                </div>
+                <div class="col-md-3">
+                    <p class="text--bold">Остальное</p>
+                    <p>Цены</p>
+                    <p>Оплата</p>
+                    <p>Доставка</p>
+                    <p>Оптом</p>
+                    <p>Контакты</p>
+                    <p>Публичная оферта</p>
+                    <p>Реквизиты</p>
+                </div>
+                <div class="col-md-3" class="f_rightColumn">
+                    <img src="img/svg/vksquare.svg" alt="Логотип ВК" width="48px">
+                    <img src="img/svg/instagramsquare.svg" alt="Логотип ВК" width="48px">
+                </div>
+            </div>
+        </section>
+</footer>
+<script>
+function openTab(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+document.getElementById("defaultOpen").click();
+</script>
+</body>
+</html>

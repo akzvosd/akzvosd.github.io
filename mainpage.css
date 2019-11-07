@@ -73,7 +73,6 @@
 .process--card {
     position: relative;
     overflow: hidden;
-    box-shadow: 0 0 0 !important;
     border-radius: 0;
     margin: 0 !important;
 }
@@ -85,8 +84,8 @@
     padding: 0 !important;
 }
 
-.process--h3 {
-    color: rgb(255, 180, 5);
+.process p {
+    color: #6394FF;
 }
 
 /* GIFT */
@@ -189,7 +188,8 @@
      .style--card button + .secondary {margin-left: 0px;}
      .style--card button {margin-top: 16px;}
      .style--card h5 {margin-top: 16px;font-size: 36px;}
-     .style--other__mobile {font-size: 20px !important;}    
+     .style--other__mobile {font-size: 20px !important;} 
+     .style--slide1 {background-position: center;}   
      .style--slide2 {display: none;}
  
      
