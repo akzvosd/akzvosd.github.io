@@ -31,7 +31,7 @@
 .review--text::before {
     content: '“';
     position: absolute;
-    left: -40px;
+    left: -24px;
     font-size: 120px;
     top: -18px;
     color: #ffd164;
