@@ -273,7 +273,11 @@
     <div id="photo" class="tabcontent">
         <form action="/action_page.php" class="form--repro">
             <div class="form--repro__item">
-                <input type="file" multiple="multiple" name="fileToUpload" id="fileToUpload" accept=".jpg, .jpeg, .png"  >
+                <label for="file--upload" class="file--label">
+                    <img src="img/svg/photo.svg" alt="Загрузить" style="width: 32px;">
+                    Загрузить изображения    
+                </label>
+                <input type="file" id="file--upload" multiple="multiple" name="fileToUpload" id="fileToUpload" accept=".jpg, .jpeg, .png"  >
             </div>
             <div class="form--repro__item">
                 <label for="name">Как вас зовут</label>
