@@ -11,6 +11,8 @@
 .tab {
     overflow: hidden;
     width: 100%;
+    border-radius: 8px;
+    margin-bottom: 32px;
 }
 
 .tab button {
@@ -20,8 +22,8 @@
     padding: 14px 16px;
     transition: 0.4s;
     font-size: 1.2rem;
-    color: #818181;
-    background: 0;
+    color: whitesmoke;
+    background: rgb(81, 121, 207);
 }
 
 .tab button:hover {
@@ -41,7 +43,10 @@
     display: none;
     padding: 48px 0 48px;
     border-top: none;
-    border: 20px solid #FFD164;
+    background: white;
+    box-shadow: 0px 0px 16px white;
+    color: #131313;
+    border-radius: 16px;
 }
 
 .form--repro {
@@ -77,6 +82,16 @@
 
 section h3 {
     margin-bottom: 16px;
+}
+
+.form {
+    margin-top: 0; 
+    margin-bottom: 0;
+    color: white;
+}
+
+.form h3 {
+    color: white;
 }
 
 form .btn {

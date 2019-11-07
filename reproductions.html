@@ -147,30 +147,31 @@
 <!-- отзывы -->
 <section class="review section--wide" style="padding:0;">
 <h3 class="text--center repro--h3" style="margin-bottom: -8px;">Отзывы</h3>
-<h5 class="text--center">Один из принципов нашей компании только настоящие отзывы</h5>
-        <div class="row align-items-center" style="width: 1000px; margin: auto; margin-top: 64px;">
-            <div class="col-md-6">
-                <div class="review--image" style="background-image: url(img/examples/example1.jpg);"></div>
-            </div>
-            <div class="col-md-6 review--text">
-                <h5>Заказывали картину для нашей компании в небольшую приемную. Предложили варианты картинок, все сделали качественно и в срок. Спасибо!</h5>
-               <p style="color: rgb(158, 158, 158) ">Наталья Кузьмина, Санкт-Петербург</p> 
-            </div>
-        </div>   
-        <div class="row align-items-center" style="width: 1000px; margin: auto; margin-top: 64px; margin-bottom: 64px;">
-            <div class="col-md-6 review--text">
-                <h5>Спасибо за прекрасную работу. <br>Спасибо за оперативность. <br> Спасибо за праздничное настроение. <br>Работу делали к дню рождения внучки. Надеемся на дальнейшее сотрудничество.</h5>
-               <p style="color: rgb(158, 158, 158) ">Наталья Кузьмина, Санкт-Петербург</p> 
-            </div>
-            <div class="col-md-6">
-                <div class="review--image" style="background-image: url(img/examples/example2.jpg);"></div>
-            </div>
-        </div>            
-        
-        <!-- <div class="row" style="margin-top: 16px">
+<h5 class="text--center">Один из принципов нашей компании только настоящие отзывы</h5>               
+<div class="row" style="margin-top: 16px">
+    <div class="col-md-6">
+        <div class="review--card row align-items-center">
+            <img src="img/review_babushka.jpg" alt="Карточка_1" class="review--card__img col-md-4">
+            <div class="card--text col-md-8">   
+                <p>Заказывали картину для нашей компании в небольшую приемную. Предложили варианты картинок, все сделали качественно и в срок. Спасибо!</p>
+                <small>Наталья Кузьмина</small>
+            </div>    
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="review--card row align-items-center">
+                <img src="img/review_babushka.jpg" alt="Карточка_1" class="review--card__img col-md-4">
+                <div class="card--text col-md-8">   
+                    <p>Спасибо за прекрасную работу. Спасибо за оперативность. Спасибо за праздничное настроение . Работу делали к дню рождения внучки. Надеемся на дальнейшее сотрудничество.</p>
+                    <small>Екатерина Шкаврон</small>
+                </div>    
+        </div>
+    </div>
+</div>
+<div class="row" style="margin-top: 16px">
                 <div class="col-md-6">
                     <div class="review--card row align-items-center">
-                        <img src="img/review_natalya.jpg" alt="Карточка_1" class="review--card__img col-md-4">
+                        <img src="img/review_babushka.jpg" alt="Карточка_1" class="review--card__img col-md-4">
                         <div class="card--text col-md-8">   
                             <p>Заказывали картину для нашей компании в небольшую приемную. Предложили варианты картинок, все сделали качественно и в срок. Спасибо!</p>
                             <small>Наталья Кузьмина</small>
@@ -186,7 +187,7 @@
                             </div>    
                     </div>
                 </div>
-        </div> -->
+</div>
         <div class="button--center">
             <button class="btn alternative">
                 <img src="img/svg/vklogo.svg" alt="Логотип ВК" class="img--noradius">
@@ -233,12 +234,13 @@
     </div>        
 </section>
 <!-- форма --> 
-<section>   
+<section class="section--bg form" style="background-color:rgb(14, 50, 129); background-image: url(img/form--bg.jpg);">
+    <section>   
     <h3 class="text--center repro--h3">Заказать репродукцию</h3>
     <div class="tab row">
-        <button class="tablinks col-md-4" onclick="openTab(event, 'picture')">По названию картины</button>
-        <button class="tablinks col-md-4" onclick="openTab(event, 'photo')" id="defaultOpen">По вашей фотографии</button>
-        <button class="tablinks col-md-4" onclick="openTab(event, 'subject')">По теме</button>
+        <button class="tablinks col-md-4" onclick="openTab(event, 'picture')" style="margin-bottom: 0;">По названию картины</button>
+        <button class="tablinks col-md-4" onclick="openTab(event, 'photo')" id="defaultOpen" style="margin-bottom: 0;">По вашей фотографии</button>
+        <button class="tablinks col-md-4" onclick="openTab(event, 'subject')" style="margin-bottom: 0;">По теме</button>
       </div>
     
     <div id="picture" class="tabcontent">
@@ -306,6 +308,7 @@
                 <input type="submit" class="btn alternative" style="box-shadow: 0 0 0;" value="Отправить заявку">
             </form>
     </div>
+</section>
 </section>
 <footer>
         <section class="section--wide">
