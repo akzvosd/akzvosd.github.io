@@ -7,7 +7,7 @@
 html,body{font-family:'Roboto', sans-serif;font-size:18px;line-height:1.3;color:#131313;scroll-behavior: smooth;}
 h1{font-size:76px}h2{font-size:56px}h3{font-size:42px}h4{font-size:32px}h5{font-size:24px}
 h1,h2,h3,h4,h5,h6{font-family:"Roboto",Arial,sans-serif;font-weight:400;margin:8px 0}
-h3 {font-weight: 700;}
+h3 {font-weight: 600;}
 hr{border:0;border-top:1px solid #eee;margin:20px 0}
 small {font-size: 14px}
 p{margin: 8px 0;}
@@ -32,7 +32,7 @@ a{color:inherit; text-decoration: none;}
 .line {border: 2px solid #0f0f0f; color: #0f0f0f;}
 .line:hover {background: #0f0f0f; color: #fff; transition: 0.4s}
 /* text-decoration */
-.text--bold {font-weight: bold;}
+.text--bold {font-weight: 600;}
 .text--left {text-align: left;}
 .text--center {text-align: center;}
 /* input */
@@ -242,7 +242,7 @@ section img {
     section {padding: 36px 16px;}
     section .col-md-4 {padding: 0;}
     .section--wide h5 {line-height: 1.5;margin-bottom: 32px;}
-    .mobile--heading {display: block; width: 100%; margin-bottom: 48px; font-weight: 700; text-align: center; padding: 0 8px; font-size: 42px; line-height: 1;}
+    .mobile--heading {display: block; width: 100%; margin-bottom: 48px; font-weight: 600; text-align: center; padding: 0 8px; font-size: 42px; line-height: 1;}
     .button--center {padding: 0 16px;}
     header {display: none !important;}
     .subheader {display: none;}
