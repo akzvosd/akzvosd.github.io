@@ -40,7 +40,7 @@
 /* delivery */
      .delivery {padding: 0 16px 64px 16px;}
      .delivery button {margin-right:0;margin-bottom:16px;}
-     .delivery figure {margin-bottom: 32px;margin-left: -16px;margin-right: -16px;}
+     .delivery figure {margin-bottom: 32px;}
      .delivery figure img {height: 320px;object-fit: cover;}
      .delivery--red::before {
          display: none;
