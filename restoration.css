@@ -15,21 +15,8 @@ main h4 {
     margin-bottom: 16px;
 }
 
-main a {
-    margin: 32px 0 64px 0;
-    display: block;
-}
-
 main button {
-    font-size: xx-large !important;
-}
-
-main p {
-    background: #FFD164;
-    padding: 8px;
-    border-radius: 8px;
-    width: max-content;
-    margin-top: 16px;
+    margin: 32px 0 64px 0;
 }
 
 .restoration--image {
@@ -67,17 +54,5 @@ section {
     h4 {
         line-height: 1.2;
         margin-bottom: 32px !important;
-    }
-    main p {
-        width: 100%;
-        margin-top: 32px;
-    }
-
-    main a {
-        margin: 32px 0;
-    }
-
-    main button {
-        font-size: 1rem !important;
     }
 }
