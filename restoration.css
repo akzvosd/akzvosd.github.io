@@ -55,4 +55,7 @@ section {
         line-height: 1.2;
         margin-bottom: 32px !important;
     }
+    main h1 {
+        font-size: xxx-large;
+    }
 }

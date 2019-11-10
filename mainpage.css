@@ -71,7 +71,7 @@
     margin-left: 8px;
 }
 .style--text__padding {
-    padding: 32px 16px !important;
+    padding: 32px 0px !important;
 }
 
 /* PROCESS */   
@@ -147,6 +147,11 @@
     padding: 8px;
 }
 
+.examples {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 .examples .btn {
     margin-top: 32px;
 }
@@ -211,6 +216,8 @@
          padding-right: 16px;
          padding-top: 32px;
          padding-bottom: 32px;
+         margin-top: 0;
+         margin-bottom: 0;
      }
      .gift--bg h3 {
          text-align: center;
