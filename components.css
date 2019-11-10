@@ -57,6 +57,10 @@ input + label {margin-right: 24px;}
     z-index: 1;
 }
 
+.dropdown-content--active {
+    background: rgb(231, 190, 93);
+}
+
 .dropdown-content a {
     padding: 4px 16px;
     text-decoration: none;
