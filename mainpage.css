@@ -2,6 +2,11 @@
     display: none;
 }
 
+
+.mainPage img {
+    width: 80%;
+}
+
 .style {
     padding-bottom: 64px;
 }
@@ -147,6 +152,10 @@
 }
 
 @media only screen and (max-width: 900px) {
+    .mainPage img {
+        width: 100%;
+    }
+    
     /* swiper */
     .swiper-container {
         display: block;

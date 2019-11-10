@@ -12,15 +12,34 @@
         $('#mobile--town').html(geolocation.city); 
         if (geolocation.city == 'Санкт-Петербург') {
             document.getElementById("townDelivery").style.display = "block";
+            document.getElementById("townDelivery--mobile").style.display = "block";
         }
         else if (geolocation.city == 'Великий Новгород') {
-            document.getElementById("townPrice").style.display = "block";
+            document.getElementById("townDelivery").style.display = "block";
+            document.getElementById("townDelivery--mobile").style.display = "block";
+        }
+        else if (geolocation.city == 'Москва') {
+            document.getElementById("MPPrice").style.display = "block";
+            document.getElementById("MPPrice--mobile").style.display = "block";
+        }
+        else if (geolocation.city == 'Псков') {
+            document.getElementById("MPPrice").style.display = "block";
+            document.getElementById("MPPrice--mobile").style.display = "block";
+        }
+        else if (geolocation.city == 'Краснодар') {
+            document.getElementById("KEPrice").style.display = "block";
+            document.getElementById("KEe--mobile").style.display = "block";
+        }
+        else if (geolocation.city == 'Екатеринбург') {
+            document.getElementById("KEPrice").style.display = "block";
+            document.getElementById("KEe--mobile").style.display = "block";
         }
         else {
-            alert('Вы не из Новгорода или Питера');
+            document.getElementById("OtherPrice").style.display = "block";
+            document.getElementById("OtherPrice--mobile").style.display = "block";
         }
         }); 
-        });
+        }); 
     </script>
     <!-- geo -->
     <meta charset="UTF-8">
@@ -119,7 +138,7 @@
         
     <main>  
     <!-- hero -->
-        <div class="hero-image">
+        <div class="hero-image mainPage">
             <div class="hero-text">
                 <img src="img/imagine_studio.svg" alt="Логотип студии">
                     <div class="hero-text__list">
