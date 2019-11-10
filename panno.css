@@ -3,6 +3,26 @@
     background-size: cover;
 }
 
+.panno--row .col-md-6 {
+    margin-bottom: 112px !important;
+}
+
+.image--panno {
+    border-radius: 0px !important;
+}
+
+.panno--card__text {
+    margin-top: 32px;
+}
+
+.panno--card__text button {
+    margin-top: 16px;
+}
+
+.panno--card__text small {
+    color: #757575;
+}
+
 form {
     padding: 16px 0;
 }

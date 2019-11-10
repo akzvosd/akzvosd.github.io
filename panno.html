@@ -34,60 +34,91 @@
     <link rel="stylesheet" href="panno.css">
     <link rel="stylesheet" href="bootstrap-grid.css">
     <link rel="stylesheet" href="swiper.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Imagine — Студия Картин</title>
 </head>
 <body>
     <div class="mobile--geo">
-    <span id="mobile--town"></span> Доставка бесплатная
+        <span id="mobile--town"></span>
+            <div id="townDelivery--mobile">Доставка бесплатная</div>
+            <div id="MPPrice--mobile">Доставка: 450p</div>
+            <div id="KEPrice--mobile">Доставка: 1000p</div>
+            <div id="OtherPrice--mobile">Доставка от 450p</div>
     </div>
     <div class="mobile--menu" onclick="openNav()">
-            <a href="#" class="mobile--menu__icon"></a>
+                <a href="#" class="mobile--menu__icon"></a>
     </div>
     <div id="myNav" class="mobile--overlay">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <div class="mobile--overlay-content">
-            <a href="#">То-то</a>
-            <a href="#">Сё-то</a>
-            <a href="#">Ещё что-то</a>
-            <a href="#">Кнопка</a>
-        </div>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="mobile--overlay-content">
+                <div class="mobile--overylay__add">
+                    <p>Доп. услуги</p>
+                    <a href="restoration.html">Реставрация старых фото</a>
+                    <a href="retush.hmtl">Ретушь</a>
+                    <a href="sertifikat.html">Сертификаты</a>
+                    <a href="gift.html">Идеи подарков</a>
+                    <a href="baget.html">Багет</a>
+                    <a href="package.html">Упаковка</a>
+                </div> 
+                <div class="mobile--overlay__main">
+                    <p>Основное</p>
+                    <a href="index.html">Портреты</a>
+                    <a href="reproductions.html" class="subheader--active">Репродукции</a>
+                    <a href="panno.html">Панно</a>
+                    <a href="foto.html">Фото на холсте</a>
+                </div>
+            </div>
     </div>
-
+    
     <header class="row align-items-center">
-        <div class="col-md-auto"><img src="img/logotype.png" alt="Логотип"></div>
-        <div class="col" style="flex-grow: 0;">
-            <img src="img/svg/geo.svg" alt="Гео">  
-        </div>
-        <div class="col" style="padding-left: 0px;">
-            <span id="tow" class="townGeo"></span> <span id="townDelivery" style="background: #ffd14a; display: block; width: max-content; display: none;">Доставка бесплатная</span>
-            <span id="townPrice" style="display: none;">Доставка: 100р</span>
-        </div>
-        <div class="col" style="text-align: right;"><a  href="tel:+79082930097">+7 908 293-00-97</a></div>
-        <div class="col-md-auto" style="text-align: right;"><button class="btn line">Заказать звонок</button></div>
+            <div class="col-md-auto"><img src="img/logotype.png" alt="Логотип"></div>
+            <div class="col" style="flex-grow: 0;">
+                <img src="img/svg/geo.svg" alt="Гео">  
+            </div>
+            <div class="col" style="padding-left: 0px;">
+                <span id="tow" class="townGeo"></span> 
+                <span id="townDelivery">Доставка бесплатная</span>
+                <span id="MPPrice">Доставка: 450p</span>
+                <span id="KEPrice">Доставка: 1000p</span>
+                <span id="OtherPrice">Доставка от 450p</span>
+            </div>
+            <div class="col" style="text-align: right;"><a  href="tel:+79082930097">+7 908 293-00-97</a></div>
+            <div class="col-md-auto" style="text-align: right;"><button class="btn line">Заказать звонок</button></div>
     </header>
     <div class="subheader" role="navigation" aria-label="Main">
-        <div class="row align-items-center">
-            <div class="col-md-6 subheader--left">
-                <nav>
-                    <a href="index.html">Портреты</a>
-                    <a href="reproductions.html">Репродукции</a>
-                    <a href="panno.html" class="subheader--active"  >Панно</a>
-                    <a href="foto.html">Фото на холсте</a>
-                    <a href="#">Доп. услуги</a>
-                </nav>
+            <div class="row align-items-center">
+                <div class="col-md-6 subheader--left">
+                    <nav>
+                        <a href="index.html">Портреты</a>
+                        <a href="reproductions.html">Репродукции</a>
+                        <a href="panno.html" class="subheader--active">Панно</a>
+                        <a href="foto.html">Фото на холсте</a>
+                        <div class="dropdown">
+                            <a href="#" class="dropdown--button">Доп. услуги <i class="fa fa-caret-down"></i></a>
+                            <div class="dropdown-content">
+                                <a href="restoration.html">Реставрация старых фото</a>
+                                <a href="retush.hmtl">Ретушь</a>
+                                <a href="sertifikat.html">Сертификаты</a>
+                                <a href="gift.html">Идеи подарков</a>
+                                <a href="baget.html">Багет</a>
+                                <a href="package.html">Упаковка</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-md-6 subheader--right">
+                    <nav>
+                        <a href="price.html">Цены</a>
+                        <a href="cash.html">Оплата</a>
+                        <a href="delivery.html">Доставка</a>
+                        <a href="optom.html">Оптом</a>
+                        <a href="contacts.html">Контакты</a>
+                    </nav>
+                </div>
             </div>
-            <div class="col-md-6 subheader--right">
-                <nav>
-                    <a href="#">Цены</a>
-                    <a href="#">Оплата</a>
-                    <a href="#">Доставка</a>
-                    <a href="#">Оптом</a>
-                    <a href="#">Контакты</a>
-                </nav>
-            </div>
-        </div>
     </div>
-        <main>  
+
+<main>  
             <!-- hero -->
             <div class="hero-image panno">
                     <div class="hero-text">
@@ -98,52 +129,75 @@
                             </div>
                     </div>
             </div>
-        </main>
-<!-- репродукции -->
+</main>
+<!-- panno examples -->
 <section class="section--wide">
-    <div class="row">
-            <div class="col-md-4">
-                <img src="img/repro/repro.jpg" alt="Девушка с репродукцией" class="image">
+    <div class="row panno--row">
+        <div class="col-md-6">
+            <img src="img/panno/panno1.png" alt="Панно с картиной Шишкина" class="image image--panno">
+            <div class="panno--card__text">
+                <h4>Утро в сосновом бору</h4>
+                <small>100 х 70, 3 модуля</small>
+                <h5>2290 ₽</h5>
+                <button class="btn primary">Заказать</button>
             </div>
-            <div class="col-md-4">
-                <img src="img/repro/repro.jpg" alt="Девушка с репродукцией" class="image">
+        </div>
+        <div class="col-md-6">
+            <img src="img/panno/panno2.png" alt="Панно с картиной Ван Гога" class="image image--panno">
+            <div class="panno--card__text">
+                <h4>Звёздная ночь</h4>
+                <small>120 х 90, 4 модуля</small>
+                <h5>3090 ₽</h5>
+                <button class="btn primary">Заказать</button>
             </div>
-            <div class="col-md-4">
-                <img src="img/repro/repro.jpg" alt="Девушка с репродукцией" class="image">
-            </div>
+        </div>
     </div>
-    <div class="row">
-            <div class="col-md-4">
-                <img src="img/repro/repro.jpg" alt="Девушка с репродукцией" class="image">
+    <div class="row panno--row">
+        <div class="col-md-6">
+            <img src="img/panno/panno3.png" alt="Панно с картиной Танго на закате" class="image image--panno">
+            <div class="panno--card__text">
+                <h4>Танго на закате</h4>
+                <small>80 х 100, 3 модуля</small>
+                <h5>2560 ₽</h5>
+                <button class="btn primary">Заказать</button>
             </div>
-            <div class="col-md-4">
-                <img src="img/repro/repro.jpg" alt="Девушка с репродукцией" class="image">
+        </div>
+        <div class="col-md-6">
+            <img src="img/panno/panno4.png" alt="Панно с картиной Цветы     " class="image image--panno">
+            <div class="panno--card__text">
+                <h4>Букет цветов</h4>
+                <small>140 х 80, 5 модулей</small>
+                <h5>4000 ₽</h5>
+                <button class="btn primary">Заказать</button>
             </div>
-            <div class="col-md-4">
-                <img src="img/repro/repro.jpg" alt="Девушка с репродукцией" class="image">
-            </div>
+        </div>
     </div>
 </section>   
 <!-- как -->  
 <section class="section--wide">
-            <h3 class="text--center repro--h3">Как мы это делаем?</h3>  
-            <div class="row">
-                <div class="col-md-4">
-                    <img src="img/svg/foto.svg" alt="Картина в компьютере" class="image image--repro__svg">
-                    <h5 class="text--center" style="margin-bottom: 0;"><span style="background: #FFD164;">1. Фотография</span></h5>
-                    <p class="text--center">Вы присылаете нам фотографию(-ии). <br> Мы их обрабатываем и готовим к печати.</p> 
-                </div>
-                <div class="col-md-4">
-                    <img src="img/svg/repro2.svg" alt="Пример репродукции Ван Гог" class="image image--repro__svg">
-                    <h5 class="text--center" style="margin-bottom: 0;"><span style="background: #FFD164;">2. Печать</span></h5>
-                    <p class="text--center">Печатаем репродукцию на холсте. <br>Размер холста указывает заказчик.</p> 
-                </div> 
-                <div class="col-md-4">
-                    <img src="img/svg/repro3.svg" alt="Пример" class="image image--repro__svg">
-                    <h5 class="text--center" style="margin-bottom: 0;"><span style="background: #FFD164;">3.  Оформление</span></h5>
-                    <p class="text--center">Репродукцию оформляем в багет (рамку). <br> Вы имеете право отказаться.</p>
-                </div>
-            </div>   
+    <h3 class="text--center repro--h3">Как мы это делаем?</h3>  
+    <div class="row">
+        <div class="col-md-3">
+            <img src="img/svg/repro1.svg" alt="Картина в компьютере" class="image image--repro__svg">
+            <h5 class="text--center" style="margin-bottom: 0;"><span style="background: #FFD164;">1. Оцифровка</span></h5>
+            <p class="text--center">Нужно заполнить это текстом</p> 
+        </div>
+        <div class="col-md-3">
+            <img src="img/svg/repro2.svg" alt="Пример репродукции Ван Гог" class="image image--repro__svg">
+            <h5 class="text--center" style="margin-bottom: 0;"><span style="background: #FFD164;">2. Печать</span></h5>
+            <p class="text--center">Нужно заполнить это текстом</p> 
+        </div> 
+        <div class="col-md-3">
+            <img src="img/svg/repro3.svg" alt="Пример" class="image image--repro__svg">
+            <h5 class="text--center" style="margin-bottom: 0;"><span style="background: #FFD164;">3. Оформление</span></h5>
+            <p class="text--center">Нужно заполнить это текстом</p>
+        </div>
+        <div class="col-md-3">
+            <img src="img/svg/repro4.svg" alt="Пример" class="image image--repro__svg">
+            <h5 class="text--center" style="margin-bottom: 0;"><span style="background: #FFD164;">4. Доставка</span></h5>
+            <p class="text--center">Нужно заполнить это текстом</p>
+        </div>
+    </div>   
 </section>
 <!-- отзывы -->
 <section class="review section--wide" style="padding:0;">
@@ -235,12 +289,23 @@
     </div>        
 </section>
 <!-- форма --> 
-<div id="form"></div>
-<section style="margin-top: 120px;">   
-    <h3 class="text--center repro--h3">Заказать фотографию на доске</h3>
+<!-- форма --> 
+<section class="section--bg form">
+    <section>   
+    <h3 class="text--center repro--h3">Заказать панно</h3>
+    <div class="tab row">
+        <button class="tablinks col-md-6" onclick="openTab(event, 'photo')" id="defaultOpen" style="margin-bottom: 0;">По вашей фотографии</button>
+        <button class="tablinks col-md-6" onclick="openTab(event, 'subject')" style="margin-bottom: 0;">По теме</button>
+      </div>
+      
+    <div id="photo" class="tabcontent">
         <form action="/action_page.php" class="form--repro">
             <div class="form--repro__item">
-                <input type="file" name="fileToUpload" id="fileToUpload" accept=".jpg, .jpeg, .png"  >
+                <label for="file--upload" class="file--label">
+                    <img src="img/svg/photo.svg" alt="Загрузить" style="width: 32px;">
+                    Загрузить изображения    
+                </label>
+                <input type="file" id="file--upload" multiple="multiple" name="fileToUpload" id="fileToUpload" accept=".jpg, .jpeg, .png"  >
             </div>
             <div class="form--repro__item">
                 <label for="name">Как вас зовут</label>
@@ -254,44 +319,69 @@
                 <label for="email">E-mail</label>
                 <input type="email" id="email" name="email" placeholder="imagine@mail.ru" required>
             </div>
-            <input type="submit" class="btn alternative form--button" value="Отправить заявку">
+            <input type="submit" class="btn alternative" style="box-shadow: 0 0 0;" value="Отправить заявку">
         </form>
+    </div>
+      
+    <div id="subject" class="tabcontent">
+            <form action="/action_page.php" class="form--repro">
+                <p class="tab--text">Укажите тему, и мы пришлём вам подборку из наилучших вариантов</p>   
+                <div class="form--repro__item">
+                    <label for="artist">Укажите тему</label>
+                    <input type="text" id="artist" name="artist" placeholder="Цветы" required>
+                </div>
+                <div class="form--repro__item">
+                    <label for="name">Как вас зовут</label>
+                    <input type="text" id="name" name="user_name" placeholder="Вася" required>
+                </div>
+                <div class="form--repro__item">
+                    <label for="tel">Номер телефона</label>
+                    <input type="tel" id="tel" name="tel" placeholder="+7 900 100 20 10" required>
+                </div>
+                <div class="form--repro__item">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="imagine@mail.ru" required>
+                </div>
+                <input type="submit" class="btn alternative" style="box-shadow: 0 0 0;" value="Отправить заявку">
+            </form>
+    </div>
+</section>
 </section>
 <footer>
-        <section class="section--wide">
-            <div class="row">
-                <div class="col-md-3">
-                    <p class="text--bold">Картины</p>
-                    <p>Портреты по фото</p>
-                    <p>Печать фото на холсте</p>
-                    <p>Репродукции</p>
-                    <p>Модульное панно</p>
-                </div>
-                <div class="col-md-3">
-                    <p class="text--bold">Доп. услуги</p>
-                    <p>Реставрация старых фото</p>
-                    <p>Ретушь</p>
-                    <p>Сертификаты</p>
-                    <p>Идеи подарков</p>
-                    <p>Багет</p>
-                    <p>Упаковка</p>
-                </div>
-                <div class="col-md-3">
-                    <p class="text--bold">Остальное</p>
-                    <p>Цены</p>
-                    <p>Оплата</p>
-                    <p>Доставка</p>
-                    <p>Оптом</p>
-                    <p>Контакты</p>
-                    <p>Публичная оферта</p>
-                    <p>Реквизиты</p>
-                </div>
-                <div class="col-md-3" class="f_rightColumn">
-                    <img src="img/svg/vksquare.svg" alt="Логотип ВК" width="48px">
-                    <img src="img/svg/instagramsquare.svg" alt="Логотип ВК" width="48px">
-                </div>
+    <section class="section--wide">
+        <div class="row">
+            <div class="col-md-3">
+                <a class="text--bold" href="#">Картины</a>
+                <a href="index.html">Портреты по фото</a>
+                <a href="foto.html">Печать фото на холсте</a>
+                <a href="reproductions.html">Репродукции</a>
+                <a href="panno.html">Модульное панно</p>
             </div>
-        </section>
+            <div class="col-md-3">
+                <a class="text--bold" href="#">Доп. услуги</a>
+                <a href="restoration.html">Реставрация старых фото</a>
+                <a href="retush.hmtl">Ретушь</a>
+                <a href="sertifikat.html">Сертификаты</a>
+                <a href="gift.html">Идеи подарков</a>
+                <a href="baget.html">Багет</a>
+                <a href="package.html">Упаковка</a>
+            </div>
+            <div class="col-md-3">
+                <a class="text--bold">Остальное</a>
+                <a href="price.html">Цены</a>
+                <a href="cash.html">Оплата</a>
+                <a href="delivery.html">Доставка</a>
+                <a href="optom.html">Оптом</a>
+                <a href="contacts.html">Контакты</a>
+                <a href="oferta.html">Публичная оферта</a>
+                <a href="props.html">Реквизиты</a>
+            </div>
+            <div class="col-md-3 footer--social">
+                <a href="https://vk.com/imagine71" style="display: inline;"><img src="img/svg/vksquare.svg" alt="Логотип ВК" width="48px"></a>
+                <a href="https://www.instagram.com/imagine.1971/" style="display: inline;"><img src="img/svg/instagramsquare.svg" alt="Логотип ВК" width="48px"></a>
+            </div>
+        </div>
+    </section>
 </footer>
 <script>
 function openTab(evt, cityName) {
@@ -309,5 +399,6 @@ function openTab(evt, cityName) {
 }
 document.getElementById("defaultOpen").click();
 </script>
+<script src="js/script.js"></script>
 </body>
 </html>

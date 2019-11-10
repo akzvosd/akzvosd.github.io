@@ -12,7 +12,7 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 small {font-size: 14px}
 p{margin: 8px 0;}
 figcaption {margin-top: 8px;}
-footer {background: #F6F6F6; padding: 56px 0 72px 0;}
+footer {background: #F6F6F6; padding: 56px 0 72px 0;} footer a {display: block; line-height: 1.7;} footer a:hover {text-decoration: underline;}
 hr{border: 1px solid black}
 /* images */
 .image{max-width:100%;height:auto;}
@@ -40,6 +40,39 @@ input[type=radio] {vertical-align: baseline !important;}
 input + label {margin-right: 24px;}
 /* no-radius */
 .img--noradius {border-radius: 0;}
+
+/* dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #FFD164;
+    color: #131313;
+    box-shadow: 0px 4px 16px rgba(255, 208, 100, 0.507);
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    padding: 4px 16px;
+    text-decoration: none;
+    display: block;
+    margin-right: 0 !important;
+    border-radius: 0 !important;
+  }
+
+.dropdown-content a:hover {
+    padding: 8px 16px !important;
+    background: #ffffff !important;
+}
+
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
 
 header {
     margin: auto;
@@ -126,34 +159,7 @@ ul {
     margin-top: 1.5rem;
     padding: 16px 48px;
     color: #131313;
-} 
-
-/*
-.subheader table {
-    margin: auto;
-    width: 1168px;
 }
-
-.subheader a:hover {
-    background: #FFD164;
-    border-radius: 8px;
-    padding: 8px;
-}
-
-.subheader--a__active {
-    background: #FFD164;
-    border-radius: 8px;
-    padding: 8px;
-}
-
-.subheader--left a {
-    margin-right: 16px;
-}
-
-.subheader--right a {
-    margin-left: 16px;
-}
-*/
 
 /* sections */
 
@@ -199,22 +205,8 @@ section img {
     max-width: 1400px;
 }
 
-/* input */ 
-/* input[type=radio] {
-    -webkit-appearance: none;
-    border: 2px solid #dcdcdc;
-    padding: 6px;
-    border-radius: 100%;
-}
-
-input[type=radio]:checked {
-    border: 4px solid #FFD164;
-    background: white;
-    padding: 4px;
-} */
-
 /* footer */
-footer .col-md-6 {
+.footer--social {
     text-align: right !important;
 }
 
@@ -238,6 +230,12 @@ footer .col-md-6 {
     display: none;
 }
 
+/* header delivery */
+#townDelivery, #MPPrice, #KEPrice, #OtherPrice {
+    background: #ffd14a; display: block; width: max-content; display: none;
+}   
+
+
 @media only screen and (max-width: 900px) {
     h1,h2,h3,h4,h5,h6 {line-height: 1.0;}
     h5 {font-size: 20px;}
@@ -249,6 +247,11 @@ footer .col-md-6 {
     header {display: none !important;}
     .subheader {display: none;}
     button {width: 100%;padding: 16px !important;}
+
+    /* header delivery */
+    #townDelivery--mobile, #MPPrice--mobile, #KEPrice--mobile, #OtherPrice--mobile {
+        background: #ffd14a; display: block; width: max-content; display: none;
+    }
 
      /* hero-image */
      .hero-image {
@@ -318,6 +321,7 @@ footer .col-md-6 {
         content: url(img/svg/geo.svg);
         position: absolute;
         left: 16px;
+        transform: translateY(50%);
     }
 
     .mobile--overlay {
@@ -336,11 +340,36 @@ footer .col-md-6 {
     .mobile--overlay-content {
         display: block;
         position: relative;
-        top: 25%;
+        top: 0%;
+        left: 4%;
         width: 100%;
-        text-align: center;
         margin-top: 30px;
     }
+
+    .mobile--overylay__add a {
+        font-size: 18px !important;
+    }
+
+    .mobile--overylay__add p {
+        font-size: 18px !important;
+        color: #949494;
+        text-decoration: underline;
+    }
+
+    .mobile--overylay__add {
+        margin-bottom: 2rem;
+    }
+
+    .mobile--overlay__main a {
+        font-size: 18px !important;
+    }
+
+    .mobile--overlay__main p {
+        font-size: 18px !important;
+        color: #949494;
+        text-decoration: underline;
+    }
+
     
     .mobile--overlay a {
         padding: 8px;
@@ -357,9 +386,9 @@ footer .col-md-6 {
       
       .mobile--overlay .closebtn {
         position: absolute;
-        top: 20px;
-        right: 45px;
-        font-size: 60px;
+        top: 16px;
+        right: 16px;
+        z-index: 222;
       }
 
     /* footer */
