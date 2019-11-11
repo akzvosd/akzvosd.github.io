@@ -32,10 +32,6 @@
   }
 
   .modal img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     border: 24px solid white;
   }
 
@@ -48,7 +44,7 @@
   .modal small {
       color: white;
       z-index: 1;
-      font-size: x-large
+      font-size: x-large;
   }
 
 main {
@@ -57,6 +53,10 @@ main {
 
 h4 {
     margin-bottom: 16px !important;
+}
+
+.image--baget__mobile {
+    display: none;
 }
 
 @media only screen and (max-width: 900px) {
@@ -69,5 +69,11 @@ h4 {
     main h1 {
         margin-bottom: 0px !important;
         margin-top: 32px !important;
+    }
+    .image--baget {
+        display: none;
+    }
+    .image--baget__mobile {
+        display: block;
     }
 }
