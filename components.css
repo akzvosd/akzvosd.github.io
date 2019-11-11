@@ -10,7 +10,7 @@ h1,h2,h3,h4,h5,h6{font-family:"Roboto",Arial,sans-serif;font-weight:400;margin:8
 h3 {font-weight: 600;}
 hr{border:0;border-top:1px solid #eee;margin:20px 0}
 small {font-size: 14px}
-p{margin: 8px 0;}
+p{margin: 8px 0;} .x-large {font-size: x-large}
 figcaption {margin-top: 8px;}
 footer {background: #F6F6F6; padding: 56px 0 72px 0; box-shadow: inset 0px 8px 16px #dcdcdc;} footer a {display: block; line-height: 1.7;} footer a:hover {text-decoration: underline;} footer .col-md-3 {padding-left: 0 !important}
 hr{border: 1px solid black}
@@ -251,6 +251,7 @@ section img {
     .subheader {display: none;}
     button {width: 100%;padding: 16px !important;}
     .text--yellow {width: 100%;}
+    .x-large {font-size: 1rem;}
 
     /* header delivery */
     #townDelivery--mobile, #MPPrice--mobile, #KEPrice--mobile, #OtherPrice--mobile {

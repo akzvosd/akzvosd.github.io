@@ -7,7 +7,7 @@ main .col-md-3 {
 }
 
 main {
-    padding: 120px 0 136px 0;
+    padding: 120px 0 72px 0;
     max-width: 1400px;
 }
 
@@ -20,7 +20,7 @@ main {
         padding-left: 16px;
         padding-right: 16px;
         padding-top: 40px;
-        padding-bottom: 120px;
+        padding-bottom: 72px;
     }
 
     main .col-md-3 {
