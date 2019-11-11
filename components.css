@@ -12,7 +12,7 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 small {font-size: 14px}
 p{margin: 8px 0;}
 figcaption {margin-top: 8px;}
-footer {background: #F6F6F6; padding: 56px 0 72px 0; box-shadow: inset 0px 8px 16px #dcdcdc;} footer a {display: block; line-height: 1.7;} footer a:hover {text-decoration: underline;}
+footer {background: #F6F6F6; padding: 56px 0 72px 0; box-shadow: inset 0px 8px 16px #dcdcdc;} footer a {display: block; line-height: 1.7;} footer a:hover {text-decoration: underline;} footer .col-md-3 {padding-left: 0 !important}
 hr{border: 1px solid black}
 /* images */
 .image{max-width:100%;height:auto;}

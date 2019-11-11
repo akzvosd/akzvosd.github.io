@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- geo дописать условие по бесплатной доставке -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){ 
+        ymaps.ready(function(){ 
+        var geolocation = ymaps.geolocation; 
+        $('#tow').html(geolocation.city); 
+        $('#mobile--town').html(geolocation.city); 
+        if (geolocation.city == 'Санкт-Петербург') {
+            document.getElementById("townDelivery").style.display = "block";
+            document.getElementById("townDelivery--mobile").style.display = "block";
+        }
+        else if (geolocation.city == 'Великий Новгород') {
+            document.getElementById("townDelivery").style.display = "block";
+            document.getElementById("townDelivery--mobile").style.display = "block";
+        }
+        else if (geolocation.city == 'Москва') {
+            document.getElementById("MPPrice").style.display = "block";
+            document.getElementById("MPPrice--mobile").style.display = "block";
+        }
+        else if (geolocation.city == 'Псков') {
+            document.getElementById("MPPrice").style.display = "block";
+            document.getElementById("MPPrice--mobile").style.display = "block";
+        }
+        else if (geolocation.city == 'Краснодар') {
+            document.getElementById("KEPrice").style.display = "block";
+            document.getElementById("KEe--mobile").style.display = "block";
+        }
+        else if (geolocation.city == 'Екатеринбург') {
+            document.getElementById("KEPrice").style.display = "block";
+            document.getElementById("KEe--mobile").style.display = "block";
+        }
+        else {
+            document.getElementById("OtherPrice").style.display = "block";
+            document.getElementById("OtherPrice--mobile").style.display = "block";
+        }
+        }); 
+        }); 
+    </script>
+    <!-- geo -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="bootstrap-grid.css">
+    <link rel="stylesheet" href="restoration.css">
+    <link rel="stylesheet" href="cash.css">
+    <link rel="stylesheet" href="contacs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Imagine — Реставрация фото</title>
+</head>
+<body>
+    <div class="mobile--geo">
+        <span id="mobile--town"></span>
+            <div id="townDelivery--mobile">Доставка бесплатная</div>
+            <div id="MPPrice--mobile">Доставка: 450p</div>
+            <div id="KEPrice--mobile">Доставка: 1000p</div>
+            <div id="OtherPrice--mobile">Доставка от 450p</div>
+    </div>
+    <div class="mobile--menu" onclick="openNav()">
+                <a href="#" class="mobile--menu__icon"></a>
+    </div>
+    <div id="myNav" class="mobile--overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="mobile--overlay-content">
+                <div class="mobile--overylay__add">
+                    <p>Доп. услуги</p>
+                    <a href="restoration.html">Реставрация старых фото</a>
+                    <a href="retush.html">Ретушь</a>
+                    <a href="sertifikat.html">Сертификаты</a>
+                    <a href="baget.html">Багет</a>
+                    <a href="package.html">Упаковка</a>
+                </div> 
+                <div class="mobile--overlay__main">
+                    <p>Основное</p>
+                    <a href="index.html">Портреты</a>
+                    <a href="reproductions.html">Репродукции</a>
+                    <a href="panno.html">Панно</a>
+                    <a href="foto.html">Фото на холсте</a>
+                </div>
+            </div>
+    </div>
+    
+    <header class="row align-items-center">
+            <div class="col-md-auto"><img src="img/logotype.png" alt="Логотип"></div>
+            <div class="col" style="flex-grow: 0;">
+                <img src="img/svg/geo.svg" alt="Гео">  
+            </div>
+            <div class="col" style="padding-left: 0px;">
+                <span id="tow" class="townGeo"></span> 
+                <span id="townDelivery">Доставка бесплатная</span>
+                <span id="MPPrice">Доставка: 450p</span>
+                <span id="KEPrice">Доставка: 1000p</span>
+                <span id="OtherPrice">Доставка от 450p</span>
+            </div>
+            <div class="col" style="text-align: right;"><a  href="tel:+79082930097">+7 908 293-00-97</a></div>
+            <div class="col-md-auto" style="text-align: right;"><button class="btn line">Заказать звонок</button></div>
+    </header>
+    <div class="subheader" role="navigation" aria-label="Main">
+            <div class="row align-items-center">
+                <div class="col-md-6 subheader--left">
+                    <nav>
+                        <a href="index.html">Портреты</a>
+                        <a href="reproductions.html">Репродукции</a>
+                        <a href="panno.html">Панно</a>
+                        <a href="foto.html">Фото на холсте</a>
+                        <div class="dropdown">
+                            <a href="#" class="dropdown--button">Доп. услуги <i class="fa fa-caret-down"></i></a>
+                            <div class="dropdown-content">
+                                <a href="restoration.html">Реставрация старых фото</a>
+                                <a href="retush.html">Ретушь</a>
+                                <a href="sertifikat.html">Сертификаты</a>
+                                <a href="baget.html">Багет</a>
+                                <a href="package.html">Упаковка</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-md-6 subheader--right">
+                    <nav>
+                        <a href="price.html">Цены</a>
+                        <a href="cash.html">Оплата</a>
+                        <a href="delivery.html">Доставка</a>
+                        <a href="optom.html">Оптом</a>
+                        <a href="contacts.html" class="subheader--active">Контакты</a>
+                    </nav>
+                </div>
+            </div>
+    </div>
+
+    <main class="contacts">
+        <h1>Контакты</h1>
+        <p>
+            Телефон приёма заказов: <a href="tel:+79082930097">8 908 293-00-97</a>
+        </p>
+        <p>
+            Основная почта: <a href="mailto:imagine1971@yandex.ru?Subject=Imagine,Привет">imagine1971@yandex.ru</a>
+        </p>
+        <p>
+            Почта директора: <a href="mailto:z-imagine@yandex.ru?Subject=Imagine,Привет">z-imagine@yandex.ru</a>
+        </p>
+        <p>
+            Группа ВКонакте: <a href="http://vk.com/imagine71">vk.com/imagine71</a>
+        </p>
+        <p>
+            Страничка в Инстаграм: <a href="http://instagram.com/imagine.1971">instagram.com/imagine.1971</a>
+        </p>
+    </main> 
+
+    <footer>
+        <section class="section--wide">
+            <div class="row">
+                <div class="col-md-3">
+                    <a class="text--bold" href="#">Картины</a>
+                    <a href="index.html">Портреты по фото</a>
+                    <a href="foto.html">Печать фото на холсте</a>
+                    <a href="reproductions.html">Репродукции</a>
+                    <a href="panno.html">Модульное панно</p>
+                </div>
+                <div class="col-md-3">
+                    <a class="text--bold" href="#">Доп. услуги</a>
+                    <a href="restoration.html">Реставрация старых фото</a>
+                    <a href="retush.html">Ретушь</a>
+                    <a href="sertifikat.html">Сертификаты</a>
+                    <a href="gift.html">Идеи подарков</a>
+                    <a href="baget.html">Багет</a>
+                    <a href="package.html">Упаковка</a>
+                </div>
+                <div class="col-md-3">
+                    <a class="text--bold">Остальное</a>
+                    <a href="price.html">Цены</a>
+                    <a href="cash.html">Оплата</a>
+                    <a href="delivery.html">Доставка</a>
+                    <a href="optom.html">Оптом</a>
+                    <a href="contacts.html">Контакты</a>
+                    <a href="oferta.html">Публичная оферта</a>
+                    <a href="props.html">Реквизиты</a>
+                </div>
+                <div class="col-md-3 footer--social">
+                    <a href="https://vk.com/imagine71" style="display: inline;"><img src="img/svg/vksquare.svg" alt="Логотип ВК" width="48px"></a>
+                    <a href="https://www.instagram.com/imagine.1971/" style="display: inline;"><img src="img/svg/instagramsquare.svg" alt="Логотип ВК" width="48px"></a>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
