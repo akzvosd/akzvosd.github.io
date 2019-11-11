@@ -48,7 +48,7 @@
     <link rel="stylesheet" href="components.css">
     <link rel="stylesheet" href="bootstrap-grid.css">
     <link rel="stylesheet" href="restoration.css">
-    <link rel="stylesheet" href="repro.css">
+    <link rel="stylesheet" href="cash.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Imagine — Реставрация фото</title>
 </head>
@@ -77,7 +77,7 @@
                 <div class="mobile--overlay__main">
                     <p>Основное</p>
                     <a href="index.html">Портреты</a>
-                    <a href="reproductions.html" class="subheader--active">Репродукции</a>
+                    <a href="reproductions.html">Репродукции</a>
                     <a href="panno.html">Панно</a>
                     <a href="foto.html">Фото на холсте</a>
                 </div>
@@ -108,9 +108,9 @@
                         <a href="panno.html">Панно</a>
                         <a href="foto.html">Фото на холсте</a>
                         <div class="dropdown">
-                            <a href="#" class="dropdown--button subheader--active">Доп. услуги <i class="fa fa-caret-down"></i></a>
+                            <a href="#" class="dropdown--button">Доп. услуги <i class="fa fa-caret-down"></i></a>
                             <div class="dropdown-content">
-                                <a href="restoration.html" class="dropdown-content--active">Реставрация старых фото</a>
+                                <a href="restoration.html">Реставрация старых фото</a>
                                 <a href="retush.html">Ретушь</a>
                                 <a href="sertifikat.html">Сертификаты</a>
                                 <a href="baget.html">Багет</a>
@@ -123,7 +123,7 @@
                     <nav>
                         <a href="price.html">Цены</a>
                         <a href="cash.html">Оплата</a>
-                        <a href="delivery.html">Доставка</a>
+                        <a href="delivery.html" class="subheader--active">Доставка</a>
                         <a href="optom.html">Оптом</a>
                         <a href="contacts.html">Контакты</a>
                     </nav>
@@ -132,85 +132,27 @@
     </div>
 
     <main>
-        <h1>Реставрация старых фотографий</h1>
-        <h4>Восстановим поврежденную и даже порванную фотографию</h4>
-        <p>— Уберём трещины, удалим шумы и прочие дефекты</p>
-        <p>— Дорисуем недостающие части лица и фона</p>
-        <p>— Вернём яркие и контрастные цвета выцветшей фотографии</p>
-        <p>— Раскрасим чёрно-белую фотографию</p>
-        <a href="#form"><button class="btn line">Отправить фотографию</button></a>   
+        <h1>Доставка</h1>
+        <h4>На время доставки картин влияет несколько факторов:</h4>
+        <div class="row">
+            <div class="col-md-3" style="padding-right: 48px; paddding-left: 0;">
+                <h5 class="text--bold">Печать на холсте</h5>
+                <p>Данная работа выполняется по указанным срокам. Если сроки будут увеличены, то менеджер Вам сообщит.</p>
+            </div>
+            <div class="col-md-3" style="padding-right: 48px;">
+                <h5 class="text--bold">Художественная обработка</h5>
+                <p>Художественная обработка может увеличивать срок изготовления картины в зависимости от сложности работы. Например, портреты в стилях создаются на 2 дня дольше.</p>
+            </div>
+            <div class="col-md-3" style="padding-right: 48px;">
+                <h5 class="text--bold">Багет</h5>
+                <p>Оформление в багет увеличивает время выполнения работы.</p>
+            </div>
+            <div class="col-md-3" style="padding-right: 48px;">
+                <h5 class="text--bold">Город</h5>
+                <p>Ваше местоположение также влияет на сроки доставки.</p>
+            </div>
+        </div>
     </main>
-
-    <section>
-        <h3 style="margin-bottom: 32px;">Примеры работ</h3>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="restoration--image image--shadow" style="background: url(img/restoration/do_1.jpg);">
-                    <span class="restoration--image__text">До</span>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="restoration--image image--shadow" style="background: url(img/restoration/posle_1.jpg);">
-                    <span class="restoration--image__text">После</span>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-                <div class="col-md-6">
-                    <div class="restoration--image image--shadow" style="background: url(img/restoration/do_2.jpg);">
-                        <span class="restoration--image__text">До</span>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="restoration--image image--shadow" style="background: url(img/restoration/posle_2.jpg);">
-                        <span class="restoration--image__text">После</span>
-                    </div>
-                </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="restoration--image image--shadow" style="background: url(img/restoration/do_3.jpg);">
-                    <span class="restoration--image__text">До</span>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="restoration--image image--shadow" style="background: url(img/restoration/posle_3.jpg);">
-                    <span class="restoration--image__text">После</span>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section class="section--bg form" id="form">
-            <section>   
-            <h3 class="text--center repro--h3">Отправить фото на реставрацию</h3>
-            
-            <div id="photo" class="tabcontent" style="display: block;">
-                <form action="/action_page.php" class="form--repro">
-                    <div class="form--repro__item">
-                        <label for="file--upload" class="file--label">
-                            <img src="img/svg/photo.svg" alt="Загрузить" style="width: 32px;">
-                            Загрузить изображения    
-                        </label>
-                        <input type="file" id="file--upload" multiple="multiple" name="fileToUpload" id="fileToUpload" accept=".jpg, .jpeg, .png"  >
-                    </div>
-                    <div class="form--repro__item">
-                        <label for="name">Как вас зовут</label>
-                        <input type="text" id="name" name="user_name" placeholder="Вася" required>
-                    </div>
-                    <div class="form--repro__item">
-                        <label for="tel">Номер телефона</label>
-                        <input type="tel" id="tel" name="tel" placeholder="+7 900 100 20 10" required>
-                    </div>
-                    <div class="form--repro__item">
-                        <label for="email">E-mail</label>
-                        <input type="email" id="email" name="email" placeholder="imagine@mail.ru" required>
-                    </div>
-                    <input type="submit" class="btn alternative" style="box-shadow: 0 0 0;" value="Отправить заявку">
-                </form>
-            </div>
-        </section>
-        </section>
 
     <footer>
         <section class="section--wide">
