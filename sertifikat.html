@@ -47,7 +47,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="components.css">
     <link rel="stylesheet" href="bootstrap-grid.css">
-    <link rel="stylesheet" href="restoration.css">
+    <link rel="stylesheet" href="sertifikat.css">
     <link rel="stylesheet" href="repro.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Imagine — Сертификаты</title>
@@ -130,9 +130,18 @@
             </div>
     </div>
 
-    <main>
-        <h1>Подарочные сертификаты</h1>
-    </main>
+    <main>  
+            <!-- hero -->
+            <div class="hero-image sertifikat">
+                    <div class="hero-text">
+                            <div class="hero-text__list">
+                                <h3>Подарочные сертификаты</h3>
+                                <h5>Порадуйте близких и родных</h5>
+                                <a href="#form"><button class="btn primary">Купить сертификат</button></a>
+                            </div>
+                    </div>
+            </div>
+</main>
 
     <section>
         <div class="row">
@@ -178,16 +187,18 @@
     
     <section class="section--bg form" id="form">
             <section>   
-            <h3 class="text--center repro--h3">Отправить фото на ретушь</h3>
+            <h3 class="text--center repro--h3">Купить сертификат</h3>
             
             <div id="photo" class="tabcontent" style="display: block;">
                 <form action="/action_page.php" class="form--repro">
                     <div class="form--repro__item">
-                        <label for="file--upload" class="file--label">
-                            <img src="img/svg/photo.svg" alt="Загрузить" style="width: 32px;">
-                            Загрузить изображения    
-                        </label>
-                        <input type="file" id="file--upload" multiple="multiple" name="fileToUpload" id="fileToUpload" accept=".jpg, .jpeg, .png"  >
+                        <label for="sertikifat--select">Выберите сертифкат</label>
+                        <select name="sertikifat--select" id="sertikifat--select">
+                            <option value="1000">₽1000</option>
+                            <option value="2000">₽2000</option>
+                            <option value="3000">₽3000</option>
+                            <option value="5000">₽5000</option>
+                        </select>
                     </div>
                     <div class="form--repro__item">
                         <label for="name">Как вас зовут</label>

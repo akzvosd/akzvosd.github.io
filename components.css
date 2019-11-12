@@ -144,15 +144,18 @@ ul {
   }
 
 .hero-text {
-    text-align: left;
     position: absolute;
     top: 49%;
-    left: 35%;
+    left: 29%;
     transform: translate(-50%, -50%);
     color: white;
 }
 
-.hero-text__list { margin-top: 5rem;}
+.hero-text h3 {
+    font-weight: 600;
+}
+
+.hero-text__list {margin-top: 5rem;}
 
 .hero-text p {
     margin-top: 1rem;
