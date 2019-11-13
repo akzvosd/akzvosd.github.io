@@ -1,6 +1,7 @@
 .popart {
     background-image: url("img/examples/example7_hero.jpg");
     background-size: cover;
+    background-position: left;
 }
 
 .hero-text__list {
@@ -14,18 +15,58 @@
 
 .style--container {
     margin: auto;
+    margin-top: 32px;
+}
+
+.popart--image {
+    height: 360px;
+    object-fit: cover;
+}
+
+.section--bg {
+    background: #6394FF;
+    color: white;
+    overflow: hidden;
+}
+
+.offer--card {
+    background: white;
+    color: #131313;
+    border-radius: 1rem;
+    padding-bottom: 16px;
+    box-shadow: 0px 0px 16px white;
+}
+
+.offer--image {
+    height: 320px;
+    object-fit: cover;
+}
+
+.section--bg {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.offer--text {
+    margin-top: 16px;
+    padding-left: 32px;
 }
 
 @media only screen and (max-width: 900px) {
     .popart {
         background-image: url("img/examples/example7_hero.jpg");
         background-size: cover;
-        background-position-x: 78%;
+        background-position-x: 20%;
         margin-bottom: 360px;
     }
 
-    .hero-text {
+    .hero-text--style {
         top: 50%;
         z-index: 2;
     } 
+
+    .style--slide2 {
+        display: block;
+        background-position: center;
+    }
 }

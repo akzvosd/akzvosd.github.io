@@ -152,6 +152,18 @@ ul {
     color: white;
 }
 
+.hero-text--style {
+    position: absolute;
+    top: 49%;
+    right: 8%;
+    transform: translate(0%, -50%);
+    color: white;
+}
+
+.hero-text--style h3 {
+    font-weight: 600;
+}
+
 .hero-text h3 {
     font-weight: 600;
 }
@@ -278,6 +290,16 @@ section img {
         transform: translate(0, 0);
         color: white;
         }
+        .hero-text--style {
+            text-align: left;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            transform: translate(0, 0);
+            color: white;
+            }
         .hero-text img {
             position: absolute;
             width: 100%;
