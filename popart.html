@@ -46,11 +46,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="slider.css">
     <link rel="stylesheet" href="bootstrap-grid.css">
-    <link rel="stylesheet" href="restoration.css">
-    <link rel="stylesheet" href="baget.css">
+    <link rel="stylesheet" href="popart.css">
+    <link rel="stylesheet" href="repro.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Imagine — Упаковка</title>
+    <title>Imagine — Pop Art</title>
 </head>
 <body>
     <div class="mobile--geo">
@@ -69,15 +70,16 @@
                 <div class="mobile--overylay__add">
                     <p>Доп. услуги</p>
                     <a href="restoration.html">Реставрация старых фото</a>
-                    <a href="retush.html">Ретушь</a>
+                    <a href="retush.hmtl">Ретушь</a>
                     <a href="sertifikat.html">Сертификаты</a>
+                    <a href="gift.html">Идеи подарков</a>
                     <a href="baget.html">Багет</a>
-                    <a href="package.html" class="subheader--active">Упаковка</a>
+                    <a href="package.html">Упаковка</a>
                 </div> 
                 <div class="mobile--overlay__main">
                     <p>Основное</p>
                     <a href="index.html">Портреты</a>
-                    <a href="reproductions.html">Репродукции</a>
+                    <a href="reproductions.html" class="subheader--active">Репродукции</a>
                     <a href="panno.html">Панно</a>
                     <a href="foto.html">Фото на холсте</a>
                 </div>
@@ -108,19 +110,20 @@
                         <a href="panno.html">Панно</a>
                         <a href="foto.html">Фото на холсте</a>
                         <div class="dropdown">
-                            <a href="#" class="dropdown--button subheader--active">Доп. услуги <i class="fa fa-caret-down"></i></a>
+                            <a href="#" class="dropdown--button">Доп. услуги <i class="fa fa-caret-down"></i></a>
                             <div class="dropdown-content">
                                 <a href="restoration.html">Реставрация старых фото</a>
                                 <a href="retush.html">Ретушь</a>
                                 <a href="sertifikat.html">Сертификаты</a>
                                 <a href="baget.html">Багет</a>
-                                <a href="package.html" class="dropdown-content--active">Упаковка</a>
+                                <a href="package.html">Упаковка</a>
                             </div>
                         </div>
                     </nav>
                 </div>
                 <div class="col-md-6 subheader--right">
                     <nav>
+                        <a href="price.html">Цены</a>
                         <a href="cash.html">Оплата</a>
                         <a href="delivery.html">Доставка</a>
                         <a href="optom.html">Оптом</a>
@@ -129,46 +132,99 @@
                 </div>
             </div>
     </div>
-
-    <main>
-        <h1>Подарочная упаковка</h1>
-        <h5>Преподнесите подарок в красивой упаковке</h5>
+        
+    <main>  
+    <!-- hero -->
+        <div class="hero-image popart">
+            <div class="hero-text">
+                    <div class="hero-text__list">
+                        <h3>Портрет в стиле POP ART</h3>
+                        <small>Вы заплатите за картину только в том случае, если она вам понравится</small>
+                        <h5>— a</h5>
+                        <h5>— b</h5>
+                        <h5>— c</h5>
+                        <button class="btn primary">Сделать заказ</button>
+                    </div>
+            </div>
+        </div>
     </main>
 
     <section>
-        <h4 class="text--yellow" style="margin: 8px 0; !important">Крафт</h4>
-        <div class="row baget--row">
+        calc
+    </section>
+
+    <section class="text--center">
+        До и После
+        <div class="style--container">
+            <div class="style--slide1" style="background-image: url(img/examples/example7.jpg);"></div>
+            <div class="style--slide2" style="background-image: url(img/examples/example7_X.jpg);">
+                <div class="style--line"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="text--center">
+        Галерея
+        <div class="row">
             <div class="col-md-4">
-                <img src="img/package/red-bant.png" alt="Красный бант" class="package--bant">
-                <img src="img/package/package_bluepink.jpg"
-                onclick="openModal(this.src, 'Голубой-Розовый', 'Синий бант',306)" class="image image--baget">
-                <img src="img/package/package_bluepink.jpg" class="image image--baget__mobile">
-                <p class="text--bold">Голубой-Розовый</p>
-                <small> 
-                    <!-- <svg height="16" width="16">
-                        <circle cx="8" cy="8" r="8" fill="red" />
-                    </svg><br>Упаковывается с красным бантом -->
-                </small>
-                <p>₽306</p>
+                <img src="img/examples/example7.jpg" alt="Портрет в стиле Pop Art #1" class="image">
             </div>
             <div class="col-md-4">
-                    <img src="img/package/blue-bant.png" alt="Красный бант" class="package--bant">
-                <img src="img/package/package_flowers.jpg" onclick="openModal(this.src, 'Премиум - Тёмное золото', 'Ширина 5.8 см / Высота 3.7 см', 2400)" class="image image--baget">
-                <img src="img/package/package_flowers.jpg" class="image image--baget__mobile">
-                <p class="text--bold">Цветы</p>
-                <small>Ширина 5,8 см / Высота 3,7 см</small>
-                <p>₽2,400</p>
+                <img src="img/examples/example7.jpg" alt="Портрет в стиле Pop Art #1" class="image">
             </div>
             <div class="col-md-4">
-                <img src="img/package/package_glasses.jpg" onclick="openModal(this.src, 'Премиум - Белый с золотом', 'Ширина 6 см / Высота 4.5 см', 2000)" class="image image--baget">
-                <img src="img/package/package_glasses.jpg" class="image image--baget__mobile">
-                <p class="text--bold">Премиум (Белый с золотом)</p>
-                <small>Ширина 6 см / Высота 4,5 см</small>
-                <p>₽2,000</p>
+                <img src="img/examples/example7.jpg" alt="Портрет в стиле Pop Art #1" class="image">
+            </div>
+        </div>
+    </section>
+
+    <section class="section--bg text--center">
+        Вам также могут понравиться 
+        <section>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="img/examples/example7.jpg" alt="Портрет в стиле Pop Art #1" class="image">
+                </div>
+                <div class="col-md-4">
+                    <img src="img/examples/example7.jpg" alt="Портрет в стиле Pop Art #1" class="image">
+                </div>
+                <div class="col-md-4">
+                    <img src="img/examples/example7.jpg" alt="Портрет в стиле Pop Art #1" class="image">
                 </div>
             </div>
-    <div class="modal" onclick="closeModal()">
+        </section>
     </section>
+
+    <section class="section--bg form" id="form">
+            <section>   
+            <h3 class="text--center repro--h3">Заказать печать вашей фотографии на холсте</h3>
+            
+            <div id="photo" class="tabcontent" style="display: block;">
+                <form action="/action_page.php" class="form--repro">
+                    <div class="form--repro__item">
+                        <label for="file--upload" class="file--label">
+                            <img src="img/svg/photo.svg" alt="Загрузить" style="width: 32px;">
+                            Загрузить изображения    
+                        </label>
+                        <input type="file" id="file--upload" multiple="multiple" name="fileToUpload" id="fileToUpload" accept=".jpg, .jpeg, .png"  >
+                    </div>
+                    <div class="form--repro__item">
+                        <label for="name">Как вас зовут</label>
+                        <input type="text" id="name" name="user_name" placeholder="Вася" required>
+                    </div>
+                    <div class="form--repro__item">
+                        <label for="tel">Номер телефона</label>
+                        <input type="tel" id="tel" name="tel" placeholder="+7 900 100 20 10" required>
+                    </div>
+                    <div class="form--repro__item">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="imagine@mail.ru" required>
+                    </div>
+                    <input type="submit" class="btn alternative" style="box-shadow: 0 0 0;" value="Отправить заявку">
+                </form>
+            </div>
+        </section>
+        </section>
 
     <footer>
         <section class="section--wide">
@@ -191,6 +247,7 @@
                 </div>
                 <div class="col-md-3">
                     <a class="text--bold">Остальное</a>
+                    <a href="price.html">Цены</a>
                     <a href="cash.html">Оплата</a>
                     <a href="delivery.html">Доставка</a>
                     <a href="optom.html">Оптом</a>
@@ -206,19 +263,10 @@
         </section>
     </footer>
     <script src="js/script.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/swiper.js"></script>
     <script>
-            var modal = document.querySelector('.modal');
-       
-            function openModal(imgSrc, name, size, price) {
-              var html = '<img src="' + imgSrc + '"/><p>' + name + '</p><small>'+ size +'</small><p>' + price + "₽"+'</p>';
-       
-              modal.innerHTML = html;
-              modal.style.display = 'inline-block';
-            }
-       
-            function closeModal() {
-              modal.style.display = 'none';
-            }
+        var swiper = new Swiper('.swiper-container');
     </script>
 </body>
 </html>

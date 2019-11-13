@@ -19,47 +19,6 @@
     margin-bottom: 8px;
 }
 
-.style--container {
-    position: relative;
-    max-width: 649px;
-    min-height: 360px;
-}
-
-.style--slide1,
-.style--slide2 {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-size: 800px auto;
-}
-
-.style--slide1 {
-    background-color: #FFD164;
-    background-position: center left;
-    background-size: cover;
-    border-radius: 8px;
-}
-
-.style--slide2 {
-    background-color: #6394FF;
-    background-position: center right;
-    background-size: cover; 
-    border-radius: 8px;
-    width: 20%;
-    right: 0;
-}
-
-.style--slide2 .style--line {
-    position: absolute;
-    width: 8px;
-    height: 100%;
-    background: #fff;
-    left: calc(-10px / 2);
-    -webkit-box-shadow: 5px 0px 8px -3px rgba(0,0,0,0.46);
-    -moz-box-shadow: 5px 0px 8px -3px rgba(0,0,0,0.46);
-    box-shadow: 5px 0px 8px -3px rgba(0,0,0,0.46);
-}
-
 .style--card__input {
     padding-top: 8px;
     padding-bottom: 8px;
@@ -203,11 +162,7 @@
      .style--card button {margin-top: 16px;}
      .style--card h5 {margin-top: 16px;font-size: 36px;}
      .style--other__mobile {font-size: 20px !important;} 
-     .style--slide1 {background-position: center;}   
-     .style--slide2 {display: none;}
- 
-     
- 
+
      /* gift */
      .gift--bg {
          background: url(img/bg-texture_mobile.jpg);

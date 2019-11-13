@@ -4,17 +4,26 @@
 .baget--row {
     margin-bottom: 120px !important;
     border: 1px solid #dcdcdc;
-    padding: 16px;
+    padding: 16px 0px;
     border-radius: 8px;
 }
 .baget--row {
     cursor: pointer;
 }
+.row .col-md-4 {
+    padding-right: 0;
+}
 
 .text--yellow {
     width: 100% !important;
 }
-
+.package--bant {
+    position: absolute; 
+    width: 64px;
+    top: 16px;
+    left: 32px;
+    background: white;
+}
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -75,5 +84,8 @@ h4 {
     }
     .image--baget__mobile {
         display: block;
+    }
+    .baget--row {
+        padding: 16px;
     }
 }

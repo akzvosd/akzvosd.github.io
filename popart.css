@@ -1,0 +1,31 @@
+.popart {
+    background-image: url("img/examples/example7_hero.jpg");
+    background-size: cover;
+}
+
+.hero-text__list {
+    margin: 0;
+    background: #fff;
+    border: 8px solid #FFD164;
+    border-radius: 16px;
+    color: #131313;
+    padding: 24px;
+} 
+
+.style--container {
+    margin: auto;
+}
+
+@media only screen and (max-width: 900px) {
+    .popart {
+        background-image: url("img/examples/example7_hero.jpg");
+        background-size: cover;
+        background-position-x: 78%;
+        margin-bottom: 360px;
+    }
+
+    .hero-text {
+        top: 50%;
+        z-index: 2;
+    } 
+}
