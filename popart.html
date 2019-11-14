@@ -50,6 +50,8 @@
     <link rel="stylesheet" href="bootstrap-grid.css">
     <link rel="stylesheet" href="popart.css">
     <link rel="stylesheet" href="repro.css">
+    <link rel="stylesheet" href="review.css">
+    <link rel="stylesheet" href="accordion.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Imagine — Pop Art</title>
 </head>
@@ -148,11 +150,11 @@
             </div>
         </div>
     </main>
-
-    <section class="animate">
+<!-- калькулятор 
+    <section>
         calc
-    </section>
-
+    </section> -->
+<!-- до и после -->
     <section class="text--center">
         <h3 class="text--bold">До и После</h3>
         <div class="style--container">
@@ -162,19 +164,19 @@
             </div>
         </div>
         <div class="style--container">
-            <div class="style--slide1" style="background-image: url(img/popart.jpg);"></div>
-            <div class="style--slide2" style="background-image: url(img/popart_X.jpg);">
+            <div class="style--slide1" style="background-image: url(img/popart/popart.jpg);"></div>
+            <div class="style--slide2" style="background-image: url(img/popart/popart_X.jpg);">
                 <div class="style--line"></div>
             </div>
         </div>
         <div class="style--container">
-            <div class="style--slide1" style="background-image: url(img/popart1.jpg);"></div>
-                <div class="style--slide2" style="background-image: url(img/popart1_x.jpg);">
+            <div class="style--slide1" style="background-image: url(img/popart/popart1.jpg);"></div>
+                <div class="style--slide2" style="background-image: url(img/popart/popart1_x.jpg);">
                 <div class="style--line"></div>
             </div>
         </div>
     </section>
-
+<!-- галерея -->
     <section class="section--wide text--center">
         <h3 class="text--bold">Галерея</h3>
         <div class="row">
@@ -199,44 +201,130 @@
                 <img src="img/popart/popart7.jpg" alt="Портрет в стиле Pop Art #1" class="image popart--image">
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="img/popart/popart3.jpg" alt="Портрет в стиле Pop Art #1" class="image popart--image">
+            </div>
+            <div class="col-md-4">
+                <img src="img/popart/popart2.jpg" alt="Портрет в стиле Pop Art #1" class="image popart--image">
+            </div>
+            <div class="col-md-4">
+                <img src="img/popart/popart5.jpg" alt="Портрет в стиле Pop Art #1" class="image popart--image">
+            </div>
+        </div>
     </section>
-
+<!-- вам также могут понравится -->
     <section class="section--bg offer" style="margin-bottom: 0;">
         <section>
-        <h3 class="text--bold">Вам также могут понравиться </h3>
+        <h3 class="text--center">Вам также могут понравиться </h3>
              <div class="row">
                 <div class="col-md-4">
                     <div class="offer--card">
-                        <img src="img/examples/example7.jpg" alt="Портрет в стиле Pop Art #1" class="image offer--image">
+                        <img src="img/examples/example2.jpg" alt="Портрет в стиле Pop Art #1" class="image offer--image">
                         <div class="offer--text">
-                            <h5>POP ART</h5>
+                            <h5>Акварель</h5>
+                            <p>от 800 Р</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="offer--card">
+                        <img src="img/examples/example1.jpg" alt="Портрет в стиле Pop Art #1" class="image offer--image">
+                        <div class="offer--text">
+                            <h5>Dream Art</h5>
                             <p>от 1200 Р</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="offer--card">
-                        <img src="img/examples/example7.jpg" alt="Портрет в стиле Pop Art #1" class="image offer--image">
+                        <img src="img/examples/example.jpg" alt="Портрет в стиле Pop Art #1" class="image offer--image">
                         <div class="offer--text">
-                            <h5>POP ART</h5>
-                            <p>от 1200 Р</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="offer--card">
-                        <img src="img/examples/example7.jpg" alt="Портрет в стиле Pop Art #1" class="image offer--image">
-                        <div class="offer--text">
-                            <h5>POP ART</h5>
-                            <p>от 1200 Р</p>
+                            <h5>В образе</h5>
+                            <p>от 1500 Р</p>
                         </div>
                     </div>
                 </div>
             </div> 
         </section>
     </section>
+<!-- доп информация -->
+    <section class="information">
+        <h3 class="text--center">Дополнительная информация</h3>
+        <button class="accordion">Процесс работы</button>
+        <div class="panel">
+            <iframe width="100%" height="600px" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>  
+        </div>
+        
+        <button class="accordion">Качество и гарантии</button>
+        <div class="panel">
+            <h4 class="text--bold">Качество работы </h4>
+            <p>— Хлопковый холст высокого качества</p>
+            <p>— Дорогостоящее печатное оборудование </p>
+            <p>— Качественные чернила для максимальной цветопередачи и устойчивости к механическим повреждениям</p>
+            <p>— Подрамники из натуральной сосны</p>
+            <p><a href="optom.html" class="link">Подробнее</a></p>
+        </div>
+        
+        <button class="accordion">Отзывы</button>
+        <div class="panel">
+            <div class="review--card row align-items-center">
+                <img src="img/card_1.png" alt="Карточка_1" class="review--card__img col-md-4">
+                <div class="card--text col-md-8">   
+                    <p>Спасибо Вам большое за качественную работу в столь короткий срок, очень понравилось!</p>
+                    <small class="text--alt">Алёна Лаврентьева, Великий Новгород</small>
+                </div>    
+            </div>
+            <div class="review--card row align-items-center">
+                    <img src="img/card_2.png" alt="Карточка_1" class="review--card__img col-md-4">
+                    <div class="card--text col-md-8">   
+                        <p>Спасибо Вам большое за качественную работу в столь короткий срок, очень понравилось!</p>
+                        <small class="text--alt">Чумазый Лох, Великий Новгород</small>
+                    </div>    
+                </div>
+        </div>
 
-    <section class="section--bg form" id="form">
+        <button class="accordion">Доставка и самовывоз</button>
+        <div class="panel">
+            <h4 class="text--bold" style="margin-bottom: 16px;">Доставка в любой город России</h4>
+            <button class="btn line">Адреса фирменных отделов</button>
+            <button class="btn line" style="margin-left: 8px;">Подробнее о доставке</button>
+            
+            <h4 style="margin-top: 32px; margin-bottom: 16px;" class="text--bold">Точки самовывоза</h4>
+            <div class="row">
+                <div class="col-md-4">
+                    <figure>
+                        <img src="img/delivery--spb.png" alt="Точка в СПб" class="image">
+                        <figcaption>Санкт-Петербург, ТРК «ЛиговЪ», 2 этаж</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-4">
+                    <figure>
+                        <img src="img/delivery--vn.png" alt="Точка в Великом Новгороде" class="image">
+                        <figcaption>Великий Новгород, ТД «Русь», 1 этаж</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-4">
+                    <figure>
+                        <img src="img/delivery--psk.png" alt="Точка во Пскове" class="image">
+                        <figcaption>Псков, ТЦ «Максимус», 1 этаж</figcaption>
+                    </figure>
+                </div> 
+            </div>
+        </div>
+    </section>
+<!-- форма -->
+<script id="bx24_form_inline" data-skip-moving="true">
+        (function(w,d,u,b){w['Bitrix24FormObject']=b;w[b] = w[b] || function(){arguments[0].ref=u;
+                (w[b].forms=w[b].forms||[]).push(arguments[0])};
+                if(w[b]['forms']) return;
+                var s=d.createElement('script');s.async=1;s.src=u+'?'+(1*new Date());
+                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+        })(window,document,'https://b24-vrm86j.bitrix24.ru/bitrix/js/crm/form_loader.js','b24form');
+ 
+        b24form({"id":"7","lang":"ru","sec":"sz7slk","type":"inline"});
+</script>
+    <!-- <section class="section--bg form" id="form">
             <section>   
             <h3 class="text--center repro--h3">Заказать печать вашей фотографии на холсте</h3>
             
@@ -265,7 +353,7 @@
                 </form>
             </div>
         </section>
-        </section>
+    </section> -->
 
     <footer>
         <section class="section--wide">
@@ -303,11 +391,30 @@
             </div>
         </section>
     </footer>
+    <!-- menu -->
     <script src="js/script.js"></script>
     <script src="js/slider.js"></script>
+    <!-- swiper -->
     <script src="js/swiper.js"></script>
     <script>
         var swiper = new Swiper('.swiper-container');
+    </script>
+    <!-- accordion -->
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+            } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+            } 
+        });
+        }
     </script>
 </body>
 </html>

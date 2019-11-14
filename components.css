@@ -9,6 +9,7 @@ h1{font-size:76px}h2{font-size:56px}h3{font-size:42px}h4{font-size:32px}h5{font-
 h1,h2,h3,h4,h5,h6{font-family:"Roboto",Arial,sans-serif;font-weight:400;margin:8px 0}
 hr{border:0;border-top:1px solid #eee;margin:20px 0}
 small {font-size: 14px}
+.link {color: #6394FF; text-decoration: underline;}
 p{margin: 8px 0;} .x-large {font-size: x-large}
 figcaption {margin-top: 8px;}
 footer {background: #F6F6F6; padding: 56px 0 72px 0; box-shadow: inset 0px 8px 16px #dcdcdc;} footer a {display: block; line-height: 1.7;} footer a:hover {text-decoration: underline;} footer .col-md-3 {padding-left: 0 !important}
@@ -192,11 +193,6 @@ section {
     margin: auto;
     margin-top: 120px;
     margin-bottom: 120px;
-}
-
-section h4 {
-    margin-top: -16px;
-    margin-bottom: 0;
 }
 
 section img {

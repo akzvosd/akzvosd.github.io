@@ -10,8 +10,12 @@
     border: 8px solid #FFD164;
     border-radius: 16px;
     color: #131313;
-    padding: 24px;
+    padding: 24px 24px 36px 24px;
 } 
+
+.hero-text__list button {
+    margin-top: 32px;
+}
 
 .style--container {
     margin: auto;
@@ -29,6 +33,20 @@
     overflow: hidden;
 }
 
+.offer section {
+    margin-top: 60px !important;
+    margin-bottom: 60px !important;
+}
+
+section h3 {
+    margin-bottom: 40px !important;
+    line-height: 1 !important;
+}
+
+.offer .col-md-4 {
+    padding-left: 0px;
+}
+
 .offer--card {
     background: white;
     color: #131313;
@@ -38,7 +56,7 @@
 }
 
 .offer--image {
-    height: 320px;
+    height: 240px;
     object-fit: cover;
 }
 
@@ -50,6 +68,14 @@
 .offer--text {
     margin-top: 16px;
     padding-left: 32px;
+}
+
+.information {
+    margin-bottom: 136px;
+}
+
+.information h3 {
+    margin-bottom: 32px;
 }
 
 @media only screen and (max-width: 900px) {
