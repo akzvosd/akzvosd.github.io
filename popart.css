@@ -43,6 +43,10 @@ section h3 {
     line-height: 1 !important;
 }
 
+.bitrix iframe {
+    height: 700px !important;
+}
+
 .offer .col-md-4 {
     padding-left: 0px;
 }
