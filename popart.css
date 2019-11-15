@@ -90,6 +90,10 @@ section h3 {
     background-size: cover;
 }
 
+.col-md-3 {
+    padding-right: 0;
+}
+
 @media only screen and (max-width: 900px) {
     .popart {
         background-image: url("img/examples/example7_hero.jpg");

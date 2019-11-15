@@ -10,9 +10,6 @@
 .baget--row {
     cursor: pointer;
 }
-.row .col-md-4 {
-    padding-right: 0;
-}
 
 .text--yellow {
     width: 100% !important;

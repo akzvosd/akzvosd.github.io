@@ -1,15 +1,18 @@
 .accordion {
-    background-color: #FFD164;
+    background-color: white;
+    border: 1px solid #131313;
     color: #131313;
     cursor: pointer;
     padding: 24px;
     width: 100%;
-    border: none;
     text-align: left;
     outline: none;
     font-size: 1rem;
     transition: 0.4s;
-    border-radius: 8px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
   }
 
   .review--card {
@@ -24,7 +27,11 @@
   }
   
   .active, .accordion:hover {
-    background-color: #ffba1a;
+    background-color: #6394FF;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border: none;
+    color: white;
   }
   
   .accordion:after {
@@ -41,12 +48,18 @@
   
   .panel {
     padding: 0 16px;
-    background-color:white;
+    background-color:#fff;
     max-height: 0;
     overflow: hidden;
-    margin-top: 16px;
     margin-bottom: 16px;
     transition: max-height 0.2s ease-out;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+
+  .panel--margin {
+    margin-top: 16px;
+    margin-bottom: 24px;
   }
 
   .panel .col-md-4 {
