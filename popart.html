@@ -374,7 +374,7 @@
 <section class="section--bg form" id="form">
     <section>   
     <h3 class="text--center repro--h3">Заказать печать вашей фотографии на холсте</h3>
-    <div class="bitrix" style="padding-bottom: 32px !important;">
+    <div class="bitrix" style="padding-bottom: 32px !important; ">
             <script id="bx24_form_inline" data-skip-moving="true">
                     (function(w,d,u,b){w['Bitrix24FormObject']=b;w[b] = w[b] || function(){arguments[0].ref=u;
                             (w[b].forms=w[b].forms||[]).push(arguments[0])};
@@ -489,5 +489,12 @@
               modal.style.display = 'none';
             }
     </script>
+    <!-- iframe -->
+    <script type="text/javascript">
+        $(function() {
+            var iframe = $('#bx_form_iframe_7', parent.document.body);
+            iframe.height($(document.body).height());
+        });
+        </script>
 </body>
 </html>
