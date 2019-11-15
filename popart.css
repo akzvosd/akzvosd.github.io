@@ -4,6 +4,13 @@
     background-position: left;
 }
 
+.modal img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .hero-text__list {
     margin: 0;
     background: #fff;
@@ -44,11 +51,7 @@ section h3 {
 }
 
 .bitrix iframe {
-    height: 700px !important;
-}
-
-.offer .col-md-4 {
-    padding-left: 0px;
+    height: 1200px !important;
 }
 
 .offer--card {
