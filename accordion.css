@@ -27,11 +27,10 @@
   }
   
   .active, .accordion:hover {
-    background-color: #6394FF;
+    background-color: #FFD164;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
     border: none;
-    color: white;
   }
   
   .accordion:after {
