@@ -7,6 +7,10 @@
     margin-bottom: 112px !important;
 }
 
+.panno--row img {
+    height: auto !important;
+}
+
 .image--panno {
     border-radius: 0px !important;
 }

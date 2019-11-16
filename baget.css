@@ -20,6 +20,7 @@
     top: 16px;
     left: 32px;
     background: white;
+    display: none;
 }
 .modal {
     display: none; /* Hidden by default */
@@ -65,12 +66,17 @@ h4 {
     display: none;
 }
 
+.image--baget {
+    height: auto !important;
+}
+
+.image--package {
+    height: auto !important;
+}
+
 @media only screen and (max-width: 900px) {
-    .col-md-3 {
-        margin-top: 64px !important;    
-    }
     main {
-        padding: 0 16px !important;
+        padding: 0 !important;
     }
     main h1 {
         margin-bottom: 0px !important;

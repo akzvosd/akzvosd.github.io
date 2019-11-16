@@ -50,21 +50,6 @@ section h3 {
     line-height: 1 !important;
 }
 
-.bitrix {
-    overflow: hidden !important;
-    padding-top: 56.25% !important;
-    position: relative !important;
-}
-
-.bitrix iframe {
-    border: 0 !important;
-    height: 100% !important;
-    left: 0 !important;
-    position: absolute !important;
-    top: 0 !important;
-    width: 100% !important;
-}
-
 .offer--card {
     background: white;
     color: #131313;
@@ -121,5 +106,10 @@ section h3 {
     .style--slide2 {
         display: block;
         background-position: center;
+    }
+
+    .col-md-3 {
+        margin-top: 0 !important;
+        margin-bottom: 16px;
     }
 }

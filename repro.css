@@ -135,7 +135,9 @@ input[type=file] {
     font-size: 18px !important;
 }
 
-
+.image--repro__svg {
+    height: auto;
+}
 
 @media only screen and (max-width: 900px) {
     .hero-text h5 {

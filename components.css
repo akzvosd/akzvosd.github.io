@@ -15,7 +15,7 @@ figcaption {margin-top: 8px;}
 footer {background: #F6F6F6; padding: 56px 0 72px 0; box-shadow: inset 0px 8px 16px #dcdcdc;} footer a {display: block; line-height: 1.7;} footer a:hover {text-decoration: underline;} footer .col-md-3 {padding-left: 0 !important}
 hr{border: 1px solid black}
 /* images */
-.image{max-width:100%;height:auto;}
+.image{max-width:100%;height:100%;object-fit:cover;}
 .image--shadow{box-shadow: 8px 8px 0px #FFD164;}
 a{color:inherit; text-decoration: none;}
 /* buttons */
@@ -41,6 +41,9 @@ input[type=radio] {vertical-align: baseline !important;}
 input + label {margin-right: 24px;}
 /* no-radius */
 .img--noradius {border-radius: 0;}
+.bitrix iframe {
+    height: 1200px !important;
+}
 
 /* dropdown */
 .dropdown {
@@ -147,10 +150,16 @@ ul {
 
 .hero-text {
     position: absolute;
-    top: 49%;
+    /* top: 49%;
     left: 29%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
+    top: 34%;
+    left: 16%;
     color: white;
+}
+
+.hero-text__mainPage {
+    top: 18%;
 }
 
 .hero-text--style {
@@ -214,6 +223,8 @@ section img {
     max-width: 100%;
     padding-top: 96px;
     padding-bottom: 96px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .section--wide {
@@ -249,10 +260,31 @@ section img {
 #townDelivery, #MPPrice, #KEPrice, #OtherPrice {
     background: #ffd14a; display: block; width: max-content; display: none;
 }   
+.col-md-3__leftZero {
+    padding-left: 0 !important;
+}
 
+.col-md-4__leftZero {
+    padding-left: 0 !important;
+}
 
 @media only screen and (max-width: 900px) {
-    section {padding: 36px 16px;}
+    .col-md-3__top40 {
+        margin-top: 40px;
+    }
+    .col-md-3-bottom32 {
+        margin-bottom: 32px;
+    }
+    .col-md-4__bottom32 {
+        margin-bottom: 32px;
+    }
+    h3 {
+        font-size: xx-large;
+    }
+    h4 {
+        font-size: x-large;
+    }
+    section {padding: 36px 16px; margin-top: 0; margin-bottom: 0;}
     section .col-md-4 {padding: 0;}
     .section--wide h5 {line-height: 1.5;margin-bottom: 32px;}
     .mobile--heading {display: block; width: 100%; margin-bottom: 48px; font-weight: 600; text-align: center; padding: 0 8px; font-size: 42px; line-height: 1;}
