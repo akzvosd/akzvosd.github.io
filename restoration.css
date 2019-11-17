@@ -50,6 +50,9 @@ section {
     h1 {
         line-height: 1.2;
     }
+    main h1 {
+        font-size: xxx-large;
+    }
     h4 {
         line-height: 1.2;
         margin-bottom: 32px !important;

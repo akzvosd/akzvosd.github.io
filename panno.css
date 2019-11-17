@@ -13,6 +13,7 @@
 
 .image--panno {
     border-radius: 0px !important;
+    width: auto;
 }
 
 .panno--card__text {
