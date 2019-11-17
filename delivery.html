@@ -55,17 +55,36 @@
 <body>
     <div class="mobile--geo">
         <span id="mobile--town"></span>
-            <div id="townDelivery--mobile">Доставка бесплатная</div>
+            <div id="townDelivery--mobile">ТРК ЛиговЪ, м. Обводный Канал</div>
             <div id="MPPrice--mobile">Доставка: 450p</div>
             <div id="KEPrice--mobile">Доставка: 1000p</div>
             <div id="OtherPrice--mobile">Доставка от 450p</div>
     </div>
-    <div class="mobile--menu" onclick="openNav()">
-                <a href="#" class="mobile--menu__icon"></a>
+    <div class="mobile--header">
+        <div class="row align-items-center" style="padding: 0 16px;">
+            <div class="col"><a href="#" class="mobile--menu__icon" onclick="openNav()"><img src="img/svg/menu.svg" alt="Меню"></a></div>
+            <div class="col"><img src="img/logotype.png" alt="Логотип"></div>
+            <div class="col" style="text-align: right;"><a href="tel:+79082930097"><img src="img/svg/phone.svg" alt="Позвонить" style="width: 32px"></a></div>
+        </div>
+    </div>
+    <div class="mobile--nav">
+        <nav class="row justify-content-between" style="margin-top: 0">
+            <a href="index.html">Портреты</a>
+            <a href="reproductions.html">Картины</a>
+            <a href="panno.html">Панно</a>
+            <a href="foto.html">Печать</a>
+        </nav>
     </div>
     <div id="myNav" class="mobile--overlay">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <div class="mobile--overlay-content">
+                <div class="mobile--overlay__main" style="margin-bottom: 32px;">
+                <p>Основное</p>
+                    <a href="index.html">Портреты</a>
+                    <a href="reproductions.html">Картины</a>
+                    <a href="panno.html">Панно</a>
+                    <a href="foto.html">Фото на холсте</a>
+                </div>
                 <div class="mobile--overylay__add">
                     <p>Доп. услуги</p>
                     <a href="restoration.html">Реставрация старых фото</a>
@@ -73,14 +92,14 @@
                     <a href="sertifikat.html">Сертификаты</a>
                     <a href="baget.html">Багет</a>
                     <a href="package.html">Упаковка</a>
-                </div> 
-                <div class="mobile--overlay__main">
-                    <p>Основное</p>
-                    <a href="index.html">Портреты</a>
-                    <a href="reproductions.html">Репродукции</a>
-                    <a href="panno.html">Панно</a>
-                    <a href="foto.html">Фото на холсте</a>
                 </div>
+                <div class="mobile--overylay__add">
+                    <p>Остальное</p>
+                    <a href="cash.html">Оплата</a>
+                    <a href="delivery.html" class="subheader--active">Доставка</a>
+                    <a href="optom.html">Оптом</a>
+                    <a href="contacts.html">Контакты</a>
+                </div> 
             </div>
     </div>
     
@@ -238,7 +257,7 @@
 <p class="text--bold">ВЕЛИКИЙ НОВГОРОД<br>Большая Санкт-Петербургская, 25 (ТД Русь, 1 этаж)</p><br>
 <p class="text--bold">САНКТ-ПЕТЕРБУРГ <br>Лиговский проспект, 153 (ТРК Лиговъ, станция метро Обводный канал)</p><br>
 <p class="text--bold">ПСКОВ<br>Псков, ТЦ «Максимус», 1 этаж</p><br>
-<p style="text-decoration: underline;"><br>Доставка<br>Города с пунктами самовывоза (1242 города)</p>
+<p class="text--bold"><br>Доставка<br>Города с пунктами самовывоза (1242 города)</p>
 <p>Абакан</p>
 <p>Абинск</p>
 <p>Азов</p>

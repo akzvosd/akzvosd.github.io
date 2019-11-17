@@ -308,6 +308,14 @@ section img {
       font-size: x-large;
   }
 
+  .mobile--header {
+      display: none;
+  }
+
+  .mobile--nav {
+      display: none;
+  }
+
 @media only screen and (max-width: 900px) {
     .image--baget {
         display: none;
@@ -346,7 +354,7 @@ section img {
 
     /* header delivery */
     #townDelivery--mobile, #MPPrice--mobile, #KEPrice--mobile, #OtherPrice--mobile {
-        background: #ffd14a; display: block; width: max-content; display: none;
+        display: block;  display: none;
     }
 
      /* hero-image */
@@ -392,7 +400,18 @@ section img {
     .examples--heading {display: none;}
 
     /* menu */
-    .mobile--menu {
+    .mobile--header {
+        display: block;
+        position: relative;
+        margin-top: -10px;
+        margin-bottom: 16px;
+    }
+    .mobile--nav {
+        display: block;
+        background:#FFD164;
+        padding: 8px 16px;
+    }
+    /* .mobile--menu {
         display: block;
         background: white;
         -webkit-box-shadow: 0px 10px 32px 16px rgba(0,0,0,0.08);
@@ -414,20 +433,22 @@ section img {
         position: absolute;
         top: 16px;
         right: 16px;
-    }
+    } */
 
     .mobile--geo {
         display: block;
         position: relative;
         width: 100%;
-        padding: 16px 0 16px 48px;
+        padding: 24px 0 32px 48px;
+        background: #eeeeee;
+        box-shadow: inset 0px -4px 8px rgb(209, 209, 209);
     }
 
     .mobile--geo::before {
         content: url(img/svg/geo.svg);
         position: absolute;
         left: 16px;
-        transform: translateY(50%);
+        transform: translateY(45%);
     }
 
     .mobile--overlay {
