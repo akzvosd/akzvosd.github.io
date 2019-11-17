@@ -15,7 +15,7 @@ figcaption {margin-top: 8px;}
 footer {background: #F6F6F6; padding: 56px 0 72px 0; box-shadow: inset 0px 8px 16px #dcdcdc;} footer a {display: block; line-height: 1.7;} footer a:hover {text-decoration: underline;} footer .col-md-3 {padding-left: 0 !important}
 hr{border: 1px solid black}
 /* images */
-.image{max-width:100%;height:100%;object-fit:cover;}
+.image{max-width:100%;height:100%;object-fit:cover;} .image_auto{max-width:100%;height:auto;object-fit:cover;}
 .image--shadow{box-shadow: 8px 8px 0px #FFD164;}
 a{color:inherit; text-decoration: none;}
 /* buttons */
@@ -159,13 +159,13 @@ ul {
 }
 
 .hero-text__mainPage {
-    top: 18%;
+    top: 20%;
 }
 
 .hero-text--style {
     position: absolute;
     top: 49%;
-    right: 8%;
+    right: 12%;
     transform: translate(0%, -50%);
     color: white;
 }

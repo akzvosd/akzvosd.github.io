@@ -76,7 +76,7 @@ h4 {
 
 @media only screen and (max-width: 900px) {
     main {
-        padding: 0 !important;
+        padding: 0 16px !important;
     }
     main h1 {
         margin-bottom: 0px !important;
@@ -87,6 +87,7 @@ h4 {
     }
     .image--baget__mobile {
         display: block;
+        height: auto;
     }
     .baget--row {
         padding: 16px;
