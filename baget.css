@@ -79,8 +79,9 @@ h4 {
         padding: 0 16px !important;
     }
     main h1 {
-        margin-bottom: 0px !important;
         margin-top: 32px !important;
+        margin-bottom: 24px !important;
+        line-height: 1.0;
     }
     .image--baget {
         display: none;
