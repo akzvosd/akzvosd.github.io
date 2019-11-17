@@ -299,7 +299,7 @@ section img {
   .modal p {
       color: white;
       z-index: 1;
-      font-size: xx-large;
+      font-size: x-large;
   }
 
   .modal small {
@@ -435,7 +435,7 @@ section img {
         height: 0;
         width: 100%;
         position: fixed;
-        z-index: 3;
+        z-index: 23;
         top: 0;
         left: 0;
         background-color: white;
