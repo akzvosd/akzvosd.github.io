@@ -11,32 +11,16 @@
         $('#tow').html(geolocation.city); 
         $('#mobile--town').html(geolocation.city); 
         if (geolocation.city == 'Санкт-Петербург') {
-            document.getElementById("townDelivery").style.display = "block";
-            document.getElementById("townDelivery--mobile").style.display = "block";
+            document.getElementById("SpbDelivery").style.display = "block";
+            document.getElementById("SpbDelivery--mobile").style.display = "block";
         }
         else if (geolocation.city == 'Великий Новгород') {
-            document.getElementById("townDelivery").style.display = "block";
-            document.getElementById("townDelivery--mobile").style.display = "block";
-        }
-        else if (geolocation.city == 'Москва') {
-            document.getElementById("MPPrice").style.display = "block";
-            document.getElementById("MPPrice--mobile").style.display = "block";
-        }
-        else if (geolocation.city == 'Псков') {
-            document.getElementById("MPPrice").style.display = "block";
-            document.getElementById("MPPrice--mobile").style.display = "block";
-        }
-        else if (geolocation.city == 'Краснодар') {
-            document.getElementById("KEPrice").style.display = "block";
-            document.getElementById("KEe--mobile").style.display = "block";
-        }
-        else if (geolocation.city == 'Екатеринбург') {
-            document.getElementById("KEPrice").style.display = "block";
-            document.getElementById("KEe--mobile").style.display = "block";
+            document.getElementById("VNDelivery").style.display = "block";
+            document.getElementById("VNDelivery--mobile").style.display = "block";
         }
         else {
-            document.getElementById("OtherPrice").style.display = "block";
-            document.getElementById("OtherPrice--mobile").style.display = "block";
+            document.getElementById("OtherDelivery").style.display = "block";
+            document.getElementById("OtherDelivery--mobile").style.display = "block";
         }
         }); 
         }); 
@@ -56,36 +40,55 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Imagine — Pop Art</title>
 </head>
-<body>
+ <body>   
     <div class="mobile--geo">
         <span id="mobile--town"></span>
-            <div id="townDelivery--mobile">Доставка бесплатная</div>
-            <div id="MPPrice--mobile">Доставка: 450p</div>
-            <div id="KEPrice--mobile">Доставка: 1000p</div>
-            <div id="OtherPrice--mobile">Доставка от 450p</div>
+             <div id="SpbDelivery--mobile">ТРК ЛиговЪ, м. Обводный Канал</div>
+            <div id="VNDelivery--mobile">ТД Русь, 1 этаж</div>
+            <div id="OtherDelivery--mobile">Доставка от 450p</div>
     </div>
-    <div class="mobile--menu" onclick="openNav()">
-                <a href="#" class="mobile--menu__icon"></a>
+    <div class="mobile--header">
+        <div class="row align-items-center" style="padding: 0 16px;">
+            <div class="col"><a href="#" class="mobile--menu__icon" onclick="openNav()"><img src="img/svg/menu.svg" alt="Меню"></a></div>
+            <div class="col"><a href="index.html"><img src="img/logotype.png" alt="Логотип"></a></div>
+            <div class="col" style="text-align: right;"><a href="tel:+79082930097"><img src="img/svg/phone.svg" alt="Позвонить" style="width: 32px"></a></div>
+        </div>
+    </div>
+    <div class="mobile--nav">
+        <nav class="row justify-content-between" style="margin-top: 0">
+            <a  >Портреты</a>
+            <a href="reproductions.html">Картины</a>
+            <a href="panno.html">Панно</a>
+            <a href="foto.html">Печать</a>
+        </nav>
+    </div>
     </div>
     <div id="myNav" class="mobile--overlay">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <div class="mobile--overlay-content">
-                <div class="mobile--overylay__add">
-                    <p>Доп. услуги</p>
-                    <a href="restoration.html">Реставрация старых фото</a>
-                    <a href="retush.hmtl">Ретушь</a>
-                    <a href="sertifikat.html">Сертификаты</a>
-                    <a href="gift.html">Идеи подарков</a>
-                    <a href="baget.html">Багет</a>
-                    <a href="package.html">Упаковка</a>
-                </div> 
-                <div class="mobile--overlay__main">
-                    <p>Основное</p>
+                <div class="mobile--overlay__main" style="margin-bottom: 32px;">
+                <p>Основное</p>
                     <a href="index.html">Портреты</a>
-                    <a href="reproductions.html" class="subheader--active">Репродукции</a>
+                    <a href="reproductions.html">Картины</a>
                     <a href="panno.html">Панно</a>
                     <a href="foto.html">Фото на холсте</a>
                 </div>
+                <div class="mobile--overylay__add">
+                    <p>Доп. услуги</p>
+                    <a href="restoration.html">Реставрация старых фото</a>
+                    <a href="retush.html">Ретушь</a>
+                    <a href="sertifikat.html">Сертификаты</a>
+                    <a href="baget.html">Багет</a>
+                    <a href="package.html">Упаковка</a>
+                </div>
+                <div class="mobile--overylay__add">
+                    <p>Остальное</p>
+                    <a href="cash.html">Оплата</a>
+                    <a href="delivery.html" class="subheader--active">Доставка</a>
+                    <a href="optom.html">Оптом</a>
+                    <a href="contacts.html">Контакты</a>
+                </div>
+                <div class="col-md-auto" ><a href="https://bitrix24public.com/b24-vrm86j.bitrix24.ru/form/6_ne_nashli_chto_iskali/zk0a9o/"><button class="btn line" id="callmebaby" style="width: auto; margin-bottom: 32px">Заказать звонок</button></a></div>
             </div>
     </div>
     
@@ -96,20 +99,20 @@
             </div>
             <div class="col" style="padding-left: 0px;">
                 <span id="tow" class="townGeo"></span> 
-                <span id="townDelivery">Доставка бесплатная</span>
-                <span id="MPPrice">Доставка: 450p</span>
-                <span id="KEPrice">Доставка: 1000p</span>
-                <span id="OtherPrice">Доставка от 450p</span>
+                <span id="SpbDelivery"> ТРК ЛиговЪ, м. Обводный Канал</span>
+                <span id="VNDelivery">ТД Русь, 1 этаж</span>
+                <span id="OtherDelivery">Доставка от 450p</span>
+                 
             </div>
             <div class="col" style="text-align: right;"><a  href="tel:+79082930097">+7 908 293-00-97</a></div>
-            <div class="col-md-auto" style="text-align: right;"><button class="btn line">Заказать звонок</button></div>
+            <div class="col-md-auto"  >  <a href="https://bitrix24public.com/b24-vrm86j.bitrix24.ru/form/6_ne_nashli_chto_iskali/zk0a9o/"><button class="btn line" id="callmebaby">Заказать звонок</button></a></div>
     </header>
     <div class="subheader" role="navigation" aria-label="Main">
             <div class="row align-items-center">
                 <div class="col-md-6 subheader--left">
                     <nav>
                         <a href="index.html">Портреты</a>
-                        <a href="reproductions.html">Репродукции</a>
+                        <a href="reproductions.html">Картины</a>
                         <a href="panno.html">Панно</a>
                         <a href="foto.html">Фото на холсте</a>
                         <div class="dropdown">
@@ -126,7 +129,7 @@
                 </div>
                 <div class="col-md-6 subheader--right">
                     <nav>
-                        <a href="price.html">Цены</a>
+                         
                         <a href="cash.html">Оплата</a>
                         <a href="delivery.html">Доставка</a>
                         <a href="optom.html">Оптом</a>
@@ -435,14 +438,14 @@
         </div>-->
         </section>
 </section> 
-<footer>
-        <section class="section--wide">
+ 
+           <footer><section class="section--wide">
             <div class="row">
                 <div class="col-md-3">
                     <a class="text--bold" href="#">Картины</a>
                     <a href="index.html">Портреты по фото</a>
                     <a href="foto.html">Печать фото на холсте</a>
-                    <a href="reproductions.html">Репродукции</a>
+                    <a href="reproductions.html">Картины</a>
                     <a href="panno.html">Модульное панно</p>
                 </div>
                 <div class="col-md-3">
@@ -456,7 +459,7 @@
                 </div>
                 <div class="col-md-3">
                     <a class="text--bold">Остальное</a>
-                    <a href="price.html">Цены</a>
+                     
                     <a href="cash.html">Оплата</a>
                     <a href="delivery.html">Доставка</a>
                     <a href="optom.html">Оптом</a>
@@ -469,7 +472,42 @@
                     <a href="https://www.instagram.com/imagine.1971/" style="display: inline;"><img src="img/svg/instagramsquare.svg" alt="Логотип ВК" width="48px"></a>
                 </div>
             </div>
-        </section>
+        </section></footer>
+<footer>
+    <section class="section--wide">
+        <div class="row">
+            <div class="col-md-3">
+                <a class="text--bold" href="#">Картины</a>
+                <a href="index.html">Портреты по фото</a>
+                <a href="foto.html">Печать фото на холсте</a>
+                <a href="reproductions.html">Картины</a>
+                <a href="panno.html">Модульное панно</p>
+            </div>
+            <div class="col-md-3">
+                <a class="text--bold" href="#">Доп. услуги</a>
+                <a href="restoration.html">Реставрация старых фото</a>
+                <a href="retush.html">Ретушь</a>
+                <a href="sertifikat.html">Сертификаты</a>
+                <a href="gift.html">Идеи подарков</a>
+                <a href="baget.html">Багет</a>
+                <a href="package.html">Упаковка</a>
+            </div>
+            <div class="col-md-3">
+                <a class="text--bold">Остальное</a>
+                 
+                <a href="cash.html">Оплата</a>
+                <a href="delivery.html">Доставка</a>
+                <a href="optom.html">Оптом</a>
+                <a href="contacts.html">Контакты</a>
+                <a href="oferta.html">Публичная оферта</a>
+                <a href="props.html">Реквизиты</a>
+            </div>
+            <div class="col-md-3 footer--social">
+                <a href="https://vk.com/imagine71" style="display: inline;"><img src="img/svg/vksquare.svg" alt="Логотип ВК" width="48px"></a>
+                <a href="https://www.instagram.com/imagine.1971/" style="display: inline;"><img src="img/svg/instagramsquare.svg" alt="Логотип ВК" width="48px"></a>
+            </div>
+        </div>
+    </section>
 </footer>
 <div class="modal" onclick="closeModal()">
     <!-- menu -->
@@ -511,6 +549,16 @@
             function closeModal() {
               modal.style.display = 'none';
             }
+    </script><script>
+        $( "#callmebaby" ).click(function() {
+        $( "#modalCall" ).show();
+        });
+        $( "#closeCall" ).click(function() {
+        $( "#modalCall" ).hide();
+        });
+        $( "#callmebabyDesk" ).click(function() {
+        $( "#modalCall" ).show();
+        });
     </script>
 </body>
 </html>

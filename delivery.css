@@ -10,15 +10,6 @@
     position: relative;
 }
 
-.delivery--red::before {
-    content: '';
-    position: absolute;
-    height: 230px;
-    width: 100%;
-    top: 45%;
-    background:red;
-}
-
 .delivery--button {
     margin-bottom: 32px;
 }

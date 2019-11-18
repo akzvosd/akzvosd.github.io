@@ -257,7 +257,7 @@ section img {
 }
 
 /* header delivery */
-#townDelivery, #MPPrice, #KEPrice, #OtherPrice {
+#SpbDelivery, #VNDelivery, #OtherDelivery {
     background: #ffd14a; display: block; width: max-content; display: none;
 }   
 .col-md-3__leftZero {
@@ -353,7 +353,7 @@ section img {
     .x-large {font-size: 1rem;}
 
     /* header delivery */
-    #townDelivery--mobile, #MPPrice--mobile, #KEPrice--mobile, #OtherPrice--mobile {
+    #SpbDelivery--mobile, #VNDelivery--mobile, #OtherDelivery--mobile, #OtherPrice--mobile {
         display: block;  display: none;
     }
 
@@ -403,13 +403,21 @@ section img {
     .mobile--header {
         display: block;
         position: relative;
-        margin-top: -10px;
+        margin-top: 16px;
         margin-bottom: 16px;
     }
     .mobile--nav {
         display: block;
         background:#FFD164;
-        padding: 8px 16px;
+        padding: 16px 18px;
+        color: #13131346;
+        font-size: 13px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    .mobile--nav .active {
+        color: #131313;
     }
     /* .mobile--menu {
         display: block;
