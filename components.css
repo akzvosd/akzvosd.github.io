@@ -45,6 +45,17 @@ input + label {margin-right: 24px;}
     height: 1200px !important;
 }
 
+.popart--image {
+    display: block;
+    background-image: url(img/examples/example7.jpg);
+    width: 100%;
+    height: 320px;
+}
+
+.popart--image:active {
+    background-image: url(img/examples/example7_x.jpg);
+}
+
 /* dropdown */
 .dropdown {
     position: relative;
