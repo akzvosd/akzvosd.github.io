@@ -35,6 +35,7 @@
     <link rel="stylesheet" href="delivery.css">
     <link rel="stylesheet" href="youtube.css">
     <link rel="stylesheet" href="slider.css">
+    <link rel="stylesheet" href="toggle.css">
     <link rel="stylesheet" href="bootstrap-grid.css">
     <link rel="stylesheet" href="swiper.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -160,6 +161,13 @@
                <div class="row align-items-center">
                    <div class="col-md-7" style="position: static;">
                         <div class="style--container">
+                                <!-- <label class="switch">
+                                        <input type="checkbox" id="toggle">
+                                        <span class="slider round"></span>
+                                      </label> -->
+                                      <button onclick="toggleContent()">xxx</button>
+                                    <img src="img/examples/example7.jpg" id="toggleImg" class="image-x">
+                                    <img src="img/examples/example7_x.jpg" id="toggleImg" class="image-x" style="display: none;">
                             <div class="slider--mouse">Проведите мышкой</div>
                             <div class="style--slide1" style="background-image: url(img/examples/example7.jpg);"></div>
                             <div class="style--slide2" style="background-image: url(img/examples/example7_x.jpg);">
@@ -172,23 +180,23 @@
                         <p>Хотите порадовать друзей современным и уникальным подарком? Этот яркий и незабываемый стиль отлично Вам подойдёт!</p>
                         <div class="style--card__input"> 
                             <div class="card--input">
-                                <input type="radio" id="popart_30x40" name="size" onclick='document.getElementById("popart--price").innerHTML = "100₽"'>
+                                <input type="radio" id="popart_30x40" name="size" onclick='document.getElementById("popart--price").innerHTML = "100Р"'>
                                 <label for="popart_30x40">30 x 40 см</label>
                             </div>
                             <div class="card--input">
-                                <input type="radio" id="popart_40x50" name="size" onclick='document.getElementById("popart--price").innerHTML = "200₽"'> 
+                                <input type="radio" id="popart_40x50" name="size" onclick='document.getElementById("popart--price").innerHTML = "200Р"'> 
                                 <label for="popart_40x50">40 x 50 см</label>
                             </div>
                             <div class="card--input">
-                                <input type="radio" id="popart_50x60" name="size" onclick='document.getElementById("popart--price").innerHTML = "300₽"'>
+                                <input type="radio" id="popart_50x60" name="size" onclick='document.getElementById("popart--price").innerHTML = "300Р"'>
                                 <label for="popart_50x60">50 x 60 см</label>
                             </div>
                             <div class="card--input">
-                                <input type="radio" id="popart_60x70" name="size" onclick='document.getElementById("popart--price").innerHTML = "400₽"'>
+                                <input type="radio" id="popart_60x70" name="size" onclick='document.getElementById("popart--price").innerHTML = "400Р"'>
                                 <label for="popart_60x70">60 x 70 см</label>
                             </div>
                             <div class="card--input">
-                                <input type="radio" id="popart_80x90" name="size" onclick='document.getElementById("popart--price").innerHTML = "500₽"'>
+                                <input type="radio" id="popart_80x90" name="size" onclick='document.getElementById("popart--price").innerHTML = "500Р"'>
                                 <label for="popart_80x90">80 x 90 см</label>
                             </div>
                             <div class="card--input">
@@ -196,7 +204,7 @@
                                 <label for="popart_other">Другой</label>
                             </div>
                         </div>    
-                            <h5 id="popart--price">100₽</h5>
+                            <h5 id="popart--price">100Р</h5>
                         <a href="popart.html#form"><button class="btn primary">Заказать</button></a>
                         <a href="popart.html"><button class="btn secondary">Подробнее</button></a>
                    </div>
@@ -219,23 +227,23 @@
                          <p>Настоящая классика живописи! Презентабельный и изысканный подарок на любой праздник!</p>
                          <div class="style--card__input"> 
                                 <div class="card--input">
-                                    <input type="radio" id="maslom_30x40" name="size" onclick='document.getElementById("maslo--price").innerHTML = "100₽"'>
+                                    <input type="radio" id="maslom_30x40" name="size" onclick='document.getElementById("maslo--price").innerHTML = "100Р"'>
                                     <label for="maslom_30x40">30 x 40 см</label>
                                 </div>
                                 <div class="card--input">
-                                    <input type="radio" id="maslom_40x50" name="size" onclick='document.getElementById("maslo--price").innerHTML = "200₽"'>
+                                    <input type="radio" id="maslom_40x50" name="size" onclick='document.getElementById("maslo--price").innerHTML = "200Р"'>
                                     <label for="maslom_40x50">40 x 50 см</label>
                                 </div>
                                 <div class="card--input">
-                                    <input type="radio" id="maslom_50x60" name="size" onclick='document.getElementById("maslo--price").innerHTML = "300₽"'>
+                                    <input type="radio" id="maslom_50x60" name="size" onclick='document.getElementById("maslo--price").innerHTML = "300Р"'>
                                     <label for="maslom_50x60">50 x 60 см</label>
                                 </div>
                                 <div class="card--input">
-                                    <input type="radio" id="maslom_60x70" name="size" onclick='document.getElementById("maslo--price").innerHTML = "400₽"'>
+                                    <input type="radio" id="maslom_60x70" name="size" onclick='document.getElementById("maslo--price").innerHTML = "400Р"'>
                                     <label for="maslom_60x70">60 x 70 см</label>
                                 </div>
                                 <div class="card--input">
-                                    <input type="radio" id="maslom_80x90" name="size" onclick='document.getElementById("maslo--price").innerHTML = "500₽"'>
+                                    <input type="radio" id="maslom_80x90" name="size" onclick='document.getElementById("maslo--price").innerHTML = "500Р"'>
                                     <label for="maslom_80x90">80 x 90 см</label>
                                 </div>
                                 <div class="card--input">
@@ -243,7 +251,7 @@
                                     <label for="maslom_other">Другой</label>
                                 </div>
                             </div>    
-                             <h5 id="maslo--price">100₽</h5>
+                             <h5 id="maslo--price">100Р</h5>
                              <a href="maslom.html#form"><button class="btn primary">Заказать</button></a>
                              <a href="maslom.html"><button class="btn secondary">Подробнее</button></a>
                     </div>
@@ -266,31 +274,31 @@
                      <p>Нежный и тёплый портрет в нашем фирменном стиле. Лучший подарок для дорогих и близких Вам людей!</p>
                      <div class="style--card__input"> 
                             <div class="card--input">
-                                <input type="radio" id="maslom_30x40" name="size" onclick='document.getElementById("maslo--price").innerHTML = "100₽"'>
-                                <label for="maslom_30x40">30 x 40 см</label>
+                                <input type="radio" id="imagine_30x40" name="size" onclick='document.getElementById("imagine--price").innerHTML = "100Р"'>
+                                <label for="imagine_30x40">30 x 40 см</label>
                             </div>
                             <div class="card--input">
-                                <input type="radio" id="maslom_40x50" name="size" onclick='document.getElementById("maslo--price").innerHTML = "200₽"'>
-                                <label for="maslom_40x50">40 x 50 см</label>
+                                <input type="radio" id="imagine_40x50" name="size" onclick='document.getElementById("imagine--price").innerHTML = "200Р"'>
+                                <label for="imagine_40x50">40 x 50 см</label>
                             </div>
                             <div class="card--input">
-                                <input type="radio" id="maslom_50x60" name="size" onclick='document.getElementById("maslo--price").innerHTML = "300₽"'>
-                                <label for="maslom_50x60">50 x 60 см</label>
+                                <input type="radio" id="imagine_50x60" name="size" onclick='document.getElementById("imagine--price").innerHTML = "300Р"'>
+                                <label for="imagine_50x60">50 x 60 см</label>
                             </div>
                             <div class="card--input">
-                                <input type="radio" id="maslom_60x70" name="size" onclick='document.getElementById("maslo--price").innerHTML = "400₽"'>
-                                <label for="maslom_60x70">60 x 70 см</label>
+                                <input type="radio" id="imagine_60x70" name="size" onclick='document.getElementById("imagine--price").innerHTML = "400Р"'>
+                                <label for="imagine_60x70">60 x 70 см</label>
                             </div>
                             <div class="card--input">
-                                <input type="radio" id="maslom_80x90" name="size" onclick='document.getElementById("maslo--price").innerHTML = "500₽"'>
-                                <label for="maslom_80x90">80 x 90 см</label>
+                                <input type="radio" id="imagine_80x90" name="size" onclick='document.getElementById("imagine--price").innerHTML = "500Р"'>
+                                <label for="imagine_80x90">80 x 90 см</label>
                             </div>
                             <div class="card--input">
-                                <input type="radio" id="maslom_other" name="size" onclick='document.getElementById("maslo--price").innerHTML = "Нажмите «Заказать» и укажите размер"'>
-                                <label for="maslom_other">Другой</label>
+                                <input type="radio" id="imagine_other" name="size" onclick='document.getElementById("imagine--price").innerHTML = "Нажмите «Заказать» и укажите размер"'>
+                                <label for="imagine_other">Другой</label>
                             </div>
                         </div>    
-                         <h5 id="maslo--price">100₽</h5>
+                         <h5 id="imagine--price">100Р</h5>
                          <a href="imagine.html#form"><button class="btn primary">Заказать</button></a>
                          <a href="imagine.html"><button class="btn secondary">Подробнее</button></a>
                 </div>
@@ -314,23 +322,23 @@
                      <p>Стильный и яркий портрет в стиле Dream Art удивит и подарит яркие эмоции!</p>
                      <div class="style--card__input"> 
                             <div class="card--input">
-                                <input type="radio" id="dream_30x40" name="size" onclick='document.getElementById("dream--price").innerHTML = "100₽"'>
+                                <input type="radio" id="dream_30x40" name="size" onclick='document.getElementById("dream--price").innerHTML = "100Р"'>
                                 <label for="dream_30x40">30 x 40 см</label>
                             </div>
                             <div class="card--input">
-                                <input type="radio" id="dream_40x50" name="size" onclick='document.getElementById("dream--price").innerHTML = "200₽"'>
+                                <input type="radio" id="dream_40x50" name="size" onclick='document.getElementById("dream--price").innerHTML = "200Р"'>
                                 <label for="dream_40x50">40 x 50 см</label>
                             </div>
                             <div class="card--input">
-                                <input type="radio" id="dream_50x60" name="size" onclick='document.getElementById("dream--price").innerHTML = "300₽"'>
+                                <input type="radio" id="dream_50x60" name="size" onclick='document.getElementById("dream--price").innerHTML = "300Р"'>
                                 <label for="dream_50x60">50 x 60 см</label>
                             </div>
                             <div class="card--input">
-                                <input type="radio" id="dream_60x70" name="size" onclick='document.getElementById("dream--price").innerHTML = "400₽"'>
+                                <input type="radio" id="dream_60x70" name="size" onclick='document.getElementById("dream--price").innerHTML = "400Р"'>
                                 <label for="dream_60x70">60 x 70 см</label>
                             </div>
                             <div class="card--input">
-                                <input type="radio" id="dream_80x90" name="size" onclick='document.getElementById("dream--price").innerHTML = "500₽"'>
+                                <input type="radio" id="dream_80x90" name="size" onclick='document.getElementById("dream--price").innerHTML = "500Р"'>
                                 <label for="dream_80x90">80 x 90 см</label>
                             </div>
                             <div class="card--input">
@@ -338,7 +346,7 @@
                                 <label for="dream_other">Другой</label>
                             </div>
                         </div>    
-                         <h5 id="dream--price">100₽</h5>
+                         <h5 id="dream--price">100Р</h5>
                          <a href="dream.html#form"><button class="btn primary">Заказать</button></a>
                          <a href="dream.html"><button class="btn secondary">Подробнее</button></a>
                 </div>
@@ -361,23 +369,23 @@
                      <p>Подарите близкому уникальную возможность — примерить на себе оригинальный образ!</p>
                      <div class="style--card__input"> 
                             <div class="card--input">
-                                <input type="radio" id="obraz_30x40" name="size" onclick='document.getElementById("obraz--price").innerHTML = "100₽"'>
+                                <input type="radio" id="obraz_30x40" name="size" onclick='document.getElementById("obraz--price").innerHTML = "100Р"'>
                                 <label for="obraz_30x40">30 x 40 см</label>
                             </div>
                             <div class="card--input">
-                                <input type="radio" id="obraz_40x50" name="size" onclick='document.getElementById("obraz--price").innerHTML = "200₽"'>
+                                <input type="radio" id="obraz_40x50" name="size" onclick='document.getElementById("obraz--price").innerHTML = "200Р"'>
                                 <label for="obraz_40x50">40 x 50 см</label>
                             </div>
                             <div class="card--input">
-                                <input type="radio" id="obraz_50x60" name="size" onclick='document.getElementById("obraz--price").innerHTML = "300₽"'>
+                                <input type="radio" id="obraz_50x60" name="size" onclick='document.getElementById("obraz--price").innerHTML = "300Р"'>
                                 <label for="obraz_50x60">50 x 60 см</label>
                             </div>
                             <div class="card--input">
-                                <input type="radio" id="obraz_60x70" name="size" onclick='document.getElementById("obraz--price").innerHTML = "400₽"'>
+                                <input type="radio" id="obraz_60x70" name="size" onclick='document.getElementById("obraz--price").innerHTML = "400Р"'>
                                 <label for="obraz_60x70">60 x 70 см</label>
                             </div>
                             <div class="card--input">
-                                <input type="radio" id="obraz_80x90" name="size" onclick='document.getElementById("obraz--price").innerHTML = "500₽"'>
+                                <input type="radio" id="obraz_80x90" name="size" onclick='document.getElementById("obraz--price").innerHTML = "500Р"'>
                                 <label for="obraz_80x90">80 x 90 см</label>
                             </div>
                             <div class="card--input">
@@ -385,7 +393,7 @@
                                 <label for="obraz_other">Другой</label>
                             </div>
                         </div>    
-                         <h5 id="obraz--price">100₽</h5>
+                         <h5 id="obraz--price">100Р</h5>
                          <a href="obraz.html#form"><button class="btn primary">Заказать</button></a>
                          <a href="obraz.html"><button class="btn secondary">Подробнее</button></a>
                 </div>
@@ -409,23 +417,23 @@
                     <p>Тёплый и красочный портрет, выполненный в классической технике, сохранит Ваш образ на долгие годы!</p>
                         <div class="style--card__input"> 
                             <div class="card--input">
-                                <input type="radio" id="aqua_30x40" name="size" onclick='document.getElementById("aqua--price").innerHTML = "100₽"'>
+                                <input type="radio" id="aqua_30x40" name="size" onclick='document.getElementById("aqua--price").innerHTML = "100Р"'>
                                 <label for="aqua_30x40">30 x 40 см</label>
                             </div>
                             <div class="card--input">
-                                <input type="radio" id="aqua_40x50" name="size" onclick='document.getElementById("aqua--price").innerHTML = "200₽"'>
+                                <input type="radio" id="aqua_40x50" name="size" onclick='document.getElementById("aqua--price").innerHTML = "200Р"'>
                                 <label for="aqua_40x50">40 x 50 см</label>
                             </div>
                             <div class="card--input">
-                                <input type="radio" id="aqua_50x60" name="size" onclick='document.getElementById("aqua--price").innerHTML = "300₽"'>
+                                <input type="radio" id="aqua_50x60" name="size" onclick='document.getElementById("aqua--price").innerHTML = "300Р"'>
                                 <label for="aqua_50x60">50 x 60 см</label>
                             </div>
                             <div class="card--input">
-                                <input type="radio" id="aqua_60x70" name="size" onclick='document.getElementById("aqua--price").innerHTML = "400₽"'>
+                                <input type="radio" id="aqua_60x70" name="size" onclick='document.getElementById("aqua--price").innerHTML = "400Р"'>
                                 <label for="aqua_60x70">60 x 70 см</label>
                             </div>
                             <div class="card--input">
-                                <input type="radio" id="aqua_80x90" name="size" onclick='document.getElementById("aqua--price").innerHTML = "500₽"'>
+                                <input type="radio" id="aqua_80x90" name="size" onclick='document.getElementById("aqua--price").innerHTML = "500Р"'>
                                 <label for="aqua_80x90">80 x 90 см</label>
                             </div>
                             <div class="card--input">
@@ -433,7 +441,7 @@
                                 <label for="aqua_other">Другой</label>
                             </div>
                         </div>    
-                        <h5 id="aqua--price">100₽</h5>
+                        <h5 id="aqua--price">100Р</h5>
                         <a href="aqua.html#form"><button class="btn primary">Заказать</button></a>
                         <a href="aqua.html"><button class="btn secondary">Подробнее</button></a>
                 </div>
@@ -457,23 +465,23 @@
                         <p>Выберите свой любимый мультфильм и фотографию, и наши художники реализуют Ваши фантазии на холсте!</p>
                             <div class="style--card__input"> 
                                 <div class="card--input">
-                                    <input type="radio" id="mult_30x40" name="size" onclick='document.getElementById("mult--price").innerHTML = "100₽"'>
+                                    <input type="radio" id="mult_30x40" name="size" onclick='document.getElementById("mult--price").innerHTML = "100Р"'>
                                     <label for="mult_30x40">30 x 40 см</label>
                                 </div>
                                 <div class="card--input">
-                                    <input type="radio" id="mult_40x50" name="size" onclick='document.getElementById("mult--price").innerHTML = "200₽"'>
+                                    <input type="radio" id="mult_40x50" name="size" onclick='document.getElementById("mult--price").innerHTML = "200Р"'>
                                     <label for="mult_40x50">40 x 50 см</label>
                                 </div>
                                 <div class="card--input">
-                                    <input type="radio" id="mult_50x60" name="size" onclick='document.getElementById("mult--price").innerHTML = "300₽"'>
+                                    <input type="radio" id="mult_50x60" name="size" onclick='document.getElementById("mult--price").innerHTML = "300Р"'>
                                     <label for="mult_50x60">50 x 60 см</label>
                                 </div>
                                 <div class="card--input">
-                                    <input type="radio" id="mult_60x70" name="size" onclick='document.getElementById("mult--price").innerHTML = "400₽"'>
+                                    <input type="radio" id="mult_60x70" name="size" onclick='document.getElementById("mult--price").innerHTML = "400Р"'>
                                     <label for="mult_60x70">60 x 70 см</label>
                                 </div>
                                 <div class="card--input">
-                                    <input type="radio" id="mult_80x90" name="size" onclick='document.getElementById("mult--price").innerHTML = "500₽"'>
+                                    <input type="radio" id="mult_80x90" name="size" onclick='document.getElementById("mult--price").innerHTML = "500Р"'>
                                     <label for="mult_80x90">80 x 90 см</label>
                                 </div>
                                 <div class="card--input">
@@ -481,7 +489,7 @@
                                     <label for="mult_other">Другой</label>
                                 </div>
                             </div>    
-                            <h5 id="mult--price">100₽</h5>
+                            <h5 id="mult--price">100Р</h5>
                             <a href="mult.html#form"><button class="btn primary">Заказать</button></a>
                             <a href="mult.html"><button class="btn secondary">Подробнее</button></a>
                     </div>
@@ -505,23 +513,23 @@
                         <p>Этим портретом можно сказать многое... Пришлите нам фото и несколько приятных слов о персонаже картины, а мы совместим это в прекрасном образе!</p>
                             <div class="style--card__input"> 
                                 <div class="card--input">
-                                    <input type="radio" id="slova_30x40" name="size" onclick='document.getElementById("slova--price").innerHTML = "100₽"'>
+                                    <input type="radio" id="slova_30x40" name="size" onclick='document.getElementById("slova--price").innerHTML = "100Р"'>
                                     <label for="slova_30x40">30 x 40 см</label>
                                 </div>
                                 <div class="card--input">
-                                    <input type="radio" id="slova_40x50" name="size" onclick='document.getElementById("slova--price").innerHTML = "200₽"'>
+                                    <input type="radio" id="slova_40x50" name="size" onclick='document.getElementById("slova--price").innerHTML = "200Р"'>
                                     <label for="slova_40x50">40 x 50 см</label>
                                 </div>
                                 <div class="card--input">
-                                    <input type="radio" id="slova_50x60" name="size" onclick='document.getElementById("slova--price").innerHTML = "300₽"'>
+                                    <input type="radio" id="slova_50x60" name="size" onclick='document.getElementById("slova--price").innerHTML = "300Р"'>
                                     <label for="slova_50x60">50 x 60 см</label>
                                 </div>
                                 <div class="card--input">
-                                    <input type="radio" id="slova_60x70" name="size" onclick='document.getElementById("slova--price").innerHTML = "400₽"'>
+                                    <input type="radio" id="slova_60x70" name="size" onclick='document.getElementById("slova--price").innerHTML = "400Р"'>
                                     <label for="slova_60x70">60 x 70 см</label>
                                 </div>
                                 <div class="card--input">
-                                    <input type="radio" id="slova_80x90" name="size" onclick='document.getElementById("slova--price").innerHTML = "500₽"'>
+                                    <input type="radio" id="slova_80x90" name="size" onclick='document.getElementById("slova--price").innerHTML = "500Р"'>
                                     <label for="slova_80x90">80 x 90 см</label>
                                 </div>
                                 <div class="card--input">
@@ -529,7 +537,7 @@
                                     <label for="slova_other">Другой</label>
                                 </div>
                             </div>    
-                            <h5 id="slova--price">100₽</h5>
+                            <h5 id="slova--price">100Р</h5>
                             <a href="izslov.html#form"><button class="btn primary">Заказать</button></a>
                             <a href="izslov.html"><button class="btn secondary">Подробнее</button></a>
                     </div>
@@ -553,23 +561,23 @@
                         <p>Отправьте несколько фотографий, и мы соберём их в одной красивой композиции!</p>
                             <div class="style--card__input"> 
                                 <div class="card--input">
-                                    <input type="radio" id="kolaj_30x40" name="size" onclick='document.getElementById("kolaj--price").innerHTML = "100₽"'>
+                                    <input type="radio" id="kolaj_30x40" name="size" onclick='document.getElementById("kolaj--price").innerHTML = "100Р"'>
                                     <label for="kolaj_30x40">30 x 40 см</label>
                                 </div>
                                 <div class="card--input">
-                                    <input type="radio" id="kolaj_40x50" name="size" onclick='document.getElementById("kolaj--price").innerHTML = "200₽"'>
+                                    <input type="radio" id="kolaj_40x50" name="size" onclick='document.getElementById("kolaj--price").innerHTML = "200Р"'>
                                     <label for="kolaj_40x50">40 x 50 см</label>
                                 </div>
                                 <div class="card--input">
-                                    <input type="radio" id="kolaj_50x60" name="size" onclick='document.getElementById("kolaj--price").innerHTML = "300₽"'>
+                                    <input type="radio" id="kolaj_50x60" name="size" onclick='document.getElementById("kolaj--price").innerHTML = "300Р"'>
                                     <label for="kolaj_50x60">50 x 60 см</label>
                                 </div>
                                 <div class="card--input">
-                                    <input type="radio" id="kolaj_60x70" name="size" onclick='document.getElementById("kolaj--price").innerHTML = "400₽"'>
+                                    <input type="radio" id="kolaj_60x70" name="size" onclick='document.getElementById("kolaj--price").innerHTML = "400Р"'>
                                     <label for="kolaj_60x70">60 x 70 см</label>
                                 </div>
                                 <div class="card--input">
-                                    <input type="radio" id="kolaj_80x90" name="size" onclick='document.getElementById("kolaj--price").innerHTML = "500₽"'>
+                                    <input type="radio" id="kolaj_80x90" name="size" onclick='document.getElementById("kolaj--price").innerHTML = "500Р"'>
                                     <label for="kolaj_80x90">80 x 90 см</label>
                                 </div>
                                 <div class="card--input">
@@ -577,7 +585,7 @@
                                     <label for="kolaj_other">Другой</label>
                                 </div>
                             </div>    
-                            <h5 id="kolaj--price">100₽</h5>
+                            <h5 id="kolaj--price">100Р</h5>
                             <a href="kolaj.html#form"><button class="btn primary">Заказать</button></a>
                             <a href="kolaj.html"><button class="btn secondary">Подробнее</button></a>
                     </div>
@@ -601,23 +609,23 @@
                         <p>Романтичный и недорогой подарок в стиле комиксов из всемирно известных конфеток</p>
                             <div class="style--card__input"> 
                                 <div class="card--input">
-                                    <input type="radio" id="loveis_30x40" name="size" onclick='document.getElementById("loveis--price").innerHTML = "100₽"'>
+                                    <input type="radio" id="loveis_30x40" name="size" onclick='document.getElementById("loveis--price").innerHTML = "100Р"'>
                                     <label for="loveis_30x40">30 x 40 см</label>
                                 </div>
                                 <div class="card--input">
-                                    <input type="radio" id="loveis_40x50" name="size" onclick='document.getElementById("loveis--price").innerHTML = "200₽"'>
+                                    <input type="radio" id="loveis_40x50" name="size" onclick='document.getElementById("loveis--price").innerHTML = "200Р"'>
                                     <label for="loveis_40x50">40 x 50 см</label>
                                 </div>
                                 <div class="card--input">
-                                    <input type="radio" id="loveis_50x60" name="size" onclick='document.getElementById("loveis--price").innerHTML = "300₽"'>
+                                    <input type="radio" id="loveis_50x60" name="size" onclick='document.getElementById("loveis--price").innerHTML = "300Р"'>
                                     <label for="loveis_50x60">50 x 60 см</label>
                                 </div>
                                 <div class="card--input">
-                                    <input type="radio" id="loveis_60x70" name="size" onclick='document.getElementById("loveis--price").innerHTML = "400₽"'>
+                                    <input type="radio" id="loveis_60x70" name="size" onclick='document.getElementById("loveis--price").innerHTML = "400Р"'>
                                     <label for="loveis_60x70">60 x 70 см</label>
                                 </div>
                                 <div class="card--input">
-                                    <input type="radio" id="loveis_80x90" name="size" onclick='document.getElementById("loveis--price").innerHTML = "500₽"'>
+                                    <input type="radio" id="loveis_80x90" name="size" onclick='document.getElementById("loveis--price").innerHTML = "500Р"'>
                                     <label for="loveis_80x90">80 x 90 см</label>
                                 </div>
                                 <div class="card--input">
@@ -625,7 +633,7 @@
                                     <label for="loveis_other">Другой</label>
                                 </div>
                             </div>    
-                            <h5 id="loveis--price">100₽</h5>
+                            <h5 id="loveis--price">100Р</h5>
                             <a href="loveis.html#form"><button class="btn primary">Заказать</button></a>
                             <a href="loveis.html"><button class="btn secondary">Подробнее</button></a>
                     </div>
@@ -658,7 +666,8 @@
                 </div>
             <section class="section--wide examples">
                 <div class="row align-items-center">
-                    <div class="col-md-7"><img src="img/example.png" alt="Примеры" class="image examples--image"></div>
+                    <div class="col-md-7">
+                        <img src="img/example.jpg" alt="Примеры" class="image examples--image"></div>
                     <div class="col-md-5">
                         <h3 class="examples--heading">Примеры работ</h3>
                         <h5>Мы не работаем с дешёвыми холстами! Мы используем только лучшие материалы и оборудование, чтобы достичь такого качества печати на холсте. Убедитесь сами или читайте отзывы ниже.</h5>
@@ -810,7 +819,7 @@
             </iframe>
     </div>
     <!-- delivery -->
-    <div class="section--bg delivery--red">
+    <div class="section--bg delivery--bg__yellow">
         <section class="section--wide delivery">
             <h3>Доставка в любой город России</h3>
             <h5>Получите готовый портрет в наших фирменных отделах <br>или в пункте выдачи возле Вашего дома</h5>
@@ -901,6 +910,11 @@
         $( "#callmebabyDesk" ).click(function() {
         $( "#modalCall" ).show();
         });
+    </script>
+    <script>
+        $("#infoToggler").click(function() {
+    $(this).find('img').toggle();
+});​
     </script>
 </body>
 </html>

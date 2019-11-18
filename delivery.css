@@ -1,13 +1,19 @@
 /* delivery */
 .delivery {
-    margin-top: 64px;
-    margin-bottom: 120px;
-    padding: 64px 0;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding: 0 16px !important;
+    color: white;
 }
 
-.delivery--red {
-    background: white;
+.delivery--bg__yellow {
+    background: #6394FF;
     position: relative;
+    margin-top: -8px;
+}
+
+.delivery section {
+    margin-bottom: 32px;
 }
 
 .delivery--button {
@@ -25,11 +31,13 @@
 
 .delivery button {
     margin-right: 16px;
+    color: white;
+    border: 1px solid white;
 }
 
 @media only screen and (max-width: 900px) {
 /* delivery */
-     .delivery {padding: 0 16px 64px 16px;}
+     .delivery {padding: 0 16px !important}
      .delivery button {margin-right:0;margin-bottom:16px;}
      .delivery figure {margin-bottom: 32px;}
      .delivery figure img {height: 320px;object-fit: cover;}

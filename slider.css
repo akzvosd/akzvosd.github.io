@@ -52,9 +52,23 @@
 .slider--mouse::before {
     content: url(img/svg/mouse.svg);
     margin-right: 8px;
+} 
+
+.image-x-1 {
+    display: none;
+}
+
+.image-x-2 {
+    display: none;
 }
 
 @media only screen and (max-width: 900px) {
-    .style--slide1 {background-position: center;}
-    .style--slide2 {background-position: center;}
+    .style--slide1 {background-position: center; display: none;}
+    .style--slide2 {background-position: center; display: none;}
+    .slider--mouse {display: none;}
+    .style--line {display: none;}
+    .image-x-1 {
+        display: block;
+    }
+    
 }

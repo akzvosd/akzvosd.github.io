@@ -31,3 +31,9 @@
 form {
     padding: 16px 0;
 }
+
+@media only screen and (max-width: 900px) {
+    .image--panno {
+        width: 100%;
+    }
+}
