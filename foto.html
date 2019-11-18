@@ -40,7 +40,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Imagine — Печать фото</title>
 </head>
- <body>   
+ <body><button onclick="topFunction()" id="myBtn" title="Наверх">↑</button>   
     <div class="mobile--geo">
         <span id="mobile--town"></span>
              <div id="SpbDelivery--mobile">ТРК ЛиговЪ, м. Обводный Канал</div>
@@ -208,7 +208,7 @@
             </div>
 </section>
 <!-- отзывы -->
-<section class="review section--wide" style="padding:0;">
+<section class="review section--wide">
     <h3 class="text--center repro--h3" style="margin-bottom: -8px;">Отзывы</h3>
     <h5 class="text--center">Один из принципов нашей компании только настоящие отзывы</h5>               
     <div class="row" style="margin-top: 16px">
@@ -217,7 +217,7 @@
                 <img src="img/review_galina.jpg" alt="Карточка_1" class="review--card__img col-md-4">
                 <div class="card--text col-md-8">   
                     <p>Спасибо за картину,был подарок близкому человеку.Всё было замечательно.😊</p>
-                    <small class="text--alt">Галина Полькина, Санкт-Петербург</small>
+                    <small  >Галина Полькина, Санкт-Петербург</small>
                 </div>    
             </div>
         </div>
@@ -226,7 +226,7 @@
                     <img src="img/review_larisaS.jpg" alt="Карточка_1" class="review--card__img col-md-4">
                     <div class="card--text col-md-8">   
                         <p>Спасибо за красивую картину.Сделали быстро,качественно,учли все пожелания.Заказывала на годовщину свадьбы,заказ был выполнен даже раньше заявленного срока.Очень понравился предложенный вариант и цветовая гамма.Благодарю за работу .Процветания и довольных заказчиков.</p>
-                        <small class="text--alt">Лариса Семёнова, Архангельск</small>
+                        <small  >Лариса Семёнова, Архангельск</small>
                     </div>    
             </div>
         </div>
@@ -241,7 +241,7 @@
                                         💫аккуратно
                                         💫красиво
                                         Буду заказывать ещё и всем вас советовать </p>
-                                <small class="text--alt">Аделина Александрова, Великий Новгород</small>
+                                <small  >Аделина Александрова, Великий Новгород</small>
                             </div>    
                         </div>
                     </div>
@@ -250,7 +250,7 @@
                                 <img src="img/review_yakovlev.jpg" alt="Карточка_1" class="review--card__img col-md-4">
                                 <div class="card--text col-md-8">   
                                     <p>Огромное спасибо студии за непередаваемые положительные эмоции от вашей работы! Вы настоящие профи своего дела!</p>
-                                    <small class="text--alt">Александр Яковлев, Демянск</small>
+                                    <small  >Александр Яковлев, Демянск</small>
                                 </div>    
                         </div>
                     </div> 
@@ -276,8 +276,8 @@
     <h3 class="text--center repro--h3" style="margin-bottom: 0;">Доставка в любой город России</h3>
     <h5 class="text--center">Получите готовый портрет в наших фирменных отделах <br>или в пункте выдачи возле Вашего дома</h5>
     <div class="text--center delivery--button">
-        <button class="btn line">Адреса фирменных отделов</button>
-        <button class="btn line">Подробнее о доставке</button>
+        <a href="delivery.html"><button class="btn line">Адреса фирменных отделов</button></a>
+        <a href="delivery.html"><button class="btn line">Подробнее о доставке</button></a>
     </div>
         <div class="row" style="margin-top: 40px;">
                 <div class="col-md-4">
@@ -419,6 +419,21 @@ document.getElementById("defaultOpen").click();
         $( "#callmebabyDesk" ).click(function() {
         $( "#modalCall" ).show();
         });
+    </script>
+    <script>
+    mybutton = document.getElementById("myBtn");
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+    }
+    function topFunction() {
+    document.body.scrollTop = 0; 
+    document.documentElement.scrollTop = 0; 
+    } 
     </script>
 </body>
 </html>

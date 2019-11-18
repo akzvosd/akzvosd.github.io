@@ -40,7 +40,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Imagine — Pop Art</title>
 </head>
- <body>   
+ <body><button onclick="topFunction()" id="myBtn" title="Наверх">↑</button>   
     <div class="mobile--geo">
         <span id="mobile--town"></span>
              <div id="SpbDelivery--mobile">ТРК ЛиговЪ, м. Обводный Канал</div>
@@ -159,6 +159,21 @@
 <!-- до и после -->
 <section class="text--center">
         <h3 class="text--bold">До и После</h3>
+        <div class="tog tog-bottom">
+            <div class="togprint"></div>
+            <img src="img/examples/example7.jpg" class="image" style="height: 320px;">
+            <img src="img/examples/example7_x.jpg" class="image" style="display:none;height: 320px;">
+        </div>
+        <div class="tog tog-bottom">
+                <div class="togprint"></div>
+                <img src="img/popart/popart1.jpg" class="image" style="height: 320px;">
+                <img src="img/popart/popart1_x.jpg" class="image" style="display:none;height: 320px;">
+            </div>
+            <div class="tog tog-bottom">
+                    <div class="togprint"></div>
+                    <img src="img/popart/popart2.jpg" class="image" style="height: 320px;">
+                    <img src="img/popart/popart2_x.jpg" class="image" style="display:none;height: 320px;">
+                </div>
         <div class="style--container">
             <div class="slider--mouse">Проведите мышкой</div>
             <div class="style--slide1" style="background-image: url(img/examples/example7.jpg);"></div>
@@ -539,6 +554,28 @@
         $( "#callmebabyDesk" ).click(function() {
         $( "#modalCall" ).show();
         });
+    </script>
+    <script>
+            $(document).ready(function(){
+            $(".tog").click(function(){
+            $('img',this).toggle();
+            });
+            });
+        </script>
+    <script>
+    mybutton = document.getElementById("myBtn");
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+    }
+    function topFunction() {
+    document.body.scrollTop = 0; 
+    document.documentElement.scrollTop = 0; 
+    } 
     </script>
 </body>
 </html>

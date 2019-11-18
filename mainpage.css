@@ -219,4 +219,12 @@
          width: 80%;
          margin: auto;
      }
+
+     .style--text__padding {
+        padding: 0px 0px !important;
+    }
+
+    .style--card {
+        margin-bottom: 64px;
+    }
 }

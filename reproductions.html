@@ -37,7 +37,7 @@
     <link rel="stylesheet" href="swiper.css">
     <title>Imagine — Картины</title>
 </head>
- <body>
+ <body><button onclick="topFunction()" id="myBtn" title="Наверх">↑</button>
     <div class="mobile--geo">
                 <span id="mobile--town"></span>
                     <div id="SpbDelivery--mobile">ТРК ЛиговЪ, м. Обводный Канал</div>
@@ -204,7 +204,7 @@
             </div>
 </section>
 <!-- отзывы -->
-<section class="review section--wide" style="padding:0;">
+<section class="review section--wide">
 <h3 class="text--center repro--h3" style="margin-bottom: -8px;">Отзывы</h3>
 <h5 class="text--center">Один из принципов нашей компании только настоящие отзывы</h5>               
 <div class="row" style="margin-top: 16px">
@@ -213,7 +213,7 @@
             <img src="img/review_zinoveva.jpg" alt="Карточка_1" class="review--card__img col-md-4">
             <div class="card--text col-md-8">   
                 <p>Спасибо большое за мой прекрасно выполненный заказ!!!очень быстро и аккуратно !!!!буду всегда пользоваться вашими услугами!!!</p>
-                <small class="text--alt">Евгения Зиновьева, Великий Новгород</small>
+                <small  >Евгения Зиновьева, Великий Новгород</small>
             </div>    
         </div>
     </div>
@@ -222,7 +222,7 @@
                 <img src="img/review_natalya.jpg" alt="Карточка_1" class="review--card__img col-md-4">
                 <div class="card--text col-md-8">   
                     <p>Заказывали картину для нашей компании в небольшую приемную. Предложили варианты картинок, все сделали качественно и в срок. Спасибо!</p>
-                    <small class="text--alt">Наталья Кузьмина, Санкт-Петербург</small>
+                    <small  >Наталья Кузьмина, Санкт-Петербург</small>
                 </div>    
         </div>
     </div>
@@ -233,7 +233,7 @@
                         <img src="img/review_shtapun.jpg" alt="Карточка_1" class="review--card__img col-md-4">
                         <div class="card--text col-md-8">   
                             <p>Очень быстро, все в сроки, высокое качество!</p>
-                            <small class="text--alt">Максим Штапун, Боровичи</small>
+                            <small  >Максим Штапун, Боровичи</small>
                         </div>    
                     </div>
                 </div>
@@ -242,7 +242,7 @@
                             <img src="img/review_davtyan.jpg" alt="Карточка_1" class="review--card__img col-md-4">
                             <div class="card--text col-md-8">   
                                 <p>Великолепная работа! Сделана быстро и цена хорошая, мы остались довольны!Большое спасибо!!!!!!   </p>
-                                <small class="text--alt">Давтян Карине, Псков</small>
+                                <small  >Давтян Карине, Псков</small>
                             </div>    
                     </div>
                 </div> 
@@ -268,8 +268,8 @@
     <h3 class="text--center repro--h3" style="margin-bottom: 0;">Доставка в любой город России</h3>
     <h5 class="text--center">Получите готовый портрет в наших фирменных отделах <br>или в пункте выдачи возле Вашего дома</h5>
     <div class="text--center delivery--button">
-        <button class="btn line">Адреса фирменных отделов</button>
-        <button class="btn line">Подробнее о доставке</button>
+        <a href="delivery.html"><button class="btn line">Адреса фирменных отделов</button></a>
+        <a href="delivery.html"><button class="btn line">Подробнее о доставке</button></a>
     </div>
         <div class="row" style="margin-top: 40px;">
                 <div class="col-md-4">
@@ -463,6 +463,21 @@ document.getElementById("defaultOpen").click();
         $( "#callmebabyDesk" ).click(function() {
         $( "#modalCall" ).show();
         });
+    </script>
+    <script>
+    mybutton = document.getElementById("myBtn");
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+    }
+    function topFunction() {
+    document.body.scrollTop = 0; 
+    document.documentElement.scrollTop = 0; 
+    } 
     </script>
 </body>
 </html>

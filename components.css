@@ -45,16 +45,25 @@ input + label {margin-right: 24px;}
     height: 1200px !important;
 }
 
-.popart--image {
-    display: block;
-    background-image: url(img/examples/example7.jpg);
-    width: 100%;
-    height: 320px;
-}
-
-.popart--image:active {
-    background-image: url(img/examples/example7_x.jpg);
-}
+#myBtn {
+    display: none; 
+    position: fixed; 
+    bottom: 20px; 
+    right: 30px; 
+    z-index: 99; 
+    border: none; 
+    outline: none;
+    background-color: #FFD164;
+    cursor: pointer;
+    padding: 16px; 
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  #myBtn:hover {
+    background-color: #ffba1a; /* Add a dark-grey background on hover */
+  }
 
 /* dropdown */
 .dropdown {
@@ -189,6 +198,10 @@ ul {
     font-weight: 600;
 }
 
+.button--vk {
+    margin-top: 64px !important;
+}
+
 .hero-text__list {margin-top: 5rem;}
 
 .hero-text p {
@@ -226,7 +239,7 @@ section img {
 .button--center button {
     padding: 16px 24px; 
     font-size: 18px;
-    margin: 72px 0 32px 0;
+    margin: 8px 0 32px 0;
 }
 
 .section--bg {
@@ -332,12 +345,21 @@ section img {
   }
 
 @media only screen and (max-width: 900px) {
+    #myBtn {
+        bottom: 8px;
+        right: 8px;
+        font-size: 18px;
+        padding: 8px;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+        width: max-content;
+      }
+
     .image--baget {
         display: none;
     }
     .image--baget__mobile {
         display: block;
-        height: 300px;
+        height: 360px;
         object-fit: cover;
         width: 100%;
     }
@@ -356,9 +378,9 @@ section img {
     h4 {
         font-size: x-large;
     }
-    section {padding: 36px 16px; margin-top: 0; margin-bottom: 0;}
+    section {padding: 36px 16px; margin-top: 64px; margin-bottom: 64px;}
     section .col-md-4 {padding: 0;}
-    .section--wide h5 {line-height: 1.5;margin-bottom: 32px;}
+    .section--wide h5 {line-height: 1.2;margin-bottom: 32px;font-size: 1rem;}
     .mobile--heading {display: block; width: 100%; margin-bottom: 48px; font-weight: 600; text-align: center; padding: 0 8px; font-size: 42px; line-height: 1;}
     .button--center {padding: 0 16px;}
     header {display: none !important;}
@@ -370,6 +392,10 @@ section img {
     /* header delivery */
     #SpbDelivery--mobile, #VNDelivery--mobile, #OtherDelivery--mobile, #OtherPrice--mobile {
         display: block;  display: none;
+    }
+
+    .button--vk {
+        margin-top: 32px !important;
     }
 
      /* hero-image */
@@ -389,6 +415,9 @@ section img {
         left: 0;
         transform: translate(0, 0);
         color: white;
+        }
+        .hero-text h5 {
+            font-size: 0.9rem;
         }
         .hero-text--style {
             text-align: left;
@@ -413,6 +442,11 @@ section img {
     /* examples */
     .examples--image {display: none;}
     .examples--heading {display: none;}
+
+    .button--center button {
+        font-size: 14px;
+        font-weight: 600;
+    }
 
     /* menu */
     .mobile--header {

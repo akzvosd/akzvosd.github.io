@@ -36,7 +36,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Imagine — Оплата</title>
 </head>
- <body>   
+ <body><button onclick="topFunction()" id="myBtn" title="Наверх">↑</button>   
     <div class="mobile--geo">
         <span id="mobile--town"></span>
              <div id="SpbDelivery--mobile">ТРК ЛиговЪ, м. Обводный Канал</div>
@@ -212,6 +212,21 @@
         $( "#callmebabyDesk" ).click(function() {
         $( "#modalCall" ).show();
         });
+    </script>
+    <script>
+    mybutton = document.getElementById("myBtn");
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+    }
+    function topFunction() {
+    document.body.scrollTop = 0; 
+    document.documentElement.scrollTop = 0; 
+    } 
     </script>
 </body>
 </html>

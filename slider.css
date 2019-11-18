@@ -54,10 +54,36 @@
     margin-right: 8px;
 }
 
+.tog {
+    display: none;
+}
+
 @media only screen and (max-width: 900px) {
+    .style--container {display: none;}
     .style--slide1 {background-position: center; display: none;}
     .style--slide2 {background-position: center; display: none;}
     .slider--mouse {display: none;}
     .style--line {display: none;}
     
+    .tog {
+        position: relative;
+        display: block;
+    }
+
+    .tog-bottom {
+        margin-bottom: 16px;
+    }
+    
+    .togprint {
+        position: absolute;
+        bottom: 16px;
+        right: 16px;
+        background: #FFD164;
+        padding: 8px;
+        border-radius: 8px; z-index: 22;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.404);
+        width: 48px;
+        height: 48px;
+        background-image: url(img/svg/tap.svg);
+    }
 }

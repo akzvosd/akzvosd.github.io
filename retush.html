@@ -36,7 +36,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Imagine — Ретушь фото</title>
 </head>
- <body>   
+ <body><button onclick="topFunction()" id="myBtn" title="Наверх">↑</button>   
     <div class="mobile--geo">
         <span id="mobile--town"></span>
              <div id="SpbDelivery--mobile">ТРК ЛиговЪ, м. Обводный Канал</div>
@@ -189,15 +189,17 @@
     
     <section class="section--bg form" id="form">
             <section class="bitrix">
-            <script id="bx24_form_inline" data-skip-moving="true">
-                (function(w,d,u,b){w['Bitrix24FormObject']=b;w[b] = w[b] || function(){arguments[0].ref=u;
-                (w[b].forms=w[b].forms||[]).push(arguments[0])};
-                if(w[b]['forms']) return;
-                var s=d.createElement('script');s.async=1;s.src=u+'?'+(1*new Date());
-                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
-                })(window,document,'https://b24-vrm86j.bitrix24.ru/bitrix/js/crm/form_loader.js','b24form');
-                b24form({"id":"9","lang":"ru","sec":"76i73a","type":"inline"});
-            </script>                    
+                    <script id="bx24_form_inline" data-skip-moving="true">
+                            (function(w,d,u,b){w['Bitrix24FormObject']=b;w[b] = w[b] || function(){arguments[0].ref=u;
+                                    (w[b].forms=w[b].forms||[]).push(arguments[0])};
+                                    if(w[b]['forms']) return;
+                                    var s=d.createElement('script');s.async=1;s.src=u+'?'+(1*new Date());
+                                    var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+                            })(window,document,'https://b24-vrm86j.bitrix24.ru/bitrix/js/crm/form_loader.js','b24form');
+                    
+                            b24form({"id":"23","lang":"ru","sec":"89ms2q","type":"inline"});
+                    </script>
+                                       
             <!-- <h3 class="text--center repro--h3">Отправить фото на ретушь</h3>
             
             <div id="photo" class="tabcontent" style="display: block;">
@@ -272,6 +274,21 @@
         $( "#callmebabyDesk" ).click(function() {
         $( "#modalCall" ).show();
         });
+    </script>
+    <script>
+    mybutton = document.getElementById("myBtn");
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+    }
+    function topFunction() {
+    document.body.scrollTop = 0; 
+    document.documentElement.scrollTop = 0; 
+    } 
     </script>
 </body>
 </html>

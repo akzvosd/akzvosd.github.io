@@ -40,7 +40,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Imagine — Панно</title>
 </head>
- <body>   
+ <body><button onclick="topFunction()" id="myBtn" title="Наверх">↑</button>   
     <div class="mobile--geo">
         <span id="mobile--town"></span>
             <div id="SpbDelivery--mobile">ТРК ЛиговЪ, м. Обводный Канал</div>
@@ -230,7 +230,7 @@
                 <img src="img/review_peteenyova.jpg" alt="Карточка_1" class="review--card__img col-md-4">
                 <div class="card--text col-md-8">   
                     <p>Было очень приятно общаться, очень заботливые, внимательные и ответственные люди работают в студии. Спасибо!</p>
-                    <small class="text--alt">Марина Петренёва, Великий Новгород</small>
+                    <small  >Марина Петренёва, Великий Новгород</small>
                 </div>    
             </div>
         </div>
@@ -239,7 +239,7 @@
                     <img src="img/review_kudrova.jpg" alt="Карточка_1" class="review--card__img col-md-4">
                     <div class="card--text col-md-8">   
                         <p>Спасибо за то, что вы есть! Всё быстро, качественно, доступно. Рекомендуем.... С уважением к вашему труду)</p>
-                        <small class="text--alt">Светлана Кудрова, Демянск</small>
+                        <small  >Светлана Кудрова, Демянск</small>
                     </div>    
             </div>
         </div>
@@ -250,7 +250,7 @@
                             <img src="img/review_vorobey.jpg" alt="Карточка_1" class="review--card__img col-md-4">
                             <div class="card--text col-md-8">   
                                 <p>Хорошая картина получилась, учитывают все пожелания, и приемлемые цены</p>
-                                <small class="text--alt">Евгений Воробьев, Санкт-Петербург</small>
+                                <small  >Евгений Воробьев, Санкт-Петербург</small>
                             </div>    
                         </div>
                     </div>
@@ -259,7 +259,7 @@
                                 <img src="img/review_pahom.jpg" alt="Карточка_1" class="review--card__img col-md-4">
                                 <div class="card--text col-md-8">   
                                     <p>Спасибо большое студии за картину, все сделали быстро и очень качественно. Всем советую, не пожалеете.</p>
-                                    <small class="text--alt">Надежда Пахомова, Пролетарий</small>
+                                    <small  >Надежда Пахомова, Пролетарий</small>
                                 </div>    
                         </div>
                     </div> 
@@ -285,8 +285,8 @@
     <h3 class="text--center repro--h3" style="margin-bottom: 0;">Доставка в любой город России</h3>
     <h5 class="text--center">Получите готовый портрет в наших фирменных отделах <br>или в пункте выдачи возле Вашего дома</h5>
     <div class="text--center delivery--button">
-        <button class="btn line">Адреса фирменных отделов</button>
-        <button class="btn line">Подробнее о доставке</button>
+        <a href="delivery.html"><button class="btn line">Адреса фирменных отделов</button></a>
+        <a href="delivery.html"><button class="btn line">Подробнее о доставке</button></a>
     </div>
         <div class="row" style="margin-top: 40px;">
                 <div class="col-md-4">
@@ -442,6 +442,21 @@ document.getElementById("defaultOpen").click();
         $( "#callmebabyDesk" ).click(function() {
         $( "#modalCall" ).show();
         });
+    </script>
+    <script>
+    mybutton = document.getElementById("myBtn");
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+    }
+    function topFunction() {
+    document.body.scrollTop = 0; 
+    document.documentElement.scrollTop = 0; 
+    } 
     </script>
 </body>
 </html>

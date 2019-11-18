@@ -40,7 +40,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Imagine — В образе</title>
 </head>
- <body>   
+ <body><button onclick="topFunction()" id="myBtn" title="Наверх">↑</button>   
     <div class="mobile--geo">
         <span id="mobile--town"></span>
              <div id="SpbDelivery--mobile">ТРК ЛиговЪ, м. Обводный Канал</div>
@@ -141,7 +141,7 @@
         
 <main style="padding: 0 !important">
     <!-- hero -->
-        <div class="hero-image popart" style="background-image: url(img/obraz/obraz-hero.jpg)">
+        <div class="hero-image popart" style="background-image: url(img/obraz/obraz-hero.jpg); background-position-x: 25%;">
             <div class="hero-text--style">
                     <div class="hero-text__list hero-text__listShadow">
                         <h3>Портрет «В образе»</h3>
@@ -159,6 +159,21 @@
 <!-- до и после -->
 <section class="text--center">
         <h3 class="text--bold">До и После</h3>
+        <div class="tog tog-bottom">
+            <div class="togprint"></div>
+            <img src="img/examples/example.jpg" class="image" style="height: 320px;">
+            <img src="img/examples/example_X.jpg" class="image" style="display:none;height: 320px;">
+        </div>
+        <div class="tog tog-bottom">
+                <div class="togprint"></div>
+                <img src="img/obraz/obraz1.jpg" class="image" style="height: 320px;">
+                <img src="img/obraz/obraz1_x.jpg" class="image" style="display:none;height: 320px;">
+            </div>
+            <div class="tog tog-bottom">
+                    <div class="togprint"></div>
+                    <img src="img/obraz/obraz2.jpg" class="image" style="height: 320px;">
+                    <img src="img/obraz/obraz2_x.jpg" class="image" style="display:none;height: 320px;">
+                </div>
         <div class="style--container">
             <div class="slider--mouse">Проведите мышкой</div>
             <div class="style--slide1" style="background-image: url(img/examples/example.jpg);"></div>
@@ -346,7 +361,7 @@
                                 <img src="img/review_peteenyova.jpg" alt="Карточка_1" class="review--card__img col-md-4">
                                 <div class="card--text col-md-8">   
                                     <p>Было очень приятно общаться, очень заботливые, внимательные и ответственные люди работают в студии. Спасибо!</p>
-                                    <small class="text--alt">Марина Петренёва, Великий Новгород</small>
+                                    <small  >Марина Петренёва, Великий Новгород</small>
                                 </div>
                         </div>
                     </div>
@@ -355,7 +370,7 @@
                                     <img src="img/review_kudrova.jpg" alt="Карточка_1" class="review--card__img col-md-4">
                                     <div class="card--text col-md-8">   
                                         <p>Спасибо за то, что вы есть! Всё быстро, качественно, доступно. Рекомендуем.... С уважением к вашему труду)</p>
-                                        <small class="text--alt">Светлана Кудрова, Демянск</small>
+                                        <small  >Светлана Кудрова, Демянск</small>
                                     </div>    
                             </div>
                     </div>
@@ -366,7 +381,7 @@
                                     <img src="img/review_vorobey.jpg" alt="Карточка_1" class="review--card__img col-md-4">
                                     <div class="card--text col-md-8">   
                                         <p>Хорошая картина получилась, учитывают все пожелания, и приемлемые цены</p>
-                                        <small class="text--alt">Евгений Воробьев, Санкт-Петербург</small>
+                                        <small  >Евгений Воробьев, Санкт-Петербург</small>
                                     </div>    
                             </div>
                         </div>
@@ -375,7 +390,7 @@
                                         <img src="img/review_pahom.jpg" alt="Карточка_1" class="review--card__img col-md-4">
                                         <div class="card--text col-md-8">   
                                             <p>Спасибо большое студии за картину, все сделали быстро и очень качественно. Всем советую, не пожалеете.</p>
-                                            <small class="text--alt">Надежда Пахомова, Пролетарий</small>
+                                            <small  >Надежда Пахомова, Пролетарий</small>
                                         </div>    
                                 </div>
                         </div>
@@ -542,6 +557,28 @@
         $( "#callmebabyDesk" ).click(function() {
         $( "#modalCall" ).show();
         });
+    </script>
+    <script>
+            $(document).ready(function(){
+            $(".tog").click(function(){
+            $('img',this).toggle();
+            });
+            });
+        </script>
+    <script>
+    mybutton = document.getElementById("myBtn");
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+    }
+    function topFunction() {
+    document.body.scrollTop = 0; 
+    document.documentElement.scrollTop = 0; 
+    } 
     </script>
 </body>
 </html>

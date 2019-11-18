@@ -36,7 +36,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Imagine — Сертификаты</title>
 </head>
- <body>   
+ <body><button onclick="topFunction()" id="myBtn" title="Наверх">↑</button>   
     <div class="mobile--geo">
         <span id="mobile--town"></span>
              <div id="SpbDelivery--mobile">ТРК ЛиговЪ, м. Обводный Канал</div>
@@ -196,8 +196,18 @@
     </section>
     
     <section class="section--bg form" id="form">
-            <section>   
-            <h3 class="text--center repro--h3">Заказать сертификат</h3>
+            <section class="bitrix" style="margin-top: 0px; padding: 0px">
+                    <script id="bx24_form_inline" data-skip-moving="true">
+                            (function(w,d,u,b){w['Bitrix24FormObject']=b;w[b] = w[b] || function(){arguments[0].ref=u;
+                                    (w[b].forms=w[b].forms||[]).push(arguments[0])};
+                                    if(w[b]['forms']) return;
+                                    var s=d.createElement('script');s.async=1;s.src=u+'?'+(1*new Date());
+                                    var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+                            })(window,document,'https://b24-vrm86j.bitrix24.ru/bitrix/js/crm/form_loader.js','b24form');
+                    
+                            b24form({"id":"21","lang":"ru","sec":"ohqrd7","type":"inline"});
+                    </script>                    
+            <!-- <h3 class="text--center repro--h3">Заказать сертификат</h3>
             <div id="photo" class="tabcontent" style="display: block;">
                 <form action="/action_page.php" class="form--repro">
                     <div class="form--repro__item">
@@ -223,7 +233,7 @@
                     </div>
                     <input type="submit" class="btn alternative" style="box-shadow: 0 0 0;" value="Отправить заявку">
                 </form>
-            </div>
+            </div> -->
         </section>
     </section>
 
@@ -272,6 +282,21 @@
         $( "#callmebabyDesk" ).click(function() {
         $( "#modalCall" ).show();
         });
+    </script>
+    <script>
+    mybutton = document.getElementById("myBtn");
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+    }
+    function topFunction() {
+    document.body.scrollTop = 0; 
+    document.documentElement.scrollTop = 0; 
+    } 
     </script>
 </body>
 </html>
