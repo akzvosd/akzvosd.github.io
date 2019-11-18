@@ -272,6 +272,10 @@ section img {
     display: none;
 }
 
+.image--baget {
+    cursor: pointer;
+}
+
 .modal--cursor {
     cursor: pointer;
 }
@@ -416,7 +420,7 @@ section img {
         text-transform: uppercase;
     }
 
-    .mobile--nav .active {
+    .mobile--nav .active--navbar__mobile {
         color: #131313;
     }
     /* .mobile--menu {
