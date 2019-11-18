@@ -55,6 +55,6 @@
 }
 
 @media only screen and (max-width: 900px) {
-    .style--slide1 {background-position: center;}   
-    .style--slide2 {display: none;}
+    .style--slide1 {background-position: center;}
+    .style--slide2 {background-position: center;}
 }
