@@ -2,7 +2,6 @@
     display: none;
 }
 
-
 .mainPage img {
     width: 80%;
 }
@@ -115,7 +114,7 @@
     .mainPage img {
         width: 100%;
     }
-    
+
     /* swiper */
     .swiper-container {
         display: block;

@@ -45,13 +45,24 @@ input + label {margin-right: 24px;}
     height: 1200px !important;
 }
 
+.btn-up {
+    border: 2px solid white; margin-top: 64px; padding: 32px 64px; 
+    font-size: 2rem;
+}
+
+.btn-up_styles {
+    border: 2px solid white; margin-top: 64px; padding: 16px 32px; 
+    font-size: 1.5rem;
+}
+
 #myBtn {
     display: none; 
     position: fixed; 
     bottom: 20px; 
     right: 30px; 
     z-index: 99; 
-    border: none; 
+    border: 4px solid #FFD164; 
+    color: #FFD164;
     outline: none;
     background-color: #fff;
     cursor: pointer;
@@ -59,15 +70,15 @@ input + label {margin-right: 24px;}
     width: 48px;
     height: 48px;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 900;
     display: inline-block;
-    -webkit-box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.2);
-            box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 2px 16px rgba(218, 178, 85, 0.4);
+            box-shadow: 0px 2px 16px rgba(218, 178, 85, 0.4);
   }
 
   #mybtn--up {
     position: absolute;
-    top: 47%;
+    top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
@@ -363,13 +374,25 @@ section img {
   }
 
 @media only screen and (max-width: 900px) {
+
+    .btn-up {
+        border: 2px solid white; margin-top: 64px; padding: 16px 32px; 
+        width: 100%;
+        font-size: x-large;
+    }
+
+    .btn-up_styles {
+        border: 2px solid white; margin-top: 64px; padding: 16px 32px; 
+        width: 100%;
+        font-size: 1rem !important;
+        font-weight: 600;
+    }
+
     #myBtn {
         bottom: 8px;
         right: 8px;
         font-size: 18px;
         padding: 8px;
-        -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
-                box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
       }
 
     .image--baget {

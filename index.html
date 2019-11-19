@@ -63,7 +63,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Imagine — Студия Картин</title>
 </head>
-<body><button onclick="topFunction()" id="myBtn" title="Наверх"><div id="mybtn--up">↑</div></button>
+<body><button onclick="topFunction()" id="myBtn" title="Наверх"><div id="mybtn--up"><img src="img/svg/up.svg" width="24px"></div></button>
            <div class="mobile--geo">
                 <span id="mobile--town"></span>
                     <div id="SpbDelivery--mobile">ТРК ЛиговЪ, м. Обводный Канал</div>
@@ -176,7 +176,7 @@
         </div>
     </main>
     <!-- styles -->
-    <section class="style">
+    <section class="style" id="top">
         <!-- dream -->
         <h3 style="display: block; width: 100%; margin-bottom: 64px; font-weight: 600; text-align: center;">Выберите свой стиль</h3>
         <div class="style--card">
@@ -710,15 +710,12 @@
             <h4 class="mobile--heading">Примеры работ</h4>
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="img/examples/example.jpg" alt="Картинка пример" class="image swiper-image"><img src="img/svg/swipe.svg" alt="Свайпни!" class="swipe-icon"></div>
-                        <div class="swiper-slide"><img src="img/examples/example1.jpg" alt="Картинка пример" class="image swiper-image"></div>
-                        <div class="swiper-slide"><img src="img/examples/example2.jpg" alt="Картинка пример" class="image swiper-image"></div>
-                        <div class="swiper-slide"><img src="img/examples/example3.jpg" alt="Картинка пример" class="image swiper-image"></div>
-                        <div class="swiper-slide"><img src="img/examples/example4.jpg" alt="Картинка пример" class="image swiper-image"></div>
-                        <div class="swiper-slide"><img src="img/examples/example5.jpg" alt="Картинка пример" class="image swiper-image"></div>
-                        <div class="swiper-slide"><img src="img/examples/example6.jpg" alt="Картинка пример" class="image swiper-image"></div>
-                        <div class="swiper-slide"><img src="img/examples/example7.jpg" alt="Картинка пример" class="image swiper-image"></div>
-                        <div class="swiper-slide"><img src="img/examples/example8.jpg" alt="Картинка пример" class="image swiper-image"></div>
+                        <div class="swiper-slide"><img src="img/main/main.jpg" alt="Картинка пример" class="image swiper-image"><img src="img/svg/swipe.svg" alt="Свайпни!" class="swipe-icon"></div>
+                        <div class="swiper-slide"><img src="img/main/main1.jpg" alt="Картинка пример" class="image swiper-image"></div>
+                        <div class="swiper-slide"><img src="img/main/main2.jpg" alt="Картинка пример" class="image swiper-image"></div>
+                        <div class="swiper-slide"><img src="img/main/main3.jpg" alt="Картинка пример" class="image swiper-image"></div>
+                        <div class="swiper-slide"><img src="img/main/main4.jpg" alt="Картинка пример" class="image swiper-image"></div>
+                        <div class="swiper-slide"><img src="img/main/main5.jpg" alt="Картинка пример" class="image swiper-image"></div>
                     </div>
                 </div>
             <section class="section--wide examples">
@@ -907,6 +904,9 @@
                     </figure>
                 </div> 
             </div>
+            <div class="text--center">
+                <a href="#top"><div class="btn btn-up">Вернуться к стилям</div></a>
+            </div>
         </section>
     </div>
      
@@ -924,7 +924,6 @@
                     <a href="restoration.html">Реставрация старых фото</a>
                     <a href="retush.html">Ретушь</a>
                     <a href="sertifikat.html">Сертификаты</a>
-                    <a href="gift.html">Идеи подарков</a>
                     <a href="baget.html">Багет</a>
                     <a href="package.html">Упаковка</a>
                 </div>
