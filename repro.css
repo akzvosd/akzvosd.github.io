@@ -1,4 +1,6 @@
 .reproductions {
+    background-image: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0)),to(rgba(0, 0, 0, 0.9))), url("img/repro.jpg");
+    background-image: -o-linear-gradient(right, rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.9)), url("img/repro.jpg");
     background-image: linear-gradient(to left, rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.9)), url("img/repro.jpg");
     background-size: cover;
 }
@@ -24,6 +26,8 @@
     outline: none;
     cursor: pointer;
     padding: 14px 16px;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
     transition: 0.4s;
     font-size: 1.2rem;
     color: whitesmoke;
@@ -41,7 +45,7 @@
 }
 
 .tab--text {
-    background: #FFD164; width:max-content; margin-bottom: 16px; padding: 4px 8px;
+    background: #FFD164; width:-webkit-max-content; width:-moz-max-content; width:max-content; margin-bottom: 16px; padding: 4px 8px;
 }
 
 .tabcontent {
@@ -49,7 +53,8 @@
     padding: 48px 0 48px;
     border-top: none;
     background: white;
-    box-shadow: 0px 0px 16px white;
+    -webkit-box-shadow: 0px 0px 16px white;
+            box-shadow: 0px 0px 16px white;
     color: #131313;
     border-radius: 16px;
 }
@@ -91,6 +96,8 @@ select {
     background: #FFD164;
     border: 1px solid #FFD164;
     color: #131313;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
     transition: 0.4s;
 }
 
@@ -126,10 +133,13 @@ input[type=file] {
 
 .file--label {
     cursor: pointer;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     border-radius: 8px;
     background: #FFD164;
-    box-shadow: 0px 8px 16px rgba(255, 208, 100, 0.432);
+    -webkit-box-shadow: 0px 8px 16px rgba(255, 208, 100, 0.432);
+            box-shadow: 0px 8px 16px rgba(255, 208, 100, 0.432);
     padding:16px 32px;
     vertical-align:middle;
     font-size: 18px !important;
@@ -142,12 +152,16 @@ input[type=file] {
 .modal img {position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 }
 
 
 @media only screen and (max-width: 900px) {
     .reproductions {
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)),to(rgba(0, 0, 0, 0.9))), url("img/repro.jpg");
+        background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.9)), url("img/repro.jpg");
         background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.9)), url("img/repro.jpg");
         background-position-x: 60%;
     }
@@ -190,7 +204,8 @@ input[type=file] {
     }
 
     .form--button {
-        box-shadow: 0 0 0;
+        -webkit-box-shadow: 0 0 0;
+                box-shadow: 0 0 0;
     }
 
     .file--label {
@@ -199,7 +214,8 @@ input[type=file] {
         text-align: center;
         border-radius: 8px;
         background: #FFD164;
-        box-shadow: 0px 8px 16px rgba(255, 208, 100, 0.432);
+        -webkit-box-shadow: 0px 8px 16px rgba(255, 208, 100, 0.432);
+                box-shadow: 0px 8px 16px rgba(255, 208, 100, 0.432);
         padding:16px 32px;
         vertical-align:middle;
         font-size: 18px !important;

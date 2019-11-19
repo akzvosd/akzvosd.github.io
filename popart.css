@@ -8,7 +8,9 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .hero-text__list {
@@ -22,7 +24,8 @@
 
 .hero-text__listShadow {
     border: 0 !important;
-    box-shadow: 0px 0px 16px rgba(0, 0, 0,.2);
+    -webkit-box-shadow: 0px 0px 16px rgba(0, 0, 0,.2);
+            box-shadow: 0px 0px 16px rgba(0, 0, 0,.2);
 }
 
 .hero-text__list button {
@@ -36,7 +39,8 @@
 
 .popart--image {
     height: 400px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 .section--bg {
@@ -60,12 +64,14 @@ section h3 {
     color: #131313;
     border-radius: 1rem;
     padding-bottom: 16px;
-    box-shadow: 0px 0px 8px rgba(255,255,255,.4);
+    -webkit-box-shadow: 0px 0px 8px rgba(255,255,255,.4);
+            box-shadow: 0px 0px 8px rgba(255,255,255,.4);
 }
 
 .offer--image {
     height: 240px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 .section--bg {

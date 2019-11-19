@@ -30,7 +30,8 @@ main {
 
 .image--delivery {
     height: 240px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 .modal {
@@ -51,7 +52,8 @@ main {
 
     .image--delivery {
         height: 320px !important;
-        object-fit: cover;
+        -o-object-fit: cover;
+           object-fit: cover;
     }
 
     .delivery--h3 {

@@ -35,7 +35,8 @@ main button {
     background: #FFD164;
     padding: 8px;
     border-radius: 8px;
-    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.4);
+            box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.4);
 }
 
 section {
