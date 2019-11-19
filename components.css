@@ -64,11 +64,13 @@ input + label {margin-right: 24px;}
     box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.2);
   }
 
-#mybtn--up {
+  #mybtn--up {
     position: absolute;
-    top: 50%;
+    top: 47%;
   left: 50%;
-  transform: translate(-50%, -50%)
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%)
 }
   
   #myBtn:hover {
