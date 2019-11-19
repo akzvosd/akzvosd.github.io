@@ -63,7 +63,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Imagine — Студия Картин</title>
 </head>
-<body><button onclick="topFunction()" id="myBtn" title="Наверх">↑</button>
+<body><button onclick="topFunction()" id="myBtn" title="Наверх"><div id="mybtn--up">↑</div></button>
            <div class="mobile--geo">
                 <span id="mobile--town"></span>
                     <div id="SpbDelivery--mobile">ТРК ЛиговЪ, м. Обводный Канал</div>
@@ -73,7 +73,7 @@
             <div class="mobile--header">
                 <div class="row align-items-center" style="padding: 0 16px;">
                     <div class="col"><a href="#" class="mobile--menu__icon" onclick="openNav()"><img src="img/svg/menu.svg" alt="Меню"></a></div>
-                    <div class="col"><a href="index.html"><img src="img/logotype.png" alt="Логотип"></a></div>
+                    <div class="col"><a href="index.html"><img src="img/logotype.png" alt="Логотип" class="image"></a></div>
                     <div class="col" style="text-align: right;"><a href="tel:+79082930097"><img src="img/svg/phone.svg" alt="Позвонить" style="width: 32px"></a></div>
                 </div>
             </div>
@@ -115,7 +115,7 @@
             </div>
     
     <header class="row align-items-center">
-            <div class="col-md-auto"><a href="index.html"><img src="img/logotype.png" alt="Логотип"></a></div>
+            <div class="col-md-2"><a href="index.html"><img src="img/logotype.png" class="image" alt="Логотип"></a></div>
             <div class="col" style="flex-grow: 0;">
                 <img src="img/svg/geo.svg" alt="Гео">  
             </div>
@@ -336,7 +336,7 @@
         </div>
     <!-- show more -->
         <!-- dream art -->
-        <div class="style--card" style="display: none" id="card--hidden">
+        <div class="style--card">
             <div class="row align-items-center">
                 <div class="col-md-7" style="position: static;">
                         <div class="tog">
@@ -388,7 +388,7 @@
             </div>
         </div>
         <!-- образ -->
-        <div class="style--card" style="display: none" id="card--hidden">
+        <div class="style--card">
             <div class="row align-items-center">
                 <div class="col-md-7" style="position: static;">
                         <div class="tog">
@@ -441,7 +441,7 @@
         </div>
 
         <!-- акварель -->
-        <div class="style--card" style="display: none" id="card--hidden">
+        <div class="style--card">
             <div class="row align-items-center">
                 <div class="col-md-7" style="position: static;">
                         <div class="tog">
@@ -494,7 +494,7 @@
         </div>
 
         <!-- Мультик -->
-        <div class="style--card" style="display: none" id="card--hidden">
+        <div class="style--card">
                 <div class="row align-items-center">
                     <div class="col-md-7" style="position: static;">
                             <div class="tog">
@@ -547,7 +547,7 @@
             </div>
 
         <!-- Из слов -->
-        <div class="style--card" style="display: none" id="card--hidden">
+        <div class="style--card">
                 <div class="row align-items-center">
                     <div class="col-md-7" style="position: static;">
                             <div class="tog">
@@ -600,7 +600,7 @@
             </div>
 
         <!-- Коллаж -->
-        <div class="style--card" style="display: none" id="card--hidden">
+        <div class="style--card">
                 <div class="row align-items-center">
                     <div class="col-md-7" style="position: static;">
                             <div class="tog">
@@ -653,7 +653,7 @@
             </div>
 
         <!-- Love is... -->
-        <div class="style--card" style="display: none" id="card--hidden">
+        <div class="style--card">
                 <div class="row align-items-center">
                     <div class="col-md-7" style="position: static;">
                             <div class="tog">
@@ -704,15 +704,7 @@
                     </div>
                 </div>
             </div>
-
-        <!-- button show more -->
-        <div class="button--center">
-            <button class="btn alternative" onclick="myFunction()" id="button--hidden">
-                Показать остальные стили
-            </button>
-        </div>
     </section>
-    <!-- button show more -->
     <!-- examples -->
     <section class="section--bg">
             <h4 class="mobile--heading">Примеры работ</h4>
@@ -960,15 +952,6 @@
         var swiper = new Swiper('.swiper-container');
     </script>
     <script>
-        function myFunction() {
-        var x, i;
-        x = document.querySelectorAll('#card--hidden');
-        for (i = 0; i < x.length; i++) {
-        x[i].style.display='block';
-        }
-        document.getElementById('button--hidden').style.display='none';
-        }
-    </script><script>
         $( "#callmebaby" ).click(function() {
         $( "#modalCall" ).show();
         });

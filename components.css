@@ -53,13 +53,22 @@ input + label {margin-right: 24px;}
     z-index: 99; 
     border: none; 
     outline: none;
-    background-color: #FFD164;
+    background-color: #fff;
     cursor: pointer;
-    padding: 16px; 
-    border-radius: 8px;
-    font-size: 18px;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
     font-weight: 600;
+    display: inline-block;
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.2);
   }
+
+#mybtn--up {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+}
   
   #myBtn:hover {
     background-color: #ffba1a; /* Add a dark-grey background on hover */
@@ -76,7 +85,6 @@ input + label {margin-right: 24px;}
     position: absolute;
     background-color: #FFD164;
     color: #131313;
-    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.2);
     min-width: 160px;
     z-index: 1;
 }
@@ -351,7 +359,6 @@ section img {
         font-size: 18px;
         padding: 8px;
         box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
-        width: max-content;
       }
 
     .image--baget {
@@ -435,7 +442,7 @@ section img {
             top: 8%;
             padding: 0 32px 0 32px;
         }
-        .hero-text__list {margin-top: 5rem; position: absolute; bottom: 8%; padding: 0 16px 0 16px}
+        .hero-text__list {margin-top: 5rem; position: absolute; bottom: 8%; padding: 0 16px 0 16px; width: 100%;}
         .hero-text p {margin-top: 1rem;}
         .hero-text button {margin-top: 1.5rem;color: #131313;}
 
