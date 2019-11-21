@@ -47,5 +47,9 @@ h4 {
     .baget--row {
         padding: 16px;
     }
+    .img-real-size {
+        object-fit: contain !important;
+        height: auto !important;
+    }
     
 }
