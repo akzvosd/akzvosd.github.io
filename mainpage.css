@@ -1,9 +1,21 @@
+section {
+    margin-top: 140px !important;
+    margin-bottom: 140px !important;
+}
 .swiper-container {
     display: none;
 }
 
 .mainPage img {
     width: 80%;
+}
+
+.modal img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 90%;
 }
 
 .style {

@@ -29,7 +29,7 @@ a{color:inherit; text-decoration: none;}
 .alternative {background: #6394FF; border: 2px solid #6394FF; color: #fff; -webkit-box-shadow: 2px 4px 32px rgba(99, 148, 255, 0.6); box-shadow: 2px 4px 16px rgba(99, 148, 255, 0.3)}
 .alternative:hover {background: #3374ff;    border: 2px solid #3374ff; -webkit-transition: 0.4s; -o-transition: 0.4s; transition: 0.4s;}
 .line {border: 2px solid #0f0f0f; color: #0f0f0f;}
-.line:hover {background: #0f0f0f; color: #fff; -webkit-transition: 0.4s; -o-transition: 0.4s; transition: 0.4s}
+.line:hover {background: #0f0f0f21; color: #fff; -webkit-transition: 0.4s; -o-transition: 0.4s; transition: 0.4s}
 /* text-decoration */
 .text--bold {font-weight: 600;}
 .text--left {text-align: left;}
@@ -43,16 +43,6 @@ input + label {margin-right: 24px;}
 .img--noradius {border-radius: 0;}
 .bitrix iframe {
     height: 1200px !important;
-}
-
-.btn-up {
-    border: 2px solid white; margin-top: 64px; padding: 32px 64px; 
-    font-size: 2rem;
-}
-
-.btn-up_styles {
-    border: 2px solid white; margin-top: 64px; padding: 16px 32px; 
-    font-size: 1.5rem;
 }
 
 #myBtn {
@@ -327,6 +317,10 @@ section img {
 
 .image--baget {
     cursor: pointer;
+}
+
+.img-yt {
+    border-radius: 8px;
 }
 
 .modal--cursor {
