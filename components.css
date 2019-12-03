@@ -29,7 +29,7 @@ a{color:inherit; text-decoration: none;}
 .alternative {background: #6394FF; border: 2px solid #6394FF; color: #fff; -webkit-box-shadow: 2px 4px 32px rgba(99, 148, 255, 0.6); box-shadow: 2px 4px 16px rgba(99, 148, 255, 0.3)}
 .alternative:hover {background: #3374ff;    border: 2px solid #3374ff; -webkit-transition: 0.4s; -o-transition: 0.4s; transition: 0.4s;}
 .line {border: 2px solid #0f0f0f; color: #0f0f0f;}
-.line:hover {background: #0f0f0f21; color: #fff; -webkit-transition: 0.4s; -o-transition: 0.4s; transition: 0.4s}
+.line:hover {background: #0f0f0f21; -webkit-transition: 0.4s; -o-transition: 0.4s; transition: 0.4s}
 /* text-decoration */
 .text--bold {font-weight: 600;}
 .text--left {text-align: left;}
@@ -66,13 +66,23 @@ input + label {margin-right: 24px;}
     margin-bottom: 8px;
 }
 
-.style--card__input {
+/* .style--card__input {
     padding-top: 8px;
     padding-bottom: 8px;
+} */
+
+.select--price::before {
+    content: 'Популярные форматы:';
+    display: block;
+    margin-top: 8px;
+    margin-bottom: 4px;
+    font-weight: 600;
 }
-.card--input {
+/* .card--input {
     display: inline-block;
-}
+    margin-right: 16px;
+    margin-top: 8px;
+} */
 .style--card button + .secondary {
     margin-left: 8px;
 }
@@ -253,7 +263,7 @@ ul {
 }
 
 .button--vk {
-    margin-top: 64px !important;
+    margin-top: 32px !important;
 }
 
 .hero-text__list {margin-top: 5rem;}
@@ -276,7 +286,7 @@ ul {
 
 section {   
     width: 100%; /* в мобильной версии перевести до 100% */
-    max-width: 1200px;
+    max-width: 80%;
     margin: auto;
     margin-top: 120px;
     margin-bottom: 120px;
@@ -299,10 +309,10 @@ section img {
 .section--bg {
     background-color: #FFD164;
     max-width: 100%;
-    padding-top: 96px;
-    padding-bottom: 96px;
     background-repeat: no-repeat;
     background-size: cover;
+    padding-top: 64px;
+    padding-bottom: 64px;
 }
 
 .section--wide {
@@ -466,7 +476,6 @@ section img {
     h4 {
         font-size: x-large;
     }
-    section {padding: 36px 16px; margin-top: 64px; margin-bottom: 64px;}
     section .col-md-4 {padding: 0;}
     .section--wide h5 {line-height: 1.2;font-size: 1rem;}
     .mobile--heading {display: block; width: 100%; margin-bottom: 48px; font-weight: 400; text-align: center; padding: 0 8px; font-size: 42px; line-height: 1;}

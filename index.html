@@ -71,7 +71,6 @@
     <link rel="stylesheet" href="slider.css">
     <link rel="stylesheet" href="bootstrap-grid.css">
     <link rel="stylesheet" href="swiper.css">
-    <link rel="stylesheet" href="toggle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Imagine — Студия Картин</title>
 </head>
@@ -201,7 +200,7 @@
     <!-- примеры работ -->
     <section class="section--wide">
         <div class="text--center" style="margin-bottom: 48px;">
-            <h3>Примеры работ</h3>
+            <h3 class="text--bold">Примеры работ</h3>
         </div>
         <div class="row">
                 <div class="col-md-4 modal--cursor">
@@ -233,9 +232,9 @@
         </div>
         <div class="text--center"><a href="#form"><button class="btn primary" style="margin-top: 32px; font-size: x-large; padding: 16px 40px;">Заказать картину</button></a></div>
     </section>
-        <!-- качество работ -->
-        <section class="section--bg">
-            <h4 class="mobile--heading">Качество работ</h4>
+    <!-- качество работ -->
+    <section class="section--bg">
+            <h4 class="mobile--heading text--bold">Качество работ</h4>
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide"><img src="img/main/main.jpg" alt="Картинка пример" class="image swiper-image"><img src="img/svg/swipe.svg" alt="Свайпни!" class="swipe-icon"></div>
@@ -251,29 +250,84 @@
                     <div class="col-md-7">
                         <img src="img/example.jpg" alt="Примеры" class="image examples--image"></div>
                     <div class="col-md-5">
-                        <h3 class="examples--heading">Качество работ</h3>
+                        <h3 class="examples--heading text--bold">Качество работ</h3>
                         <h5>Мы не работаем с дешёвыми холстами! Мы используем только лучшие материалы и оборудование, чтобы достичь такого качества печати на холсте. Убедитесь сами или читайте отзывы ниже.</h5>
                         <a href="#top"><button class="btn line">Заказать картину</button></a>
                     </div>
                 </div>
             </section>
-        </section>
-            <!-- youtube -->
+    </section>
+    <!-- youtube -->
     <section class="youtube--video text--center">
-        <h3 style="margin-bottom: 24px;">Как сделать заказ</h3>
-        <img src="img/yt.png" alt="youtube видео" id="ytopen" class="img-yt modal--cursor">
-        <div class="modal" id="ytvideo" onclick="closeModal()">
-            <iframe width="80%" class="youtube--desktop"
-            src="https://www.youtube.com/embed/qENMvCLRbQg" style="border: 0">
-            </iframe>
-            <iframe width="100%" class="youtube--mobile"
-            src="https://www.youtube.com/embed/lmq20ABQdlg" style="border: 0">
-            </iframe>
-        </div>
-</section>
-    <!-- до после -->
-    <section class="text--center">
-        <h3 style="margin-bottom: 32px;">До и После</h3>
+            <h3 style="margin-bottom: 24px;" class="text--bold">Как сделать заказ</h3>
+            <img src="img/yt.png" alt="youtube видео" id="ytopen" class="img-yt modal--cursor">
+            <div class="modal" id="ytvideo" onclick="closeModal()">
+                <iframe width="80%" class="youtube--desktop"
+                src="https://www.youtube.com/embed/qENMvCLRbQg" style="border: 0">
+                </iframe>
+                <iframe width="100%" class="youtube--mobile"
+                src="https://www.youtube.com/embed/lmq20ABQdlg" style="border: 0">
+                </iframe>
+            </div>
+    </section>
+        <!-- reviews -->
+        <section class="section--bg">
+        <div class="review section--wide" style="margin: auto;">
+                <div class="text--center">
+                    <h3 class="text--bold">Отзывы</h3>
+                    <h5>Один из принципов нашей компании только настоящие отзывы</h5>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="review--card row align-items-center">
+                            <img src="img/card_1.png" alt="Карточка_1" class="review--card__img col-md-4">
+                            <div class="card--text col-md-8">   
+                                <p>Спасибо Вам большое за качественную работу в столь короткий срок, очень понравилось!</p>
+                                <small>Алёна Лаврентьева, Великий Новгород</small>
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="review--card row align-items-center">
+                                <img src="img/review_gavaza.jpg" alt="Карточка_1" class="review--card__img col-md-4">
+                                <div class="card--text col-md-8">   
+                                    <p>Решили сделать заказ друзьям на юбилей, фото на холсте, боялись что не успеем, т.к. времени оставалось всего лишь неделя. Но нам обещали что все все успеют, и не подвели. Картина пришла вовремя, мы остались довольны, а друзья в восторге, спасибо, надеюсь еще воспользуюсь вашими услугами.</p>
+                                    <small>Валерий Гаваза, Псков</small>
+                                </div>    
+                        </div>
+                    </div>
+                </div> 
+                <div class="row">
+                        <div class="col-md-6">
+                            <div class="review--card row align-items-center">
+                                <img src="img/review_anna.jpg" alt="Карточка_1" class="review--card__img col-md-4">
+                                <div class="card--text col-md-8">   
+                                    <p>Спасибо большое за эмоции, которые мне удалось подарить друзьям, благодаря вашему профессиональному подходу к делу. Всё чётко, быстро и качественно. Картина произвела впечатление🔥</p>
+                                    <small>Анна Иванова, Санкт-Петербург  </small>
+                                </div>    
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="review--card row align-items-center">
+                                    <img src="img/review_ekaterina.jpg" alt="Карточка_1" class="review--card__img col-md-4">
+                                    <div class="card--text col-md-8">   
+                                        <p>Великолепная работа! Под интерьер цвета не подбирал, но вписалась отлично! Буду рекомендовать знакомым! Спасибо!</p>
+                                        <small>Екатерина Разуваева, Москва</small>
+                                    </div>    
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button--center">
+                        <button class="btn alternative button--vk">
+                                <img src="img/svg/vklogo.svg" alt="Логотип ВК" class="img--noradius">
+                                <a href="https://vk.com/topic-128091335_34451245"><span style="vertical-align: middle;">Посмотреть отзывы в VK</span></a>
+                        </button>
+                    </div>
+                </div>
+    </section>
+            <!-- до после -->
+<section class="text--center">
+        <h3 class="text--bold" style="margin-bottom: 32px;">До и После</h3>
                     <div class="tog">
                     <span class="toggle-switch-1"></span>
                     <span class="toggle-switch-2" style="display: none;"></span>
@@ -293,15 +347,28 @@
                 <div class="style--line"></div>
             </div>
         </div>
-        <div class="style--container" style="margin: auto;">
+        <div class="style--container" style="margin: auto; margin-bottom: 32px;">
             <div class="slider--mouse">Проведите мышкой</div>
             <div class="style--slide1" style="background-image: url(img/examples/example2.jpg);"></div>
                 <div class="style--slide2" style="background-image: url(img/examples/example2_x.jpg);">
                 <div class="style--line"></div>
             </div>
         </div>
+        <div class="style--container" style="margin: auto; margin-bottom: 32px;">
+            <div class="slider--mouse">Проведите мышкой</div>
+            <div class="style--slide1" style="background-image: url(img/examples/example.jpg);"></div>
+                <div class="style--slide2" style="background-image: url(img/examples/example_x.jpg);">
+                <div class="style--line"></div>
+            </div>
+        </div>
+        <div class="style--container" style="margin: auto;">
+            <div class="slider--mouse">Проведите мышкой</div>
+            <div class="style--slide1" style="background-image: url(img/examples/example5.jpg);"></div>
+                <div class="style--slide2" style="background-image: url(img/examples/example5_x.jpg);">
+                <div class="style--line"></div>
+            </div>
+        </div>
 </section>
-
     <!-- <section class="section--bg" style="padding-top: 16px; padding-bottom: 16px;">
         <section class="section--wide" style="padding: 0">
             <div class="row align-items-center">
@@ -315,60 +382,6 @@
             </div>
         </section>
     </section> -->
-
-    <!-- reviews -->
-    <section class="review section--wide">
-            <div class="text--center">
-                <h3>Отзывы</h3>
-                <h5>Один из принципов нашей компании только настоящие отзывы</h5>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="review--card row align-items-center">
-                        <img src="img/card_1.png" alt="Карточка_1" class="review--card__img col-md-4">
-                        <div class="card--text col-md-8">   
-                            <p>Спасибо Вам большое за качественную работу в столь короткий срок, очень понравилось!</p>
-                            <small>Алёна Лаврентьева, Великий Новгород</small>
-                        </div>    
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="review--card row align-items-center">
-                            <img src="img/review_gavaza.jpg" alt="Карточка_1" class="review--card__img col-md-4">
-                            <div class="card--text col-md-8">   
-                                <p>Решили сделать заказ друзьям на юбилей, фото на холсте, боялись что не успеем, т.к. времени оставалось всего лишь неделя. Но нам обещали что все все успеют, и не подвели. Картина пришла вовремя, мы остались довольны, а друзья в восторге, спасибо, надеюсь еще воспользуюсь вашими услугами.</p>
-                                <small>Валерий Гаваза, Псков</small>
-                            </div>    
-                    </div>
-                </div>
-            </div> 
-            <div class="row">
-                    <div class="col-md-6">
-                        <div class="review--card row align-items-center">
-                            <img src="img/review_anna.jpg" alt="Карточка_1" class="review--card__img col-md-4">
-                            <div class="card--text col-md-8">   
-                                <p>Спасибо большое за эмоции, которые мне удалось подарить друзьям, благодаря вашему профессиональному подходу к делу. Всё чётко, быстро и качественно. Картина произвела впечатление🔥</p>
-                                <small>Анна Иванова, Санкт-Петербург  </small>
-                            </div>    
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="review--card row align-items-center">
-                                <img src="img/review_ekaterina.jpg" alt="Карточка_1" class="review--card__img col-md-4">
-                                <div class="card--text col-md-8">   
-                                    <p>Великолепная работа! Под интерьер цвета не подбирал, но вписалась отлично! Буду рекомендовать знакомым! Спасибо!</p>
-                                    <small>Екатерина Разуваева, Москва</small>
-                                </div>    
-                        </div>
-                    </div>
-                </div>
-                <div class="button--center">
-                    <button class="btn alternative button--vk">
-                            <img src="img/svg/vklogo.svg" alt="Логотип ВК" class="img--noradius">
-                            <a href="https://vk.com/topic-128091335_34451245"><span style="vertical-align: middle;">Посмотреть отзывы в VK</span></a>
-                    </button>
-                </div>
-    </section>
     <!-- gift -->
     <!-- <section class="section--bg gift--bg">
             <section class="section--wide">
@@ -403,63 +416,65 @@
             </section>
     </section> -->
     <!-- process -->
-    <section class="section--wide process review">
-            <h3 class="text--center">Как мы работаем</h3>
-            <h5 class="text--center">Описание процесса работы над вашим заказом</h5>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="review--card row align-items-center process--card">
-                        <img src="img/svg/process_1.svg" alt="Ваша фотография" class="col-md-4 process--image">
-                        <div class="card--text col-md-8">   
-                        <h3 class="process--h3">1 шаг</h3>
-                        <p class="text--bold">Отправьте фотографию</p>
-                        <p>Сохраните из соцсетей или найдите у себя на телефоне или компьютере.</p>
-                        </div>    
-                    </div>
-                </div>
-                <div class="col-md-6">
-                        <div class="review--card row align-items-center process--card">
-                            <img src="img/svg/process_2.svg" alt="Ваша фотография" class="col-md-4 process--image">
-                            <div class="card--text col-md-8">   
-                            <h3 class="process--h3">2 шаг</h3>
-                            <p class="text--bold">Укажите пожелания</p>
-                            <p>Вместе с менеджером выберите стиль и формат. Расскажите о своих идеях и пожеланиях к картине.</p>
-                            </div>    
-                        </div>
-                </div>
-            </div>
-            <div class="row">
+    <section class="section--bg" style="margin-bottom: 0;">
+        <div class="section--wide process review" style="margin: auto;">
+                <h3 class="text--center text--bold">Как мы работаем</h3>
+                <h5 class="text--center" style="margin-bottom: 32px;">Описание процесса работы над вашим заказом</h5>
+                <div class="row">
                     <div class="col-md-6">
                         <div class="review--card row align-items-center process--card">
-                            <img src="img/svg/process_3.svg" alt="Ваша фотография" class="col-md-4 process--image">
+                            <img src="img/svg/process_1.svg" alt="Ваша фотография" class="col-md-4 process--image">
                             <div class="card--text col-md-8">   
-                            <h3 class="process--h3">3 шаг</h3>
-                            <p class="text--bold">Согласуйте эскиз</p>
-                            <p>Вы можете вносить правки прежде, чем картина будет изготовлена.</p>
+                            <h3 class="process--h3">1 шаг</h3>
+                            <p class="text--bold">Отправьте фотографию</p>
+                            <p>Сохраните из соцсетей или найдите у себя на телефоне или компьютере.</p>
                             </div>    
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="review--card row align-items-center process--card">
-                            <img src="img/svg/process_4.svg" alt="Ваша фотография" class="col-md-4 process--image">
-                            <div class="card--text col-md-8 ">   
-                            <h3 class="process--h3">4 шаг</h3>
-                            <p class="text--bold">Выберите, куда доставить</p>
-                            <p>Получите заказ в нашем отделе или закажите доставку до двери. Отправляем картины по всей России.</p>
+                            <div class="review--card row align-items-center process--card">
+                                <img src="img/svg/process_2.svg" alt="Ваша фотография" class="col-md-4 process--image">
+                                <div class="card--text col-md-8">   
+                                <h3 class="process--h3">2 шаг</h3>
+                                <p class="text--bold">Укажите пожелания</p>
+                                <p>Вместе с менеджером выберите стиль и формат. Расскажите о своих идеях и пожеланиях к картине.</p>
+                                </div>    
+                            </div>
+                    </div>
+                </div>
+                <div class="row">
+                        <div class="col-md-6">
+                            <div class="review--card row align-items-center process--card">
+                                <img src="img/svg/process_3.svg" alt="Ваша фотография" class="col-md-4 process--image">
+                                <div class="card--text col-md-8">   
+                                <h3 class="process--h3">3 шаг</h3>
+                                <p class="text--bold">Согласуйте эскиз</p>
+                                <p>Вы можете вносить правки прежде, чем картина будет изготовлена.</p>
+                                </div>    
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="review--card row align-items-center process--card">
+                                <img src="img/svg/process_4.svg" alt="Ваша фотография" class="col-md-4 process--image">
+                                <div class="card--text col-md-8 ">   
+                                <h3 class="process--h3">4 шаг</h3>
+                                <p class="text--bold">Выберите, куда доставить</p>
+                                <p>Получите заказ в нашем отделе или закажите доставку до двери. Отправляем картины по всей России.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="button--center">
-                        <button class="btn alternative" style="margin-top: 32px; font-size: x-large; padding: 16px 40px;">
-                        <a href="#form" class="mob--heading">Получить эскиз бесплатно</a>
-                        </button>
+                    <div class="button--center">
+                            <button class="btn line" style="font-size: x-large; padding: 16px 40px;">
+                            <a href="#form" class="mob--heading">Получить эскиз бесплатно</a>
+                            </button>
+                        </div>
                     </div>
     </section>
     <!-- delivery -->
     <div class="section--bg delivery--bg__yellow">
         <section class="section--wide delivery" style="margin-bottom: 0;">
-            <h3>Доставка в любой город России</h3>
+            <h3 class="text--bold">Доставка в любой город России</h3>
             <h5>Получите готовый портрет в наших фирменных отделах <br>или в пункте выдачи возле Вашего дома</h5>
             <div class="delivery--button">
                 <a href="delivery.html"><button class="btn line">Адреса фирменных отделов</button></a>
@@ -490,7 +505,7 @@
 
     <section class="section--bg" style="margin-top: 0 !important; margin-bottom: 0 !important;" id="top">
         <section class="section--wide" style="margin-top: 0 !important; margin-bottom: 0 !important">
-            <h2 class="text--center" style="margin-bottom: 48px;">Все наши стили</h2>
+            <h3 class="text--center text--bold" style="margin-bottom: 48px;">Все наши стили</h3>
             <div class="row style--row__mbottom">
                 <div class="col-md-3">
                     <div class="style--col">
