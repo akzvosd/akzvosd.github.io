@@ -180,6 +180,61 @@
             </div>
         </div>
 </main>
+
+<section>
+    <h3 class="text--bold text--center">Калькулятор</h3>
+    <div class="style--card">
+            <div class="row align-items-center">
+                <div class="col-md-7" style="position: static;">
+                        <div class="tog">
+                                <span class="toggle-switch-1"></span>
+                                <span class="toggle-switch-2" style="display: none;"></span>
+                                <img src="img/examples/example9.jpg" class="image" style="height: 420px;">
+                                <img src="img/examples/example9_x.jpg" class="image" style="display:none;height: 420px;">
+                            </div>
+                    <div class="style--container">
+                            <div class="slider--mouse">Проведите мышкой</div>
+                        <div class="style--slide1" style="background-image: url(img/examples/example9.jpg); background-position-y: 90%;"></div>
+                        <div class="style--slide2" style="background-image: url(img/examples/example9_x.jpg);">
+                            <div class="style--line"></div>
+                        </div>
+                    </div>
+               </div>
+               <div class="col-md-5 style--text__padding">
+                    <a href="kolaj.html"><h4>Коллаж</h4></a>
+                    <p>Отправьте несколько фотографий, и мы соберём их в одной красивой композиции!</p>
+                        <div class="style--card__input"> 
+                            <div class="card--input">
+                                <input type="radio" id="kolaj_20x30" name="size" onclick='document.getElementById("kolaj--price").innerHTML = "1290Р"'>
+                                <label for="kolaj_20x30">20 x 30 см</label>
+                            </div>
+                            <div class="card--input">
+                                <input type="radio" id="kolaj_30x40" name="size" onclick='document.getElementById("kolaj--price").innerHTML = "1990Р"'>
+                                <label for="kolaj_30x40">30 x 40 см</label>
+                            </div>
+                            <div class="card--input">
+                                <input type="radio" id="kolaj_40x60" name="size" onclick='document.getElementById("kolaj--price").innerHTML = "2790Р"'>
+                                <label for="kolaj_40x60">40 х 60 см</label>
+                            </div>
+                            <div class="card--input">
+                                <input type="radio" id="kolaj_60x80" name="size" onclick='document.getElementById("kolaj--price").innerHTML = "3950P"'>
+                                <label for="kolaj_60x80">60 х 80 см</label>
+                            </div>
+                            <div class="card--input">
+                                <input type="radio" id="kolaj_80x120" name="size" onclick='document.getElementById("kolaj--price").innerHTML = "6800Р"'>
+                                <label for="kolaj_80x120">80 х 120 см</label>
+                            </div>
+                            <div class="card--input">
+                                <input type="radio" id="kolaj_other" name="size" onclick='document.getElementById("kolaj--price").innerHTML = "Для расчёта стоимости нажмите «Заказать» и заполните форму"'>
+                                <label for="kolaj_other">Другой</label>
+                            </div>
+                        </div>    
+                        <h5 id="kolaj--price">1290Р</h5>
+                        <a href="kolaj.html#form"><button class="btn primary">Заказать</button></a>
+                </div>
+            </div>
+    </div>
+</section>
 <!-- калькулятор 
     <section>
         calc
@@ -187,28 +242,19 @@
 <!-- до и после -->
 <section class="text--center">
         <h3 class="text--bold">До и После</h3>
-        <div class="tog tog-bottom">
-                <div class="togprint"></div>
-                <img src="img/examples/example9.jpg" class="image" style="height: 320px;">
-                <img src="img/examples/example9_x.jpg" class="image" style="display:none;height: 320px;">
-            </div>
-            <div class="tog tog-bottom">
-                    <div class="togprint"></div>
+<div class="tog">
+                    <span class="toggle-switch-1"></span>
+                    <span class="toggle-switch-2" style="display: none;"></span>
                     <img src="img/kolaj/kolaj1.jpg" class="image" style="height: 320px;">
                     <img src="img/kolaj/kolaj1_x.jpg" class="image" style="display:none;height: 320px;">
                 </div>
-                <div class="tog tog-bottom">
-                        <div class="togprint"></div>
+                <div class="tog">
+                        <span class="toggle-switch-1"></span>
+                        <span class="toggle-switch-2" style="display: none;"></span>
                         <img src="img/kolaj/kolaj2.jpg" class="image" style="height: 320px;">
                         <img src="img/kolaj/kolaj2_x.jpg" class="image" style="display:none;height: 320px;">
                     </div>
-        <div class="style--container">
-            <div class="slider--mouse">Проведите мышкой</div>
-            <div class="style--slide1" style="background-image: url(img/examples/example9.jpg);"></div>
-            <div class="style--slide2" style="background-image: url(img/examples/example9_x.jpg);">
-                <div class="style--line"></div>
-            </div>
-        </div>
+
         <div class="style--container">
             <div class="slider--mouse">Проведите мышкой</div>
             <div class="style--slide1" style="background-image: url(img/kolaj/kolaj1.jpg);"></div>
@@ -355,7 +401,7 @@
                         </div>
                     </div>
                     <div class="text--center">
-                      <a href="index.html#top"><div class="btn btn-up_styles">Посмотреть все стили</div></a> 
+                      <a href="index.html#top"><div class="btn btn-up_styles" style="border: 2px solid white; margin-top: 32px">Посмотреть все стили</div></a> 
                     </div>
                 </section>
 </section>
@@ -470,9 +516,9 @@
                             var s=d.createElement('script');s.async=1;s.src=u+'?'+(1*new Date());
                             var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
                     })(window,document,'https://b24-vrm86j.bitrix24.ru/bitrix/js/crm/form_loader.js','b24form');
-             
-                    b24form({"id":"7","lang":"ru","sec":"sz7slk","type":"inline"});
-            </script>
+            
+                    b24form({"id":"17","lang":"ru","sec":"jphsdd","type":"inline"});
+            </script> 
     </div>   
     <!-- <div id="photo" class="tabcontent" style="display: block;">
             <form action="/action_page.php" class="form--repro">
@@ -590,10 +636,11 @@
     </script>
     <script>
             $(document).ready(function(){
-            $(".tog").click(function(){
-            $('img',this).toggle();
-            });
-            });
+        $(".tog").click(function(){
+        $('img',this).toggle();
+        $("span",this).toggle();
+        });
+        });
         </script>
     <script>
     mybutton = document.getElementById("myBtn");

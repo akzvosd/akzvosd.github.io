@@ -180,35 +180,80 @@
             </div>
         </div>
 </main>
+
+<section>
+    <h3 class="text--bold text--center">Калькулятор</h3>
+    <div class="style--card">
+            <div class="row align-items-center">
+                <div class="col-md-7" style="position: static;">
+                        <div class="tog">
+                                <span class="toggle-switch-1"></span>
+                                <span class="toggle-switch-2" style="display: none;"></span>
+                            <img src="img/examples/example1.jpg" class="image" style="height: 420px;">
+                            <img src="img/dream_xx.jpg" class="image" style="display:none;height: 420px;">
+                        </div>
+                    <div class="style--container">
+                            <div class="slider--mouse">Проведите мышкой</div>
+                        <div class="style--slide1" style="background-image: url(img/examples/example1.jpg);"></div>
+                        <div class="style--slide2" style="background-image: url(img/dream_xx.jpg);">
+                            <div class="style--line"></div>
+                        </div>
+                    </div>
+               </div>
+                <div class="col-md-5 style--text__padding">
+                     <a href="dream.html"><h4>Dream Art</h4></a>
+                     <p>Стильный и яркий портрет в стиле Dream Art удивит и подарит яркие эмоции!</p>
+                     <div class="style--card__input"> 
+                            <div class="card--input">
+                                <input type="radio" id="dream_20x30" name="size" onclick='document.getElementById("dream--price").innerHTML = "2290Р"'>
+                                <label for="dream_20x30">20 x 30 см</label>
+                            </div>
+                            <div class="card--input">
+                                <input type="radio" id="dream_30x40" name="size" onclick='document.getElementById("dream--price").innerHTML = "2990Р"'>
+                                <label for="dream_30x40">30 x 40 см</label>
+                            </div>
+                            <div class="card--input">
+                                <input type="radio" id="dream_40x60" name="size" onclick='document.getElementById("dream--price").innerHTML = "3790Р"'>
+                                <label for="dream_40x60">40 х 60 см</label>
+                            </div>
+                            <div class="card--input">
+                                <input type="radio" id="dream_60x80" name="size" onclick='document.getElementById("dream--price").innerHTML = "4950P"'>
+                                <label for="dream_60x80">60 х 80 см</label>
+                            </div>
+                            <div class="card--input">
+                                <input type="radio" id="dream_80x120" name="size" onclick='document.getElementById("dream--price").innerHTML = "7800Р"'>
+                                <label for="dream_80x120">80 х 120 см</label>
+                            </div>
+                            <div class="card--input">
+                                <input type="radio" id="dream_other" name="size" onclick='document.getElementById("dream--price").innerHTML = "Для расчёта стоимости нажмите «Заказать» и заполните форму"'>
+                                <label for="dream_other">Другой</label>
+                            </div>
+                        </div>    
+                         <h5 id="dream--price">2290Р</h5>
+                         <a href="dream.html#form"><button class="btn primary">Заказать</button></a>
+                </div>
+            </div>
+        </div>
+</section>
 <!-- калькулятор 
     <section>
         calc
     </section> -->
 <!-- до и после -->
-<section class="text--center">
+<section class="text--center"> 
         <h3 class="text--bold">До и После</h3>
-        <div class="tog tog-bottom">
-                <div class="togprint"></div>
-                <img src="img/examples/example1.jpg" class="image" style="height: 320px;">
-                <img src="img/dream_Xx.jpg" class="image" style="display:none;height: 320px;">
-            </div>
-            <div class="tog tog-bottom">
-                    <div class="togprint"></div>
+<div class="tog">
+                    <span class="toggle-switch-1"></span>
+                    <span class="toggle-switch-2" style="display: none;"></span>
                     <img src="img/dream/dream1.jpg" class="image" style="height: 320px;">
                     <img src="img/dream/dream1_x.jpg" class="image" style="display:none;height: 320px;">
                 </div>
-                <div class="tog tog-bottom">
-                        <div class="togprint"></div>
+                <div class="tog">
+                        <span class="toggle-switch-1"></span>
+                        <span class="toggle-switch-2" style="display: none;"></span>
                         <img src="img/dream/dream2_x.jpg" class="image" style="height: 320px;">
                         <img src="img/dream/dream2.jpg" class="image" style="display:none;height: 320px;">
                     </div>
-        <div class="style--container">
-            <div class="slider--mouse">Проведите мышкой</div>
-            <div class="style--slide1" style="background-image: url(img/examples/example1.jpg);"></div>
-            <div class="style--slide2" style="background-image: url(img/dream_Xx.jpg);">
-                <div class="style--line"></div>
-            </div>
-        </div>
         <div class="style--container">
             <div class="slider--mouse">Проведите мышкой</div>
             <div class="style--slide1" style="background-image: url(img/dream/dream1.jpg);"></div>
@@ -355,7 +400,7 @@
                     </div>
             </div>
                     <div class="text--center">
-                      <a href="index.html#top"><div class="btn btn-up_styles">Посмотреть все стили</div></a> 
+                      <a href="index.html#top"><div class="btn btn-up_styles" style="border: 2px solid white; margin-top: 32px">Посмотреть все стили</div></a> 
                     </div>
                 </section>
 </section>
@@ -471,8 +516,8 @@
                             var s=d.createElement('script');s.async=1;s.src=u+'?'+(1*new Date());
                             var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
                     })(window,document,'https://b24-vrm86j.bitrix24.ru/bitrix/js/crm/form_loader.js','b24form');
-             
-                    b24form({"id":"7","lang":"ru","sec":"sz7slk","type":"inline"});
+            
+                    b24form({"id":"17","lang":"ru","sec":"jphsdd","type":"inline"});
             </script>
     </div>   
     <!-- <div id="photo" class="tabcontent" style="display: block;">

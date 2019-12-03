@@ -1,6 +1,6 @@
 section {
-    margin-top: 140px !important;
-    margin-bottom: 140px !important;
+    /* margin-top: 140px !important;
+    margin-bottom: 140px !important; */
 }
 .swiper-container {
     display: none;
@@ -16,41 +16,6 @@ section {
     left: 50%;
     transform: translate(-50%, -50%);
     height: 90%;
-}
-
-.style {
-    padding-bottom: 64px;
-}
-
-.style--card {
-    margin-bottom: 64px;
-}
-
-.style--card h4 {
-    font-weight: 600;
-}
-
-.style--card h4:hover {
-    background: #FFD164;
-    width: max-content;
-}
-
-.style--card p {
-    margin-bottom: 8px;
-}
-
-.style--card__input {
-    padding-top: 8px;
-    padding-bottom: 8px;
-}
-.card--input {
-    display: inline-block;
-}
-.style--card button + .secondary {
-    margin-left: 8px;
-}
-.style--text__padding {
-    padding: 32px 0px !important;
 }
 
 /* PROCESS */   
@@ -131,13 +96,55 @@ section {
     margin-top: 32px;
 }
 
+.style--row__mbottom {
+    margin-bottom: 32px;
+}
+
+.style--col {
+    background: white;
+    color: #131313;
+    border-radius: 1rem;
+    -webkit-box-shadow: 0px 0px 8px rgba(255,255,255,.4);
+    box-shadow: 0px 0px 8px rgba(255,255,255,.4);
+    padding-bottom: 16px;
+}
+
+.style--col:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 32px rgba(255,255,255.9);
+}
+
+.style--text {
+    margin-top: 16px;
+    padding-left: 32px;
+}
+
 @media only screen and (max-width: 900px) {
     .mainPage img {
         width: 100%;
     }
+    .style--row__mbottom {
+        margin-bottom: 0px;
+    }
 
-    .style--card h4 {
-        font-size: 2rem !important;
+    .examples--heading {
+        display: none;
+    }
+
+    .col-md-3 {
+        margin-bottom: 32px;
+    }
+
+    .mob--heading {
+        font-size: large;
+        font-weight: 500;
+        margin-top: 0;
+    }
+
+    .img-yt {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
     }
 
     /* swiper */
@@ -176,12 +183,7 @@ section {
         object-fit: cover;
     }
      /* style */
-     .style {margin-bottom: 0;}
-     .style--card__input input {margin-bottom: 16px;}
-     .style--card button + .secondary {margin-left: 0px;}
-     .style--card button {margin-top: 16px;}
-     .style--card h5 {margin-top: 16px;font-size: 36px;}
-     .style--other__mobile {font-size: 20px !important;} 
+
 
      /* gift */
      .gift--bg {
@@ -242,9 +244,5 @@ section {
 
      .style--text__padding {
         padding: 0px 0px !important;
-    }
-
-    .style--card {
-        margin-bottom: 64px;
     }
 }

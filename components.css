@@ -45,6 +45,41 @@ input + label {margin-right: 24px;}
     height: 1200px !important;
 }
 
+.style {
+    padding-bottom: 64px;
+}
+
+.style--card {
+    margin-bottom: 64px;
+}
+
+.style--card h4 {
+    font-weight: 600;
+}
+
+.style--card h4:hover {
+    background: #FFD164;
+    width: max-content;
+}
+
+.style--card p {
+    margin-bottom: 8px;
+}
+
+.style--card__input {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.card--input {
+    display: inline-block;
+}
+.style--card button + .secondary {
+    margin-left: 8px;
+}
+.style--text__padding {
+    padding: 32px 0px !important;
+}
+
 #myBtn {
     display: none; 
     position: fixed; 
@@ -258,7 +293,7 @@ section img {
 .button--center button {
     padding: 16px 24px; 
     font-size: 18px;
-    margin: 8px 0 32px 0;
+    margin: 8px 0 0px 0;
 }
 
 .section--bg {
@@ -369,14 +404,31 @@ section img {
 
 @media only screen and (max-width: 900px) {
 
+    .style--card h4 {
+        font-size: 2rem !important;
+    }
+
+    .style {margin-bottom: 0;}
+    .style--card__input input {margin-bottom: 16px;}
+    .style--card button + .secondary {margin-left: 0px;}
+    .style--card button {margin-top: 16px;}
+    .style--card h5 {margin-top: 16px;font-size: 36px;}
+    .style--other__mobile {font-size: 20px !important;} 
+    .style--card {
+        margin-bottom: 64px;
+    }
+
     .btn-up {
-        border: 2px solid white; margin-top: 64px; padding: 16px 32px; 
+        border: 2px solid white; 
+        margin-top: 64px; padding: 16px 32px; 
         width: 100%;
         font-size: x-large;
     }
 
     .btn-up_styles {
-        border: 2px solid white; margin-top: 64px; padding: 16px 32px; 
+        border: 2px solid white; 
+        margin-top: 64px; 
+        padding: 16px 32px; 
         width: 100%;
         font-size: 1rem !important;
         font-weight: 600;
@@ -416,8 +468,8 @@ section img {
     }
     section {padding: 36px 16px; margin-top: 64px; margin-bottom: 64px;}
     section .col-md-4 {padding: 0;}
-    .section--wide h5 {line-height: 1.2;margin-bottom: 32px;font-size: 1rem;}
-    .mobile--heading {display: block; width: 100%; margin-bottom: 48px; font-weight: 600; text-align: center; padding: 0 8px; font-size: 42px; line-height: 1;}
+    .section--wide h5 {line-height: 1.2;font-size: 1rem;}
+    .mobile--heading {display: block; width: 100%; margin-bottom: 48px; font-weight: 400; text-align: center; padding: 0 8px; font-size: 42px; line-height: 1;}
     .button--center {padding: 0 16px;}
     header {display: none !important;}
     .subheader {display: none;}
@@ -483,7 +535,6 @@ section img {
 
     /* examples */
     .examples--image {display: none;}
-    .examples--heading {display: none;}
 
     .button--center button {
         font-size: 14px;

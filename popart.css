@@ -75,7 +75,7 @@ section h3 {
 }
 
 .section--bg {
-    padding: 0;
+    padding: 0 16px;
 }
 
 .offer--text {
@@ -125,5 +125,9 @@ section h3 {
 
     .mobile-bottom {
         margin-bottom: 16px;
+    }
+
+    .section--bg {
+        padding: 0;
     }
 }

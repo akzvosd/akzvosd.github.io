@@ -36,7 +36,8 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
-    <!-- geo дописать условие по бесплатной доставке -->
+    
+<!-- geo -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
     <script type="text/javascript">
@@ -60,7 +61,8 @@
         }); 
         }); 
     </script>
-    <!-- geo -->
+<!-- geo -->
+
     <link rel="stylesheet" href="components.css">
     <link rel="stylesheet" href="mainpage.css">
     <link rel="stylesheet" href="review.css">
@@ -74,12 +76,18 @@
     <title>Imagine — Студия Картин</title>
 </head>
 <body><button onclick="topFunction()" id="myBtn" title="Наверх"><div id="mybtn--up"><img src="img/svg/up.svg" width="24px"></div></button>
-           <div class="mobile--geo">
-                <span id="mobile--town"></span>
+            
+    
+    
+        <!-- гео мобайл -->
+            <div class="mobile--geo">
+            <span id="mobile--town"></span>
                     <div id="SpbDelivery--mobile">ТРК ЛиговЪ, м. Обводный Канал</div>
                     <div id="VNDelivery--mobile">ТД Русь, 1 этаж</div>
                     <div id="OtherDelivery--mobile">Доставка от 450p</div>
             </div>
+        <!-- гео мобайл -->
+
             <div class="mobile--header">
                 <div class="row align-items-center" style="padding: 0 16px;">
                     <div class="col"><a href="#" class="mobile--menu__icon" onclick="openNav()"><img src="img/svg/menu.svg" alt="Меню"></a></div>
@@ -130,12 +138,17 @@
                 <img src="img/svg/geo.svg" alt="Гео">  
             </div>
             <a href="delivery.html">
+
+
+            <!-- гео десктоп -->
             <div class="col" style="padding-left: 0px;">
                 <span id="tow" class="townGeo"></span> 
                 <div id="SpbDelivery">ТРК ЛиговЪ, м. Обводный Канал</div>
                 <div id="VNDelivery">ТД Русь, 1 этаж</div>
                 <div id="OtherDelivery">Доставка от 450p</div>
             </div>
+            <!-- гео десктоп -->
+
             </a>
             <div class="col" style="text-align: right;"><a  href="tel:+79082930097">+7 908 293-00-97</a></div>
             <div class="col-md-auto"><a href="https://bitrix24public.com/b24-vrm86j.bitrix24.ru/form/6_ne_nashli_chto_iskali/zk0a9o/"><button class="btn line" id="callmebaby">Заказать звонок</button></a></div>
@@ -220,9 +233,9 @@
         </div>
         <div class="text--center"><a href="#form"><button class="btn primary" style="margin-top: 32px; font-size: x-large; padding: 16px 40px;">Заказать картину</button></a></div>
     </section>
-    <!-- качество работ -->
-    <!-- <section class="section--bg">
-             <h4 class="mobile--heading">Примеры работ</h4>
+        <!-- качество работ -->
+        <section class="section--bg">
+            <h4 class="mobile--heading">Качество работ</h4>
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide"><img src="img/main/main.jpg" alt="Картинка пример" class="image swiper-image"><img src="img/svg/swipe.svg" alt="Свайпни!" class="swipe-icon"></div>
@@ -232,22 +245,76 @@
                         <div class="swiper-slide"><img src="img/main/main4.jpg" alt="Картинка пример" class="image swiper-image"></div>
                         <div class="swiper-slide"><img src="img/main/main5.jpg" alt="Картинка пример" class="image swiper-image"></div>
                     </div>
-                </div> 
-    </section> -->
+                </div>
+            <section class="section--wide examples">
+                <div class="row align-items-center">
+                    <div class="col-md-7">
+                        <img src="img/example.jpg" alt="Примеры" class="image examples--image"></div>
+                    <div class="col-md-5">
+                        <h3 class="examples--heading">Качество работ</h3>
+                        <h5>Мы не работаем с дешёвыми холстами! Мы используем только лучшие материалы и оборудование, чтобы достичь такого качества печати на холсте. Убедитесь сами или читайте отзывы ниже.</h5>
+                        <a href="#top"><button class="btn line">Заказать картину</button></a>
+                    </div>
+                </div>
+            </section>
+        </section>
+            <!-- youtube -->
+    <section class="youtube--video text--center">
+        <h3 style="margin-bottom: 24px;">Как сделать заказ</h3>
+        <img src="img/yt.png" alt="youtube видео" id="ytopen" class="img-yt modal--cursor">
+        <div class="modal" id="ytvideo" onclick="closeModal()">
+            <iframe width="80%" class="youtube--desktop"
+            src="https://www.youtube.com/embed/qENMvCLRbQg" style="border: 0">
+            </iframe>
+            <iframe width="100%" class="youtube--mobile"
+            src="https://www.youtube.com/embed/lmq20ABQdlg" style="border: 0">
+            </iframe>
+        </div>
+</section>
+    <!-- до после -->
+    <section class="text--center">
+        <h3 style="margin-bottom: 32px;">До и После</h3>
+                    <div class="tog">
+                    <span class="toggle-switch-1"></span>
+                    <span class="toggle-switch-2" style="display: none;"></span>
+                    <img src="img/examples/example6.jpg" class="image" style="height: 320px;">
+                    <img src="img/examples/example6_x.jpg" class="image" style="display:none;height: 320px;">
+                    </div>
+                        <div class="tog">
+                        <span class="toggle-switch-1"></span>
+                        <span class="toggle-switch-2" style="display: none;"></span>
+                        <img src="img/examples/example2.jpg" class="image" style="height: 320px;">
+                        <img src="img/examples/example2_x.jpg" class="image" style="display:none;height: 320px;">
+                        </div>
+        <div class="style--container" style="margin: auto; margin-bottom: 32px;">
+            <div class="slider--mouse">Проведите мышкой</div>
+            <div class="style--slide1" style="background-image: url(img/examples/example6.jpg);"></div>
+            <div class="style--slide2" style="background-image: url(img/examples/example6_x.jpg);">
+                <div class="style--line"></div>
+            </div>
+        </div>
+        <div class="style--container" style="margin: auto;">
+            <div class="slider--mouse">Проведите мышкой</div>
+            <div class="style--slide1" style="background-image: url(img/examples/example2.jpg);"></div>
+                <div class="style--slide2" style="background-image: url(img/examples/example2_x.jpg);">
+                <div class="style--line"></div>
+            </div>
+        </div>
+</section>
 
-    <section class="section--bg" style="padding-top: 16px; padding-bottom: 16px;">
-        <section class="section--wide">
+    <!-- <section class="section--bg" style="padding-top: 16px; padding-bottom: 16px;">
+        <section class="section--wide" style="padding: 0">
             <div class="row align-items-center">
                 <div class="col-md-7">
                     <img src="img/repro/repro4.jpg" class="image">
                 </div>
                 <div class="col-md-5">
-                    <h3 class="examples--heading" style="margin-bottom: 16px;">Качество работ</h3>
+                    <h3 class="examples--heading" style="margin-top: 24px; margin-bottom: 16px;">Качество работ</h3>
                     <h5>Мы не работаем с дешёвыми холстами! Мы используем только лучшие материалы и оборудование, чтобы достичь такого качества печати на холсте. Убедитесь сами или читайте отзывы ниже.</h5>
                 </div>
             </div>
         </section>
-    </section>
+    </section> -->
 
     <!-- reviews -->
     <section class="review section--wide">
@@ -384,23 +451,10 @@
                     </div>
                 </div>
                 <div class="button--center">
-                        <button class="btn primary" style="margin-top: 32px; font-size: x-large; padding: 16px 40px;">
-                        <a href="#form">Получить эскиз онлайн</a>
+                        <button class="btn alternative" style="margin-top: 32px; font-size: x-large; padding: 16px 40px;">
+                        <a href="#form" class="mob--heading">Получить эскиз бесплатно</a>
                         </button>
                     </div>
-    </section>
-    <!-- youtube -->
-    <section class="youtube--video text--center">
-            <h3 style="margin-bottom: 24px;">Процесс работы</h3>
-            <img src="img/yt.png" alt="youtube видео" id="ytopen" class="img-yt modal--cursor">
-            <div class="modal" id="ytvideo" onclick="closeModal()">
-                <iframe width="80%" class="youtube--desktop"
-                src="https://www.youtube.com/embed/qENMvCLRbQg" style="border: 0">
-                </iframe>
-                <iframe width="100%" class="youtube--mobile"
-                src="https://www.youtube.com/embed/lmq20ABQdlg" style="border: 0">
-                </iframe>
-            </div>
     </section>
     <!-- delivery -->
     <div class="section--bg delivery--bg__yellow">
@@ -434,64 +488,117 @@
         </section>
     </div>
 
-    <section class="section--wide">
-        <h2 class="text--center" style="margin-bottom: 48px;">Все наши стили</h2>
-        <div class="row" style="margin-bottom: 64px;">
-            <div class="col-md-3">
-                <img src="img/examples/example7.jpg" class="image" height="320px">
-                <h4 class="text--bold">POP ART</h4>
-                <h5>От 2490P</h5>
-            </div>
-            <div class="col-md-3">
-                <img src="img/examples/example6.jpg" class="image" height="320px">
-                <h4 class="text--bold">Маслом</h4>
-                <h5>От 2290P</h5>
-            </div>
-            <div class="col-md-3">
-                <img src="img/examples/example5.jpg" class="image" height="320px">
-                <h4 class="text--bold">Imagine</h4>
-                <h5>От 2290P</h5>
-            </div>
-            <div class="col-md-3">
-                <img src="img/examples/example1.jpg" class="image" height="320px">
-                <h4 class="text--bold">Dream Art</h4>
-                <h5>От 2290P</h5>
-            </div>
-        </div>
-        <div class="row" style="margin-bottom: 64px;">
-            <div class="col-md-3">
-                <img src="img/examples/example.jpg" class="image" height="320px">
-                <h4 class="text--bold">В образе</h4>
-                <h5>От 2290P</h5>
-            </div>
-            <div class="col-md-3">
-                <img src="img/examples/example2.jpg" class="image" height="320px">
-                <h4 class="text--bold">Акварель</h4>
-                <h5>От 2290P</h5>
-            </div>
-            <div class="col-md-3">
-                <img src="img/examples/example3.jpg" class="image" height="320px">
-                <h4 class="text--bold">Мульт-герой</h4>
-                <h5>От 3490P</h5>
-            </div>
-            <div class="col-md-3">
-                <img src="img/examples/example8.jpg" class="image" height="320px">
-                <h4 class="text--bold">Из слов</h4>
-                <h5>От 1780P</h5>
-            </div>
-        </div>
-        <div class="row" style="margin-bottom: 64px;">
+    <section class="section--bg" style="margin-top: 0 !important; margin-bottom: 0 !important;" id="top">
+        <section class="section--wide" style="margin-top: 0 !important; margin-bottom: 0 !important">
+            <h2 class="text--center" style="margin-bottom: 48px;">Все наши стили</h2>
+            <div class="row style--row__mbottom">
                 <div class="col-md-3">
-                    <img src="img/examples/example9s.jpg" class="image" height="320px">
-                    <h4 class="text--bold">В образе</h4>
-                    <h5>От 2290P</h5>
+                    <div class="style--col">
+                    <a href="popart.html"><img src="img/examples/example7.jpg" class="image" height="320px">
+                        <div class="style--text">
+                            <h5>POP ART</h5>
+                            <p>От 2490P</p>
+                        </div>
+                    </a>
+                    </div>
                 </div>
                 <div class="col-md-3">
-                    <img src="img/examples/example4.jpg" class="image" height="320px">
-                    <h4 class="text--bold">Акварель</h4>
-                    <h5>От 2290P</h5>
+                    <div class="style--col">
+                    <a href="maslom.html"><img src="img/examples/example6.jpg" class="image" height="320px">
+                        <div class="style--text">
+                                <h5>Маслом</h5>
+                                <p>От 2290P</p>
+                        </div>
+                    </a>
+                    </div>
                 </div>
-        </div>
+                <div class="col-md-3">
+                    <div class="style--col">
+                    <a href="imagine.html"><img src="img/examples/example5.jpg" class="image" height="320px">
+                    <div class="style--text">
+                            <h5>Imagine</h5>
+                            <p>От 2290P</p>
+                    </div>
+                    </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="style--col">
+                    <a href="dream.html"><img src="img/examples/example1.jpg" class="image" height="320px">
+                    <div class="style--text">
+                            <h5>Dream Art</h5>
+                            <p>От 2290P</p>
+                    </div>
+                        
+                </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row style--row__mbottom">
+                <div class="col-md-3">
+                    <div class="style--col">
+                    <a href="obraz.html"><img src="img/examples/example.jpg" class="image" height="320px">
+                    <div class="style--text">
+                            <h5>В образе</h5>
+                            <p>От 2290P</p>
+                    </div>
+                </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="style--col">
+                    <a href="aqua.html"><img src="img/examples/example2.jpg" class="image" height="320px">
+                    <div class="style--text">
+                            <h5>Акварель</h5>
+                            <p>От 2290P</p>
+                    </div>
+                </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="style--col">
+                    <a href="mult.html"><img src="img/examples/example3.jpg" class="image" height="320px">
+                    <div class="style--text">
+                            <h5>Мульт-герой</h5>
+                            <p>От 3490P</p>
+                    </div>
+                </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="style--col">
+                    <a href="izslov.html"><img src="img/examples/example8.jpg" class="image" height="320px">
+                    <div class="style--text">
+                            <h5>Из слов</h5>
+                            <p>От 1780P</p>
+                    </div>
+                </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-bottom: 64px;">
+                    <div class="col-md-3">
+                        <div class="style--col">
+                        <a href="kolaj.html"><img src="img/examples/example9s.jpg" class="image" height="320px">
+                        <div class="style--text">
+                                <h5>Коллаж</h5>
+                                <p>От 2290P</p>
+                        </div>
+                    </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="style--col">
+                        <a href="loveis.html"><img src="img/examples/example4.jpg" class="image" height="320px">
+                        <div class="style--text">
+                                <h5>Love is...</h5>
+                                <p>От 2290P</p>
+                        </div>
+                    </a>
+                        </div>
+                    </div>
+            </div>
+        </section>
     </section>
 
     <section class="form section--bg" id="form" style="margin-top: 0 !important; margin-bottom: 0 !important; background-image: url(img/form--bg.jpg);">

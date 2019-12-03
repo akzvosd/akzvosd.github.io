@@ -180,6 +180,61 @@
             </div>
         </div>
 </main>
+
+<section>
+        <h3 class="text--bold text--center">Калькулятор</h3>
+        <div class="style--card">
+                <div class="row align-items-center">
+                    <div class="col-md-7" style="position: static;">
+                         <div class="tog">
+                    <span class="toggle-switch-1"></span>
+                    <span class="toggle-switch-2" style="display: none;"></span>
+                             <img src="img/examples/example7.jpg" class="image" style="height: 420px;">
+                             <img src="img/examples/example7_x.jpg" class="image" style="display:none;height: 420px;">
+                         </div>
+                         <div class="style--container">
+                             <div class="slider--mouse">Проведите мышкой</div>
+                             <div class="style--slide1" style="background-image: url(img/examples/example7.jpg);"></div>
+                             <div class="style--slide2" style="background-image: url(img/examples/example7_x.jpg);">
+                                 <div class="style--line"></div>
+                             </div>
+                         </div>
+                    </div>
+                    <div class="col-md-5 style--text__padding">
+                         <a href="popart.html"><h4>Pop Art</h4></a>
+                         <p>Хотите порадовать друзей современным и уникальным подарком? Этот яркий и незабываемый стиль отлично Вам подойдёт!</p>
+                         <div class="style--card__input"> 
+                             <div class="card--input">
+                                 <input type="radio" checked id="popart_20x30" name="size" onclick='document.getElementById("popart--price").innerHTML = "2490Р"'>
+                                 <label for="popart_20x30">20 x 30 см</label>
+                             </div>
+                             <div class="card--input">
+                                 <input type="radio" id="popart_30x40" name="size" onclick='document.getElementById("popart--price").innerHTML = "3190Р"'> 
+                                 <label for="popart_30x40">30 x 40 см</label>
+                             </div>
+                             <div class="card--input">
+                                 <input type="radio" id="popart_40x60" name="size" onclick='document.getElementById("popart--price").innerHTML = "3990Р"'>
+                                 <label for="popart_40x60">40 х 60 см</label>
+                             </div>
+                             <div class="card--input">
+                                 <input type="radio" id="popart_60x80" name="size" onclick='document.getElementById("popart--price").innerHTML = "5150Р"'>
+                                 <label for="popart_60x80">60 х 80 см</label>
+                             </div>
+                             <div class="card--input">
+                                 <input type="radio" id="popart_80x120" name="size" onclick='document.getElementById("popart--price").innerHTML = "8000Р"'>
+                                 <label for="popart_80x120">80 х 120 см</label>
+                             </div>
+                             <div class="card--input">
+                                 <input type="radio" id="popart_other" name="size" onclick='document.getElementById("popart--price").innerHTML = "Для расчёта стоимости нажмите «Заказать» и заполните форму"'>
+                                 <label for="popart_other">Другой</label>
+                             </div>
+                         </div>    
+                             <h5 id="popart--price">2490Р</h5>
+                         <a href="popart.html#form"><button class="btn primary">Заказать</button></a>
+                    </div>
+                </div>
+         </div>
+</section>
 <!-- калькулятор 
     <section>
         calc
@@ -187,28 +242,19 @@
 <!-- до и после -->
 <section class="text--center">
         <h3 class="text--bold">До и После</h3>
-        <div class="tog tog-bottom">
-            <div class="togprint"></div>
-            <img src="img/examples/example7.jpg" class="image" style="height: 320px;">
-            <img src="img/examples/example7_x.jpg" class="image" style="display:none;height: 320px;">
-        </div>
-        <div class="tog tog-bottom">
-                <div class="togprint"></div>
+<div class="tog">
+                    <span class="toggle-switch-1"></span>
+                    <span class="toggle-switch-2" style="display: none;"></span>
                 <img src="img/popart/popart1.jpg" class="image" style="height: 320px;">
                 <img src="img/popart/popart1_x.jpg" class="image" style="display:none;height: 320px;">
             </div>
-            <div class="tog tog-bottom">
-                    <div class="togprint"></div>
+<div class="tog">
+                    <span class="toggle-switch-1"></span>
+                    <span class="toggle-switch-2" style="display: none;"></span>
                     <img src="img/popart/popart2.jpg" class="image" style="height: 320px;">
                     <img src="img/popart/popart2_x.jpg" class="image" style="display:none;height: 320px;">
                 </div>
-        <div class="style--container">
-            <div class="slider--mouse">Проведите мышкой</div>
-            <div class="style--slide1" style="background-image: url(img/examples/example7.jpg);"></div>
-            <div class="style--slide2" style="background-image: url(img/examples/example7_x.jpg);">
-                <div class="style--line"></div>
-            </div>
-        </div>
+
         <div class="style--container">
             <div class="slider--mouse">Проведите мышкой</div>
             <div class="style--slide1" style="background-image: url(img/popart/popart1.jpg);"></div>
@@ -355,7 +401,7 @@
                     </div>
             </div>
                     <div class="text--center">
-                      <a href="index.html#top"><div class="btn btn-up_styles">Посмотреть все стили</div></a> 
+                      <a href="index.html#top"><div class="btn btn-up_styles" style="border: 2px solid white; margin-top: 32px">Посмотреть все стили</div></a> 
                     </div>
                 </section>
 </section>
@@ -588,10 +634,11 @@
     </script>
     <script>
             $(document).ready(function(){
-            $(".tog").click(function(){
-            $('img',this).toggle();
-            });
-            });
+        $(".tog").click(function(){
+        $('img',this).toggle();
+        $("span",this).toggle();
+        });
+        });
         </script>
     <script>
     mybutton = document.getElementById("myBtn");
