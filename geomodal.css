@@ -1,0 +1,51 @@
+.geoModalWindow {
+    width: 88vh;
+    padding: 1rem;
+}
+
+.geoModalWindow__header {
+    display: flex;
+        justify-content: space-between;
+}
+
+.geoModalWindow input {
+    margin: 1rem 0;
+}
+
+.geoModalWindow__footer {
+        overflow-y: scroll;
+        max-height: 200px;
+        width: 100%;
+        line-height: 2rem;
+}
+
+.geoModalWindow__footer--wrap {
+    display: flex;
+    border-bottom: 1px solid #131313;
+    padding-bottom: 1rem;
+}
+
+.geoModalWindow__footer--letter {
+    width: 30px;
+    color: #a3a3a3;
+    font-weight: bold;
+}
+
+.geoModalWindow__footer--city {
+    margin-left: 1rem;
+}
+
+.geoModalWindow__footer--city p {
+    margin: 0px 0px !important; 
+}
+
+.geoModalWindow__footer--city p:hover {
+    background: #FFD131;
+    width: max-content;
+}
+
+@media only screen and (max-width: 900px) { 
+    .geoModalWindow {
+        width: 80vw;
+    }
+}

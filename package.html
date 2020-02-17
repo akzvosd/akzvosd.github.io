@@ -34,17 +34,409 @@
     <!-- geo дописать условие по бесплатной доставке -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
-    <script type="text/javascript">
-        $(window).on('load', function(){
-    var apiCity = ymaps.geolocation.city;
-        var i, ii, delivery;
-        var flag = true;
-        var shopAdress = {
-                "Великий Новгород" : "ТД Русь, 1 этаж",
-                "Санкт-Петербург" : "ТРК Лиговъ, 2 этаж",
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="bootstrap-grid.css">
+    <link rel="stylesheet" href="restoration.css">
+    <link rel="stylesheet" href="baget.css">
+    <link rel="stylesheet" href="package.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Imagine — Упаковка</title>
+</head>
+ <body>    
+    <div class="mobile--geo">
+           <div id="town--mob">Загрузка...</div>
+            <div id="delivery--mob">Загрузка...</div>
+        </div>
+    <div class="mobile--header">
+        <div class="row align-items-center" style="padding: 0 16px;">
+            <div class="col"><a href="#" class="mobile--menu__icon" onclick="openNav()"><img src="img/svg/menu.svg" alt="Меню"></a></div>
+            <div class="col"><a href="index.html"><img src="img/logotype.png" alt="Логотип" class="image"></a></div>
+            <div class="col" style="text-align: right;"><a href="tel:+79082930097"><img src="img/svg/phone.svg" alt="Позвонить" style="width: 32px"></a></div>
+        </div>
+    </div>
+    <div class="mobile--nav">
+        <nav class="row justify-content-between" style="margin-top: 0">
+            <a  href="index.html">Портреты</a>
+            <a href="reproductions.html">Картины</a>
+            <a href="panno.html">Панно</a>
+            <a href="foto.html">Печать</a>
+        </nav>
+    </div>
+    </div>
+     <div id="myNav" class="mobile--overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="mobile--overlay-content">
+                <div class="mobile--overlay__main" style="margin-bottom: 32px;">
+                <p>Основное</p>
+                    <a href="index.html">Главная</a>
+                    <a href="styles.html">Портреты</a>
+                    <a href="reproductions.html">Картины</a>
+                    <a href="panno.html">Панно</a>
+                    <a href="foto.html">Фото на холсте</a>
+                </div>
+                <div class="mobile--overylay__add">
+                    <p>Доп. услуги</p>
+                    <a href="restoration.html">Реставрация старых фото</a>
+                    <a href="retush.html">Ретушь</a>
+                    <a href="sertifikat.html">Сертификаты</a>
+                    <a href="baget.html">Багет</a>
+                    <a href="package.html">Упаковка</a>
+                </div>
+                <div class="mobile--overylay__add">
+                    <p>Остальное</p>
+                    <a href="cash.html">Оплата</a>
+                    <a href="delivery.html" class="subheader--active">Доставка</a>
+                    <a href="optom.html">Оптом</a>
+                    <a href="contacts.html">Контакты</a>
+                </div>
+                <div class="col-md-auto" ><a href="https://bitrix24public.com/b24-vrm86j.bitrix24.ru/form/6_ne_nashli_chto_iskali/zk0a9o/"><button class="btn line" id="callmebaby" style="width: auto; margin-bottom: 32px">Заказать звонок</button></a></div>
+            </div>
+    </div>
+    
+    <header class="row align-items-center">
+            <div class="col-md-2"><a href="index.html"><img src="img/logotype.png" class="image" alt="Логотип"></a></div>
+            <div class="col" style="flex-grow: 0;">
+                <img src="img/svg/geo.svg" alt="Гео">  
+            </div>
+            <div class="col" style="padding-left: 0px;">
+                <div id="town">Загрузка...</div>
+                <div id="delivery">Загрузка...</div>
+                 
+            </div>
+            <div class="col" style="text-align: right;"><a  href="tel:+79082930097">+7 908 293-00-97</a></div>
+            <div class="col-md-auto"  >  <a href="https://bitrix24public.com/b24-vrm86j.bitrix24.ru/form/6_ne_nashli_chto_iskali/zk0a9o/"><button class="btn line" id="callmebaby">Заказать звонок</button></a></div>
+    </header>
+    <div class="subheader" role="navigation" aria-label="Main">
+            <div class="row align-items-center">
+                <div class="col-md-6 subheader--left">
+                    <nav>
+                        <a href="index.html">Главная</a>
+                    <a href="styles.html">Портреты</a>
+                        <a href="reproductions.html">Картины</a>
+                        <a href="panno.html">Панно</a>
+                        <a href="foto.html">Фото на холсте</a>
+                        <div class="dropdown">
+                            <a href="#" class="dropdown--button subheader--active">Доп. услуги <i class="fa fa-caret-down"></i></a>
+                            <div class="dropdown-content">
+                                <a href="restoration.html">Реставрация старых фото</a>
+                                <a href="retush.html">Ретушь</a>
+                                <a href="sertifikat.html">Сертификаты</a>
+                                <a href="baget.html">Багет</a>
+                                <a href="package.html" class="dropdown-content--active">Упаковка</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-md-6 subheader--right">
+                    <nav>
+                        <a href="cash.html">Оплата</a>
+                        <a href="delivery.html">Доставка</a>
+                        <a href="optom.html">Оптом</a>
+                        <a href="contacts.html">Контакты</a>
+                    </nav>
+                </div>
+            </div>
+    </div>
+
+    <main>
+        <h1>Подарочная упаковка</h1>
+        <h5>Преподнесите подарок в красивой упаковке</h5>
+    </main>
+
+    <section>
+        <h4 class="text--yellow" style="margin: 8px 0; !important">Крафт</h4>
+        <div class="row" style="margin-bottom: 16px;">
+            <div class="col-md-4 col-md-4__leftZero modal--cursor">
+                <img src="img/package/kraft1.jpg"
+                onclick="openModal(this.src)" class="image image--baget">
+                <img src="img/package/kraft1.jpg" class="image image--baget__mobile">
+                <p class="text--bold">Красные полоски</p>
+                <p>Красный бант</p>
+            </div>
+            <div class="col-md-4 col-md-4__leftZero modal--cursor">
+                <img src="img/package/kraft2.jpg"
+                onclick="openModal(this.src)" class="image image--baget">
+                <img src="img/package/kraft2.jpg" class="image image--baget__mobile">
+                <p class="text--bold">Чёрные полоски</p>
+                <p>Фиолетовый бант</p>
+            </div>
+            <div class="col-md-4 col-md-4__leftZero modal--cursor">
+                <img src="img/package/kraft3.jpg"
+                onclick="openModal(this.src)" class="image image--baget">
+                <img src="img/package/kraft3.jpg" class="image image--baget__mobile">
+                <p class="text--bold">Красные снежинки</p>
+                <p>Красный бант</p>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 16px;">
+                <div class="col-md-4 col-md-4__leftZero modal--cursor">
+                    <img src="img/package/kraft4.jpg"
+                    onclick="openModal(this.src)" class="image image--baget">
+                    <img src="img/package/kraft4.jpg" class="image image--baget__mobile">
+                    <p class="text--bold">Хаки</p>
+                    <p>Белый бант</p>
+
+                </div>
+                <div class="col-md-4 col-md-4__leftZero modal--cursor">
+                    <img src="img/package/kraft5.jpg"
+                    onclick="openModal(this.src)" class="image image--baget">
+                    <img src="img/package/kraft5.jpg" class="image image--baget__mobile">
+                    <p class="text--bold">Цветы</p>
+                    <p>Красный бант</p>
+
+                </div>
+                <div class="col-md-4 col-md-4__leftZero modal--cursor">
+                    <img src="img/package/kraft6.jpg"
+                    onclick="openModal(this.src)" class="image image--baget">
+                    <img src="img/package/kraft6.jpg" class="image image--baget__mobile">
+                    <p class="text--bold">Сердечки</p>
+                    <p>Жёлтый бант</p>
+
+                </div>
+            </div>
+            <div class="row" style="margin-bottom: 16px;">
+                    <div class="col-md-4 col-md-4__leftZero modal--cursor">
+                        <img src="img/package/kraft7.jpg"
+                        onclick="openModal(this.src)" class="image image--baget">
+                        <img src="img/package/kraft7.jpg" class="image image--baget__mobile">
+                        <p class="text--bold">Олени</p>
+                        <p>Белый бант</p>
+    
+                    </div>
+                </div>
+
+                <h4 class="text--yellow" style="margin: 8px 0; !important">Премиум</h4>
+                <div class="row" style="margin-bottom: 16px;">
+                        <div class="col-md-4 col-md-4__leftZero modal--cursor">
+                            <img src="img/package/premium11.jpg"
+                            onclick="openModal(this.src)" class="image image--baget">
+                            <img src="img/package/premium11.jpg" class="image image--baget__mobile">
+                            <p class="text--bold">Вечерний Love</p>
+                            <p>Жёлтый бант</p>
+        
+                        </div>
+                        <div class="col-md-4 col-md-4__leftZero modal--cursor">
+                            <img src="img/package/premium12.jpg"
+                            onclick="openModal(this.src)" class="image image--baget">
+                            <img src="img/package/premium12.jpg" class="image image--baget__mobile">
+                            <p class="text--bold">Голубой-Золотой</p>
+                            <p>Белый бант</p>
+        
+                        </div>
+                        <div class="col-md-4 col-md-4__leftZero modal--cursor">
+                            <img src="img/package/premium13.jpg"
+                            onclick="openModal(this.src)" class="image image--baget">
+                            <img src="img/package/premium13.jpg" class="image image--baget__mobile">
+                            <p class="text--bold">Розовый-Золотой</p>
+                            <p>Белый бант</p>
+        
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 16px;">
+                            <div class="col-md-4 col-md-4__leftZero modal--cursor">
+                                <img src="img/package/premium10.jpg"
+                                onclick="openModal(this.src)" class="image image--baget">
+                                <img src="img/package/premium10.jpg" class="image image--baget__mobile">
+                                <p class="text--bold">Мягкая любовь</p>
+                                <p>Красный бант</p>
+            
+                            </div>
+                            <div class="col-md-4 col-md-4__leftZero modal--cursor">
+                                <img src="img/package/premium6.jpg"
+                                onclick="openModal(this.src)" class="image image--baget">
+                                <img src="img/package/premium6.jpg" class="image image--baget__mobile">
+                                <p class="text--bold">Геометричный паттерн</p>
+                                <p>Белый бант</p>
+            
+                            </div>
+                            <div class="col-md-4 col-md-4__leftZero modal--cursor">
+                                <img src="img/package/premium8.jpg"
+                                onclick="openModal(this.src)" class="image image--baget">
+                                <img src="img/package/premium8.jpg" class="image image--baget__mobile">
+                                <p class="text--bold">Золотой Дуб</p>
+                                <p>Жёлтый бант</p>
+            
+                            </div>
+                        </div>
+                        <div class="row" style="margin-bottom: 16px;">
+                                <div class="col-md-4 col-md-4__leftZero modal--cursor">
+                                    <img src="img/package/premium9.jpg"
+                                    onclick="openModal(this.src)" class="image image--baget">
+                                    <img src="img/package/premium9.jpg" class="image image--baget__mobile">
+                                    <p class="text--bold">Красная Роза</p>
+                                    <p>Красный бант</p>
+                
+                                </div>
+                                <div class="col-md-4 col-md-4__leftZero modal--cursor">
+                                    <img src="img/package/premium1.jpg"
+                                    onclick="openModal(this.src)" class="image image--baget">
+                                    <img src="img/package/premium1.jpg" class="image image--baget__mobile">
+                                    <p class="text--bold">Розовая Вуаль</p>
+                                    <p>Белый бант</p>
+                
+                                </div>
+                                <div class="col-md-4 col-md-4__leftZero modal--cursor">
+                                    <img src="img/package/premium2.jpg"
+                                    onclick="openModal(this.src)" class="image image--baget">
+                                    <img src="img/package/premium2.jpg" class="image image--baget__mobile">
+                                    <p class="text--bold">Енот Паттерн</p>
+                                    <p>Белый бант</p>
+                
+                                </div>
+                            </div>
+                            <div class="row" style="margin-bottom: 16px;">
+                                    <div class="col-md-4 col-md-4__leftZero modal--cursor">
+                                        <img src="img/package/premium3.jpg"
+                                        onclick="openModal(this.src)" class="image image--baget">
+                                        <img src="img/package/premium3.jpg" class="image image--baget__mobile">
+                                        <p class="text--bold">Снежинка Паттерн</p>
+                                        <p>Белый бант</p>
+                    
+                                    </div>
+                                    <div class="col-md-4 col-md-4__leftZero modal--cursor">
+                                        <img src="img/package/premium4.jpg"
+                                        onclick="openModal(this.src)" class="image image--baget">
+                                        <img src="img/package/premium4.jpg" class="image image--baget__mobile">
+                                        <p class="text--bold">Олень Паттерн</p>
+                                        <p>Белый бант</p>
+                    
+                                    </div>
+                                    <div class="col-md-4 col-md-4__leftZero modal--cursor">
+                                        <img src="img/package/premium5.jpg"
+                                        onclick="openModal(this.src)" class="image image--baget">
+                                        <img src="img/package/premium5.jpg" class="image image--baget__mobile">
+                                        <p class="text--bold">Дед Мороз Паттерн</p>
+                                        <p>Красный бант</p>
+                    
+                                    </div>
+                                </div>
+                                <div class="row" style="margin-bottom: 16px;">
+                                    <div class="col-md-4 col-md-4__leftZero modal--cursor">
+                                        <img src="img/package/premium7.jpg"
+                                        onclick="openModal(this.src)" class="image image--baget">
+                                        <img src="img/package/premium7.jpg" class="image image--baget__mobile">
+                                        <p class="text--bold">Жёлтая Вуаль</p>
+                                        <p>Жёлтый бант</p>
+                    
+                                    </div>
+                                    <div class="col-md-4 col-md-4__leftZero modal--cursor">
+                                        <img src="img/package/premium14.jpg"
+                                        onclick="openModal(this.src)" class="image image--baget">
+                                        <img src="img/package/premium14.jpg" class="image image--baget__mobile">
+                                        <p class="text--bold">Коралловая Вуаль</p>
+                                        <p>Белый бант</p>
+                    
+                                    </div>
+                                    <div class="col-md-4 col-md-4__leftZero modal--cursor">
+                                        <img src="img/package/premium15.jpg"
+                                        onclick="openModal(this.src)" class="image image--baget">
+                                        <img src="img/package/premium15.jpg" class="image image--baget__mobile">
+                                        <p class="text--bold">Мятная Вуаль</p>
+                                        <p>Белый бант</p>
+                    
+                                    </div>
+                                </div>
+                                <div class="row" style="margin-bottom: 16px;">
+                                    <div class="col-md-4 col-md-4__leftZero modal--cursor">
+                                        <img src="img/package/premium16.jpg"
+                                        onclick="openModal(this.src)" class="image image--baget">
+                                        <img src="img/package/premium16.jpg" class="image image--baget__mobile">
+                                        <p class="text--bold">Охристая Вуаль</p>
+                                        <p>Белый бант</p>
+                    
+                                    </div>
+                                </div>
+    <div class="modal" onclick="closeModal()">
+    </section>
+
+     
+           <footer><section class="section--wide">
+            <div class="row">
+                <div class="col-md-3">
+                    <a class="text--bold" href="#">Картины</a>
+                    <a href="index.html">Портреты по фото</a>
+                    <a href="foto.html">Печать фото на холсте</a>
+                    <a href="reproductions.html">Картины</a>
+                    <a href="panno.html">Модульное панно</p>
+                </div>
+                <div class="col-md-3">
+                    <a class="text--bold" href="#">Доп. услуги</a>
+                    <a href="restoration.html">Реставрация старых фото</a>
+                    <a href="retush.html">Ретушь</a>
+                    <a href="sertifikat.html">Сертификаты</a>
+
+                    <a href="baget.html">Багет</a>
+                    <a href="package.html">Упаковка</a>
+                </div>
+                <div class="col-md-3">
+                    <a class="text--bold">Остальное</a>
+                    <a href="cash.html">Оплата</a>
+                    <a href="delivery.html">Доставка</a>
+                    <a href="optom.html">Оптом</a>
+                    <a href="contacts.html">Контакты</a>
+                    <a href="oferta.html">Публичная оферта</a>
+                    <a href="props.html">Реквизиты</a>
+                </div>
+                <div class="col-md-3 footer--social">
+                    <a href="https://vk.com/imagine71" style="display: inline;"><img src="img/svg/vksquare.svg" alt="Логотип ВК" width="48px"></a>
+                    <a href="https://www.instagram.com/imagine.1971/" style="display: inline;"><img src="img/svg/instagramsquare.svg" alt="Логотип ВК" width="48px"></a>
+                </div>
+            </div>
+        </section></footer>
+   
+    <script src="js/script.js"></script>
+    <script>
+            var modal = document.querySelector('.modal');
+       
+            function openModal(imgSrc, name, size, price) {
+              var html = '<img src="' + imgSrc + '"/>';
+       
+              modal.innerHTML = html;
+              modal.style.display = 'inline-block';
             }
-        var deliveryAdress = {
-            'Абакан' : 'Самовывоз: ул. Чертыгашева, 126, 13 (Бесплатно)',
+       
+            function closeModal() {
+              modal.style.display = 'none';
+            }
+    </script><script>
+        $( "#callmebaby" ).click(function() {
+        $( "#modalCall" ).show();
+        });
+        $( "#closeCall" ).click(function() {
+        $( "#modalCall" ).hide();
+        });
+        $( "#callmebabyDesk" ).click(function() {
+        $( "#modalCall" ).show();
+        });
+    </script>
+    <script>
+    mybutton = document.getElementById("myBtn");
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+    }
+    function topFunction() {
+    document.body.scrollTop = 0; 
+    document.documentElement.scrollTop = 0; 
+    } 
+    </script>
+<script>
+        (function(w,d,u){
+                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+        })(window,document,'https://cdn.bitrix24.ru/b7533283/crm/site_button/loader_5_y1jzm9.js');
+</script>
+<script type="text/javascript">
+    $(window).on('load', function() {
+    var apiCity = ymaps.geolocation.city;
+    var shopAddress = { "Великий Новгород" : "ТД Русь, 1 этаж",
+            "Санкт-Петербург" : "ТРК Лиговъ, 2 этаж", };
+    var deliveryAddress = {
+'Абакан' : 'Самовывоз: ул. Чертыгашева, 126, 13 (Бесплатно)',
 'Абинск' : 'Самовывоз: пр-т Комсомольский, 110“А”/3 (Бесплатно)',
 'Адлер' : 'Самовывоз: ул. Просвещения, 118б (Бесплатно)',
 'Азов' : 'Самовывоз: ул. Измайлова, 55 (Бесплатно)',
@@ -616,439 +1008,18 @@
 'Янино-1, Всеволожский р-он' : 'Самовывоз: ул. Новая, 11А, 18-Н (Бесплатно)',
 'Ярославль' : 'Самовывоз: Ленинградский пр-т, 47 (Бесплатно)',
 'Ярцево' : 'Самовывоз: ул. Советская, 20 (Бесплатно)',
-        }        
-       
-        if (apiCity == null) { 
-    apiCity = 'Бесплатная доставка' 
-    delivery = 'по городам России (подробности по телефону)' 
-    } else {
-    for (i in shopAdress) {
-      if (apiCity.indexOf(i) >= 0) {
-      delivery = shopAdress[i]
-      flag = false
-      break
-      }
+    }
+    var delivery = shopAddress[apiCity] || deliveryAddress[apiCity] || null;
+
+    if (!delivery) {
+    apiCity = 'Бесплатная доставка';
+    delivery = 'по городам России (подробности по телефону)';
     }
 
-    if (flag == true) {
-      for (ii in deliveryAdress) {
-        if (apiCity.indexOf(i) >= 0) {
-        delivery = deliveryAdress[ii]
-        flag = false
-        break
-        }
-      }
-    }
-   
-    if (flag == true) {
-        apiCity = 'Бесплатная доставка'
-        delivery = 'по городам России (подробности по телефону)'
-    }
-    }
- 
-        $('#town').html(apiCity);
-        $('#delivery').html(delivery);
-        $('#town--mob').html(apiCity);
-        $('#delivery--mob').html(delivery);
-        }); 
-    </script>
-    <!-- geo -->
-
-    <link rel="stylesheet" href="components.css">
-    <link rel="stylesheet" href="bootstrap-grid.css">
-    <link rel="stylesheet" href="restoration.css">
-    <link rel="stylesheet" href="baget.css">
-    <link rel="stylesheet" href="package.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Imagine — Упаковка</title>
-</head>
- <body>    
-    <div class="mobile--geo">
-           <div id="town--mob">Загрузка...</div>
-            <div id="delivery--mob">Загрузка...</div>
-        </div>
-    <div class="mobile--header">
-        <div class="row align-items-center" style="padding: 0 16px;">
-            <div class="col"><a href="#" class="mobile--menu__icon" onclick="openNav()"><img src="img/svg/menu.svg" alt="Меню"></a></div>
-            <div class="col"><a href="index.html"><img src="img/logotype.png" alt="Логотип" class="image"></a></div>
-            <div class="col" style="text-align: right;"><a href="tel:+79082930097"><img src="img/svg/phone.svg" alt="Позвонить" style="width: 32px"></a></div>
-        </div>
-    </div>
-    <div class="mobile--nav">
-        <nav class="row justify-content-between" style="margin-top: 0">
-            <a  href="index.html">Портреты</a>
-            <a href="reproductions.html">Картины</a>
-            <a href="panno.html">Панно</a>
-            <a href="foto.html">Печать</a>
-        </nav>
-    </div>
-    </div>
-     <div id="myNav" class="mobile--overlay">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <div class="mobile--overlay-content">
-                <div class="mobile--overlay__main" style="margin-bottom: 32px;">
-                <p>Основное</p>
-                    <a href="index.html">Главная</a>
-                    <a href="styles.html">Портреты</a>
-                    <a href="reproductions.html">Картины</a>
-                    <a href="panno.html">Панно</a>
-                    <a href="foto.html">Фото на холсте</a>
-                </div>
-                <div class="mobile--overylay__add">
-                    <p>Доп. услуги</p>
-                    <a href="restoration.html">Реставрация старых фото</a>
-                    <a href="retush.html">Ретушь</a>
-                    <a href="sertifikat.html">Сертификаты</a>
-                    <a href="baget.html">Багет</a>
-                    <a href="package.html">Упаковка</a>
-                </div>
-                <div class="mobile--overylay__add">
-                    <p>Остальное</p>
-                    <a href="cash.html">Оплата</a>
-                    <a href="delivery.html" class="subheader--active">Доставка</a>
-                    <a href="optom.html">Оптом</a>
-                    <a href="contacts.html">Контакты</a>
-                </div>
-                <div class="col-md-auto" ><a href="https://bitrix24public.com/b24-vrm86j.bitrix24.ru/form/6_ne_nashli_chto_iskali/zk0a9o/"><button class="btn line" id="callmebaby" style="width: auto; margin-bottom: 32px">Заказать звонок</button></a></div>
-            </div>
-    </div>
-    
-    <header class="row align-items-center">
-            <div class="col-md-2"><a href="index.html"><img src="img/logotype.png" class="image" alt="Логотип"></a></div>
-            <div class="col" style="flex-grow: 0;">
-                <img src="img/svg/geo.svg" alt="Гео">  
-            </div>
-            <div class="col" style="padding-left: 0px;">
-                <div id="town">Загрузка...</div>
-                <div id="delivery">Загрузка...</div>
-                 
-            </div>
-            <div class="col" style="text-align: right;"><a  href="tel:+79082930097">+7 908 293-00-97</a></div>
-            <div class="col-md-auto"  >  <a href="https://bitrix24public.com/b24-vrm86j.bitrix24.ru/form/6_ne_nashli_chto_iskali/zk0a9o/"><button class="btn line" id="callmebaby">Заказать звонок</button></a></div>
-    </header>
-    <div class="subheader" role="navigation" aria-label="Main">
-            <div class="row align-items-center">
-                <div class="col-md-6 subheader--left">
-                    <nav>
-                        <a href="index.html">Главная</a>
-                    <a href="styles.html">Портреты</a>
-                        <a href="reproductions.html">Картины</a>
-                        <a href="panno.html">Панно</a>
-                        <a href="foto.html">Фото на холсте</a>
-                        <div class="dropdown">
-                            <a href="#" class="dropdown--button subheader--active">Доп. услуги <i class="fa fa-caret-down"></i></a>
-                            <div class="dropdown-content">
-                                <a href="restoration.html">Реставрация старых фото</a>
-                                <a href="retush.html">Ретушь</a>
-                                <a href="sertifikat.html">Сертификаты</a>
-                                <a href="baget.html">Багет</a>
-                                <a href="package.html" class="dropdown-content--active">Упаковка</a>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-                <div class="col-md-6 subheader--right">
-                    <nav>
-                        <a href="cash.html">Оплата</a>
-                        <a href="delivery.html">Доставка</a>
-                        <a href="optom.html">Оптом</a>
-                        <a href="contacts.html">Контакты</a>
-                    </nav>
-                </div>
-            </div>
-    </div>
-
-    <main>
-        <h1>Подарочная упаковка</h1>
-        <h5>Преподнесите подарок в красивой упаковке</h5>
-    </main>
-
-    <section>
-        <h4 class="text--yellow" style="margin: 8px 0; !important">Крафт</h4>
-        <div class="row" style="margin-bottom: 16px;">
-            <div class="col-md-4 col-md-4__leftZero modal--cursor">
-                <img src="img/package/kraft1.jpg"
-                onclick="openModal(this.src)" class="image image--baget">
-                <img src="img/package/kraft1.jpg" class="image image--baget__mobile">
-                <p class="text--bold">Красные полоски</p>
-                <p>Красный бант</p>
-            </div>
-            <div class="col-md-4 col-md-4__leftZero modal--cursor">
-                <img src="img/package/kraft2.jpg"
-                onclick="openModal(this.src)" class="image image--baget">
-                <img src="img/package/kraft2.jpg" class="image image--baget__mobile">
-                <p class="text--bold">Чёрные полоски</p>
-                <p>Фиолетовый бант</p>
-            </div>
-            <div class="col-md-4 col-md-4__leftZero modal--cursor">
-                <img src="img/package/kraft3.jpg"
-                onclick="openModal(this.src)" class="image image--baget">
-                <img src="img/package/kraft3.jpg" class="image image--baget__mobile">
-                <p class="text--bold">Красные снежинки</p>
-                <p>Красный бант</p>
-            </div>
-        </div>
-        <div class="row" style="margin-bottom: 16px;">
-                <div class="col-md-4 col-md-4__leftZero modal--cursor">
-                    <img src="img/package/kraft4.jpg"
-                    onclick="openModal(this.src)" class="image image--baget">
-                    <img src="img/package/kraft4.jpg" class="image image--baget__mobile">
-                    <p class="text--bold">Хаки</p>
-                    <p>Белый бант</p>
-
-                </div>
-                <div class="col-md-4 col-md-4__leftZero modal--cursor">
-                    <img src="img/package/kraft5.jpg"
-                    onclick="openModal(this.src)" class="image image--baget">
-                    <img src="img/package/kraft5.jpg" class="image image--baget__mobile">
-                    <p class="text--bold">Цветы</p>
-                    <p>Красный бант</p>
-
-                </div>
-                <div class="col-md-4 col-md-4__leftZero modal--cursor">
-                    <img src="img/package/kraft6.jpg"
-                    onclick="openModal(this.src)" class="image image--baget">
-                    <img src="img/package/kraft6.jpg" class="image image--baget__mobile">
-                    <p class="text--bold">Сердечки</p>
-                    <p>Жёлтый бант</p>
-
-                </div>
-            </div>
-            <div class="row" style="margin-bottom: 16px;">
-                    <div class="col-md-4 col-md-4__leftZero modal--cursor">
-                        <img src="img/package/kraft7.jpg"
-                        onclick="openModal(this.src)" class="image image--baget">
-                        <img src="img/package/kraft7.jpg" class="image image--baget__mobile">
-                        <p class="text--bold">Олени</p>
-                        <p>Белый бант</p>
-    
-                    </div>
-                </div>
-
-                <h4 class="text--yellow" style="margin: 8px 0; !important">Премиум</h4>
-                <div class="row" style="margin-bottom: 16px;">
-                        <div class="col-md-4 col-md-4__leftZero modal--cursor">
-                            <img src="img/package/premium11.jpg"
-                            onclick="openModal(this.src)" class="image image--baget">
-                            <img src="img/package/premium11.jpg" class="image image--baget__mobile">
-                            <p class="text--bold">Вечерний Love</p>
-                            <p>Жёлтый бант</p>
-        
-                        </div>
-                        <div class="col-md-4 col-md-4__leftZero modal--cursor">
-                            <img src="img/package/premium12.jpg"
-                            onclick="openModal(this.src)" class="image image--baget">
-                            <img src="img/package/premium12.jpg" class="image image--baget__mobile">
-                            <p class="text--bold">Голубой-Золотой</p>
-                            <p>Белый бант</p>
-        
-                        </div>
-                        <div class="col-md-4 col-md-4__leftZero modal--cursor">
-                            <img src="img/package/premium13.jpg"
-                            onclick="openModal(this.src)" class="image image--baget">
-                            <img src="img/package/premium13.jpg" class="image image--baget__mobile">
-                            <p class="text--bold">Розовый-Золотой</p>
-                            <p>Белый бант</p>
-        
-                        </div>
-                    </div>
-                    <div class="row" style="margin-bottom: 16px;">
-                            <div class="col-md-4 col-md-4__leftZero modal--cursor">
-                                <img src="img/package/premium10.jpg"
-                                onclick="openModal(this.src)" class="image image--baget">
-                                <img src="img/package/premium10.jpg" class="image image--baget__mobile">
-                                <p class="text--bold">Мягкая любовь</p>
-                                <p>Красный бант</p>
-            
-                            </div>
-                            <div class="col-md-4 col-md-4__leftZero modal--cursor">
-                                <img src="img/package/premium6.jpg"
-                                onclick="openModal(this.src)" class="image image--baget">
-                                <img src="img/package/premium6.jpg" class="image image--baget__mobile">
-                                <p class="text--bold">Геометричный паттерн</p>
-                                <p>Белый бант</p>
-            
-                            </div>
-                            <div class="col-md-4 col-md-4__leftZero modal--cursor">
-                                <img src="img/package/premium8.jpg"
-                                onclick="openModal(this.src)" class="image image--baget">
-                                <img src="img/package/premium8.jpg" class="image image--baget__mobile">
-                                <p class="text--bold">Золотой Дуб</p>
-                                <p>Жёлтый бант</p>
-            
-                            </div>
-                        </div>
-                        <div class="row" style="margin-bottom: 16px;">
-                                <div class="col-md-4 col-md-4__leftZero modal--cursor">
-                                    <img src="img/package/premium9.jpg"
-                                    onclick="openModal(this.src)" class="image image--baget">
-                                    <img src="img/package/premium9.jpg" class="image image--baget__mobile">
-                                    <p class="text--bold">Красная Роза</p>
-                                    <p>Красный бант</p>
-                
-                                </div>
-                                <div class="col-md-4 col-md-4__leftZero modal--cursor">
-                                    <img src="img/package/premium1.jpg"
-                                    onclick="openModal(this.src)" class="image image--baget">
-                                    <img src="img/package/premium1.jpg" class="image image--baget__mobile">
-                                    <p class="text--bold">Розовая Вуаль</p>
-                                    <p>Белый бант</p>
-                
-                                </div>
-                                <div class="col-md-4 col-md-4__leftZero modal--cursor">
-                                    <img src="img/package/premium2.jpg"
-                                    onclick="openModal(this.src)" class="image image--baget">
-                                    <img src="img/package/premium2.jpg" class="image image--baget__mobile">
-                                    <p class="text--bold">Енот Паттерн</p>
-                                    <p>Белый бант</p>
-                
-                                </div>
-                            </div>
-                            <div class="row" style="margin-bottom: 16px;">
-                                    <div class="col-md-4 col-md-4__leftZero modal--cursor">
-                                        <img src="img/package/premium3.jpg"
-                                        onclick="openModal(this.src)" class="image image--baget">
-                                        <img src="img/package/premium3.jpg" class="image image--baget__mobile">
-                                        <p class="text--bold">Снежинка Паттерн</p>
-                                        <p>Белый бант</p>
-                    
-                                    </div>
-                                    <div class="col-md-4 col-md-4__leftZero modal--cursor">
-                                        <img src="img/package/premium4.jpg"
-                                        onclick="openModal(this.src)" class="image image--baget">
-                                        <img src="img/package/premium4.jpg" class="image image--baget__mobile">
-                                        <p class="text--bold">Олень Паттерн</p>
-                                        <p>Белый бант</p>
-                    
-                                    </div>
-                                    <div class="col-md-4 col-md-4__leftZero modal--cursor">
-                                        <img src="img/package/premium5.jpg"
-                                        onclick="openModal(this.src)" class="image image--baget">
-                                        <img src="img/package/premium5.jpg" class="image image--baget__mobile">
-                                        <p class="text--bold">Дед Мороз Паттерн</p>
-                                        <p>Красный бант</p>
-                    
-                                    </div>
-                                </div>
-                                <div class="row" style="margin-bottom: 16px;">
-                                    <div class="col-md-4 col-md-4__leftZero modal--cursor">
-                                        <img src="img/package/premium7.jpg"
-                                        onclick="openModal(this.src)" class="image image--baget">
-                                        <img src="img/package/premium7.jpg" class="image image--baget__mobile">
-                                        <p class="text--bold">Жёлтая Вуаль</p>
-                                        <p>Жёлтый бант</p>
-                    
-                                    </div>
-                                    <div class="col-md-4 col-md-4__leftZero modal--cursor">
-                                        <img src="img/package/premium14.jpg"
-                                        onclick="openModal(this.src)" class="image image--baget">
-                                        <img src="img/package/premium14.jpg" class="image image--baget__mobile">
-                                        <p class="text--bold">Коралловая Вуаль</p>
-                                        <p>Белый бант</p>
-                    
-                                    </div>
-                                    <div class="col-md-4 col-md-4__leftZero modal--cursor">
-                                        <img src="img/package/premium15.jpg"
-                                        onclick="openModal(this.src)" class="image image--baget">
-                                        <img src="img/package/premium15.jpg" class="image image--baget__mobile">
-                                        <p class="text--bold">Мятная Вуаль</p>
-                                        <p>Белый бант</p>
-                    
-                                    </div>
-                                </div>
-                                <div class="row" style="margin-bottom: 16px;">
-                                    <div class="col-md-4 col-md-4__leftZero modal--cursor">
-                                        <img src="img/package/premium16.jpg"
-                                        onclick="openModal(this.src)" class="image image--baget">
-                                        <img src="img/package/premium16.jpg" class="image image--baget__mobile">
-                                        <p class="text--bold">Охристая Вуаль</p>
-                                        <p>Белый бант</p>
-                    
-                                    </div>
-                                </div>
-    <div class="modal" onclick="closeModal()">
-    </section>
-
-     
-           <footer><section class="section--wide">
-            <div class="row">
-                <div class="col-md-3">
-                    <a class="text--bold" href="#">Картины</a>
-                    <a href="index.html">Портреты по фото</a>
-                    <a href="foto.html">Печать фото на холсте</a>
-                    <a href="reproductions.html">Картины</a>
-                    <a href="panno.html">Модульное панно</p>
-                </div>
-                <div class="col-md-3">
-                    <a class="text--bold" href="#">Доп. услуги</a>
-                    <a href="restoration.html">Реставрация старых фото</a>
-                    <a href="retush.html">Ретушь</a>
-                    <a href="sertifikat.html">Сертификаты</a>
-
-                    <a href="baget.html">Багет</a>
-                    <a href="package.html">Упаковка</a>
-                </div>
-                <div class="col-md-3">
-                    <a class="text--bold">Остальное</a>
-                    <a href="cash.html">Оплата</a>
-                    <a href="delivery.html">Доставка</a>
-                    <a href="optom.html">Оптом</a>
-                    <a href="contacts.html">Контакты</a>
-                    <a href="oferta.html">Публичная оферта</a>
-                    <a href="props.html">Реквизиты</a>
-                </div>
-                <div class="col-md-3 footer--social">
-                    <a href="https://vk.com/imagine71" style="display: inline;"><img src="img/svg/vksquare.svg" alt="Логотип ВК" width="48px"></a>
-                    <a href="https://www.instagram.com/imagine.1971/" style="display: inline;"><img src="img/svg/instagramsquare.svg" alt="Логотип ВК" width="48px"></a>
-                </div>
-            </div>
-        </section></footer>
-   
-    <script src="js/script.js"></script>
-    <script>
-            var modal = document.querySelector('.modal');
-       
-            function openModal(imgSrc, name, size, price) {
-              var html = '<img src="' + imgSrc + '"/>';
-       
-              modal.innerHTML = html;
-              modal.style.display = 'inline-block';
-            }
-       
-            function closeModal() {
-              modal.style.display = 'none';
-            }
-    </script><script>
-        $( "#callmebaby" ).click(function() {
-        $( "#modalCall" ).show();
-        });
-        $( "#closeCall" ).click(function() {
-        $( "#modalCall" ).hide();
-        });
-        $( "#callmebabyDesk" ).click(function() {
-        $( "#modalCall" ).show();
-        });
-    </script>
-    <script>
-    mybutton = document.getElementById("myBtn");
-    window.onscroll = function() {scrollFunction()};
-    function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        mybutton.style.display = "block";
-    } else {
-        mybutton.style.display = "none";
-    }
-    }
-    function topFunction() {
-    document.body.scrollTop = 0; 
-    document.documentElement.scrollTop = 0; 
-    } 
-    </script>
-<script>
-        (function(w,d,u){
-                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
-                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
-        })(window,document,'https://cdn.bitrix24.ru/b7533283/crm/site_button/loader_5_y1jzm9.js');
-</script>
-</body>
+    $('#town').html(apiCity);
+    $('#delivery').html(delivery);
+    $('#town--mob').html(apiCity);
+    $('#delivery--mob').html(delivery);
+    });
+</script> </body>
 </html>

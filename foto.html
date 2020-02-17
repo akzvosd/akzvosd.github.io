@@ -34,17 +34,427 @@
     <!-- geo дописать условие по бесплатной доставке -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
-    <script type="text/javascript">
-        $(window).on('load', function(){
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="repro.css">
+    <link rel="stylesheet" href="review.css">
+    <link rel="stylesheet" href="delivery.css">
+    <link rel="stylesheet" href="youtube.css">
+    <link rel="stylesheet" href="foto.css">
+    <link rel="stylesheet" href="bootstrap-grid.css">
+    <link rel="stylesheet" href="swiper.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Imagine — Печать фото</title>
+</head>
+ <body>    
+    <div class="mobile--geo">
+           <div id="town--mob">Загрузка...</div>
+            <div id="delivery--mob">Загрузка...</div>
+        </div>
+    <div class="mobile--header">
+        <div class="row align-items-center" style="padding: 0 16px;">
+            <div class="col"><a href="#" class="mobile--menu__icon" onclick="openNav()"><img src="img/svg/menu.svg" alt="Меню"></a></div>
+            <div class="col"><a href="index.html"><img src="img/logotype.png" alt="Логотип" class="image"></a></div>
+            <div class="col" style="text-align: right;"><a href="tel:+79082930097"><img src="img/svg/phone.svg" alt="Позвонить" style="width: 32px"></a></div>
+        </div>
+    </div>
+    <div class="mobile--nav">
+        <nav class="row justify-content-between" style="margin-top: 0">
+            <a href="index.html">Главная</a>
+                    <a href="styles.html">Портреты</a>
+            <a href="reproductions.html">Картины</a>
+            <a href="panno.html">Панно</a>
+            <a href="foto.html" class="active--navbar__mobile">Печать</a>
+        </nav>
+    </div>
+    <div id="myNav" class="mobile--overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="mobile--overlay-content">
+                <div class="mobile--overlay__main" style="margin-bottom: 32px;">
+                <p>Основное</p>
+                    <a href="index.html">Главная</a>
+                    <a href="styles.html">Портреты</a>
+                    <a href="reproductions.html">Картины</a>
+                    <a href="panno.html">Панно</a>
+                    <a href="foto.html">Фото на холсте</a>
+                </div>
+                <div class="mobile--overylay__add">
+                    <p>Доп. услуги</p>
+                    <a href="restoration.html">Реставрация старых фото</a>
+                    <a href="retush.html">Ретушь</a>
+                    <a href="sertifikat.html">Сертификаты</a>
+                    <a href="baget.html">Багет</a>
+                    <a href="package.html">Упаковка</a>
+                </div>
+                <div class="mobile--overylay__add">
+                    <p>Остальное</p>
+                    <a href="cash.html">Оплата</a>
+                    <a href="delivery.html" class="subheader--active">Доставка</a>
+                    <a href="optom.html">Оптом</a>
+                    <a href="contacts.html">Контакты</a>
+                </div>
+                <div class="col-md-auto" ><a href="https://bitrix24public.com/b24-vrm86j.bitrix24.ru/form/6_ne_nashli_chto_iskali/zk0a9o/"><button class="btn line" id="callmebaby" style="width: auto; margin-bottom: 32px">Заказать звонок</button></a></div>
+            </div>
+    </div>
+    
+    <header class="row align-items-center">
+            <div class="col-md-2"><a href="index.html"><img src="img/logotype.png" class="image" alt="Логотип"></a></div>
+            <div class="col" style="flex-grow: 0;">
+                <img src="img/svg/geo.svg" alt="Гео">  
+            </div>
+            <div class="col" style="padding-left: 0px;">
+                <div id="town">Загрузка...</div>
+                <div id="delivery">Загрузка...</div>
+                 
+            </div>
+            <div class="col" style="text-align: right;"><a  href="tel:+79082930097">+7 908 293-00-97</a></div>
+            <div class="col-md-auto"  >  <a href="https://bitrix24public.com/b24-vrm86j.bitrix24.ru/form/6_ne_nashli_chto_iskali/zk0a9o/"><button class="btn line" id="callmebaby">Заказать звонок</button></a></div>
+    </header>
+    <div class="subheader" role="navigation" aria-label="Main">
+            <div class="row align-items-center">
+                <div class="col-md-6 subheader--left">
+                    <nav>
+                        <a href="index.html">Главная</a>
+                    <a href="styles.html">Портреты</a>
+                        <a href="reproductions.html">Картины</a>
+                        <a href="panno.html">Панно</a>
+                        <a href="foto.html" class="subheader--active">Фото на холсте</a>
+                        <div class="dropdown">
+                            <a href="#" class="dropdown--button">Доп. услуги <i class="fa fa-caret-down"></i></a>
+                            <div class="dropdown-content">
+                                <a href="restoration.html">Реставрация старых фото</a>
+                                <a href="retush.html">Ретушь</a>
+                                <a href="sertifikat.html">Сертификаты</a>
+                                <a href="baget.html">Багет</a>
+                                <a href="package.html">Упаковка</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-md-6 subheader--right">
+                    <nav>
+                         
+                        <a href="cash.html">Оплата</a>
+                        <a href="delivery.html">Доставка</a>
+                        <a href="optom.html">Оптом</a>
+                        <a href="contacts.html">Контакты</a>
+                    </nav>
+                </div>
+            </div>
+    </div>
+
+<main>  
+            <!-- hero -->
+            <div class="hero-image foto">
+                    <div class="hero-text">
+                            <div class="hero-text__list margin-top--hero-text__list">
+                                <h3>Любое фото на холсте</h3>
+                                <h5>Присылайте нам любую фотографию,<br>и мы напечатаем её на холсте.</h5>
+                                <a href="#form"><button class="btn primary">Прислать фото</button></a>
+                            </div>
+                    </div>
+            </div>
+</main>
+<!-- репродукции -->
+<section class="section--wide">
+    <div class="row">
+            <div class="col-md-4">
+                <img src="img/foto/foto1.jpg" onclick="openModal(this.src)" class="image image--baget image--shadow" style="height: 400px;">
+                <img src="img/foto/foto1.jpg" class="image image--baget__mobile">
+            </div>
+            <div class="col-md-4">
+                <img src="img/foto/foto2.jpg" onclick="openModal(this.src)" class="image image--baget image--shadow" style="height: 400px;">
+                <img src="img/foto/foto2.jpg" class="image image--baget__mobile">
+            </div>
+            <div class="col-md-4">
+                <img src="img/foto/foto3.jpg" onclick="openModal(this.src)" class="image image--baget image--shadow" style="height: 400px;">
+                <img src="img/foto/foto3.jpg" class="image image--baget__mobile">
+            </div>
+    </div>
+    <div class="row">
+            <div class="col-md-4">
+                <img src="img/foto/foto4.jpg" onclick="openModal(this.src)" class="image image--baget image--shadow" style="height: 400px;">
+                <img src="img/foto/foto4.jpg" class="image image--baget__mobile">
+            </div>
+            <div class="col-md-4">
+                <img src="img/foto/foto5.jpg" onclick="openModal(this.src)" class="image image--baget image--shadow" style="height: 400px;">
+                <img src="img/foto/foto5.jpg" class="image image--baget__mobile">
+            </div>
+            <div class="col-md-4">
+                <img src="img/foto/foto6.jpg" onclick="openModal(this.src)" class="image image--baget image--shadow" style="height: 400px;">
+                <img src="img/foto/foto6.jpg" class="image image--baget__mobile">
+            </div>
+    </div>
+</section>   
+<!-- как -->  
+<section class="section--wide">
+            <h3 class="text--center repro--h3">Как мы это делаем?</h3>  
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="img/svg/foto.svg" alt="Картина в компьютере" class="image image--repro__svg">
+                    <h5 class="text--center" style="margin-bottom: 0;"><span style="background: #FFD164;">1. Фотография</span></h5>
+                    <p class="text--center">Вы выбираете изображение на компьютере или телефоне и отправляете его нам.</p> 
+                </div>
+                <div class="col-md-3">
+                    <img src="img/svg/repro2.svg" alt="Пример репродукции Ван Гог" class="image image--repro__svg">
+                    <h5 class="text--center" style="margin-bottom: 0;"><span style="background: #FFD164;">2. Печать</span></h5>
+                    <p class="text--center">Мы печатаем изображение на натуральном хлопковом холсте и натягиваем на подрамник из сосны. Устанавливаем крепление.</p> 
+                </div> 
+                <div class="col-md-3">
+                    <img src="img/svg/repro3.svg" alt="Пример" class="image image--repro__svg">
+                    <h5 class="text--center" style="margin-bottom: 0;"><span style="background: #FFD164;">3. Оформление</span></h5>
+                    <p class="text--center">По вашему желанию оформим картину в багетную раму, покроем лаком или обернём в подарочную упаковку</p>
+                </div>
+                <div class="col-md-3">
+                    <img src="img/svg/repro4.svg" alt="Пример" class="image image--repro__svg">
+                    <h5 class="text--center" style="margin-bottom: 0;"><span style="background: #FFD164;">4. Доставка</span></h5>
+                    <p class="text--center">Надёжно упаковываем картину перед отправкой в толстые листы гофрокартона и воздушно-пузырьковую плёнку и отправляем в ваш город!</p>
+                </div>
+            </div>
+</section>
+<!-- отзывы -->
+<section class="review section--wide">
+    <h3 class="text--center repro--h3" style="margin-bottom: -8px;">Отзывы</h3>
+    <h5 class="text--center">Один из принципов нашей компании только настоящие отзывы</h5>               
+    <div class="row" style="margin-top: 16px">
+        <div class="col-md-6">
+            <div class="review--card row align-items-center">
+                <img src="img/review_galina.jpg" alt="Карточка_1" class="review--card__img col-md-4">
+                <div class="card--text col-md-8">   
+                    <p>Спасибо за картину,был подарок близкому человеку.Всё было замечательно.😊</p>
+                    <small  >Галина Полькина, Санкт-Петербург</small>
+                </div>    
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="review--card row align-items-center">
+                    <img src="img/review_larisaS.jpg" alt="Карточка_1" class="review--card__img col-md-4">
+                    <div class="card--text col-md-8">   
+                        <p>Спасибо за красивую картину.Сделали быстро,качественно,учли все пожелания.Заказывала на годовщину свадьбы,заказ был выполнен даже раньше заявленного срока.Очень понравился предложенный вариант и цветовая гамма.Благодарю за работу .Процветания и довольных заказчиков.</p>
+                        <small  >Лариса Семёнова, Архангельск</small>
+                    </div>    
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 16px">
+                    <div class="col-md-6">
+                        <div class="review--card row align-items-center">
+                            <img src="img/review_adelina.jpg" alt="Карточка_1" class="review--card__img col-md-4">
+                            <div class="card--text col-md-8">   
+                                <p>Спасибо огромное за выполненную работу 🤗✨Все очень
+                                        💫быстро
+                                        💫аккуратно
+                                        💫красиво
+                                        Буду заказывать ещё и всем вас советовать </p>
+                                <small  >Аделина Александрова, Великий Новгород</small>
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="review--card row align-items-center">
+                                <img src="img/review_yakovlev.jpg" alt="Карточка_1" class="review--card__img col-md-4">
+                                <div class="card--text col-md-8">   
+                                    <p>Огромное спасибо студии за непередаваемые положительные эмоции от вашей работы! Вы настоящие профи своего дела!</p>
+                                    <small  >Александр Яковлев, Демянск</small>
+                                </div>    
+                        </div>
+                    </div> 
+    </div>
+      
+            <div class="button--center">
+                <button class="btn alternative button--vk">
+                    <img src="img/svg/vklogo.svg" alt="Логотип ВК" class="img--noradius">
+                    <a href="https://vk.com/topic-128091335_34451245"><span style="vertical-align: middle;">Посмотреть отзывы в VK</span></a>
+                </button>
+            </div>
+</section>
+<!-- youtube -->
+<div class="youtube--video text--center">
+    <h3>Процесс работы</h3>
+    <iframe width="100%" class="youtube--desktop"
+    src="https://www.youtube.com/embed/pEFMpm2dKtw">
+    </iframe>
+    <iframe width="100%" class="youtube--mobile"
+    src="https://www.youtube.com/embed/j0-rIwxuNZA">
+    </iframe>
+</div>
+<!-- доставка -->
+<section class="section--bg delivery--bg__yellow" style="margin-bottom: 0; margin-top: -8px;">
+    <div class="section--wide delivery" style="margin: auto;">
+    <h3 class="text--center repro--h3" style="margin-bottom: 0;">Доставка в любой город России</h3>
+    <h5 class="text--center">Получите готовый портрет в наших фирменных отделах <br>или в пункте выдачи возле Вашего дома</h5>
+    <div class="text--center delivery--button">
+        <a href="delivery.html"><button class="btn line">Адреса фирменных отделов</button></a>
+        <a href="delivery.html"><button class="btn line">Подробнее о доставке</button></a>
+    </div>
+        <div class="row" style="margin-top: 40px;">
+                <div class="col-md-4">
+                    <figure>
+                        <img src="img/delivery--spb.jpg" alt="Точка в СПб" class="image">
+                        <figcaption>Санкт-Петербург, ТРК «ЛиговЪ», 2 этаж</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-4">
+                    <figure>
+                        <img src="img/delivery--vn.jpg" alt="Точка в Великом Новгороде" class="image">
+                        <figcaption>Великий Новгород, ТД «Русь», 1 этаж</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-4">   
+                    <figure>
+                        <img src="img/delivery--psk.jpg" alt="Точка во Пскове" class="image">
+                        <figcaption>Псков, ТЦ «Максимус», 1 этаж</figcaption>
+                    </figure>
+                </div> 
+        </div>
+    </div>        
+</section>
+<!-- форма --> 
+<!-- форма --> 
+<section class="section--bg form" id="form">
+    <section class="bitrix">
+            <script id="bx24_form_inline" data-skip-moving="true">
+                    (function(w,d,u,b){w['Bitrix24FormObject']=b;w[b] = w[b] || function(){arguments[0].ref=u;
+                            (w[b].forms=w[b].forms||[]).push(arguments[0])};
+                            if(w[b]['forms']) return;
+                            var s=d.createElement('script');s.async=1;s.src=u+'?'+(1*new Date());
+                            var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+                    })(window,document,'https://b24-vrm86j.bitrix24.ru/bitrix/js/crm/form_loader.js','b24form');
+            
+                    b24form({"id":"9","lang":"ru","sec":"76i73a","type":"inline"});
+            </script>
+            
+    <!-- <h3 class="text--center repro--h3"> </h3>
+    
+    <div id="photo" class="tabcontent" style="display: block;">
+        <form action="/action_page.php" class="form--repro">
+            <div class="form--repro__item">
+                <label for="file--upload" class="file--label">
+                    <img src="img/svg/photo.svg" alt="Загрузить" style="width: 32px;">
+                    Загрузить изображения    
+                </label>
+                <input type="file" id="file--upload" multiple="multiple" name="fileToUpload" id="fileToUpload" accept=".jpg, .jpeg, .png"  >
+            </div>
+            <div class="form--repro__item">
+                <label for="name">Как вас зовут</label>
+                <input type="text" id="name" name="user_name" placeholder="Вася" required>
+            </div>
+            <div class="form--repro__item">
+                <label for="tel">Номер телефона</label>
+                <input type="tel" id="tel" name="tel" placeholder="+7 900 100 20 10" required>
+            </div>
+            <div class="form--repro__item">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="imagine@mail.ru" required>
+            </div>
+            <input type="submit" class="btn alternative" style="box-shadow: 0 0 0;" value="Отправить заявку">
+        </form>
+    </div> -->
+    </section>
+</section>
+<div class="modal" onclick="closeModal()"></div>
+<footer><section class="section--wide">
+            <div class="row">
+                <div class="col-md-3">
+                    <a class="text--bold" href="#">Картины</a>
+                    <a href="index.html">Портреты по фото</a>
+                    <a href="foto.html">Печать фото на холсте</a>
+                    <a href="reproductions.html">Картины</a>
+                    <a href="panno.html">Модульное панно</p>
+                </div>
+                <div class="col-md-3">
+                    <a class="text--bold" href="#">Доп. услуги</a>
+                    <a href="restoration.html">Реставрация старых фото</a>
+                    <a href="retush.html">Ретушь</a>
+                    <a href="sertifikat.html">Сертификаты</a>
+
+                    <a href="baget.html">Багет</a>
+                    <a href="package.html">Упаковка</a>
+                </div>
+                <div class="col-md-3">
+                    <a class="text--bold">Остальное</a>
+                     
+                    <a href="cash.html">Оплата</a>
+                    <a href="delivery.html">Доставка</a>
+                    <a href="optom.html">Оптом</a>
+                    <a href="contacts.html">Контакты</a>
+                    <a href="oferta.html">Публичная оферта</a>
+                    <a href="props.html">Реквизиты</a>
+                </div>
+                <div class="col-md-3 footer--social">
+                    <a href="https://vk.com/imagine71" style="display: inline;"><img src="img/svg/vksquare.svg" alt="Логотип ВК" width="48px"></a>
+                    <a href="https://www.instagram.com/imagine.1971/" style="display: inline;"><img src="img/svg/instagramsquare.svg" alt="Логотип ВК" width="48px"></a>
+                </div>
+            </div>
+        </section></footer>
+<script>
+function openTab(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+document.getElementById("defaultOpen").click();
+</script>
+<script src="js/script.js"></script>
+<script>
+        var modal = document.querySelector('.modal');
+   
+        function openModal(imgSrc, name, size, price) {
+          var html = '<img src="' + imgSrc + '"/>';
+   
+          modal.innerHTML = html;
+          modal.style.display = 'inline-block';
+        }
+   
+        function closeModal() {
+          modal.style.display = 'none';
+        }
+</script><script>
+        $( "#callmebaby" ).click(function() {
+        $( "#modalCall" ).show();
+        });
+        $( "#closeCall" ).click(function() {
+        $( "#modalCall" ).hide();
+        });
+        $( "#callmebabyDesk" ).click(function() {
+        $( "#modalCall" ).show();
+        });
+    </script>
+    <script>
+    mybutton = document.getElementById("myBtn");
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+    }
+    function topFunction() {
+    document.body.scrollTop = 0; 
+    document.documentElement.scrollTop = 0; 
+    } 
+    </script>
+<script>
+        (function(w,d,u){
+                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+        })(window,document,'https://cdn.bitrix24.ru/b7533283/crm/site_button/loader_5_y1jzm9.js');
+</script>
+<script type="text/javascript">
+    $(window).on('load', function() {
     var apiCity = ymaps.geolocation.city;
-        var i, ii, delivery;
-        var flag = true;
-        var shopAdress = {
-                "Великий Новгород" : "ТД Русь, 1 этаж",
-                "Санкт-Петербург" : "ТРК Лиговъ, 2 этаж",
-            }
-        var deliveryAdress = {
-            'Абакан' : 'Самовывоз: ул. Чертыгашева, 126, 13 (Бесплатно)',
+    var shopAddress = { "Великий Новгород" : "ТД Русь, 1 этаж",
+            "Санкт-Петербург" : "ТРК Лиговъ, 2 этаж", };
+    var deliveryAddress = {
+'Абакан' : 'Самовывоз: ул. Чертыгашева, 126, 13 (Бесплатно)',
 'Абинск' : 'Самовывоз: пр-т Комсомольский, 110“А”/3 (Бесплатно)',
 'Адлер' : 'Самовывоз: ул. Просвещения, 118б (Бесплатно)',
 'Азов' : 'Самовывоз: ул. Измайлова, 55 (Бесплатно)',
@@ -616,457 +1026,18 @@
 'Янино-1, Всеволожский р-он' : 'Самовывоз: ул. Новая, 11А, 18-Н (Бесплатно)',
 'Ярославль' : 'Самовывоз: Ленинградский пр-т, 47 (Бесплатно)',
 'Ярцево' : 'Самовывоз: ул. Советская, 20 (Бесплатно)',
-        }        
-       
-        if (apiCity == null) { 
-    apiCity = 'Бесплатная доставка' 
-    delivery = 'по городам России (подробности по телефону)' 
-    } else {
-    for (i in shopAdress) {
-      if (apiCity.indexOf(i) >= 0) {
-      delivery = shopAdress[i]
-      flag = false
-      break
-      }
+    }
+    var delivery = shopAddress[apiCity] || deliveryAddress[apiCity] || null;
+
+    if (!delivery) {
+    apiCity = 'Бесплатная доставка';
+    delivery = 'по городам России (подробности по телефону)';
     }
 
-    if (flag == true) {
-      for (ii in deliveryAdress) {
-        if (apiCity.indexOf(i) >= 0) {
-        delivery = deliveryAdress[ii]
-        flag = false
-        break
-        }
-      }
-    }
-   
-    if (flag == true) {
-        apiCity = 'Бесплатная доставка'
-        delivery = 'по городам России (подробности по телефону)'
-    }
-    }
- 
-        $('#town').html(apiCity);
-        $('#delivery').html(delivery);
-        $('#town--mob').html(apiCity);
-        $('#delivery--mob').html(delivery);
-        }); 
-    </script>
-    <!-- geo -->
-
-    <link rel="stylesheet" href="components.css">
-    <link rel="stylesheet" href="repro.css">
-    <link rel="stylesheet" href="review.css">
-    <link rel="stylesheet" href="delivery.css">
-    <link rel="stylesheet" href="youtube.css">
-    <link rel="stylesheet" href="foto.css">
-    <link rel="stylesheet" href="bootstrap-grid.css">
-    <link rel="stylesheet" href="swiper.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Imagine — Печать фото</title>
-</head>
- <body>    
-    <div class="mobile--geo">
-           <div id="town--mob">Загрузка...</div>
-            <div id="delivery--mob">Загрузка...</div>
-        </div>
-    <div class="mobile--header">
-        <div class="row align-items-center" style="padding: 0 16px;">
-            <div class="col"><a href="#" class="mobile--menu__icon" onclick="openNav()"><img src="img/svg/menu.svg" alt="Меню"></a></div>
-            <div class="col"><a href="index.html"><img src="img/logotype.png" alt="Логотип" class="image"></a></div>
-            <div class="col" style="text-align: right;"><a href="tel:+79082930097"><img src="img/svg/phone.svg" alt="Позвонить" style="width: 32px"></a></div>
-        </div>
-    </div>
-    <div class="mobile--nav">
-        <nav class="row justify-content-between" style="margin-top: 0">
-            <a href="index.html">Главная</a>
-                    <a href="styles.html">Портреты</a>
-            <a href="reproductions.html">Картины</a>
-            <a href="panno.html">Панно</a>
-            <a href="foto.html" class="active--navbar__mobile">Печать</a>
-        </nav>
-    </div>
-    <div id="myNav" class="mobile--overlay">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <div class="mobile--overlay-content">
-                <div class="mobile--overlay__main" style="margin-bottom: 32px;">
-                <p>Основное</p>
-                    <a href="index.html">Главная</a>
-                    <a href="styles.html">Портреты</a>
-                    <a href="reproductions.html">Картины</a>
-                    <a href="panno.html">Панно</a>
-                    <a href="foto.html">Фото на холсте</a>
-                </div>
-                <div class="mobile--overylay__add">
-                    <p>Доп. услуги</p>
-                    <a href="restoration.html">Реставрация старых фото</a>
-                    <a href="retush.html">Ретушь</a>
-                    <a href="sertifikat.html">Сертификаты</a>
-                    <a href="baget.html">Багет</a>
-                    <a href="package.html">Упаковка</a>
-                </div>
-                <div class="mobile--overylay__add">
-                    <p>Остальное</p>
-                    <a href="cash.html">Оплата</a>
-                    <a href="delivery.html" class="subheader--active">Доставка</a>
-                    <a href="optom.html">Оптом</a>
-                    <a href="contacts.html">Контакты</a>
-                </div>
-                <div class="col-md-auto" ><a href="https://bitrix24public.com/b24-vrm86j.bitrix24.ru/form/6_ne_nashli_chto_iskali/zk0a9o/"><button class="btn line" id="callmebaby" style="width: auto; margin-bottom: 32px">Заказать звонок</button></a></div>
-            </div>
-    </div>
-    
-    <header class="row align-items-center">
-            <div class="col-md-2"><a href="index.html"><img src="img/logotype.png" class="image" alt="Логотип"></a></div>
-            <div class="col" style="flex-grow: 0;">
-                <img src="img/svg/geo.svg" alt="Гео">  
-            </div>
-            <div class="col" style="padding-left: 0px;">
-                <div id="town">Загрузка...</div>
-                <div id="delivery">Загрузка...</div>
-                 
-            </div>
-            <div class="col" style="text-align: right;"><a  href="tel:+79082930097">+7 908 293-00-97</a></div>
-            <div class="col-md-auto"  >  <a href="https://bitrix24public.com/b24-vrm86j.bitrix24.ru/form/6_ne_nashli_chto_iskali/zk0a9o/"><button class="btn line" id="callmebaby">Заказать звонок</button></a></div>
-    </header>
-    <div class="subheader" role="navigation" aria-label="Main">
-            <div class="row align-items-center">
-                <div class="col-md-6 subheader--left">
-                    <nav>
-                        <a href="index.html">Главная</a>
-                    <a href="styles.html">Портреты</a>
-                        <a href="reproductions.html">Картины</a>
-                        <a href="panno.html">Панно</a>
-                        <a href="foto.html" class="subheader--active">Фото на холсте</a>
-                        <div class="dropdown">
-                            <a href="#" class="dropdown--button">Доп. услуги <i class="fa fa-caret-down"></i></a>
-                            <div class="dropdown-content">
-                                <a href="restoration.html">Реставрация старых фото</a>
-                                <a href="retush.html">Ретушь</a>
-                                <a href="sertifikat.html">Сертификаты</a>
-                                <a href="baget.html">Багет</a>
-                                <a href="package.html">Упаковка</a>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-                <div class="col-md-6 subheader--right">
-                    <nav>
-                         
-                        <a href="cash.html">Оплата</a>
-                        <a href="delivery.html">Доставка</a>
-                        <a href="optom.html">Оптом</a>
-                        <a href="contacts.html">Контакты</a>
-                    </nav>
-                </div>
-            </div>
-    </div>
-
-<main>  
-            <!-- hero -->
-            <div class="hero-image foto">
-                    <div class="hero-text">
-                            <div class="hero-text__list margin-top--hero-text__list">
-                                <h3>Любое фото на холсте</h3>
-                                <h5>Присылайте нам любую фотографию,<br>и мы напечатаем её на холсте.</h5>
-                                <a href="#form"><button class="btn primary">Прислать фото</button></a>
-                            </div>
-                    </div>
-            </div>
-</main>
-<!-- репродукции -->
-<section class="section--wide">
-    <div class="row">
-            <div class="col-md-4">
-                <img src="img/foto/foto1.jpg" onclick="openModal(this.src)" class="image image--baget image--shadow" style="height: 400px;">
-                <img src="img/foto/foto1.jpg" class="image image--baget__mobile">
-            </div>
-            <div class="col-md-4">
-                <img src="img/foto/foto2.jpg" onclick="openModal(this.src)" class="image image--baget image--shadow" style="height: 400px;">
-                <img src="img/foto/foto2.jpg" class="image image--baget__mobile">
-            </div>
-            <div class="col-md-4">
-                <img src="img/foto/foto3.jpg" onclick="openModal(this.src)" class="image image--baget image--shadow" style="height: 400px;">
-                <img src="img/foto/foto3.jpg" class="image image--baget__mobile">
-            </div>
-    </div>
-    <div class="row">
-            <div class="col-md-4">
-                <img src="img/foto/foto4.jpg" onclick="openModal(this.src)" class="image image--baget image--shadow" style="height: 400px;">
-                <img src="img/foto/foto4.jpg" class="image image--baget__mobile">
-            </div>
-            <div class="col-md-4">
-                <img src="img/foto/foto5.jpg" onclick="openModal(this.src)" class="image image--baget image--shadow" style="height: 400px;">
-                <img src="img/foto/foto5.jpg" class="image image--baget__mobile">
-            </div>
-            <div class="col-md-4">
-                <img src="img/foto/foto6.jpg" onclick="openModal(this.src)" class="image image--baget image--shadow" style="height: 400px;">
-                <img src="img/foto/foto6.jpg" class="image image--baget__mobile">
-            </div>
-    </div>
-</section>   
-<!-- как -->  
-<section class="section--wide">
-            <h3 class="text--center repro--h3">Как мы это делаем?</h3>  
-            <div class="row">
-                <div class="col-md-3">
-                    <img src="img/svg/foto.svg" alt="Картина в компьютере" class="image image--repro__svg">
-                    <h5 class="text--center" style="margin-bottom: 0;"><span style="background: #FFD164;">1. Фотография</span></h5>
-                    <p class="text--center">Вы выбираете изображение на компьютере или телефоне и отправляете его нам.</p> 
-                </div>
-                <div class="col-md-3">
-                    <img src="img/svg/repro2.svg" alt="Пример репродукции Ван Гог" class="image image--repro__svg">
-                    <h5 class="text--center" style="margin-bottom: 0;"><span style="background: #FFD164;">2. Печать</span></h5>
-                    <p class="text--center">Мы печатаем изображение на натуральном хлопковом холсте и натягиваем на подрамник из сосны. Устанавливаем крепление.</p> 
-                </div> 
-                <div class="col-md-3">
-                    <img src="img/svg/repro3.svg" alt="Пример" class="image image--repro__svg">
-                    <h5 class="text--center" style="margin-bottom: 0;"><span style="background: #FFD164;">3. Оформление</span></h5>
-                    <p class="text--center">По вашему желанию оформим картину в багетную раму, покроем лаком или обернём в подарочную упаковку</p>
-                </div>
-                <div class="col-md-3">
-                    <img src="img/svg/repro4.svg" alt="Пример" class="image image--repro__svg">
-                    <h5 class="text--center" style="margin-bottom: 0;"><span style="background: #FFD164;">4. Доставка</span></h5>
-                    <p class="text--center">Надёжно упаковываем картину перед отправкой в толстые листы гофрокартона и воздушно-пузырьковую плёнку и отправляем в ваш город!</p>
-                </div>
-            </div>
-</section>
-<!-- отзывы -->
-<section class="review section--wide">
-    <h3 class="text--center repro--h3" style="margin-bottom: -8px;">Отзывы</h3>
-    <h5 class="text--center">Один из принципов нашей компании только настоящие отзывы</h5>               
-    <div class="row" style="margin-top: 16px">
-        <div class="col-md-6">
-            <div class="review--card row align-items-center">
-                <img src="img/review_galina.jpg" alt="Карточка_1" class="review--card__img col-md-4">
-                <div class="card--text col-md-8">   
-                    <p>Спасибо за картину,был подарок близкому человеку.Всё было замечательно.😊</p>
-                    <small  >Галина Полькина, Санкт-Петербург</small>
-                </div>    
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="review--card row align-items-center">
-                    <img src="img/review_larisaS.jpg" alt="Карточка_1" class="review--card__img col-md-4">
-                    <div class="card--text col-md-8">   
-                        <p>Спасибо за красивую картину.Сделали быстро,качественно,учли все пожелания.Заказывала на годовщину свадьбы,заказ был выполнен даже раньше заявленного срока.Очень понравился предложенный вариант и цветовая гамма.Благодарю за работу .Процветания и довольных заказчиков.</p>
-                        <small  >Лариса Семёнова, Архангельск</small>
-                    </div>    
-            </div>
-        </div>
-    </div>
-    <div class="row" style="margin-top: 16px">
-                    <div class="col-md-6">
-                        <div class="review--card row align-items-center">
-                            <img src="img/review_adelina.jpg" alt="Карточка_1" class="review--card__img col-md-4">
-                            <div class="card--text col-md-8">   
-                                <p>Спасибо огромное за выполненную работу 🤗✨Все очень
-                                        💫быстро
-                                        💫аккуратно
-                                        💫красиво
-                                        Буду заказывать ещё и всем вас советовать </p>
-                                <small  >Аделина Александрова, Великий Новгород</small>
-                            </div>    
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="review--card row align-items-center">
-                                <img src="img/review_yakovlev.jpg" alt="Карточка_1" class="review--card__img col-md-4">
-                                <div class="card--text col-md-8">   
-                                    <p>Огромное спасибо студии за непередаваемые положительные эмоции от вашей работы! Вы настоящие профи своего дела!</p>
-                                    <small  >Александр Яковлев, Демянск</small>
-                                </div>    
-                        </div>
-                    </div> 
-    </div>
-      
-            <div class="button--center">
-                <button class="btn alternative button--vk">
-                    <img src="img/svg/vklogo.svg" alt="Логотип ВК" class="img--noradius">
-                    <a href="https://vk.com/topic-128091335_34451245"><span style="vertical-align: middle;">Посмотреть отзывы в VK</span></a>
-                </button>
-            </div>
-</section>
-<!-- youtube -->
-<div class="youtube--video text--center">
-    <h3>Процесс работы</h3>
-    <iframe width="100%" class="youtube--desktop"
-    src="https://www.youtube.com/embed/pEFMpm2dKtw">
-    </iframe>
-    <iframe width="100%" class="youtube--mobile"
-    src="https://www.youtube.com/embed/j0-rIwxuNZA">
-    </iframe>
-</div>
-<!-- доставка -->
-<section class="section--bg delivery--bg__yellow" style="margin-bottom: 0; margin-top: -8px;">
-    <div class="section--wide delivery" style="margin: auto;">
-    <h3 class="text--center repro--h3" style="margin-bottom: 0;">Доставка в любой город России</h3>
-    <h5 class="text--center">Получите готовый портрет в наших фирменных отделах <br>или в пункте выдачи возле Вашего дома</h5>
-    <div class="text--center delivery--button">
-        <a href="delivery.html"><button class="btn line">Адреса фирменных отделов</button></a>
-        <a href="delivery.html"><button class="btn line">Подробнее о доставке</button></a>
-    </div>
-        <div class="row" style="margin-top: 40px;">
-                <div class="col-md-4">
-                    <figure>
-                        <img src="img/delivery--spb.jpg" alt="Точка в СПб" class="image">
-                        <figcaption>Санкт-Петербург, ТРК «ЛиговЪ», 2 этаж</figcaption>
-                    </figure>
-                </div>
-                <div class="col-md-4">
-                    <figure>
-                        <img src="img/delivery--vn.jpg" alt="Точка в Великом Новгороде" class="image">
-                        <figcaption>Великий Новгород, ТД «Русь», 1 этаж</figcaption>
-                    </figure>
-                </div>
-                <div class="col-md-4">   
-                    <figure>
-                        <img src="img/delivery--psk.jpg" alt="Точка во Пскове" class="image">
-                        <figcaption>Псков, ТЦ «Максимус», 1 этаж</figcaption>
-                    </figure>
-                </div> 
-        </div>
-    </div>        
-</section>
-<!-- форма --> 
-<!-- форма --> 
-<section class="section--bg form" id="form">
-    <section class="bitrix">
-            <script id="bx24_form_inline" data-skip-moving="true">
-                    (function(w,d,u,b){w['Bitrix24FormObject']=b;w[b] = w[b] || function(){arguments[0].ref=u;
-                            (w[b].forms=w[b].forms||[]).push(arguments[0])};
-                            if(w[b]['forms']) return;
-                            var s=d.createElement('script');s.async=1;s.src=u+'?'+(1*new Date());
-                            var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
-                    })(window,document,'https://b24-vrm86j.bitrix24.ru/bitrix/js/crm/form_loader.js','b24form');
-            
-                    b24form({"id":"9","lang":"ru","sec":"76i73a","type":"inline"});
-            </script>
-            
-    <!-- <h3 class="text--center repro--h3"> </h3>
-    
-    <div id="photo" class="tabcontent" style="display: block;">
-        <form action="/action_page.php" class="form--repro">
-            <div class="form--repro__item">
-                <label for="file--upload" class="file--label">
-                    <img src="img/svg/photo.svg" alt="Загрузить" style="width: 32px;">
-                    Загрузить изображения    
-                </label>
-                <input type="file" id="file--upload" multiple="multiple" name="fileToUpload" id="fileToUpload" accept=".jpg, .jpeg, .png"  >
-            </div>
-            <div class="form--repro__item">
-                <label for="name">Как вас зовут</label>
-                <input type="text" id="name" name="user_name" placeholder="Вася" required>
-            </div>
-            <div class="form--repro__item">
-                <label for="tel">Номер телефона</label>
-                <input type="tel" id="tel" name="tel" placeholder="+7 900 100 20 10" required>
-            </div>
-            <div class="form--repro__item">
-                <label for="email">E-mail</label>
-                <input type="email" id="email" name="email" placeholder="imagine@mail.ru" required>
-            </div>
-            <input type="submit" class="btn alternative" style="box-shadow: 0 0 0;" value="Отправить заявку">
-        </form>
-    </div> -->
-    </section>
-</section>
-<div class="modal" onclick="closeModal()"></div>
-<footer><section class="section--wide">
-            <div class="row">
-                <div class="col-md-3">
-                    <a class="text--bold" href="#">Картины</a>
-                    <a href="index.html">Портреты по фото</a>
-                    <a href="foto.html">Печать фото на холсте</a>
-                    <a href="reproductions.html">Картины</a>
-                    <a href="panno.html">Модульное панно</p>
-                </div>
-                <div class="col-md-3">
-                    <a class="text--bold" href="#">Доп. услуги</a>
-                    <a href="restoration.html">Реставрация старых фото</a>
-                    <a href="retush.html">Ретушь</a>
-                    <a href="sertifikat.html">Сертификаты</a>
-
-                    <a href="baget.html">Багет</a>
-                    <a href="package.html">Упаковка</a>
-                </div>
-                <div class="col-md-3">
-                    <a class="text--bold">Остальное</a>
-                     
-                    <a href="cash.html">Оплата</a>
-                    <a href="delivery.html">Доставка</a>
-                    <a href="optom.html">Оптом</a>
-                    <a href="contacts.html">Контакты</a>
-                    <a href="oferta.html">Публичная оферта</a>
-                    <a href="props.html">Реквизиты</a>
-                </div>
-                <div class="col-md-3 footer--social">
-                    <a href="https://vk.com/imagine71" style="display: inline;"><img src="img/svg/vksquare.svg" alt="Логотип ВК" width="48px"></a>
-                    <a href="https://www.instagram.com/imagine.1971/" style="display: inline;"><img src="img/svg/instagramsquare.svg" alt="Логотип ВК" width="48px"></a>
-                </div>
-            </div>
-        </section></footer>
-<script>
-function openTab(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-document.getElementById("defaultOpen").click();
-</script>
-<script src="js/script.js"></script>
-<script>
-        var modal = document.querySelector('.modal');
-   
-        function openModal(imgSrc, name, size, price) {
-          var html = '<img src="' + imgSrc + '"/>';
-   
-          modal.innerHTML = html;
-          modal.style.display = 'inline-block';
-        }
-   
-        function closeModal() {
-          modal.style.display = 'none';
-        }
-</script><script>
-        $( "#callmebaby" ).click(function() {
-        $( "#modalCall" ).show();
-        });
-        $( "#closeCall" ).click(function() {
-        $( "#modalCall" ).hide();
-        });
-        $( "#callmebabyDesk" ).click(function() {
-        $( "#modalCall" ).show();
-        });
-    </script>
-    <script>
-    mybutton = document.getElementById("myBtn");
-    window.onscroll = function() {scrollFunction()};
-    function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        mybutton.style.display = "block";
-    } else {
-        mybutton.style.display = "none";
-    }
-    }
-    function topFunction() {
-    document.body.scrollTop = 0; 
-    document.documentElement.scrollTop = 0; 
-    } 
-    </script>
-<script>
-        (function(w,d,u){
-                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
-                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
-        })(window,document,'https://cdn.bitrix24.ru/b7533283/crm/site_button/loader_5_y1jzm9.js');
-</script>
-</body>
+    $('#town').html(apiCity);
+    $('#delivery').html(delivery);
+    $('#town--mob').html(apiCity);
+    $('#delivery--mob').html(delivery);
+    });
+</script> </body>
 </html>

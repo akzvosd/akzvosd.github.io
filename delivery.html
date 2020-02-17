@@ -34,17 +34,776 @@
     <!-- geo дописать условие по бесплатной доставке -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
-    <script type="text/javascript">
-        $(window).on('load', function(){
+    <!-- geo -->
+
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="bootstrap-grid.css">
+    <link rel="stylesheet" href="restoration.css">
+    <link rel="stylesheet" href="cash.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Imagine — Доставка</title>
+</head>
+ <body>    
+    <div class="mobile--geo">
+        <div id="town--mob">Загрузка...</div>
+        <div id="delivery--mob">Загрузка...</div>
+    </div>
+    <div class="mobile--header">
+        <div class="row align-items-center" style="padding: 0 16px;">
+            <div class="col"><a href="#" class="mobile--menu__icon" onclick="openNav()"><img src="img/svg/menu.svg" alt="Меню"></a></div>
+            <div class="col"><a href="index.html"><img src="img/logotype.png" alt="Логотип" class="image"></a></div>
+            <div class="col" style="text-align: right;"><a href="tel:+79082930097"><img src="img/svg/phone.svg" alt="Позвонить" style="width: 32px"></a></div>
+        </div>
+    </div>
+    <div class="mobile--nav">
+        <nav class="row justify-content-between" style="margin-top: 0">
+            <a href="index.html">Главная</a>
+                    <a href="styles.html">Портреты</a>
+            <a href="reproductions.html">Картины</a>
+            <a href="panno.html">Панно</a>
+            <a href="foto.html">Печать</a>
+        </nav>
+    </div>
+    <div id="myNav" class="mobile--overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="mobile--overlay-content">
+                <div class="mobile--overlay__main" style="margin-bottom: 32px;">
+                <p>Основное</p>
+                    <a href="index.html">Главная</a>
+                    <a href="styles.html">Портреты</a>
+                    <a href="reproductions.html">Картины</a>
+                    <a href="panno.html">Панно</a>
+                    <a href="foto.html">Фото на холсте</a>
+                </div>
+                <div class="mobile--overylay__add">
+                    <p>Доп. услуги</p>
+                    <a href="restoration.html">Реставрация старых фото</a>
+                    <a href="retush.html">Ретушь</a>
+                    <a href="sertifikat.html">Сертификаты</a>
+                    <a href="baget.html">Багет</a>
+                    <a href="package.html">Упаковка</a>
+                </div>
+                <div class="mobile--overylay__add">
+                    <p>Остальное</p>
+                    <a href="cash.html">Оплата</a>
+                    <a href="delivery.html" class="subheader--active">Доставка</a>
+                    <a href="optom.html">Оптом</a>
+                    <a href="contacts.html">Контакты</a>
+                </div>
+                <div class="col-md-auto" ><a href="https://bitrix24public.com/b24-vrm86j.bitrix24.ru/form/6_ne_nashli_chto_iskali/zk0a9o/"><button class="btn line" id="callmebaby" style="width: auto; margin-bottom: 32px">Заказать звонок</button></a></div>
+            </div>
+    </div>
+    
+    <header class="row align-items-center">
+            <div class="col-md-2"><a href="index.html"><img src="img/logotype.png" class="image" alt="Логотип"></a></div>
+            <div class="col" style="flex-grow: 0;">
+                <img src="img/svg/geo.svg" alt="Гео">  
+            </div>
+            <div class="col" style="padding-left: 0px;">
+                <div id="town">Загрузка...</div>
+                <div id="delivery">Загрузка...</div>
+            </div>
+            <div class="col" style="text-align: right;"><a  href="tel:+79082930097">+7 908 293-00-97</a></div>
+            <div class="col-md-auto" ><a href="https://bitrix24public.com/b24-vrm86j.bitrix24.ru/form/6_ne_nashli_chto_iskali/zk0a9o/"><button class="btn line" id="callmebaby">Заказать звонок</button></a></div>
+    </header>
+    <div class="subheader" role="navigation" aria-label="Main">
+            <div class="row align-items-center">
+                <div class="col-md-6 subheader--left">
+                    <nav>
+                        <a href="index.html">Главная</a>
+                    <a href="styles.html">Портреты</a>
+                        <a href="reproductions.html">Картины</a>
+                        <a href="panno.html">Панно</a>
+                        <a href="foto.html">Фото на холсте</a>
+                        <div class="dropdown">
+                            <a href="#" class="dropdown--button">Доп. услуги <i class="fa fa-caret-down"></i></a>
+                            <div class="dropdown-content">
+                                <a href="restoration.html">Реставрация старых фото</a>
+                                <a href="retush.html">Ретушь</a>
+                                <a href="sertifikat.html">Сертификаты</a>
+                                <a href="baget.html">Багет</a>
+                                <a href="package.html">Упаковка</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-md-6 subheader--right">
+                    <nav>
+                        <a href="cash.html">Оплата</a>
+                        <a href="delivery.html" class="subheader--active">Доставка</a>
+                        <a href="optom.html">Оптом</a>
+                        <a href="contacts.html">Контакты</a>
+                    </nav>
+                </div>
+            </div>
+    </div>
+
+    <main>
+        <h1>Время доставки</h1>
+        <h4>Зависит от вашего местоположения.</h4>
+        <button class="btn line" style="margin: 0;" id="openList">Посмотреть список городов</button>
+        <div class="row">
+            <div class="col-md-3" style="padding-right: 48px; paddding-left: 0;">
+                <h5 class="text--bold">От 1 дня</h5>
+                <p>Санкт-Петербург <br> Великий Новгород</p>
+            </div>
+            <div class="col-md-3" style="padding-right: 48px;">
+                <h5 class="text--bold">От 2 дней</h5>
+                <p>Псков <br> Старая Русса <br> Валдай</p>
+            </div>
+            <div class="col-md-3" style="padding-right: 48px;">
+                <h5 class="text--bold">От 3 дней</h5>
+                <p>Москва <br> Тверь <br> Тула <br> Рязань</p>
+            </div>
+            <div class="col-md-3" style="padding-right: 48px;">
+                <h5 class="text--bold">От 6 дней</h5>
+                <p>Другие города России</p>
+            </div>
+        </div>
+    </main>
+
+    <section>
+        <h3 class="text--bold">Упаковка для доставки</h3>
+        <h5>Мы надёжно упаковываем картины перед отправкой в толстые листы гофрокартона и воздушно-пузырьковую плёнку</h5>
+        <!-- <h5><a target="_blank" href="https://www.youtube.com/watch?time_continue=12&v=Qut0J-qjORY&feature=emb_logo" style="color:blueviolet; text-decoration: underline;">Посмотреть видео с распаковкой</a></h5> -->
+        <div class="row">
+            <div class="col-md-3 col-md-3__leftZero col-md-3-bottom32">
+                <img src="img/package/package-process-1.jpg" alt="Картина в плёнке" class="image image--delivery">
+                1. Оборачиваем картину в пузырьковую плёнку
+            </div>
+            <div class="col-md-3 col-md-3__leftZero col-md-3-bottom32">
+                <img src="img/package/package-process-2.jpg" alt="Картина в плёнке" class="image image--delivery">
+                2. Защищаем со всех сторон толстыми листами гофрокартона
+            </div>
+            <div class="col-md-3 col-md-3__leftZero col-md-3-bottom32">
+                <img src="img/package/package-process-3.jpg" alt="Картина в плёнке" class="image image--delivery">
+                3. Фиксируем гофрокартон скотчем со всех сторон
+            </div>
+            <div class="col-md-3 col-md-3__leftZero col-md-3-bottom32">
+                <img src="img/package/package-process-4.jpg" alt="Картина в плёнке" class="image image--delivery">
+                4. Картина готова к отправке
+            </div>
+        </div>
+
+        <!-- <a target="_blank" href="https://www.youtube.com/watch?time_continue=12&v=Qut0J-qjORY&feature=emb_logo" class="link" style="margin-top: 60px;">Распаковка нашей картины. Видео предоставлено нашим заказчиком.</a> -->
+        <!-- <p style="margin-top: 16px">Фотография подарочной упаковки</p>
+        <img src="img/package.jpg" alt="Пример упаковки" class="image image--delivery"> -->
+        <h5 style="margin-top: 64px">Распаковка картины. Видео предоставлено нашим заказчиком.</h5>
+        <iframe class="delivery--youtube" src="https://www.youtube.com/embed/Qut0J-qjORY?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+
+    <section>
+        <h3 class="delivery--h3 text--bold">Сроки выполнения заказа</h3>
+        <h4>На время изготовления картин влияет несколько факторов: </h4>
+        <div class="row">
+            <div class="col-md-3" style="padding-right: 48px; padding-left: 0 !important;">
+                <h5 class="text--bold">Рабочее время</h5>
+                <p>Наши дизайнеры работают в режиме пн-пт с 09:00 до 18:00. Режим работы менеджеров дольше, но правки могут быть внесены только пока дизайнеры на рабочем месте</p>
+            </div>
+            <div class="col-md-3" style="padding-right: 48px;">
+                <h5 class="text--bold">Сложность работы </h5>
+                <p>Мы изготавливаем картины в течение 1-2х дней. Но в случае большого количества правок, пожеланий или лиц на портрете, срок может быть увеличен. </p>
+            </div>
+            <div class="col-md-3" style="padding-right: 48px;">
+                <h5 class="text--bold">Доп. услуги </h5>
+                <p>В редких случаях доп. услуги (например, фактурный гель, лак, багет) могут увеличивать срок доставки. Менеджер оповестит вас, если сроки могут сдвинуться.</p>
+            </div>
+            <div class="col-md-3" style="padding-right: 48px;">
+                <h5 class="text--bold">Город </h5>
+                <p>Ваше местоположение и способ получения также влияют на сроки выполнения заказа.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h3 class="delivery--h3 text--bold">Доставка в любой город России</h3>
+        <h5>Получите готовый портрет в наших фирменных отделах
+            или в пункте выдачи возле Вашего дома</h5>
+            <div class="row" style="margin-top: 24px;">
+                    <div class="col-md-4 col-md-4__leftZero">
+                        <figure>
+                            <img src="img/delivery--spb.jpg" alt="Точка в СПб" class="image">
+                            <figcaption>Санкт-Петербург, ТРК «ЛиговЪ», 2 этаж</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-md-4 col-md-4__leftZero">
+                        <figure>
+                            <img src="img/delivery--vn.jpg" alt="Точка в Великом Новгороде" class="image">
+                            <figcaption>Великий Новгород, ТД «Русь», 1 этаж</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-md-4 col-md-4__leftZero">   
+                        <figure>
+                            <img src="img/delivery--psk.jpg" alt="Точка во Пскове" class="image">
+                            <figcaption>Псков, ТЦ «Максимус», 1 этаж</figcaption>
+                        </figure>
+                    </div> 
+            </div>
+    </section>
+
+    <div class="modal" id="modal">
+        <span class="modal--close" id="close">
+            <button class="btn" style="border: 1px solid white">Закрыть</button>
+            <p style="padding-top: 32px; text-decoration: underline;">Фирменные отделы:</p><br>
+<p class="text--bold">ВЕЛИКИЙ НОВГОРОД<br>Большая Санкт-Петербургская, 25 (ТД Русь, 1 этаж)</p><br>
+<p class="text--bold">САНКТ-ПЕТЕРБУРГ <br>Лиговский проспект, 153 (ТРК Лиговъ, станция метро Обводный канал)</p><br>
+<p class="text--bold">ПСКОВ<br>Псков, ТЦ «Максимус», 1 этаж</p><br>
+<p class="text--bold"><br>Доставка<br>Бесплатный самовывоз</p>
+<p>Абакан</p>
+<p>Абинск</p>
+<p>Азов</p>
+<p>Аксай</p>
+<p>Александров</p>
+<p>Алексеевка</p>
+<p>Алексин</p>
+<p>Алушта</p>
+<p>Альметьевск</p>
+<p>Амурск</p>
+<p>Анапа</p>
+<p>Ангарск</p>
+<p>Анжеро-Судженск</p>
+<p>Апатиты</p>
+<p>Апрелевка</p>
+<p>Апшеронск</p>
+<p>Арзамас</p>
+<p>Армавир</p>
+<p>Арсеньев</p>
+<p>Артем</p>
+<p>Архангельск</p>
+<p>Асбест</p>
+<p>Астрахань</p>
+<p>Ачинск</p>
+<p>Аша</p>
+<p>Балабаново</p>
+<p>Балаково</p>
+<p>Балахна</p>
+<p>Балашиха</p>
+<p>Барнаул</p>
+<p>Батайск</p>
+<p>Бахчисарай</p>
+<p>Белая Калитва</p>
+<p>Белгород</p>
+<p>Белебей</p>
+<p>Белово</p>
+<p>Белорецк</p>
+<p>Белореченск</p>
+<p>Бердск</p>
+<p>Березники</p>
+<p>Березовский</p>
+<p>Бийск</p>
+<p>Биробиджан</p>
+<p>Бирск</p>
+<p>Благовещенск</p>
+<p>Благодарный</p>
+<p>Богданович</p>
+<p>Бор</p>
+<p>Борзя</p>
+<p>Борисоглебск</p>
+<p>Боровичи</p>
+<p>Братск</p>
+<p>Бронницы</p>
+<p>Брянск</p>
+<p>Бугульма</p>
+<p>Буденновск</p>
+<p>Бузулук</p>
+<p>Бутово</p>
+<p>Великие Луки</p>
+<p>Великий Новгород</p>
+<p>Верхняя Пышма</p>
+<p>Видное</p>
+<p>Владивосток</p>
+<p>Владикавказ</p>
+<p>Владимир</p>
+<p>ВНИИССОК, Одинцовский р-н</p>
+<p>Внуково</p>
+<p>Волгоград</p>
+<p>Волгодонск</p>
+<p>Волжск, Волжский р-н</p>
+<p>Волжский</p>
+<p>Вологда</p>
+<p>Волоколамск</p>
+<p>Волхов</p>
+<p>Воронеж</p>
+<p>Воскресенск</p>
+<p>Воскресенское поселение</p>
+<p>Восточный мкр., округ Балашиха</p>
+<p>Воткинск</p>
+<p>Всеволожск</p>
+<p>Выборг</p>
+<p>Выкса</p>
+<p>Вышний Волочёк, гор.окр. Вышний Волочёк</p>
+<p>Вязники</p>
+<p>Вязьма</p>
+<p>Вятские Поляны</p>
+<p>Гатчина</p>
+<p>Геленджик</p>
+<p>Георгиевск</p>
+<p>Глазов</p>
+<p>Горелово</p>
+<p>Горно-Алтайск</p>
+<p>Городец</p>
+<p>Гороховец</p>
+<p>Горячий Ключ</p>
+<p>Грозный</p>
+<p>Грязи</p>
+<p>Губаха</p>
+<p>Губкин</p>
+<p>Губкинский</p>
+<p>Гуково</p>
+<p>Гусь-Хрустальный</p>
+<p>Джанкой</p>
+<p>Дзержинск, Нижегородская обл.</p>
+<p>Дзержинский</p>
+<p>Димитровград</p>
+<p>Динская</p>
+<p>Дмитров</p>
+<p>Долгопрудный</p>
+<p>Домодедово</p>
+<p>Донецк</p>
+<p>Дубна</p>
+<p>Евпатория</p>
+<p>Егорьевск</p>
+<p>Ейск</p>
+<p>Елабуга</p>
+<p>Елец</p>
+<p>Елизово</p>
+<p>Ессентуки</p>
+<p>Ефремов</p>
+<p>Железноводск</p>
+<p>Железногорск, Красноярский край</p>
+<p>Железногорск, Курская обл.</p>
+<p>Железнодорожный, округ Балашиха</p>
+<p>Жуковский</p>
+<p>Забайкальск</p>
+<p>Заводоуковск</p>
+<p>Заволжье</p>
+<p>Заинск</p>
+<p>Заречный, Свердловская обл.</p>
+<p>Заринск</p>
+<p>Звенигород</p>
+<p>Зеленогорск</p>
+<p>Зеленоград</p>
+<p>Зеленодольск</p>
+<p>Зеленокумск</p>
+<p>Зерноград</p>
+<p>Златоуст</p>
+<p>Ивангород, Кингисеппский р-н</p>
+<p>Иваново</p>
+<p>Ивантеевка</p>
+<p>Игра</p>
+<p>Ижевск</p>
+<p>Изобильный</p>
+<p>Иноземцево</p>
+<p>Ирбит</p>
+<p>Иркутск</p>
+<p>Искитим</p>
+<p>Истра</p>
+<p>Ишим</p>
+<p>Йошкар-Ола</p>
+<p>Казань</p>
+<p>Калининград</p>
+<p>Калуга</p>
+<p>Каменск-Уральский</p>
+<p>Каменск-Шахтинский</p>
+<p>Камышин</p>
+<p>Камышлов</p>
+<p>Канаш</p>
+<p>Канск</p>
+<p>Карасук</p>
+<p>Каргат</p>
+<p>Кашира</p>
+<p>Кемерово</p>
+<p>Керчь</p>
+<p>Кимры</p>
+<p>Кингисепп</p>
+<p>Кинешма</p>
+<p>Киреевск, Тульская обл.Киржач</p>
+<p>Кириши</p>
+<p>Киров</p>
+<p>Кировск, Ленинградская обл.</p>
+<p>Киселёвск</p>
+<p>Кисловодск</p>
+<p>Климовск</p>
+<p>Клин</p>
+<p>Клинцы</p>
+<p>Ковров</p>
+<p>Когалым</p>
+<p>Коломна</p>
+<p>Колпино</p>
+<p>Кольцово</p>
+<p>Кольчугино</p>
+<p>Коммунарка</p>
+<p>Комсомольск-на-Амуре</p>
+<p>Конаково</p>
+<p>Копейск</p>
+<p>Кореновск</p>
+<p>Королев</p>
+<p>Коротчаево</p>
+<p>Кострома</p>
+<p>Котельники</p>
+<p>Котельнич</p>
+<p>Кохма</p>
+<p>Красная Поляна</p>
+<p>Красногорск</p>
+<p>Красногорск, ЮжныйКрасное Село</p>
+<p>Краснообск</p>
+<p>Красноперекопск</p>
+<p>Краснотурьинск</p>
+<p>Красноуфимск</p>
+<p>Красноярск</p>
+<p>Кронштадт</p>
+<p>Кропоткин</p>
+<p>Крымск</p>
+<p>Кстово</p>
+<p>Кубинка</p>
+<p>Кудрово</p>
+<p>Кудымкар</p>
+<p>Куйбышев</p>
+<p>Кунгур</p>
+<p>Купино</p>
+<p>Курган</p>
+<p>Курганинск</p>
+<p>Куровское</p>
+<p>Курск</p>
+<p>Курчатов</p>
+<p>Кыштым</p>
+<p>Лабинск</p>
+<p>Лениногорск</p>
+<p>Ленинск-Кузнецкий</p>
+<p>Лермонтов</p>
+<p>Ликино-Дулево</p>
+<p>Липецк</p>
+<p>Лиски, Лискинский р-н</p>
+<p>Лобня</p>
+<p>Луга</p>
+<p>Луховицы</p>
+<p>Лыткарино</p>
+<p>Люберцы</p>
+<p>Людиново</p>
+<p>Магадан</p>
+<p>Магнитогорск</p>
+<p>Майкоп</p>
+<p>Малаховка</p>
+<p>Махачкала</p>
+<p>Мегион</p>
+<p>Междуреченск</p>
+<p>Мелеуз</p>
+<p>Миасс</p>
+<p>Минеральные</p>
+<p>ВодыМирный,</p>
+<p>Саха респ. (Якутия)</p>
+<p>Митино</p>
+<p>Михайловка</p>
+<p>Михайловск</p>
+<p>Мичуринск</p>
+<p>Можайск</p>
+<p>Монино</p>
+<p>Мончегорск</p>
+<p>Московский</p>
+<p>Мосрентген,</p>
+<p>МоскваМурино, Всеволожский р-н</p>
+<p>Мурманск</p>
+<p>Муром</p>
+<p>Мытищи</p>
+<p>Набережные Челны</p>
+<p>Надым</p>
+<p>Назарово</p>
+<p>Назрань</p>
+<p>Нальчик</p>
+<p>Наро-Фоминск</p>
+<p>Нарьян-Мар</p>
+<p>Нахабино</p>
+<p>Находка</p>
+<p>Невинномысск</p>
+<p>Невьянск</p>
+<p>Некрасовка</p>
+<p>Нерюнгри</p>
+<p>Нефтекамск</p>
+<p>Нефтеюганск</p>
+<p>Нижневартовск</p>
+<p>Нижнекамск</p>
+<p>Нижний Тагил</p>
+<p>Нижняя Тура</p>
+<p>Ново-Переделкино</p>
+<p>Новоалтайск</p>
+<p>Новокузнецк</p>
+<p>Новокуйбышевск</p>
+<p>Новомосковск</p>
+<p>Новороссийск</p>
+<p>Новотроицк</p>
+<p>Новоуральск</p>
+<p>Новочебоксарск</p>
+<p>Новочеркасск</p>
+<p>Новошахтинск</p>
+<p>Новый Уренгой</p>
+<p>Ногинск</p>
+<p>Норильск</p>
+<p>Ноябрьск</p>
+<p>Нягань</p>
+<p>Обнинск</p>
+<p>Обухово, Ногинский р-н</p>
+<p>Обь</p>
+<p>Одинцово</p>
+<p>Озерск</p>
+<p>Октябрьский, Башкортостан респ.</p>
+<p>Омск</p>
+<p>Орел</p>
+<p>Оренбург</p>
+<p>Орехово-Зуево</p>
+<p>Орск</p>
+<p>Островцы</p>
+<p>Острогожск, Острогожский р-н</p>
+<p>Отрадный</p>
+<p>Павлово</p>
+<p>Павловский Посад</p>
+<p>Пенза</p>
+<p>Первоуральск</p>
+<p>Петергоф (Петродворец)</p>
+<p>Петрозаводск</p>
+<p>Петропавловск-Камчатский</p>
+<p>Пограничный</p>
+<p>Подольск</p>
+<p>Покровка</p>
+<p>Полевской</p>
+<p>Похвистнево</p>
+<p>Приморско-Ахтарск</p>
+<p>Приозерск</p>
+<p>Прокопьевск</p>
+<p>Протвино</p>
+<p>Псков</p>
+<p>Путилково</p>
+<p>Пушкин</p>
+<p>Пушкино</p>
+<p>Пятигорск</p>
+<p>Раменское</p>
+<p>Рассказово</p>
+<p>Ревда</p>
+<p>Реутов</p>
+<p>Ржев</p>
+<p>Рославль</p>
+<p>Россошь</p>
+<p>Рубцовск</p>
+<p>Руза</p>
+<p>Румянцево, поселение Московский</p>
+<p>Рыбинск</p>
+<p>Рязань</p>
+<p>Саки</p>
+<p>Салават</p>
+<p>Салехард</p>
+<p>Сальск</p>
+<p>Саранск</p>
+<p>Сарапул</p>
+<p>Саратов</p>
+<p>Саров</p>
+<p>Светлоград</p>
+<p>Севастополь</p>
+<p>Северный (Москва)</p>
+<p>Северодвинск</p>
+<p>Североуральск</p>
+<p>Северск</p>
+<p>Северская, Северский р-н</p>
+<p>Сергиев Посад</p>
+<p>Серов</p>
+<p>Серпухов</p>
+<p>Сертолово, Всеволожский р-н</p>
+<p>Сестрорецк</p>
+<p>Симферополь</p>
+<p>Славянск-на-Кубани</p>
+<p>Смоленск</p>
+<p>Снежинск</p>
+<p>Советский</p>
+<p>Соликамск</p>
+<p>Солнечногорск</p>
+<p>Солнцево</p>
+<p>Сосновый Бор</p>
+<p>Софрино</p>
+<p>Сочи</p>
+<p>Ставрополь</p>
+<p>Старый Оскол</p>
+<p>Стерлитамак</p>
+<p>Стрежевой</p>
+<p>Строитель</p>
+<p>Ступино</p>
+<p>Судак</p>
+<p>Сургут</p>
+<p>Сухой Лог</p>
+<p>Сходня</p>
+<p>Сызрань</p>
+<p>Сыктывкар</p>
+<p>Тавда</p>
+<p>Таганрог</p>
+<p>Тамбов</p>
+<p>Тарасково, Наро-Фоминский р-н</p>
+<p>Тверь</p>
+<p>Темрюк</p>
+<p>Тимашевск, Тимашевский р-н</p>
+<p>Тихвин</p>
+<p>Тихорецк</p>
+<p>Тобольск</p>
+<p>Тольятти</p>
+<p>Томилино</p>
+<p>Томск</p>
+<p>Торжок</p>
+<p>Тосно</p>
+<p>Трехгорный</p>
+<p>Троицк, Москов. обл.</p>
+<p>Троицк, Чел. обл</p>
+<p>Туапсе</p>
+<p>Туймазы</p>
+<p>Тула</p>
+<p>Тюмень</p>
+<p>Улан-Удэ</p>
+<p>Ульяновск</p>
+<p>Урай</p>
+<p>Урюпинск</p>
+<p>Усолье-Сибирское</p>
+<p>Успенское</p>
+<p>Уссурийск</p>
+<p>Усть-Лабинск</p>
+<p>Ухта</p>
+<p>Учалы</p>
+<p>Феодосия</p>
+<p>Фролово</p>
+<p>Фрязино</p>
+<p>Хабаровск</p>
+<p>Ханты-Мансийск</p>
+<p>Химки</p>
+<p>Химки Новые</p>
+<p>Хотьково, Сергиево-Посадский р-н</p>
+<p>Чайковский</p>
+<p>Чебоксары</p>
+<p>Челябинск</p>
+<p>Череповец</p>
+<p>Черкесск</p>
+<p>Черноморское</p>
+<p>Чехов</p>
+<p>Чистополь</p>
+<p>Чита</p>
+<p>Чусовой</p>
+<p>Шадринск</p>
+<p>Шарыпово</p>
+<p>Шатура</p>
+<p>Шахты</p>
+<p>Шушары</p>
+<p>Шуя</p>
+<p>Щекино</p>
+<p>Щелково</p>
+<p>Щербинка</p>
+<p>Электрогорск</p>
+<p>Электросталь</p>
+<p>Электроугли</p>
+<p>Элиста</p>
+<p>Энгельс</p>
+<p>Юбилейный</p>
+<p>Югорск</p>
+<p>Южно-Сахалинск</p>
+<p>Южноуральск</p>
+<p>Юрга</p>
+<p>Юрюзань</p>
+<p>Яблоновский</p>
+<p>Якутск</p>
+<p>Ялта</p>
+<p>Ялуторовск</p>
+<p>Ярославль</p>
+<p>Ярцево</p>
+        </span>
+    </div>
+
+           <footer><section class="section--wide">
+            <div class="row">
+                <div class="col-md-3">
+                    <a class="text--bold" href="#">Картины</a>
+                    <a href="index.html">Портреты по фото</a>
+                    <a href="foto.html">Печать фото на холсте</a>
+                    <a href="reproductions.html">Картины</a>
+                    <a href="panno.html">Модульное панно</p>
+                </div>
+                <div class="col-md-3">
+                    <a class="text--bold" href="#">Доп. услуги</a>
+                    <a href="restoration.html">Реставрация старых фото</a>
+                    <a href="retush.html">Ретушь</a>
+                    <a href="sertifikat.html">Сертификаты</a>
+
+                    <a href="baget.html">Багет</a>
+                    <a href="package.html">Упаковка</a>
+                </div>
+                <div class="col-md-3">
+                    <a class="text--bold">Остальное</a>
+                    <a href="cash.html">Оплата</a>
+                    <a href="delivery.html">Доставка</a>
+                    <a href="optom.html">Оптом</a>
+                    <a href="contacts.html">Контакты</a>
+                    <a href="oferta.html">Публичная оферта</a>
+                    <a href="props.html">Реквизиты</a>
+                </div>
+                <div class="col-md-3 footer--social">
+                    <a href="https://vk.com/imagine71" style="display: inline;"><img src="img/svg/vksquare.svg" alt="Логотип ВК" width="48px"></a>
+                    <a href="https://www.instagram.com/imagine.1971/" style="display: inline;"><img src="img/svg/instagramsquare.svg" alt="Логотип ВК" width="48px"></a>
+                </div>
+            </div>
+        </section></footer>
+   
+    <script src="js/script.js"></script>
+    <script>
+        $( "#openList" ).click(function() {
+        $( "#modal" ).show();
+        });
+        $( "#close" ).click(function() {
+        $( "#modal" ).hide();
+        });
+    </script>
+    <script>
+        $( "#callmebaby" ).click(function() {
+        $( "#modalCall" ).show();
+        });
+        $( "#closeCall" ).click(function() {
+        $( "#modalCall" ).hide();
+        });
+        $( "#callmebabyDesk" ).click(function() {
+        $( "#modalCall" ).show();
+        });
+    </script><script>
+        $( "#callmebaby" ).click(function() {
+        $( "#modalCall" ).show();
+        });
+        $( "#closeCall" ).click(function() {
+        $( "#modalCall" ).hide();
+        });
+        $( "#callmebabyDesk" ).click(function() {
+        $( "#modalCall" ).show();
+        });
+        $( "#callmebabyDesk" ).click(function() {
+        $( "#modalCall" ).show();
+        });
+    </script>
+    <script>
+    mybutton = document.getElementById("myBtn");
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+    }
+    function topFunction() {
+    document.body.scrollTop = 0; 
+    document.documentElement.scrollTop = 0; 
+    } 
+    </script>
+<script>
+        (function(w,d,u){
+                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+        })(window,document,'https://cdn.bitrix24.ru/b7533283/crm/site_button/loader_5_y1jzm9.js');
+</script>
+<script type="text/javascript">
+    $(window).on('load', function() {
     var apiCity = ymaps.geolocation.city;
-        var i, ii, delivery;
-        var flag = true;
-        var shopAdress = {
-                "Великий Новгород" : "ТД Русь, 1 этаж",
-                "Санкт-Петербург" : "ТРК Лиговъ, 2 этаж",
-            }
-        var deliveryAdress = {
-            'Абакан' : 'Самовывоз: ул. Чертыгашева, 126, 13 (Бесплатно)',
+    var shopAddress = { "Великий Новгород" : "ТД Русь, 1 этаж",
+            "Санкт-Петербург" : "ТРК Лиговъ, 2 этаж", };
+    var deliveryAddress = {
+'Абакан' : 'Самовывоз: ул. Чертыгашева, 126, 13 (Бесплатно)',
 'Абинск' : 'Самовывоз: пр-т Комсомольский, 110“А”/3 (Бесплатно)',
 'Адлер' : 'Самовывоз: ул. Просвещения, 118б (Бесплатно)',
 'Азов' : 'Самовывоз: ул. Измайлова, 55 (Бесплатно)',
@@ -616,804 +1375,18 @@
 'Янино-1, Всеволожский р-он' : 'Самовывоз: ул. Новая, 11А, 18-Н (Бесплатно)',
 'Ярославль' : 'Самовывоз: Ленинградский пр-т, 47 (Бесплатно)',
 'Ярцево' : 'Самовывоз: ул. Советская, 20 (Бесплатно)',
-        }        
-       
-        if (apiCity == null) { 
-    apiCity = 'Бесплатная доставка' 
-    delivery = 'по городам России (подробности по телефону)' 
-    } else {
-    for (i in shopAdress) {
-      if (apiCity.indexOf(i) >= 0) {
-      delivery = shopAdress[i]
-      flag = false
-      break
-      }
+    }
+    var delivery = shopAddress[apiCity] || deliveryAddress[apiCity] || null;
+
+    if (!delivery) {
+    apiCity = 'Бесплатная доставка';
+    delivery = 'по городам России (подробности по телефону)';
     }
 
-    if (flag == true) {
-      for (ii in deliveryAdress) {
-        if (apiCity.indexOf(i) >= 0) {
-        delivery = deliveryAdress[ii]
-        flag = false
-        break
-        }
-      }
-    }
-   
-    if (flag == true) {
-        apiCity = 'Бесплатная доставка'
-        delivery = 'по городам России (подробности по телефону)'
-    }
-    }
- 
-        $('#town').html(apiCity);
-        $('#delivery').html(delivery);
-        $('#town--mob').html(apiCity);
-        $('#delivery--mob').html(delivery);
-        }); 
-    </script>
-    <!-- geo -->
-
-    <link rel="stylesheet" href="components.css">
-    <link rel="stylesheet" href="bootstrap-grid.css">
-    <link rel="stylesheet" href="restoration.css">
-    <link rel="stylesheet" href="cash.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Imagine — Доставка</title>
-</head>
- <body>    
-    <div class="mobile--geo">
-        <div id="town--mob">Загрузка...</div>
-        <div id="delivery--mob">Загрузка...</div>
-    </div>
-    <div class="mobile--header">
-        <div class="row align-items-center" style="padding: 0 16px;">
-            <div class="col"><a href="#" class="mobile--menu__icon" onclick="openNav()"><img src="img/svg/menu.svg" alt="Меню"></a></div>
-            <div class="col"><a href="index.html"><img src="img/logotype.png" alt="Логотип" class="image"></a></div>
-            <div class="col" style="text-align: right;"><a href="tel:+79082930097"><img src="img/svg/phone.svg" alt="Позвонить" style="width: 32px"></a></div>
-        </div>
-    </div>
-    <div class="mobile--nav">
-        <nav class="row justify-content-between" style="margin-top: 0">
-            <a href="index.html">Главная</a>
-                    <a href="styles.html">Портреты</a>
-            <a href="reproductions.html">Картины</a>
-            <a href="panno.html">Панно</a>
-            <a href="foto.html">Печать</a>
-        </nav>
-    </div>
-    <div id="myNav" class="mobile--overlay">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <div class="mobile--overlay-content">
-                <div class="mobile--overlay__main" style="margin-bottom: 32px;">
-                <p>Основное</p>
-                    <a href="index.html">Главная</a>
-                    <a href="styles.html">Портреты</a>
-                    <a href="reproductions.html">Картины</a>
-                    <a href="panno.html">Панно</a>
-                    <a href="foto.html">Фото на холсте</a>
-                </div>
-                <div class="mobile--overylay__add">
-                    <p>Доп. услуги</p>
-                    <a href="restoration.html">Реставрация старых фото</a>
-                    <a href="retush.html">Ретушь</a>
-                    <a href="sertifikat.html">Сертификаты</a>
-                    <a href="baget.html">Багет</a>
-                    <a href="package.html">Упаковка</a>
-                </div>
-                <div class="mobile--overylay__add">
-                    <p>Остальное</p>
-                    <a href="cash.html">Оплата</a>
-                    <a href="delivery.html" class="subheader--active">Доставка</a>
-                    <a href="optom.html">Оптом</a>
-                    <a href="contacts.html">Контакты</a>
-                </div>
-                <div class="col-md-auto" ><a href="https://bitrix24public.com/b24-vrm86j.bitrix24.ru/form/6_ne_nashli_chto_iskali/zk0a9o/"><button class="btn line" id="callmebaby" style="width: auto; margin-bottom: 32px">Заказать звонок</button></a></div>
-            </div>
-    </div>
-    
-    <header class="row align-items-center">
-            <div class="col-md-2"><a href="index.html"><img src="img/logotype.png" class="image" alt="Логотип"></a></div>
-            <div class="col" style="flex-grow: 0;">
-                <img src="img/svg/geo.svg" alt="Гео">  
-            </div>
-            <div class="col" style="padding-left: 0px;">
-                <div id="town">Загрузка...</div>
-                <div id="delivery">Загрузка...</div>
-            </div>
-            <div class="col" style="text-align: right;"><a  href="tel:+79082930097">+7 908 293-00-97</a></div>
-            <div class="col-md-auto" ><a href="https://bitrix24public.com/b24-vrm86j.bitrix24.ru/form/6_ne_nashli_chto_iskali/zk0a9o/"><button class="btn line" id="callmebaby">Заказать звонок</button></a></div>
-    </header>
-    <div class="subheader" role="navigation" aria-label="Main">
-            <div class="row align-items-center">
-                <div class="col-md-6 subheader--left">
-                    <nav>
-                        <a href="index.html">Главная</a>
-                    <a href="styles.html">Портреты</a>
-                        <a href="reproductions.html">Картины</a>
-                        <a href="panno.html">Панно</a>
-                        <a href="foto.html">Фото на холсте</a>
-                        <div class="dropdown">
-                            <a href="#" class="dropdown--button">Доп. услуги <i class="fa fa-caret-down"></i></a>
-                            <div class="dropdown-content">
-                                <a href="restoration.html">Реставрация старых фото</a>
-                                <a href="retush.html">Ретушь</a>
-                                <a href="sertifikat.html">Сертификаты</a>
-                                <a href="baget.html">Багет</a>
-                                <a href="package.html">Упаковка</a>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-                <div class="col-md-6 subheader--right">
-                    <nav>
-                        <a href="cash.html">Оплата</a>
-                        <a href="delivery.html" class="subheader--active">Доставка</a>
-                        <a href="optom.html">Оптом</a>
-                        <a href="contacts.html">Контакты</a>
-                    </nav>
-                </div>
-            </div>
-    </div>
-
-    <main>
-        <h1>Время доставки</h1>
-        <h4>Зависит от вашего местоположения.</h4>
-        <button class="btn line" style="margin: 0;" id="openList">Посмотреть список городов</button>
-        <div class="row">
-            <div class="col-md-3" style="padding-right: 48px; paddding-left: 0;">
-                <h5 class="text--bold">От 1 дня</h5>
-                <p>Санкт-Петербург <br> Великий Новгород</p>
-            </div>
-            <div class="col-md-3" style="padding-right: 48px;">
-                <h5 class="text--bold">От 2 дней</h5>
-                <p>Псков <br> Старая Русса <br> Валдай</p>
-            </div>
-            <div class="col-md-3" style="padding-right: 48px;">
-                <h5 class="text--bold">От 3 дней</h5>
-                <p>Москва <br> Тверь <br> Тула <br> Рязань</p>
-            </div>
-            <div class="col-md-3" style="padding-right: 48px;">
-                <h5 class="text--bold">От 6 дней</h5>
-                <p>Другие города России</p>
-            </div>
-        </div>
-    </main>
-
-    <section>
-        <h3 class="text--bold">Упаковка для доставки</h3>
-        <h5>Мы надёжно упаковываем картины перед отправкой в толстые листы гофрокартона и воздушно-пузырьковую плёнку</h5>
-        <!-- <h5><a target="_blank" href="https://www.youtube.com/watch?time_continue=12&v=Qut0J-qjORY&feature=emb_logo" style="color:blueviolet; text-decoration: underline;">Посмотреть видео с распаковкой</a></h5> -->
-        <div class="row">
-            <div class="col-md-3 col-md-3__leftZero col-md-3-bottom32">
-                <img src="img/package/package-process-1.jpg" alt="Картина в плёнке" class="image image--delivery">
-                1. Оборачиваем картину в пузырьковую плёнку
-            </div>
-            <div class="col-md-3 col-md-3__leftZero col-md-3-bottom32">
-                <img src="img/package/package-process-2.jpg" alt="Картина в плёнке" class="image image--delivery">
-                2. Защищаем со всех сторон толстыми листами гофрокартона
-            </div>
-            <div class="col-md-3 col-md-3__leftZero col-md-3-bottom32">
-                <img src="img/package/package-process-3.jpg" alt="Картина в плёнке" class="image image--delivery">
-                3. Фиксируем гофрокартон скотчем со всех сторон
-            </div>
-            <div class="col-md-3 col-md-3__leftZero col-md-3-bottom32">
-                <img src="img/package/package-process-4.jpg" alt="Картина в плёнке" class="image image--delivery">
-                4. Картина готова к отправке
-            </div>
-        </div>
-
-        <!-- <a target="_blank" href="https://www.youtube.com/watch?time_continue=12&v=Qut0J-qjORY&feature=emb_logo" class="link" style="margin-top: 60px;">Распаковка нашей картины. Видео предоставлено нашим заказчиком.</a> -->
-        <!-- <p style="margin-top: 16px">Фотография подарочной упаковки</p>
-        <img src="img/package.jpg" alt="Пример упаковки" class="image image--delivery"> -->
-        <h5 style="margin-top: 64px">Распаковка картины. Видео предоставлено нашим заказчиком.</h5>
-        <iframe class="delivery--youtube" src="https://www.youtube.com/embed/Qut0J-qjORY?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </section>
-
-    <section>
-        <h3 class="delivery--h3 text--bold">Сроки выполнения заказа</h3>
-        <h4>На время изготовления картин влияет несколько факторов: </h4>
-        <div class="row">
-            <div class="col-md-3" style="padding-right: 48px; padding-left: 0 !important;">
-                <h5 class="text--bold">Рабочее время</h5>
-                <p>Наши дизайнеры работают в режиме пн-пт с 09:00 до 18:00. Режим работы менеджеров дольше, но правки могут быть внесены только пока дизайнеры на рабочем месте</p>
-            </div>
-            <div class="col-md-3" style="padding-right: 48px;">
-                <h5 class="text--bold">Сложность работы </h5>
-                <p>Мы изготавливаем картины в течение 1-2х дней. Но в случае большого количества правок, пожеланий или лиц на портрете, срок может быть увеличен. </p>
-            </div>
-            <div class="col-md-3" style="padding-right: 48px;">
-                <h5 class="text--bold">Доп. услуги </h5>
-                <p>В редких случаях доп. услуги (например, фактурный гель, лак, багет) могут увеличивать срок доставки. Менеджер оповестит вас, если сроки могут сдвинуться.</p>
-            </div>
-            <div class="col-md-3" style="padding-right: 48px;">
-                <h5 class="text--bold">Город </h5>
-                <p>Ваше местоположение и способ получения также влияют на сроки выполнения заказа.</p>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <h3 class="delivery--h3 text--bold">Доставка в любой город России</h3>
-        <h5>Получите готовый портрет в наших фирменных отделах
-            или в пункте выдачи возле Вашего дома</h5>
-            <div class="row" style="margin-top: 24px;">
-                    <div class="col-md-4 col-md-4__leftZero">
-                        <figure>
-                            <img src="img/delivery--spb.jpg" alt="Точка в СПб" class="image">
-                            <figcaption>Санкт-Петербург, ТРК «ЛиговЪ», 2 этаж</figcaption>
-                        </figure>
-                    </div>
-                    <div class="col-md-4 col-md-4__leftZero">
-                        <figure>
-                            <img src="img/delivery--vn.jpg" alt="Точка в Великом Новгороде" class="image">
-                            <figcaption>Великий Новгород, ТД «Русь», 1 этаж</figcaption>
-                        </figure>
-                    </div>
-                    <div class="col-md-4 col-md-4__leftZero">   
-                        <figure>
-                            <img src="img/delivery--psk.jpg" alt="Точка во Пскове" class="image">
-                            <figcaption>Псков, ТЦ «Максимус», 1 этаж</figcaption>
-                        </figure>
-                    </div> 
-            </div>
-    </section>
-
-    <div class="modal" id="modal">
-        <span class="modal--close" id="close">
-            <button class="btn" style="border: 1px solid white">Закрыть</button>
-            <p style="padding-top: 32px; text-decoration: underline;">Фирменные отделы:</p><br>
-<p class="text--bold">ВЕЛИКИЙ НОВГОРОД<br>Большая Санкт-Петербургская, 25 (ТД Русь, 1 этаж)</p><br>
-<p class="text--bold">САНКТ-ПЕТЕРБУРГ <br>Лиговский проспект, 153 (ТРК Лиговъ, станция метро Обводный канал)</p><br>
-<p class="text--bold">ПСКОВ<br>Псков, ТЦ «Максимус», 1 этаж</p><br>
-<p class="text--bold"><br>Доставка<br>Города с пунктами самовывоза (1242 города)</p>
-<p>Абакан</p>
-<p>Абинск</p>
-<p>Азов</p>
-<p>Аксай</p>
-<p>Александров</p>
-<p>Алексеевка</p>
-<p>Алексин</p>
-<p>Алушта</p>
-<p>Альметьевск</p>
-<p>Амурск</p>
-<p>Анапа</p>
-<p>Ангарск</p>
-<p>Анжеро-Судженск</p>
-<p>Апатиты</p>
-<p>Апрелевка</p>
-<p>Апшеронск</p>
-<p>Арзамас</p>
-<p>Армавир</p>
-<p>Арсеньев</p>
-<p>Артем</p>
-<p>Архангельск</p>
-<p>Асбест</p>
-<p>Астрахань</p>
-<p>Ачинск</p>
-<p>Аша</p>
-<p>Балабаново</p>
-<p>Балаково</p>
-<p>Балахна</p>
-<p>Балашиха</p>
-<p>Барнаул</p>
-<p>Батайск</p>
-<p>Бахчисарай</p>
-<p>Белая Калитва</p>
-<p>Белгород</p>
-<p>Белебей</p>
-<p>Белово</p>
-<p>Белорецк</p>
-<p>Белореченск</p>
-<p>Бердск</p>
-<p>Березники</p>
-<p>Березовский</p>
-<p>Бийск</p>
-<p>Биробиджан</p>
-<p>Бирск</p>
-<p>Благовещенск</p>
-<p>Благодарный</p>
-<p>Богданович</p>
-<p>Бор</p>
-<p>Борзя</p>
-<p>Борисоглебск</p>
-<p>Боровичи</p>
-<p>Братск</p>
-<p>Бронницы</p>
-<p>Брянск</p>
-<p>Бугульма</p>
-<p>Буденновск</p>
-<p>Бузулук</p>
-<p>Бутово</p>
-<p>Великие Луки</p>
-<p>Великий Новгород</p>
-<p>Верхняя Пышма</p>
-<p>Видное</p>
-<p>Владивосток</p>
-<p>Владикавказ</p>
-<p>Владимир</p>
-<p>ВНИИССОК, Одинцовский р-н</p>
-<p>Внуково</p>
-<p>Волгоград</p>
-<p>Волгодонск</p>
-<p>Волжск, Волжский р-н</p>
-<p>Волжский</p>
-<p>Вологда</p>
-<p>Волоколамск</p>
-<p>Волхов</p>
-<p>Воронеж</p>
-<p>Воскресенск</p>
-<p>Воскресенское поселение</p>
-<p>Восточный мкр., округ Балашиха</p>
-<p>Воткинск</p>
-<p>Всеволожск</p>
-<p>Выборг</p>
-<p>Выкса</p>
-<p>Вышний Волочёк, гор.окр. Вышний Волочёк</p>
-<p>Вязники</p>
-<p>Вязьма</p>
-<p>Вятские Поляны</p>
-<p>Гатчина</p>
-<p>Геленджик</p>
-<p>Георгиевск</p>
-<p>Глазов</p>
-<p>Горелово</p>
-<p>Горно-Алтайск</p>
-<p>Городец</p>
-<p>Гороховец</p>
-<p>Горячий Ключ</p>
-<p>Грозный</p>
-<p>Грязи</p>
-<p>Губаха</p>
-<p>Губкин</p>
-<p>Губкинский</p>
-<p>Гуково</p>
-<p>Гусь-Хрустальный</p>
-<p>Джанкой</p>
-<p>Дзержинск, Нижегородская обл.</p>
-<p>Дзержинский</p>
-<p>Димитровград</p>
-<p>Динская</p>
-<p>Дмитров</p>
-<p>Долгопрудный</p>
-<p>Домодедово</p>
-<p>Донецк</p>
-<p>Дубна</p>
-<p>Евпатория</p>
-<p>Егорьевск</p>
-<p>Ейск</p>
-<p>Елабуга</p>
-<p>Елец</p>
-<p>Елизово</p>
-<p>Ессентуки</p>
-<p>Ефремов</p>
-<p>Железноводск</p>
-<p>Железногорск, Красноярский край</p>
-<p>Железногорск, Курская обл.</p>
-<p>Железнодорожный, округ Балашиха</p>
-<p>Жуковский</p>
-<p>Забайкальск</p>
-<p>Заводоуковск</p>
-<p>Заволжье</p>
-<p>Заинск</p>
-<p>Заречный, Свердловская обл.</p>
-<p>Заринск</p>
-<p>Звенигород</p>
-<p>Зеленогорск</p>
-<p>Зеленоград</p>
-<p>Зеленодольск</p>
-<p>Зеленокумск</p>
-<p>Зерноград</p>
-<p>Златоуст</p>
-<p>Ивангород, Кингисеппский р-н</p>
-<p>Иваново</p>
-<p>Ивантеевка</p>
-<p>Игра</p>
-<p>Ижевск</p>
-<p>Изобильный</p>
-<p>Иноземцево</p>
-<p>Ирбит</p>
-<p>Иркутск</p>
-<p>Искитим</p>
-<p>Истра</p>
-<p>Ишим</p>
-<p>Йошкар-Ола</p>
-<p>Казань</p>
-<p>Калининград</p>
-<p>Калуга</p>
-<p>Каменск-Уральский</p>
-<p>Каменск-Шахтинский</p>
-<p>Камышин</p>
-<p>Камышлов</p>
-<p>Канаш</p>
-<p>Канск</p>
-<p>Карасук</p>
-<p>Каргат</p>
-<p>Кашира</p>
-<p>Кемерово</p>
-<p>Керчь</p>
-<p>Кимры</p>
-<p>Кингисепп</p>
-<p>Кинешма</p>
-<p>Киреевск, Тульская обл.Киржач</p>
-<p>Кириши</p>
-<p>Киров</p>
-<p>Кировск, Ленинградская обл.</p>
-<p>Киселёвск</p>
-<p>Кисловодск</p>
-<p>Климовск</p>
-<p>Клин</p>
-<p>Клинцы</p>
-<p>Ковров</p>
-<p>Когалым</p>
-<p>Коломна</p>
-<p>Колпино</p>
-<p>Кольцово</p>
-<p>Кольчугино</p>
-<p>Коммунарка</p>
-<p>Комсомольск-на-Амуре</p>
-<p>Конаково</p>
-<p>Копейск</p>
-<p>Кореновск</p>
-<p>Королев</p>
-<p>Коротчаево</p>
-<p>Кострома</p>
-<p>Котельники</p>
-<p>Котельнич</p>
-<p>Кохма</p>
-<p>Красная Поляна</p>
-<p>Красногорск</p>
-<p>Красногорск, ЮжныйКрасное Село</p>
-<p>Краснообск</p>
-<p>Красноперекопск</p>
-<p>Краснотурьинск</p>
-<p>Красноуфимск</p>
-<p>Красноярск</p>
-<p>Кронштадт</p>
-<p>Кропоткин</p>
-<p>Крымск</p>
-<p>Кстово</p>
-<p>Кубинка</p>
-<p>Кудрово</p>
-<p>Кудымкар</p>
-<p>Куйбышев</p>
-<p>Кунгур</p>
-<p>Купино</p>
-<p>Курган</p>
-<p>Курганинск</p>
-<p>Куровское</p>
-<p>Курск</p>
-<p>Курчатов</p>
-<p>Кыштым</p>
-<p>Лабинск</p>
-<p>Лениногорск</p>
-<p>Ленинск-Кузнецкий</p>
-<p>Лермонтов</p>
-<p>Ликино-Дулево</p>
-<p>Липецк</p>
-<p>Лиски, Лискинский р-н</p>
-<p>Лобня</p>
-<p>Луга</p>
-<p>Луховицы</p>
-<p>Лыткарино</p>
-<p>Люберцы</p>
-<p>Людиново</p>
-<p>Магадан</p>
-<p>Магнитогорск</p>
-<p>Майкоп</p>
-<p>Малаховка</p>
-<p>Махачкала</p>
-<p>Мегион</p>
-<p>Междуреченск</p>
-<p>Мелеуз</p>
-<p>Миасс</p>
-<p>Минеральные</p>
-<p>ВодыМирный,</p>
-<p>Саха респ. (Якутия)</p>
-<p>Митино</p>
-<p>Михайловка</p>
-<p>Михайловск</p>
-<p>Мичуринск</p>
-<p>Можайск</p>
-<p>Монино</p>
-<p>Мончегорск</p>
-<p>Московский</p>
-<p>Мосрентген,</p>
-<p>МоскваМурино, Всеволожский р-н</p>
-<p>Мурманск</p>
-<p>Муром</p>
-<p>Мытищи</p>
-<p>Набережные Челны</p>
-<p>Надым</p>
-<p>Назарово</p>
-<p>Назрань</p>
-<p>Нальчик</p>
-<p>Наро-Фоминск</p>
-<p>Нарьян-Мар</p>
-<p>Нахабино</p>
-<p>Находка</p>
-<p>Невинномысск</p>
-<p>Невьянск</p>
-<p>Некрасовка</p>
-<p>Нерюнгри</p>
-<p>Нефтекамск</p>
-<p>Нефтеюганск</p>
-<p>Нижневартовск</p>
-<p>Нижнекамск</p>
-<p>Нижний Тагил</p>
-<p>Нижняя Тура</p>
-<p>Ново-Переделкино</p>
-<p>Новоалтайск</p>
-<p>Новокузнецк</p>
-<p>Новокуйбышевск</p>
-<p>Новомосковск</p>
-<p>Новороссийск</p>
-<p>Новотроицк</p>
-<p>Новоуральск</p>
-<p>Новочебоксарск</p>
-<p>Новочеркасск</p>
-<p>Новошахтинск</p>
-<p>Новый Уренгой</p>
-<p>Ногинск</p>
-<p>Норильск</p>
-<p>Ноябрьск</p>
-<p>Нягань</p>
-<p>Обнинск</p>
-<p>Обухово, Ногинский р-н</p>
-<p>Обь</p>
-<p>Одинцово</p>
-<p>Озерск</p>
-<p>Октябрьский, Башкортостан респ.</p>
-<p>Омск</p>
-<p>Орел</p>
-<p>Оренбург</p>
-<p>Орехово-Зуево</p>
-<p>Орск</p>
-<p>Островцы</p>
-<p>Острогожск, Острогожский р-н</p>
-<p>Отрадный</p>
-<p>Павлово</p>
-<p>Павловский Посад</p>
-<p>Пенза</p>
-<p>Первоуральск</p>
-<p>Петергоф (Петродворец)</p>
-<p>Петрозаводск</p>
-<p>Петропавловск-Камчатский</p>
-<p>Пограничный</p>
-<p>Подольск</p>
-<p>Покровка</p>
-<p>Полевской</p>
-<p>Похвистнево</p>
-<p>Приморско-Ахтарск</p>
-<p>Приозерск</p>
-<p>Прокопьевск</p>
-<p>Протвино</p>
-<p>Псков</p>
-<p>Путилково</p>
-<p>Пушкин</p>
-<p>Пушкино</p>
-<p>Пятигорск</p>
-<p>Раменское</p>
-<p>Рассказово</p>
-<p>Ревда</p>
-<p>Реутов</p>
-<p>Ржев</p>
-<p>Рославль</p>
-<p>Россошь</p>
-<p>Рубцовск</p>
-<p>Руза</p>
-<p>Румянцево, поселение Московский</p>
-<p>Рыбинск</p>
-<p>Рязань</p>
-<p>Саки</p>
-<p>Салават</p>
-<p>Салехард</p>
-<p>Сальск</p>
-<p>Саранск</p>
-<p>Сарапул</p>
-<p>Саратов</p>
-<p>Саров</p>
-<p>Светлоград</p>
-<p>Севастополь</p>
-<p>Северный (Москва)</p>
-<p>Северодвинск</p>
-<p>Североуральск</p>
-<p>Северск</p>
-<p>Северская, Северский р-н</p>
-<p>Сергиев Посад</p>
-<p>Серов</p>
-<p>Серпухов</p>
-<p>Сертолово, Всеволожский р-н</p>
-<p>Сестрорецк</p>
-<p>Симферополь</p>
-<p>Славянск-на-Кубани</p>
-<p>Смоленск</p>
-<p>Снежинск</p>
-<p>Советский</p>
-<p>Соликамск</p>
-<p>Солнечногорск</p>
-<p>Солнцево</p>
-<p>Сосновый Бор</p>
-<p>Софрино</p>
-<p>Сочи</p>
-<p>Ставрополь</p>
-<p>Старый Оскол</p>
-<p>Стерлитамак</p>
-<p>Стрежевой</p>
-<p>Строитель</p>
-<p>Ступино</p>
-<p>Судак</p>
-<p>Сургут</p>
-<p>Сухой Лог</p>
-<p>Сходня</p>
-<p>Сызрань</p>
-<p>Сыктывкар</p>
-<p>Тавда</p>
-<p>Таганрог</p>
-<p>Тамбов</p>
-<p>Тарасково, Наро-Фоминский р-н</p>
-<p>Тверь</p>
-<p>Темрюк</p>
-<p>Тимашевск, Тимашевский р-н</p>
-<p>Тихвин</p>
-<p>Тихорецк</p>
-<p>Тобольск</p>
-<p>Тольятти</p>
-<p>Томилино</p>
-<p>Томск</p>
-<p>Торжок</p>
-<p>Тосно</p>
-<p>Трехгорный</p>
-<p>Троицк, Москов. обл.</p>
-<p>Троицк, Чел. обл</p>
-<p>Туапсе</p>
-<p>Туймазы</p>
-<p>Тула</p>
-<p>Тюмень</p>
-<p>Улан-Удэ</p>
-<p>Ульяновск</p>
-<p>Урай</p>
-<p>Урюпинск</p>
-<p>Усолье-Сибирское</p>
-<p>Успенское</p>
-<p>Уссурийск</p>
-<p>Усть-Лабинск</p>
-<p>Ухта</p>
-<p>Учалы</p>
-<p>Феодосия</p>
-<p>Фролово</p>
-<p>Фрязино</p>
-<p>Хабаровск</p>
-<p>Ханты-Мансийск</p>
-<p>Химки</p>
-<p>Химки Новые</p>
-<p>Хотьково, Сергиево-Посадский р-н</p>
-<p>Чайковский</p>
-<p>Чебоксары</p>
-<p>Челябинск</p>
-<p>Череповец</p>
-<p>Черкесск</p>
-<p>Черноморское</p>
-<p>Чехов</p>
-<p>Чистополь</p>
-<p>Чита</p>
-<p>Чусовой</p>
-<p>Шадринск</p>
-<p>Шарыпово</p>
-<p>Шатура</p>
-<p>Шахты</p>
-<p>Шушары</p>
-<p>Шуя</p>
-<p>Щекино</p>
-<p>Щелково</p>
-<p>Щербинка</p>
-<p>Электрогорск</p>
-<p>Электросталь</p>
-<p>Электроугли</p>
-<p>Элиста</p>
-<p>Энгельс</p>
-<p>Юбилейный</p>
-<p>Югорск</p>
-<p>Южно-Сахалинск</p>
-<p>Южноуральск</p>
-<p>Юрга</p>
-<p>Юрюзань</p>
-<p>Яблоновский</p>
-<p>Якутск</p>
-<p>Ялта</p>
-<p>Ялуторовск</p>
-<p>Ярославль</p>
-<p>Ярцево</p>
-        </span>
-    </div>
-
-           <footer><section class="section--wide">
-            <div class="row">
-                <div class="col-md-3">
-                    <a class="text--bold" href="#">Картины</a>
-                    <a href="index.html">Портреты по фото</a>
-                    <a href="foto.html">Печать фото на холсте</a>
-                    <a href="reproductions.html">Картины</a>
-                    <a href="panno.html">Модульное панно</p>
-                </div>
-                <div class="col-md-3">
-                    <a class="text--bold" href="#">Доп. услуги</a>
-                    <a href="restoration.html">Реставрация старых фото</a>
-                    <a href="retush.html">Ретушь</a>
-                    <a href="sertifikat.html">Сертификаты</a>
-
-                    <a href="baget.html">Багет</a>
-                    <a href="package.html">Упаковка</a>
-                </div>
-                <div class="col-md-3">
-                    <a class="text--bold">Остальное</a>
-                    <a href="cash.html">Оплата</a>
-                    <a href="delivery.html">Доставка</a>
-                    <a href="optom.html">Оптом</a>
-                    <a href="contacts.html">Контакты</a>
-                    <a href="oferta.html">Публичная оферта</a>
-                    <a href="props.html">Реквизиты</a>
-                </div>
-                <div class="col-md-3 footer--social">
-                    <a href="https://vk.com/imagine71" style="display: inline;"><img src="img/svg/vksquare.svg" alt="Логотип ВК" width="48px"></a>
-                    <a href="https://www.instagram.com/imagine.1971/" style="display: inline;"><img src="img/svg/instagramsquare.svg" alt="Логотип ВК" width="48px"></a>
-                </div>
-            </div>
-        </section></footer>
-   
-    <script src="js/script.js"></script>
-    <script>
-        $( "#openList" ).click(function() {
-        $( "#modal" ).show();
-        });
-        $( "#close" ).click(function() {
-        $( "#modal" ).hide();
-        });
-    </script>
-    <script>
-        $( "#callmebaby" ).click(function() {
-        $( "#modalCall" ).show();
-        });
-        $( "#closeCall" ).click(function() {
-        $( "#modalCall" ).hide();
-        });
-        $( "#callmebabyDesk" ).click(function() {
-        $( "#modalCall" ).show();
-        });
-    </script><script>
-        $( "#callmebaby" ).click(function() {
-        $( "#modalCall" ).show();
-        });
-        $( "#closeCall" ).click(function() {
-        $( "#modalCall" ).hide();
-        });
-        $( "#callmebabyDesk" ).click(function() {
-        $( "#modalCall" ).show();
-        });
-        $( "#callmebabyDesk" ).click(function() {
-        $( "#modalCall" ).show();
-        });
-    </script>
-    <script>
-    mybutton = document.getElementById("myBtn");
-    window.onscroll = function() {scrollFunction()};
-    function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        mybutton.style.display = "block";
-    } else {
-        mybutton.style.display = "none";
-    }
-    }
-    function topFunction() {
-    document.body.scrollTop = 0; 
-    document.documentElement.scrollTop = 0; 
-    } 
-    </script>
-<script>
-        (function(w,d,u){
-                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
-                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
-        })(window,document,'https://cdn.bitrix24.ru/b7533283/crm/site_button/loader_5_y1jzm9.js');
-</script>
-</body>
+    $('#town').html(apiCity);
+    $('#delivery').html(delivery);
+    $('#town--mob').html(apiCity);
+    $('#delivery--mob').html(delivery);
+    });
+</script> </body>
 </html>

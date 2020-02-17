@@ -6,6 +6,12 @@ section {
     display: none;
 }
 
+.price {
+    border-bottom: 4px solid rgb(255, 224, 150);
+    padding: 2px 4px;
+    width: max-content;
+}
+
 .mainPage img {
     width: 80%;
 }
