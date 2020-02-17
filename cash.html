@@ -34,17 +34,221 @@
     <!-- geo дописать условие по бесплатной доставке -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
-    <script type="text/javascript">
-        $(window).on('load', function(){
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="bootstrap-grid.css">
+    <link rel="stylesheet" href="restoration.css">
+    <link rel="stylesheet" href="cash.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Imagine — Оплата</title>
+</head>
+ <body>    
+    <div class="mobile--geo">
+           <div id="town--mob">Загрузка...</div>
+            <div id="delivery--mob">Загрузка...</div>
+        </div>
+    <div class="mobile--header">
+        <div class="row align-items-center" style="padding: 0 16px;">
+            <div class="col"><a href="#" class="mobile--menu__icon" onclick="openNav()"><img src="img/svg/menu.svg" alt="Меню"></a></div>
+            <div class="col"><a href="index.html"><img src="img/logotype.png" alt="Логотип" class="image"></a></div>
+            <div class="col" style="text-align: right;"><a href="tel:+79082930097"><img src="img/svg/phone.svg" alt="Позвонить" style="width: 32px"></a></div>
+        </div>
+    </div>
+    <div class="mobile--nav">
+        <nav class="row justify-content-between" style="margin-top: 0">
+            <a  href="index.html">Портреты</a>
+            <a href="reproductions.html">Картины</a>
+            <a href="panno.html">Панно</a>
+            <a href="foto.html">Печать</a>
+        </nav>
+    </div>
+    </div>
+     <div id="myNav" class="mobile--overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="mobile--overlay-content">
+                <div class="mobile--overlay__main" style="margin-bottom: 32px;">
+                <p>Основное</p>
+                    <a href="index.html">Главная</a>
+                    <a href="styles.html">Портреты</a>
+                    <a href="reproductions.html">Картины</a>
+                    <a href="panno.html">Панно</a>
+                    <a href="foto.html">Фото на холсте</a>
+                </div>
+                <div class="mobile--overylay__add">
+                    <p>Доп. услуги</p>
+                    <a href="restoration.html">Реставрация старых фото</a>
+                    <a href="retush.html">Ретушь</a>
+                    <a href="sertifikat.html">Сертификаты</a>
+                    <a href="baget.html">Багет</a>
+                    <a href="package.html">Упаковка</a>
+                </div>
+                <div class="mobile--overylay__add">
+                    <p>Остальное</p>
+                    <a href="cash.html">Оплата</a>
+                    <a href="delivery.html" class="subheader--active">Доставка</a>
+                    <a href="optom.html">Оптом</a>
+                    <a href="contacts.html">Контакты</a>
+                </div>
+                <div class="col-md-auto" ><a href="https://bitrix24public.com/b24-vrm86j.bitrix24.ru/form/6_ne_nashli_chto_iskali/zk0a9o/"><button class="btn line" id="callmebaby" style="width: auto; margin-bottom: 32px">Заказать звонок</button></a></div>
+            </div>
+    </div>
+    
+    <header class="row align-items-center">
+            <div class="col-md-2"><a href="index.html"><img src="img/logotype.png" class="image" alt="Логотип"></a></div>
+            <div class="col" style="flex-grow: 0;">
+                <img src="img/svg/geo.svg" alt="Гео">  
+            </div>
+            <div class="col" style="padding-left: 0px;">
+                <div id="town">Загрузка...</div>
+                <div id="delivery">Загрузка...</div>
+                 
+            </div>
+            <div class="col" style="text-align: right;"><a  href="tel:+79082930097">+7 908 293-00-97</a></div>
+            <div class="col-md-auto"  >  <a href="https://bitrix24public.com/b24-vrm86j.bitrix24.ru/form/6_ne_nashli_chto_iskali/zk0a9o/"><button class="btn line" id="callmebaby">Заказать звонок</button></a></div>
+    </header>
+    <div class="subheader" role="navigation" aria-label="Main">
+            <div class="row align-items-center">
+                <div class="col-md-6 subheader--left">
+                    <nav>
+                        <a href="index.html">Главная</a>
+                    <a href="styles.html">Портреты</a>
+                        <a href="reproductions.html">Картины</a>
+                        <a href="panno.html">Панно</a>
+                        <a href="foto.html">Фото на холсте</a>
+                        <div class="dropdown">
+                            <a href="#" class="dropdown--button">Доп. услуги <i class="fa fa-caret-down"></i></a>
+                            <div class="dropdown-content">
+                                <a href="restoration.html">Реставрация старых фото</a>
+                                <a href="retush.html">Ретушь</a>
+                                <a href="sertifikat.html">Сертификаты</a>
+                                <a href="baget.html">Багет</a>
+                                <a href="package.html">Упаковка</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-md-6 subheader--right">
+                    <nav>
+                        <a href="cash.html" class="subheader--active">Оплата</a>
+                        <a href="delivery.html">Доставка</a>
+                        <a href="optom.html">Оптом</a>
+                        <a href="contacts.html">Контакты</a>
+                    </nav>
+                </div>
+            </div>
+    </div>
+
+    <main>
+        <h1>Способы оплаты</h1>
+        <div class="row">
+            <div class="col-md-4" style="padding-right: 48px; paddding-left: 0;">
+                <div class="cash--nal">
+                    <img src="img/svg/cash.svg" alt="Оплата наличными" class="image_auto">
+                    <h5 class="text--bold">Наличный рассчёт</h5>
+                    <p>Оплата наличными при получении после просмотра картины возможна в любых фирменных отделах, пунктах самовывоза и курьерам во всех регионах.</p>
+                    <img src="" alt="" class="image">
+                </div>
+            </div>
+            <div class="col-md-4" style="padding-right: 48px;">
+                <img src="img/svg/bank.svg" alt="Оплата банковской картой" class="image_auto">
+                <h5 class="text--bold">Банковский рассчёт</h5>
+                <p>Мы принимаем платежи с сайта по cледующим банковским картам: VISA, MasterCard, Tinkoff, Maestro, JCB, МИР. Оплата банковской картой, через Интернет, возможна через системы электронных платежей.</p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="MasterCard" style="width: 80px;  margin-top: 16px">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Maestro_2016.svg/200px-Maestro_2016.svg.png" alt="MasterCard" style="width: 80px; margin-top: 8px"> <br>
+                <img src="https://upload.wikimedia.org/wikipedia/ru/a/a3/JCB_Cards.svg" alt="MasterCard" style="width: 120px;  margin-top: 8px">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Visa_2014_logo_detail.svg" alt="MasterCard" style="width: 120px;margin-top: 8px">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Nspk-mir.png" alt="MasterCard" style="width: 120px; margin-top: 8px">
+                <img src="https://upload.wikimedia.org/wikipedia/en/0/04/Tinkoff_Bank_logo.png" alt="MasterCard" style="width: 120px; margin-top: 8px">
+            </div>
+            <div class="col-md-4" style="padding-right: 48px;">
+                <img src="img/svg/internetpay.svg" alt="Оплата через интернет" class="image_auto">
+                <h5 class="text--bold">Электронные платежи</h5>
+                <p>Стоимость заказа можно оплатить через системы электронных платежей. Яндекс.Деньги, MasterCard, WebMoney, PayPal.</p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/%D0%9B%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF_%D0%AF%D0%BD%D0%B4%D0%B5%D0%BA%D1%81.%D0%94%D0%B5%D0%BD%D0%B5%D0%B3.svg" alt="Яндекс Деньги" style="width: 120px; display: block; margin-top: 16px">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/PayPal_logo.svg" alt="PayPal" style="width: 120px; display: block;  margin-top: 8px">
+                <img src="https://upload.wikimedia.org/wikipedia/en/5/5b/WebMoney_logo.svg" alt="MasterCard" style="width: 120px; display: block;  margin-top: 8px">
+            </div>
+        </div>
+    </main>
+
+    <section>
+        <h3 class="text--bold">Предоплата</h3>
+        <p class="x-large">Предоплата потребуется только после согласования эскиза в размере 50% от общей стоимости. Если Вам не нравится выполненный эскиз, вы в праве отказаться.</p>
+    </section>
+
+     
+           <footer><section class="section--wide">
+            <div class="row">
+                <div class="col-md-3">
+                    <a class="text--bold" href="#">Картины</a>
+                    <a href="index.html">Портреты по фото</a>
+                    <a href="foto.html">Печать фото на холсте</a>
+                    <a href="reproductions.html">Картины</a>
+                    <a href="panno.html">Модульное панно</p>
+                </div>
+                <div class="col-md-3">
+                    <a class="text--bold" href="#">Доп. услуги</a>
+                    <a href="restoration.html">Реставрация старых фото</a>
+                    <a href="retush.html">Ретушь</a>
+                    <a href="sertifikat.html">Сертификаты</a>
+
+                    <a href="baget.html">Багет</a>
+                    <a href="package.html">Упаковка</a>
+                </div>
+                <div class="col-md-3">
+                    <a class="text--bold">Остальное</a>
+                    <a href="cash.html">Оплата</a>
+                    <a href="delivery.html">Доставка</a>
+                    <a href="optom.html">Оптом</a>
+                    <a href="contacts.html">Контакты</a>
+                    <a href="oferta.html">Публичная оферта</a>
+                    <a href="props.html">Реквизиты</a>
+                </div>
+                <div class="col-md-3 footer--social">
+                    <a href="https://vk.com/imagine71" style="display: inline;"><img src="img/svg/vksquare.svg" alt="Логотип ВК" width="48px"></a>
+                    <a href="https://www.instagram.com/imagine.1971/" style="display: inline;"><img src="img/svg/instagramsquare.svg" alt="Логотип ВК" width="48px"></a>
+                </div>
+            </div>
+        </section></footer>
+   
+    <script src="js/script.js"></script><script>
+        $( "#callmebaby" ).click(function() {
+        $( "#modalCall" ).show();
+        });
+        $( "#closeCall" ).click(function() {
+        $( "#modalCall" ).hide();
+        });
+        $( "#callmebabyDesk" ).click(function() {
+        $( "#modalCall" ).show();
+        });
+    </script>
+    <script>
+    mybutton = document.getElementById("myBtn");
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+    }
+    function topFunction() {
+    document.body.scrollTop = 0; 
+    document.documentElement.scrollTop = 0; 
+    } 
+    </script>
+<script>
+        (function(w,d,u){
+                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+        })(window,document,'https://cdn.bitrix24.ru/b7533283/crm/site_button/loader_5_y1jzm9.js');
+</script>
+<script type="text/javascript">
+    $(window).on('load', function() {
     var apiCity = ymaps.geolocation.city;
-        var i, ii, delivery;
-        var flag = true;
-        var shopAdress = {
-                "Великий Новгород" : "ТД Русь, 1 этаж",
-                "Санкт-Петербург" : "ТРК Лиговъ, 2 этаж",
-            }
-        var deliveryAdress = {
-            'Абакан' : 'Самовывоз: ул. Чертыгашева, 126, 13 (Бесплатно)',
+    var shopAddress = { "Великий Новгород" : "ТД Русь, 1 этаж",
+            "Санкт-Петербург" : "ТРК Лиговъ, 2 этаж", };
+    var deliveryAddress = {
+'Абакан' : 'Самовывоз: ул. Чертыгашева, 126, 13 (Бесплатно)',
 'Абинск' : 'Самовывоз: пр-т Комсомольский, 110“А”/3 (Бесплатно)',
 'Адлер' : 'Самовывоз: ул. Просвещения, 118б (Бесплатно)',
 'Азов' : 'Самовывоз: ул. Измайлова, 55 (Бесплатно)',
@@ -616,251 +820,18 @@
 'Янино-1, Всеволожский р-он' : 'Самовывоз: ул. Новая, 11А, 18-Н (Бесплатно)',
 'Ярославль' : 'Самовывоз: Ленинградский пр-т, 47 (Бесплатно)',
 'Ярцево' : 'Самовывоз: ул. Советская, 20 (Бесплатно)',
-        }        
-       
-        if (apiCity == null) { 
-    apiCity = 'Бесплатная доставка' 
-    delivery = 'по городам России (подробности по телефону)' 
-    } else {
-    for (i in shopAdress) {
-      if (apiCity.indexOf(i) >= 0) {
-      delivery = shopAdress[i]
-      flag = false
-      break
-      }
+    }
+    var delivery = shopAddress[apiCity] || deliveryAddress[apiCity] || null;
+
+    if (!delivery) {
+    apiCity = 'Бесплатная доставка';
+    delivery = 'по городам России (подробности по телефону)';
     }
 
-    if (flag == true) {
-      for (ii in deliveryAdress) {
-        if (apiCity.indexOf(i) >= 0) {
-        delivery = deliveryAdress[ii]
-        flag = false
-        break
-        }
-      }
-    }
-   
-    if (flag == true) {
-        apiCity = 'Бесплатная доставка'
-        delivery = 'по городам России (подробности по телефону)'
-    }
-    }
- 
-        $('#town').html(apiCity);
-        $('#delivery').html(delivery);
-        $('#town--mob').html(apiCity);
-        $('#delivery--mob').html(delivery);
-        }); 
-    </script>
-    <!-- geo -->
-
-    <link rel="stylesheet" href="components.css">
-    <link rel="stylesheet" href="bootstrap-grid.css">
-    <link rel="stylesheet" href="restoration.css">
-    <link rel="stylesheet" href="cash.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Imagine — Оплата</title>
-</head>
- <body>    
-    <div class="mobile--geo">
-           <div id="town--mob">Загрузка...</div>
-            <div id="delivery--mob">Загрузка...</div>
-        </div>
-    <div class="mobile--header">
-        <div class="row align-items-center" style="padding: 0 16px;">
-            <div class="col"><a href="#" class="mobile--menu__icon" onclick="openNav()"><img src="img/svg/menu.svg" alt="Меню"></a></div>
-            <div class="col"><a href="index.html"><img src="img/logotype.png" alt="Логотип" class="image"></a></div>
-            <div class="col" style="text-align: right;"><a href="tel:+79082930097"><img src="img/svg/phone.svg" alt="Позвонить" style="width: 32px"></a></div>
-        </div>
-    </div>
-    <div class="mobile--nav">
-        <nav class="row justify-content-between" style="margin-top: 0">
-            <a  href="index.html">Портреты</a>
-            <a href="reproductions.html">Картины</a>
-            <a href="panno.html">Панно</a>
-            <a href="foto.html">Печать</a>
-        </nav>
-    </div>
-    </div>
-     <div id="myNav" class="mobile--overlay">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <div class="mobile--overlay-content">
-                <div class="mobile--overlay__main" style="margin-bottom: 32px;">
-                <p>Основное</p>
-                    <a href="index.html">Главная</a>
-                    <a href="styles.html">Портреты</a>
-                    <a href="reproductions.html">Картины</a>
-                    <a href="panno.html">Панно</a>
-                    <a href="foto.html">Фото на холсте</a>
-                </div>
-                <div class="mobile--overylay__add">
-                    <p>Доп. услуги</p>
-                    <a href="restoration.html">Реставрация старых фото</a>
-                    <a href="retush.html">Ретушь</a>
-                    <a href="sertifikat.html">Сертификаты</a>
-                    <a href="baget.html">Багет</a>
-                    <a href="package.html">Упаковка</a>
-                </div>
-                <div class="mobile--overylay__add">
-                    <p>Остальное</p>
-                    <a href="cash.html">Оплата</a>
-                    <a href="delivery.html" class="subheader--active">Доставка</a>
-                    <a href="optom.html">Оптом</a>
-                    <a href="contacts.html">Контакты</a>
-                </div>
-                <div class="col-md-auto" ><a href="https://bitrix24public.com/b24-vrm86j.bitrix24.ru/form/6_ne_nashli_chto_iskali/zk0a9o/"><button class="btn line" id="callmebaby" style="width: auto; margin-bottom: 32px">Заказать звонок</button></a></div>
-            </div>
-    </div>
-    
-    <header class="row align-items-center">
-            <div class="col-md-2"><a href="index.html"><img src="img/logotype.png" class="image" alt="Логотип"></a></div>
-            <div class="col" style="flex-grow: 0;">
-                <img src="img/svg/geo.svg" alt="Гео">  
-            </div>
-            <div class="col" style="padding-left: 0px;">
-                <div id="town">Загрузка...</div>
-                <div id="delivery">Загрузка...</div>
-                 
-            </div>
-            <div class="col" style="text-align: right;"><a  href="tel:+79082930097">+7 908 293-00-97</a></div>
-            <div class="col-md-auto"  >  <a href="https://bitrix24public.com/b24-vrm86j.bitrix24.ru/form/6_ne_nashli_chto_iskali/zk0a9o/"><button class="btn line" id="callmebaby">Заказать звонок</button></a></div>
-    </header>
-    <div class="subheader" role="navigation" aria-label="Main">
-            <div class="row align-items-center">
-                <div class="col-md-6 subheader--left">
-                    <nav>
-                        <a href="index.html">Главная</a>
-                    <a href="styles.html">Портреты</a>
-                        <a href="reproductions.html">Картины</a>
-                        <a href="panno.html">Панно</a>
-                        <a href="foto.html">Фото на холсте</a>
-                        <div class="dropdown">
-                            <a href="#" class="dropdown--button">Доп. услуги <i class="fa fa-caret-down"></i></a>
-                            <div class="dropdown-content">
-                                <a href="restoration.html">Реставрация старых фото</a>
-                                <a href="retush.html">Ретушь</a>
-                                <a href="sertifikat.html">Сертификаты</a>
-                                <a href="baget.html">Багет</a>
-                                <a href="package.html">Упаковка</a>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-                <div class="col-md-6 subheader--right">
-                    <nav>
-                        <a href="cash.html" class="subheader--active">Оплата</a>
-                        <a href="delivery.html">Доставка</a>
-                        <a href="optom.html">Оптом</a>
-                        <a href="contacts.html">Контакты</a>
-                    </nav>
-                </div>
-            </div>
-    </div>
-
-    <main>
-        <h1>Способы оплаты</h1>
-        <div class="row">
-            <div class="col-md-4" style="padding-right: 48px; paddding-left: 0;">
-                <div class="cash--nal">
-                    <img src="img/svg/cash.svg" alt="Оплата наличными" class="image_auto">
-                    <h5 class="text--bold">Наличный рассчёт</h5>
-                    <p>Оплата наличными при получении после просмотра картины возможна в любых фирменных отделах, пунктах самовывоза и курьерам во всех регионах.</p>
-                    <img src="" alt="" class="image">
-                </div>
-            </div>
-            <div class="col-md-4" style="padding-right: 48px;">
-                <img src="img/svg/bank.svg" alt="Оплата банковской картой" class="image_auto">
-                <h5 class="text--bold">Банковский рассчёт</h5>
-                <p>Мы принимаем платежи с сайта по cледующим банковским картам: VISA, MasterCard, Tinkoff, Maestro, JCB, МИР. Оплата банковской картой, через Интернет, возможна через системы электронных платежей.</p>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="MasterCard" style="width: 80px;  margin-top: 16px">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Maestro_2016.svg/200px-Maestro_2016.svg.png" alt="MasterCard" style="width: 80px; margin-top: 8px"> <br>
-                <img src="https://upload.wikimedia.org/wikipedia/ru/a/a3/JCB_Cards.svg" alt="MasterCard" style="width: 120px;  margin-top: 8px">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Visa_2014_logo_detail.svg" alt="MasterCard" style="width: 120px;margin-top: 8px">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Nspk-mir.png" alt="MasterCard" style="width: 120px; margin-top: 8px">
-                <img src="https://upload.wikimedia.org/wikipedia/en/0/04/Tinkoff_Bank_logo.png" alt="MasterCard" style="width: 120px; margin-top: 8px">
-            </div>
-            <div class="col-md-4" style="padding-right: 48px;">
-                <img src="img/svg/internetpay.svg" alt="Оплата через интернет" class="image_auto">
-                <h5 class="text--bold">Электронные платежи</h5>
-                <p>Стоимость заказа можно оплатить через системы электронных платежей. Яндекс.Деньги, MasterCard, WebMoney, PayPal.</p>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/%D0%9B%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF_%D0%AF%D0%BD%D0%B4%D0%B5%D0%BA%D1%81.%D0%94%D0%B5%D0%BD%D0%B5%D0%B3.svg" alt="Яндекс Деньги" style="width: 120px; display: block; margin-top: 16px">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/PayPal_logo.svg" alt="PayPal" style="width: 120px; display: block;  margin-top: 8px">
-                <img src="https://upload.wikimedia.org/wikipedia/en/5/5b/WebMoney_logo.svg" alt="MasterCard" style="width: 120px; display: block;  margin-top: 8px">
-            </div>
-        </div>
-    </main>
-
-    <section>
-        <h3 class="text--bold">Предоплата</h3>
-        <p class="x-large">Предоплата потребуется только после согласования эскиза в размере 50% от общей стоимости. Если Вам не нравится выполненный эскиз, вы в праве отказаться.</p>
-    </section>
-
-     
-           <footer><section class="section--wide">
-            <div class="row">
-                <div class="col-md-3">
-                    <a class="text--bold" href="#">Картины</a>
-                    <a href="index.html">Портреты по фото</a>
-                    <a href="foto.html">Печать фото на холсте</a>
-                    <a href="reproductions.html">Картины</a>
-                    <a href="panno.html">Модульное панно</p>
-                </div>
-                <div class="col-md-3">
-                    <a class="text--bold" href="#">Доп. услуги</a>
-                    <a href="restoration.html">Реставрация старых фото</a>
-                    <a href="retush.html">Ретушь</a>
-                    <a href="sertifikat.html">Сертификаты</a>
-
-                    <a href="baget.html">Багет</a>
-                    <a href="package.html">Упаковка</a>
-                </div>
-                <div class="col-md-3">
-                    <a class="text--bold">Остальное</a>
-                    <a href="cash.html">Оплата</a>
-                    <a href="delivery.html">Доставка</a>
-                    <a href="optom.html">Оптом</a>
-                    <a href="contacts.html">Контакты</a>
-                    <a href="oferta.html">Публичная оферта</a>
-                    <a href="props.html">Реквизиты</a>
-                </div>
-                <div class="col-md-3 footer--social">
-                    <a href="https://vk.com/imagine71" style="display: inline;"><img src="img/svg/vksquare.svg" alt="Логотип ВК" width="48px"></a>
-                    <a href="https://www.instagram.com/imagine.1971/" style="display: inline;"><img src="img/svg/instagramsquare.svg" alt="Логотип ВК" width="48px"></a>
-                </div>
-            </div>
-        </section></footer>
-   
-    <script src="js/script.js"></script><script>
-        $( "#callmebaby" ).click(function() {
-        $( "#modalCall" ).show();
-        });
-        $( "#closeCall" ).click(function() {
-        $( "#modalCall" ).hide();
-        });
-        $( "#callmebabyDesk" ).click(function() {
-        $( "#modalCall" ).show();
-        });
-    </script>
-    <script>
-    mybutton = document.getElementById("myBtn");
-    window.onscroll = function() {scrollFunction()};
-    function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        mybutton.style.display = "block";
-    } else {
-        mybutton.style.display = "none";
-    }
-    }
-    function topFunction() {
-    document.body.scrollTop = 0; 
-    document.documentElement.scrollTop = 0; 
-    } 
-    </script>
-<script>
-        (function(w,d,u){
-                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
-                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
-        })(window,document,'https://cdn.bitrix24.ru/b7533283/crm/site_button/loader_5_y1jzm9.js');
-</script>
-</body>
+    $('#town').html(apiCity);
+    $('#delivery').html(delivery);
+    $('#town--mob').html(apiCity);
+    $('#delivery--mob').html(delivery);
+    });
+</script> </body>
 </html>

@@ -33,17 +33,349 @@
 <meta name="theme-color" content="#ffffff">  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
-    <script type="text/javascript">
-        $(window).on('load', function(){
+
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="repro.css">
+    <link rel="stylesheet" href="review.css">
+    <link rel="stylesheet" href="delivery.css">
+    <link rel="stylesheet" href="youtube.css">
+    <link rel="stylesheet" href="bootstrap-grid.css">
+    <link rel="stylesheet" href="mainpage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="swiper.css">
+    <title>Imagine — Портреты</title>
+</head>
+ <body> 
+    <div class="mobile--geo">
+        <div id="town--mob">Загрузка...</div>
+        <div id="delivery--mob">Загрузка...</div>
+    </div>
+    <div class="mobile--header">
+            <div class="row align-items-center" style="padding: 0 16px;">
+                <div class="col"><a href="#" class="mobile--menu__icon" onclick="openNav()"><img src="img/svg/menu.svg" alt="Меню"></a></div>
+                <div class="col"><a href="index.html"><img src="img/logotype.png" alt="Логотип" class="image"></a></div>
+                <div class="col" style="text-align: right;"><a href="tel:+79082930097"><img src="img/svg/phone.svg" alt="Позвонить" style="width: 32px"></a></div>
+            </div>
+        </div>
+        <div class="mobile--nav">
+            <nav class="row justify-content-between" style="margin-top: 0">
+                <a href="styles.html" class="active--navbar__mobile">Портреты</a>
+                <a href="reproductions.html">Картины</a>
+                <a href="panno.html">Панно</a>
+                <a href="foto.html">Печать</a>
+            </nav>
+        </div>
+        <div id="myNav" class="mobile--overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="mobile--overlay-content">
+                    <div class="mobile--overlay__main" style="margin-bottom: 32px;">
+                    <p>Основное</p>
+                        <a href="index.html">Главная</a>
+                    <a href="styles.html">Портреты</a>
+                        <a href="reproductions.html">Картины</a>
+                        <a href="panno.html">Панно</a>
+                        <a href="foto.html">Фото на холсте</a>
+                    </div>
+                    <div class="mobile--overylay__add">
+                        <p>Доп. услуги</p>
+                        <a href="restoration.html">Реставрация старых фото</a>
+                        <a href="retush.html">Ретушь</a>
+                        <a href="sertifikat.html">Сертификаты</a>
+                        <a href="baget.html">Багет</a>
+                        <a href="package.html">Упаковка</a>
+                    </div>
+                    <div class="mobile--overylay__add">
+                        <p>Остальное</p>
+                        <a href="cash.html">Оплата</a>
+                        <a href="delivery.html" class="subheader--active">Доставка</a>
+                        <a href="optom.html">Оптом</a>
+                        <a href="contacts.html">Контакты</a>
+                    </div>
+                    <div class="col-md-auto" ><a href="https://bitrix24public.com/b24-vrm86j.bitrix24.ru/form/6_ne_nashli_chto_iskali/zk0a9o/"><button class="btn line" id="callmebaby" style="width: auto; margin-bottom: 32px">Заказать звонок</button></a></div>
+                </div>
+        </div>
+
+    <header class="row align-items-center">
+        <div class="col-md-2"><a href="index.html"><img src="img/logotype.png" class="image" alt="Логотип"></a></div>
+        <div class="col" style="flex-grow: 0;">
+            <img src="img/svg/geo.svg" alt="Гео">  
+        </div>
+        <div class="col" style="padding-left: 0px;">
+            <div id="town"></div>
+            <div id="delivery"></div>
+        </div>
+        <div class="col" style="text-align: right;"><a  href="tel:+79082930097">+7 908 293-00-97</a></div>
+        <div class="col-md-auto"  >  <a href="https://bitrix24public.com/b24-vrm86j.bitrix24.ru/form/6_ne_nashli_chto_iskali/zk0a9o/"><button class="btn line" id="callmebaby">Заказать звонок</button></a></div>
+    </header>
+    <div class="subheader" role="navigation" aria-label="Main">
+        <div class="row align-items-center">
+            <div class="col-md-6 subheader--left">
+                <nav>
+                    <a href="index.html">Главная</a>
+                    <a href="styles.html" class="subheader--active">Портреты</a>
+                    <a href="reproductions.html" >Картины</a>
+                    <a href="panno.html">Панно</a>
+                    <a href="foto.html">Фото на холсте</a>
+                    <div class="dropdown">
+                        <a href="#" class="dropdown--button">Доп. услуги <i class="fa fa-caret-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="restoration.html">Реставрация старых фото</a>
+                            <a href="retush.html">Ретушь</a>
+                            <a href="sertifikat.html">Сертификаты</a>
+                            <a href="baget.html">Багет</a>
+                            <a href="package.html">Упаковка</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="col-md-6 subheader--right">
+                <nav>
+                    <a href="cash.html">Оплата</a>
+                    <a href="delivery.html">Доставка</a>
+                    <a href="optom.html">Оптом</a>
+                    <a href="contacts.html">Контакты</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <section class="section--wide" style="margin-top: 32px !important; margin-bottom: 0 !important">
+            <h3 class="text--center text--bold">Выберите стиль для портрета</h3>
+            <p class="text--center" style="margin-bottom: 48px;">Десять стилей на любой вкус!</p>
+            <div class="row style--row__mbottom">
+                <div class="col-md-3">
+                    <div class="style--col">
+                    <a href="popart.html"><img src="img/examples/example7.jpg" class="image" height="320px">
+                        <div class="style--text">
+                            <h5>POP ART</h5>
+                            <small style="color: rgb(95, 95, 95);">Хотите порадовать друзей современным и уникальным подарком? Это яркий и незабываемый стиль!</small>
+                            <p style="margin-top: 16px">От 2490P</p>
+                            <button class="btn primary style--button">Заказать</button>
+                        </div>
+                    </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="style--col">
+                    <a href="maslom.html"><img src="img/examples/example6.jpg" class="image" height="320px">
+                        <div class="style--text">
+                                <h5>Маслом</h5>
+                                <small style="color: rgb(95, 95, 95);">Настоящая классика живописи! Презентабельный и изысканный подарок на любой праздник!</small>
+                                <p style="margin-top: 16px">От 2290P</p>
+                                <button class="btn primary style--button">Заказать</button>
+                        </div>
+                    </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="style--col">
+                    <a href="imagine.html"><img src="img/examples/example5.jpg" class="image" height="320px">
+                    <div class="style--text">
+                            <h5>Imagine</h5>
+                            <small style="color: rgb(95, 95, 95);">Нежный и тёплый портрет в нашем фирменном стиле. Лучший подарок для дорогих и близких Вам людей!</small>
+                            <p style="margin-top: 16px">От 2290P</p>
+                            <button class="btn primary style--button">Заказать</button>
+                    </div>
+                    </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="style--col">
+                    <a href="dream.html"><img src="img/examples/example1.jpg" class="image" height="320px">
+                    <div class="style--text">
+                            <h5>Dream Art</h5>
+                            <small style="color: rgb(95, 95, 95);">Стильный и яркий портрет в стиле Dream Art удивит и подарит яркие эмоции!</small>
+                            <p style="margin-top: 16px">От 2290P</p>
+                            <button class="btn primary style--button">Заказать</button>
+                    </div>
+                        
+                </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row style--row__mbottom">
+                <div class="col-md-3">
+                    <div class="style--col">
+                    <a href="obraz.html"><img src="img/examples/example.jpg" class="image" height="320px">
+                    <div class="style--text">
+                            <h5>В образе</h5>
+                            <small style="color: rgb(95, 95, 95);">Подарите близкому уникальную возможность - примерить на себе оригинальный образ!</small>
+                            <p style="margin-top: 16px">От 2290P</p>
+                            <button class="btn primary style--button">Заказать</button>
+                    </div>
+                </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="style--col">
+                    <a href="aqua.html"><img src="img/examples/example2.jpg" class="image" height="320px">
+                    <div class="style--text">
+                            <h5>Акварель</h5>
+                            <small style="color: rgb(95, 95, 95);">Нежный и красочный портрет, выполненный в классической технике, сохранит Ваш образ на долгие годы!</small>
+                            <p style="margin-top: 16px">От 2290P</p>
+                            <button class="btn primary style--button">Заказать</button>
+                    </div>
+                </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="style--col">
+                    <a href="mult.html"><img src="img/examples/example3.jpg" class="image" height="320px">
+                    <div class="style--text">
+                            <h5>Мульт-герой</h5>
+                            <small style="color: rgb(95, 95, 95);">Настоящая классика живописи! Презентабельный и изысканный подарок на любой праздник!</small>
+                            <p style="margin-top: 16px">От 3490P</p>
+                            <button class="btn primary style--button">Заказать</button>
+                    </div>
+                </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="style--col">
+                    <a href="izslov.html"><img src="img/examples/example8.jpg" class="image" height="320px">
+                    <div class="style--text">
+                            <h5>Из слов</h5>
+                            <small style="color: rgb(95, 95, 95);">Этим портретом можно сказать многое... Фотография и несколько приятных слов — прекрасный образ!</small>
+                            <p style="margin-top: 16px">От 1780P</p>
+                            <button class="btn primary style--button">Заказать</button>
+                    </div>
+                </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-bottom: 64px;">
+                    <div class="col-md-3">
+                        <div class="style--col">
+                        <a href="kolaj.html"><img src="img/examples/example9s.jpg" class="image" height="320px">
+                        <div class="style--text">
+                                <h5>Коллаж</h5>
+                                <small style="color: rgb(95, 95, 95);">Сохраните самые дорогие воспоминания в одну картину!</small>
+                                <p style="margin-top: 16px">От 1290P</p>
+                                <button class="btn primary style--button">Заказать</button>
+                        </div>
+                    </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="style--col">
+                        <a href="loveis.html"><img src="img/examples/example4.jpg" class="image" height="320px">
+                        <div class="style--text">
+                                <h5>Love is...</h5>
+                                <small style="color: rgb(95, 95, 95);">Романтичный и недорогой подарок в стиле комиксов из всемирно известных конфеток.</small>
+                                <p style="margin-top: 16px">От 1090P</p>
+                                <button class="btn primary style--button">Заказать</button>
+                        </div>
+                    </a>
+                        </div>
+                    </div>
+            </div>
+    </section>
+<footer>
+    <section class="section--wide">
+        <div class="row">
+            <div class="col-md-3">
+                <a class="text--bold" href="#">Картины</a>
+                <a href="index.html">Портреты по фото</a>
+                <a href="foto.html">Печать фото на холсте</a>
+                <a href="reproductions.html">Картины</a>
+                <a href="panno.html">Модульное панно</p>
+            </div>
+            <div class="col-md-3">
+                <a class="text--bold" href="#">Доп. услуги</a>
+                <a href="restoration.html">Реставрация старых фото</a>
+                <a href="retush.html">Ретушь</a>
+                <a href="sertifikat.html">Сертификаты</a>
+                <a href="gift.html">Идеи подарков</a>
+                <a href="baget.html">Багет</a>
+                <a href="package.html">Упаковка</a>
+            </div>
+            <div class="col-md-3">
+                <a class="text--bold">Остальное</a>
+                 
+                <a href="cash.html">Оплата</a>
+                <a href="delivery.html">Доставка</a>
+                <a href="optom.html">Оптом</a>
+                <a href="contacts.html">Контакты</a>
+                <a href="oferta.html">Публичная оферта</a>
+                <a href="props.html">Реквизиты</a>
+            </div>
+            <div class="col-md-3 footer--social">
+                <a href="https://vk.com/imagine71" style="display: inline;"><img src="img/svg/vksquare.svg" alt="Логотип ВК" width="48px"></a>
+                <a href="https://www.instagram.com/imagine.1971/" style="display: inline;"><img src="img/svg/instagramsquare.svg" alt="Логотип ВК" width="48px"></a>
+            </div>
+        </div>
+    </section>
+</footer>
+
+<script>
+function openTab(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+document.getElementById("defaultOpen").click();
+</script>
+<script src="js/script.js"></script>
+<script>
+        var modal = document.querySelector('.modal');
+   
+        function openModal(imgSrc, name, size, price) {
+          var html = '<img src="' + imgSrc + '"/>';
+   
+          modal.innerHTML = html;
+          modal.style.display = 'inline-block';
+        }
+   
+        function closeModal() {
+          modal.style.display = 'none';
+        }
+</script>
+<script>
+        $( "#callmebaby" ).click(function() {
+        $( "#modalCall" ).show();
+        });
+        $( "#closeCall" ).click(function() {
+        $( "#modalCall" ).hide();
+        });
+        $( "#callmebabyDesk" ).click(function() {
+        $( "#modalCall" ).show();
+        });
+</script>
+<script>
+    mybutton = document.getElementById("myBtn");
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+    }
+    function topFunction() {
+    document.body.scrollTop = 0; 
+    document.documentElement.scrollTop = 0; 
+    } 
+</script>
+<script>
+        (function(w,d,u){
+                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+        })(window,document,'https://cdn.bitrix24.ru/b7533283/crm/site_button/loader_5_y1jzm9.js');
+</script>
+<script type="text/javascript">
+    $(window).on('load', function() {
     var apiCity = ymaps.geolocation.city;
-        var i, ii, delivery;
-        var flag = true;
-        var shopAdress = {
-                "Великий Новгород" : "ТД Русь, 1 этаж",
-                "Санкт-Петербург" : "ТРК Лиговъ, 2 этаж",
-            }
-        var deliveryAdress = {
-            'Абакан' : 'Самовывоз: ул. Чертыгашева, 126, 13 (Бесплатно)',
+    var shopAddress = { "Великий Новгород" : "ТД Русь, 1 этаж",
+            "Санкт-Петербург" : "ТРК Лиговъ, 2 этаж", };
+    var deliveryAddress = {
+'Абакан' : 'Самовывоз: ул. Чертыгашева, 126, 13 (Бесплатно)',
 'Абинск' : 'Самовывоз: пр-т Комсомольский, 110“А”/3 (Бесплатно)',
 'Адлер' : 'Самовывоз: ул. Просвещения, 118б (Бесплатно)',
 'Азов' : 'Самовывоз: ул. Измайлова, 55 (Бесплатно)',
@@ -615,377 +947,18 @@
 'Янино-1, Всеволожский р-он' : 'Самовывоз: ул. Новая, 11А, 18-Н (Бесплатно)',
 'Ярославль' : 'Самовывоз: Ленинградский пр-т, 47 (Бесплатно)',
 'Ярцево' : 'Самовывоз: ул. Советская, 20 (Бесплатно)',
-        }        
-       
-        if (apiCity == null) { 
-    apiCity = 'Бесплатная доставка' 
-    delivery = 'по городам России (подробности по телефону)' 
-    } else {
-    for (i in shopAdress) {
-      if (apiCity.indexOf(i) >= 0) {
-      delivery = shopAdress[i]
-      flag = false
-      break
-      }
+    }
+    var delivery = shopAddress[apiCity] || deliveryAddress[apiCity] || null;
+
+    if (!delivery) {
+    apiCity = 'Бесплатная доставка';
+    delivery = 'по городам России (подробности по телефону)';
     }
 
-    if (flag == true) {
-      for (ii in deliveryAdress) {
-        if (apiCity.indexOf(i) >= 0) {
-        delivery = deliveryAdress[ii]
-        flag = false
-        break
-        }
-      }
-    }
-   
-    if (flag == true) {
-        apiCity = 'Бесплатная доставка'
-        delivery = 'по городам России (подробности по телефону)'
-    }
-    }
- 
-        $('#town').html(apiCity);
-        $('#delivery').html(delivery);
-        $('#town--mob').html(apiCity);
-        $('#delivery--mob').html(delivery);
-        }); 
-    </script>
-
-    <link rel="stylesheet" href="components.css">
-    <link rel="stylesheet" href="repro.css">
-    <link rel="stylesheet" href="review.css">
-    <link rel="stylesheet" href="delivery.css">
-    <link rel="stylesheet" href="youtube.css">
-    <link rel="stylesheet" href="bootstrap-grid.css">
-    <link rel="stylesheet" href="mainpage.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="swiper.css">
-    <title>Imagine — Портреты</title>
-</head>
- <body> 
-    <div class="mobile--geo">
-        <div id="town--mob">Загрузка...</div>
-        <div id="delivery--mob">Загрузка...</div>
-    </div>
-    <div class="mobile--header">
-            <div class="row align-items-center" style="padding: 0 16px;">
-                <div class="col"><a href="#" class="mobile--menu__icon" onclick="openNav()"><img src="img/svg/menu.svg" alt="Меню"></a></div>
-                <div class="col"><a href="index.html"><img src="img/logotype.png" alt="Логотип" class="image"></a></div>
-                <div class="col" style="text-align: right;"><a href="tel:+79082930097"><img src="img/svg/phone.svg" alt="Позвонить" style="width: 32px"></a></div>
-            </div>
-        </div>
-        <div class="mobile--nav">
-            <nav class="row justify-content-between" style="margin-top: 0">
-                <a href="styles.html" class="active--navbar__mobile">Портреты</a>
-                <a href="reproductions.html">Картины</a>
-                <a href="panno.html">Панно</a>
-                <a href="foto.html">Печать</a>
-            </nav>
-        </div>
-        <div id="myNav" class="mobile--overlay">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <div class="mobile--overlay-content">
-                    <div class="mobile--overlay__main" style="margin-bottom: 32px;">
-                    <p>Основное</p>
-                        <a href="index.html">Главная</a>
-                    <a href="styles.html">Портреты</a>
-                        <a href="reproductions.html">Картины</a>
-                        <a href="panno.html">Панно</a>
-                        <a href="foto.html">Фото на холсте</a>
-                    </div>
-                    <div class="mobile--overylay__add">
-                        <p>Доп. услуги</p>
-                        <a href="restoration.html">Реставрация старых фото</a>
-                        <a href="retush.html">Ретушь</a>
-                        <a href="sertifikat.html">Сертификаты</a>
-                        <a href="baget.html">Багет</a>
-                        <a href="package.html">Упаковка</a>
-                    </div>
-                    <div class="mobile--overylay__add">
-                        <p>Остальное</p>
-                        <a href="cash.html">Оплата</a>
-                        <a href="delivery.html" class="subheader--active">Доставка</a>
-                        <a href="optom.html">Оптом</a>
-                        <a href="contacts.html">Контакты</a>
-                    </div>
-                    <div class="col-md-auto" ><a href="https://bitrix24public.com/b24-vrm86j.bitrix24.ru/form/6_ne_nashli_chto_iskali/zk0a9o/"><button class="btn line" id="callmebaby" style="width: auto; margin-bottom: 32px">Заказать звонок</button></a></div>
-                </div>
-        </div>
-
-    <header class="row align-items-center">
-        <div class="col-md-2"><a href="index.html"><img src="img/logotype.png" class="image" alt="Логотип"></a></div>
-        <div class="col" style="flex-grow: 0;">
-            <img src="img/svg/geo.svg" alt="Гео">  
-        </div>
-        <div class="col" style="padding-left: 0px;">
-            <div id="town"></div>
-            <div id="delivery"></div>
-        </div>
-        <div class="col" style="text-align: right;"><a  href="tel:+79082930097">+7 908 293-00-97</a></div>
-        <div class="col-md-auto"  >  <a href="https://bitrix24public.com/b24-vrm86j.bitrix24.ru/form/6_ne_nashli_chto_iskali/zk0a9o/"><button class="btn line" id="callmebaby">Заказать звонок</button></a></div>
-    </header>
-    <div class="subheader" role="navigation" aria-label="Main">
-        <div class="row align-items-center">
-            <div class="col-md-6 subheader--left">
-                <nav>
-                    <a href="index.html">Главная</a>
-                    <a href="styles.html" class="subheader--active">Портреты</a>
-                    <a href="reproductions.html" >Картины</a>
-                    <a href="panno.html">Панно</a>
-                    <a href="foto.html">Фото на холсте</a>
-                    <div class="dropdown">
-                        <a href="#" class="dropdown--button">Доп. услуги <i class="fa fa-caret-down"></i></a>
-                        <div class="dropdown-content">
-                            <a href="restoration.html">Реставрация старых фото</a>
-                            <a href="retush.html">Ретушь</a>
-                            <a href="sertifikat.html">Сертификаты</a>
-                            <a href="baget.html">Багет</a>
-                            <a href="package.html">Упаковка</a>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-            <div class="col-md-6 subheader--right">
-                <nav>
-                    <a href="cash.html">Оплата</a>
-                    <a href="delivery.html">Доставка</a>
-                    <a href="optom.html">Оптом</a>
-                    <a href="contacts.html">Контакты</a>
-                </nav>
-            </div>
-        </div>
-    </div>
-    <section class="section--wide" style="margin-top: 32px !important; margin-bottom: 0 !important">
-            <h3 class="text--center text--bold">Выберите стиль для портрета</h3>
-            <p class="text--center" style="margin-bottom: 48px;">Десять стилей на любой вкус!</p>
-            <div class="row style--row__mbottom">
-                <div class="col-md-3">
-                    <div class="style--col">
-                    <a href="popart.html"><img src="img/examples/example7.jpg" class="image" height="320px">
-                        <div class="style--text">
-                            <h5>POP ART</h5>
-                            <small style="color: rgb(95, 95, 95);">Хотите порадовать друзей современным и уникальным подарком? Это яркий и незабываемый стиль!</small>
-                            <p style="margin-top: 16px">От 2490P</p>
-                            <button class="btn primary style--button">Заказать</button>
-                        </div>
-                    </a>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="style--col">
-                    <a href="maslom.html"><img src="img/examples/example6.jpg" class="image" height="320px">
-                        <div class="style--text">
-                                <h5>Маслом</h5>
-                                <small style="color: rgb(95, 95, 95);">Настоящая классика живописи! Презентабельный и изысканный подарок на любой праздник!</small>
-                                <p style="margin-top: 16px">От 2290P</p>
-                                <button class="btn primary style--button">Заказать</button>
-                        </div>
-                    </a>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="style--col">
-                    <a href="imagine.html"><img src="img/examples/example5.jpg" class="image" height="320px">
-                    <div class="style--text">
-                            <h5>Imagine</h5>
-                            <small style="color: rgb(95, 95, 95);">Нежный и тёплый портрет в нашем фирменном стиле. Лучший подарок для дорогих и близких Вам людей!</small>
-                            <p style="margin-top: 16px">От 2290P</p>
-                            <button class="btn primary style--button">Заказать</button>
-                    </div>
-                    </a>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="style--col">
-                    <a href="dream.html"><img src="img/examples/example1.jpg" class="image" height="320px">
-                    <div class="style--text">
-                            <h5>Dream Art</h5>
-                            <small style="color: rgb(95, 95, 95);">Стильный и яркий портрет в стиле Dream Art удивит и подарит яркие эмоции!</small>
-                            <p style="margin-top: 16px">От 2290P</p>
-                            <button class="btn primary style--button">Заказать</button>
-                    </div>
-                        
-                </a>
-                    </div>
-                </div>
-            </div>
-            <div class="row style--row__mbottom">
-                <div class="col-md-3">
-                    <div class="style--col">
-                    <a href="obraz.html"><img src="img/examples/example.jpg" class="image" height="320px">
-                    <div class="style--text">
-                            <h5>В образе</h5>
-                            <small style="color: rgb(95, 95, 95);">Подарите близкому уникальную возможность - примерить на себе оригинальный образ!</small>
-                            <p style="margin-top: 16px">От 2290P</p>
-                            <button class="btn primary style--button">Заказать</button>
-                    </div>
-                </a>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="style--col">
-                    <a href="aqua.html"><img src="img/examples/example2.jpg" class="image" height="320px">
-                    <div class="style--text">
-                            <h5>Акварель</h5>
-                            <small style="color: rgb(95, 95, 95);">Нежный и красочный портрет, выполненный в классической технике, сохранит Ваш образ на долгие годы!</small>
-                            <p style="margin-top: 16px">От 2290P</p>
-                            <button class="btn primary style--button">Заказать</button>
-                    </div>
-                </a>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="style--col">
-                    <a href="mult.html"><img src="img/examples/example3.jpg" class="image" height="320px">
-                    <div class="style--text">
-                            <h5>Мульт-герой</h5>
-                            <small style="color: rgb(95, 95, 95);">Настоящая классика живописи! Презентабельный и изысканный подарок на любой праздник!</small>
-                            <p style="margin-top: 16px">От 3490P</p>
-                            <button class="btn primary style--button">Заказать</button>
-                    </div>
-                </a>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="style--col">
-                    <a href="izslov.html"><img src="img/examples/example8.jpg" class="image" height="320px">
-                    <div class="style--text">
-                            <h5>Из слов</h5>
-                            <small style="color: rgb(95, 95, 95);">Этим портретом можно сказать многое... Фотография и несколько приятных слов — прекрасный образ!</small>
-                            <p style="margin-top: 16px">От 1780P</p>
-                            <button class="btn primary style--button">Заказать</button>
-                    </div>
-                </a>
-                    </div>
-                </div>
-            </div>
-            <div class="row" style="margin-bottom: 64px;">
-                    <div class="col-md-3">
-                        <div class="style--col">
-                        <a href="kolaj.html"><img src="img/examples/example9s.jpg" class="image" height="320px">
-                        <div class="style--text">
-                                <h5>Коллаж</h5>
-                                <small style="color: rgb(95, 95, 95);">Сохраните самые дорогие воспоминания в одну картину!</small>
-                                <p style="margin-top: 16px">От 1290P</p>
-                                <button class="btn primary style--button">Заказать</button>
-                        </div>
-                    </a>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="style--col">
-                        <a href="loveis.html"><img src="img/examples/example4.jpg" class="image" height="320px">
-                        <div class="style--text">
-                                <h5>Love is...</h5>
-                                <small style="color: rgb(95, 95, 95);">Романтичный и недорогой подарок в стиле комиксов из всемирно известных конфеток.</small>
-                                <p style="margin-top: 16px">От 1090P</p>
-                                <button class="btn primary style--button">Заказать</button>
-                        </div>
-                    </a>
-                        </div>
-                    </div>
-            </div>
-    </section>
-<footer>
-    <section class="section--wide">
-        <div class="row">
-            <div class="col-md-3">
-                <a class="text--bold" href="#">Картины</a>
-                <a href="index.html">Портреты по фото</a>
-                <a href="foto.html">Печать фото на холсте</a>
-                <a href="reproductions.html">Картины</a>
-                <a href="panno.html">Модульное панно</p>
-            </div>
-            <div class="col-md-3">
-                <a class="text--bold" href="#">Доп. услуги</a>
-                <a href="restoration.html">Реставрация старых фото</a>
-                <a href="retush.html">Ретушь</a>
-                <a href="sertifikat.html">Сертификаты</a>
-                <a href="gift.html">Идеи подарков</a>
-                <a href="baget.html">Багет</a>
-                <a href="package.html">Упаковка</a>
-            </div>
-            <div class="col-md-3">
-                <a class="text--bold">Остальное</a>
-                 
-                <a href="cash.html">Оплата</a>
-                <a href="delivery.html">Доставка</a>
-                <a href="optom.html">Оптом</a>
-                <a href="contacts.html">Контакты</a>
-                <a href="oferta.html">Публичная оферта</a>
-                <a href="props.html">Реквизиты</a>
-            </div>
-            <div class="col-md-3 footer--social">
-                <a href="https://vk.com/imagine71" style="display: inline;"><img src="img/svg/vksquare.svg" alt="Логотип ВК" width="48px"></a>
-                <a href="https://www.instagram.com/imagine.1971/" style="display: inline;"><img src="img/svg/instagramsquare.svg" alt="Логотип ВК" width="48px"></a>
-            </div>
-        </div>
-    </section>
-</footer>
-
-<script>
-function openTab(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-document.getElementById("defaultOpen").click();
-</script>
-<script src="js/script.js"></script>
-<script>
-        var modal = document.querySelector('.modal');
-   
-        function openModal(imgSrc, name, size, price) {
-          var html = '<img src="' + imgSrc + '"/>';
-   
-          modal.innerHTML = html;
-          modal.style.display = 'inline-block';
-        }
-   
-        function closeModal() {
-          modal.style.display = 'none';
-        }
-</script>
-<script>
-        $( "#callmebaby" ).click(function() {
-        $( "#modalCall" ).show();
-        });
-        $( "#closeCall" ).click(function() {
-        $( "#modalCall" ).hide();
-        });
-        $( "#callmebabyDesk" ).click(function() {
-        $( "#modalCall" ).show();
-        });
-</script>
-<script>
-    mybutton = document.getElementById("myBtn");
-    window.onscroll = function() {scrollFunction()};
-    function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        mybutton.style.display = "block";
-    } else {
-        mybutton.style.display = "none";
-    }
-    }
-    function topFunction() {
-    document.body.scrollTop = 0; 
-    document.documentElement.scrollTop = 0; 
-    } 
-</script>
-<script>
-        (function(w,d,u){
-                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
-                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
-        })(window,document,'https://cdn.bitrix24.ru/b7533283/crm/site_button/loader_5_y1jzm9.js');
-</script>
-</body>
+    $('#town').html(apiCity);
+    $('#delivery').html(delivery);
+    $('#town--mob').html(apiCity);
+    $('#delivery--mob').html(delivery);
+    });
+</script> </body>
 </html>

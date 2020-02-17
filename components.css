@@ -330,10 +330,7 @@ section img {
     display: none;
 }
 
-/* header delivery */
-#delivery {
-    background: #ffd14a; display: block; width: -webkit-max-content; width: -moz-max-content; width: max-content; 
-}   
+/* header delivery */ 
 .col-md-3__leftZero {
     padding-left: 0 !important;
 }
@@ -372,6 +369,70 @@ section img {
     background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
     color: white;
     cursor: pointer;
+  }
+
+  .geoModalBox {
+      display: flex;
+      padding: 2px 4px;
+      color: #949494;
+  }
+
+  .geoModalBox:hover {
+    cursor: pointer;
+    color: #131313;
+    transition: 0.4s;
+  }
+
+  #geoModal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding: 40px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    color: white;
+  }
+
+  #geoModalClose i {
+      cursor: pointer;
+      background: #cccccc;
+      color: #949494
+  }
+
+  #geoModalClose i:hover {
+      background: #FFD164;
+      color: #131313;
+  }
+
+  #geoModalMobile {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding: 40px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    color: white;
+    cursor: pointer; 
+  }
+
+  .geoModalContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #eee;
+    color: #131313;
+    border-radius: 0.5rem;
   }
 
   .modal img {
@@ -555,29 +616,6 @@ section img {
     .mobile--nav .active--navbar__mobile {
         color: #131313;
     }
-    /* .mobile--menu {
-        display: block;
-        background: white;
-        -webkit-box-shadow: 0px 10px 32px 16px rgba(0,0,0,0.08);
-        -moz-box-shadow: 0px 10px 32px 16px rgba(0,0,0,0.08);
-        box-shadow: 0px 10px 32px 16px rgba(0,0,0,0.08);
-        height: 64px;
-        width: 64px;
-        border-radius: 50%;
-        text-align: center;
-        position: fixed;
-        right: 24px;
-        bottom: 24px;
-        z-index: 20;
-        cursor: pointer;
-    }
-
-    .mobile--menu__icon::before {
-        content: url(img/svg/menu.svg);
-        position: absolute;
-        top: 16px;
-        right: 16px;
-    } */
 
     .mobile--geo {
         display: block;

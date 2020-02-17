@@ -8,7 +8,7 @@
 <script type="text/javascript" >
 (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(56317726, "init",{clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true});
 </script>
- <noscript><div><img src="https://mc.yandex.ru/watch/56317726" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<noscript><div><img src="https://mc.yandex.ru/watch/56317726" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- mail -->
 <meta name='wmail-verification' content='87fdcf235e85513a5d94aec593dddec2' />
 <!-- yandex -->
@@ -48,26 +48,22 @@
     <link rel="stylesheet" href="delivery.css">
     <link rel="stylesheet" href="youtube.css">
     <link rel="stylesheet" href="slider.css">
+    <link rel="stylesheet" href="geomodal.css">
     <link rel="stylesheet" href="bootstrap-grid.css">
     <link rel="stylesheet" href="swiper.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Imagine — Студия Картин</title>
 </head>
-<body> 
-            
-    <!-- <button onclick="topFunction()" id="myBtn" title="Наверх"><div id="mybtn--up"><img src="img/svg/up.svg" width="24px"></div></button> -->
-    
+<body>     
         <!-- гео мобайл -->
-        <div class="mobile--geo">
-            <div id="town--mob">Загрузка...</div>
-            <div id="delivery--mob">Загрузка...</div>
-        </div>
-            <!-- <div class="mobile--geo">
-            <span id="mobile--town"></span>
-                    <div id="SpbDelivery--mobile">ТРК ЛиговЪ, м. Обводный Канал, 2 этаж</div>
-                    <div id="VNDelivery--mobile">ТД Русь, 1 этаж</div>
-                    <div id="OtherDelivery--mobile">Пункт самовывоза</div>
-            </div> -->
+        <a href="#" id="geoModalOpenMobile">
+            <div class="mobile--geo">
+                <div id="town--mob">Загрузка...</div>
+                <div id="delivery--mob">Загрузка...</div>
+            </div>
+        </a>
         <!-- гео мобайл -->
 
             <div class="mobile--header">
@@ -120,21 +116,17 @@
             <div class="col" style="flex-grow: 0;">
                 <img src="img/svg/geo.svg" alt="Гео">  
             </div>
-            <a href="delivery.html">
-
-
             <!-- гео десктоп -->
-            <div class="col" style="padding-left: 0px;">
-                <div id="town">Загрузка...</div>
-                <div id="delivery">Загрузка...</div>
-                <!-- <span id="tow" class="townGeo"></span> 
-                <div id="SpbDelivery">ТРК ЛиговЪ, м. Обводный Канал, 2 этаж</div>
-                <div id="VNDelivery">ТД Русь, 1 этаж</div>
-                <div id="OtherDelivery">Пункт самовывоза</div> -->
-            </div>
+                <div class="geoModalBox" id="geoModalOpen">
+                    <div class="col" style="padding-left: 0px;">
+                        <div id="town">Загрузка...</div>
+                        <div id="delivery">Загрузка...</div>
+                    </div>
+                        <i class="material-icons" style="padding: 10px 0 10px 0">
+                            keyboard_arrow_down
+                        </i>
+                </div>
             <!-- гео десктоп -->
-
-            </a>
             <div class="col" style="text-align: right;"><a  href="tel:+79082930097">+7 908 293-00-97</a></div>
             <div class="col-md-auto"><a href="https://bitrix24public.com/b24-vrm86j.bitrix24.ru/form/6_ne_nashli_chto_iskali/zk0a9o/"><button class="btn line" id="callmebaby">Заказать звонок</button></a></div>
     </header>
@@ -169,7 +161,59 @@
                 </div>
             </div>
     </div>
-    <main>  
+    <main>
+        <!-- geomodal -->
+        <div id="geoModal">
+            <div class="geoModalContent">
+                <div class="geoModalWindow">
+                    <!-- Header -->
+                    <div class="geoModalWindow__header">
+                        <h4>Ваш город</h4>
+                        <div id="geoModalClose">
+                            <i class="material-icons">
+                            close
+                            </i>
+                        </div>
+                    </div>
+                        <!-- Content -->
+                        <input type="text" placeholder="Поиск города" class="btn" style="text-align:  left; width: 100%;"> 
+                    <!-- Footer -->
+                    <div class="geoModalWindow__footer">
+                        <div class="geoModalWindow__footer--wrap">
+                            <div class="geoModalWindow__footer--letter">
+                                <i class="material-icons">
+                                star
+                                </i>
+                            </div>
+                            <div class="geoModalWindow__footer--city">
+                                <p>Москва</p>
+                                <p>Санкт-Петербург</p>
+                                <p>Великий Новгород</p>
+                            </div>
+                        </div>
+                        <div class="geoModalWindow__footer--wrap">
+                            <div class="geoModalWindow__footer--letter">А</div>
+                            <div class="geoModalWindow__footer--city">
+                                <p>Архангельск</p>
+                                <p>Армавир</p>
+                                <p>Анапа</p>
+                                <p>Астрахань</p>
+                            </div>
+                        </div>
+                        <div class="geoModalWindow__footer--wrap">
+                            <div class="geoModalWindow__footer--letter">Б</div>
+                            <div class="geoModalWindow__footer--city">
+                                <p>Барнаул</p>
+                                <p>Белгород</p>
+                                <p>Балашиха</p>
+                                <p>Брянск</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- geomodal -->
     <!-- hero -->
         <div class="hero-image mainPage">
             <div class="hero-text hero-text__mainPage">
@@ -182,43 +226,43 @@
         </div>
     </main>
     <!-- примеры работ -->
-    <section class="section--wide" style="margin-top: 0px !important">
+    <section class="section--wide" style="margin-top: 32px !important">
         <div class="text--center" style="margin-bottom: 32px;">
             <h3 class="text--bold">Примеры работ</h3>
-            <p>Картинки кликабельны</p>
+            <p>Наши счастливые заказчики</p>
         </div>
         <div class="row">
                 <div class="col-md-4 modal--cursor">
                     <img src="img/ex10.jpg" onclick="openModal(this.src)" class="image image--baget" style="height: 350px;">
                     <img src="img/ex10.jpg" class="image image--baget__mobile">
-                    <p>Imagine 30x40 — 2990p</p>
+                    <p>Imagine 30x40 — <span class="price">2990 руб.</span></p>
                 </div>
                 <div class="col-md-4 modal--cursor">
                     <img src="img/ex11.jpg" onclick="openModal(this.src)" class="image image--baget" style="height: 350px;">
                     <img src="img/ex11.jpg" class="image image--baget__mobile">
-                    <p>Поп Арт 60x80 — 5150p</p>
+                    <p>Поп Арт 60x80 — <span class="price">5150 руб.</span> </p>
                 </div>
                 <div class="col-md-4 modal--cursor">
                     <img src="img/ex12.jpg" onclick="openModal(this.src)" class="image image--baget" style="height: 350px;">
                     <img src="img/ex12.jpg" class="image image--baget__mobile">
-                    <p>Поп Арт 30x40 — 3190p</p>
+                    <p>Поп Арт 30x40 — <span class="price">3190 руб.</span> </p>
                 </div>
         </div>
         <div class="row">
                 <div class="col-md-4 modal--cursor">
                     <img src="img/ex13.jpg" onclick="openModal(this.src)" class="image image--baget" style="height: 350px;">
                     <img src="img/ex13.jpg" class="image image--baget__mobile">
-                    <p>Imagine 40x60 — 3790p</p>
+                    <p>Imagine 40x60 — <span class="price">3790 руб.</span> </p>
                 </div>
                 <div class="col-md-4 modal--cursor">
                     <img src="img/ex14.jpg" onclick="openModal(this.src)" class="image image--baget" style="height: 350px;">
                     <img src="img/ex14.jpg" class="image image--baget__mobile">
-                    <p>Маслом 50x50 — 3850p</p>
+                    <p>Маслом 50x50 — <span class="price">3850 руб.</span> </p>
                 </div>
                 <div class="col-md-4 modal--cursor">
                     <img src="img/ex15.jpg" onclick="openModal(this.src)" class="image image--baget" style="height: 350px;">
                     <img src="img/ex15.jpg" class="image image--baget__mobile">
-                    <p>В образе 40x60 — 3790p</p>
+                    <p>В образе 40x60 — <span class="price">3790 руб.</span> </p>
                 </div>
         </div>
         <div class="text--center"><a href="#form"><button class="btn primary" style="margin-top: 32px; font-size: x-large; padding: 16px 40px;">Заказать картину</button></a></div>
@@ -235,7 +279,7 @@
                             <div class="style--text">
                                 <h5>POP ART</h5>
                                 <small style="color: rgb(95, 95, 95);">Хотите порадовать друзей современным и уникальным подарком? Это яркий и незабываемый стиль!</small>
-                                <p style="margin-top: 16px">От 2490P</p>
+                                <p style="margin-top: 16px" class="price">От 2490 руб.</p>
                                 <button class="btn primary style--button">Заказать</button>
                             </div>
                         </a>
@@ -247,7 +291,7 @@
                             <div class="style--text">
                                     <h5>Маслом</h5>
                                     <small style="color: rgb(95, 95, 95);">Настоящая классика живописи! Презентабельный и изысканный подарок на любой праздник!</small>
-                                    <p style="margin-top: 16px">От 2290P</p>
+                                    <p style="margin-top: 16px" class="price">От 2290 руб.</p>
                                     <button class="btn primary style--button">Заказать</button>
                             </div>
                         </a>
@@ -259,7 +303,7 @@
                         <div class="style--text">
                                 <h5>Imagine</h5>
                                 <small style="color: rgb(95, 95, 95);">Нежный и тёплый портрет в нашем фирменном стиле. Лучший подарок для дорогих и близких Вам людей!</small>
-                                <p style="margin-top: 16px">От 2290P</p>
+                                <p style="margin-top: 16px" class="price">От 2290 руб.</p>
                                 <button class="btn primary style--button">Заказать</button>
                         </div>
                         </a>
@@ -271,7 +315,7 @@
                         <div class="style--text">
                                 <h5>Dream Art</h5>
                                 <small style="color: rgb(95, 95, 95);">Стильный и яркий портрет в стиле Dream Art удивит и подарит яркие эмоции!</small>
-                                <p style="margin-top: 16px">От 2290P</p>
+                                <p style="margin-top: 16px" class="price">От 2290 руб.</p>
                                 <button class="btn primary style--button">Заказать</button>
                         </div>
                             
@@ -286,7 +330,7 @@
                         <div class="style--text">
                                 <h5>В образе</h5>
                                 <small style="color: rgb(95, 95, 95);">Подарите близкому уникальную возможность - примерить на себе оригинальный образ!</small>
-                                <p style="margin-top: 16px">От 2290P</p>
+                                <p style="margin-top: 16px" class="price">От 2290 руб.</p>
                                 <button class="btn primary style--button">Заказать</button>
                         </div>
                     </a>
@@ -298,7 +342,7 @@
                         <div class="style--text">
                                 <h5>Акварель</h5>
                                 <small style="color: rgb(95, 95, 95);">Нежный и красочный портрет, выполненный в классической технике, сохранит Ваш образ на долгие годы!</small>
-                                <p style="margin-top: 16px">От 2290P</p>
+                                <p style="margin-top: 16px" class="price">От 2290 руб.</p>
                                 <button class="btn primary style--button">Заказать</button>
                         </div>
                     </a>
@@ -310,7 +354,7 @@
                         <div class="style--text">
                                 <h5>Мульт-герой</h5>
                                 <small style="color: rgb(95, 95, 95);">Настоящая классика живописи! Презентабельный и изысканный подарок на любой праздник!</small>
-                                <p style="margin-top: 16px">От 3490P</p>
+                                <p style="margin-top: 16px" class="price">От 3490 руб.</p>
                                 <button class="btn primary style--button">Заказать</button>
                         </div>
                     </a>
@@ -322,7 +366,7 @@
                         <div class="style--text">
                                 <h5>Из слов</h5>
                                 <small style="color: rgb(95, 95, 95);">Этим портретом можно сказать многое... Фотография и несколько приятных слов — прекрасный образ!</small>
-                                <p style="margin-top: 16px">От 1780P</p>
+                                <p style="margin-top: 16px" class="price">От 1780 руб.</p>
                                 <button class="btn primary style--button">Заказать</button>
                         </div>
                     </a>
@@ -336,7 +380,7 @@
                             <div class="style--text">
                                     <h5>Коллаж</h5>
                                     <small style="color: rgb(95, 95, 95);">Сохраните самые дорогие воспоминания в одну картину!</small>
-                                    <p style="margin-top: 16px">От 1290P</p>
+                                    <p style="margin-top: 16px" class="price">От 1290 руб.</p>
                                     <button class="btn primary style--button">Заказать</button>
                             </div>
                         </a>
@@ -348,7 +392,7 @@
                                 <div class="style--text">
                                         <h5>Love is...</h5>
                                         <small style="color: rgb(95, 95, 95);">Романтичный и недорогой подарок в стиле комиксов из всемирно известных конфеток.</small>
-                                        <p style="margin-top: 16px">От 1090P</p>
+                                        <p style="margin-top: 16px" class="price">От 1090 руб.</p>
                                         <button class="btn primary style--button">Заказать</button>
                                 </div>
                             </a>
@@ -360,7 +404,7 @@
                                     <div class="style--text">
                                             <h5>Репродукции</h5>
                                             <small style="color: rgb(95, 95, 95);">Картины великих классиков и не только. Выберите любую картину, и мы напечатаем её на холсте!</small>
-                                            <p style="margin-top: 16px">От 790P</p>
+                                            <p style="margin-top: 16px" class="price">От 790 руб.</p>
                                             <button class="btn primary style--button">Заказать</button>
                                     </div>
                                 </a>
@@ -372,7 +416,7 @@
                                         <div class="style--text">
                                                 <h5>Фото на холсте</h5>
                                                 <small style="color: rgb(95, 95, 95);">Любое фото на холсте. Присылайте нам любую фотографию, и мы напечатаем её на холсте.</small>
-                                                <p style="margin-top: 16px">От 790P</p>
+                                                <p style="margin-top: 16px" class="price">От 790 руб.</p>
                                                 <button class="btn primary style--button">Заказать</button>
                                         </div>
                                     </a>
@@ -396,7 +440,7 @@
                 </div>
                 <div class="text--center ka4-text">
                     <h3 class="examples--heading text--bold">Качество работ</h3>
-                    <p>Мы не работаем с дешёвыми холстами! Мы используем только лучшие материалы и оборудование, чтобы достичь такого качества печати на холсте. Убедитесь сами или читайте отзывы ниже.</p>
+                    <p>Мы не работаем с дешёвыми холстами! Мы используем только лучшие материалы и оборудование, чтобы достичь такого качества печати на холсте. <br>Убедитесь сами или читайте отзывы ниже.</p>
                 </div>
                 <section class="text--center ka4-margin">
                     <div class="row">
@@ -407,19 +451,6 @@
                     </div>
                     <a href="#form"><button class="btn white" style="margin-top: 32px; padding: 16px 32px;">Заказать картину</button></a>
                 </section>
-            <!-- <section class="section--wide examples">
-                <div class="row align-items-center">
-                    <div class="col-md-6"><img src="img/main/main.jpg" alt="Картинка пример" class="image"></div>
-                    <dil class="col"></dil> -->
-                    <!-- <div class="col-md-7">
-                        <img src="img/example.jpg" alt="Примеры" class="image examples--image"></div> -->
-                    <!-- <div class="col-md-5">
-                        <h3 class="examples--heading text--bold">Качество работ</h3>
-                        <h5>Мы не работаем с дешёвыми холстами! Мы используем только лучшие материалы и оборудование, чтобы достичь такого качества печати на холсте. Убедитесь сами или читайте отзывы ниже.</h5>
-                        <a href="#top"><button class="btn white" style="padding: 16px 40px;">Заказать картину</button></a>
-                    </div>
-                </div>
-            </section> -->
     </section>
     <!-- youtube -->
     <section class="youtube--video text--center">
@@ -545,52 +576,6 @@
             </div>
         </div>
     </section>
-    <!-- <section class="section--bg" style="padding-top: 16px; padding-bottom: 16px;">
-        <section class="section--wide" style="padding: 0">
-            <div class="row align-items-center">
-                <div class="col-md-7">
-                    <img src="img/repro/repro4.jpg" class="image">
-                </div>
-                <div class="col-md-5">
-                    <h3 class="examples--heading" style="margin-top: 24px; margin-bottom: 16px;">Качество работ</h3>
-                    <h5>Мы не работаем с дешёвыми холстами! Мы используем только лучшие материалы и оборудование, чтобы достичь такого качества печати на холсте. Убедитесь сами или читайте отзывы ниже.</h5>
-                </div>
-            </div>
-        </section>
-    </section> -->
-    <!-- gift -->
-    <!-- <section class="section--bg gift--bg">
-            <section class="section--wide">
-                <div class="row">
-                    <h3>Таким должен быть идеальный подарок</h3>
-                    <div class="col-md-6">
-                        <div class="gift--item">
-                            <h5><span class="text--bold">Оригинальный</span><br>
-                            Будьте уверены, нарисовать дважды одинаковый портрет невозможно</h5>
-                        </div>
-                        <div class="gift--item">
-                            <h5><span class="text--bold">Впечатляющий</span><br>
-                            Количество правок не ограничено, поэтому отличный результат гарантирован</h5>
-                        </div>
-                        <div class="gift--item">
-                            <h5><span class="text--bold">Недорогой</span><br>
-                            Цена за портрет на холсте - от 2290р.</h5>
-                        </div>
-                        <div class="gift--item">
-                            <h5><span class="text--bold">Бесценный</span><br>
-                            Момент, запечатлённый в картине, останется с вами навсегда</h5>
-                        </div>
-                        <div class="gift--item">
-                            <h5><span class="text--bold">Полезный</span><br>
-                            Картина станет украшением интерьера и вдохнёт жизнь в пустые стены.</h5>
-                        </div>
-                    </div>
-                    <div class="col-md-6"></div>
-                </div>
-                <div class="gift--girl"></div>
-                <div class="gift--yellowBlock"></div>
-            </section>
-    </section> -->
     <!-- process -->
     <section class="section--bg" style="margin-bottom: 0;">
         <div class="section--wide process review" style="margin: auto;">
@@ -693,32 +678,7 @@
                             b24form({"id":"17","lang":"ru","sec":"jphsdd","type":"inline"});
                     </script>  
             </div>   
-            <!-- <div id="photo" class="tabcontent" style="display: block;">
-                    <form action="/action_page.php" class="form--repro">
-                        <div class="form--repro__item">
-                            <label for="file--upload" class="file--label">
-                                <img src="img/svg/photo.svg" alt="Загрузить" style="width: 32px;">
-                                Загрузить изображения    
-                            </label>
-                            <input type="file" id="file--upload" multiple="multiple" name="fileToUpload" id="fileToUpload" accept=".jpg, .jpeg, .png">
-                        </div>
-                        <div class="form--repro__item">
-                            <label for="name">Как вас зовут</label>
-                            <input type="text" id="name" name="user_name" placeholder="Вася" required>
-                        </div>
-                        <div class="form--repro__item">
-                            <label for="tel">Номер телефона</label>
-                            <input type="tel" id="tel" name="tel" placeholder="+7 900 100 20 10" required>
-                        </div>
-                        <div class="form--repro__item">
-                            <label for="email">E-mail</label>
-                            <input type="email" id="email" name="email" placeholder="imagine@mail.ru" required>
-                        </div>
-                        <input type="submit" class="btn alternative" style="box-shadow: 0 0 0;" value="Отправить заявку">
-                    </form>
-                </div>-->
     </section> 
-
 
 <div class="modal" onclick="closeModal()"></div>
 <footer>
@@ -814,7 +774,7 @@
 </script>
 <script>
         var modal = document.querySelector('.modal');
-   
+
         function openModal(imgSrc, name, size, price) {
           var html = '<img src="' + imgSrc + '"/>';
    
@@ -828,25 +788,34 @@
 </script>
 <script>
     $(document).ready(function(){
+    $("#geoModalOpen").click(function(){
+        $("#geoModal").show();
+    });
+    $("#geoModalOpenMobile").click(function(){
+        $("#geoModal").show();
+    });
+    $("#geoModalClose").click(function(){
+        $("#geoModal").hide();
+    });
+    });
+</script>
+<script>
+    $(document).ready(function(){
     $("#ytopen").click(function(){
         $("#ytvideo").show();
     });
     $("#ytexit").click(function(){
-        $("#ytvideo").show();
+        $("#ytvideo").hide();
     });
     });
 </script>
 <script type="text/javascript">
-    $(window).on('load', function(){
+    $(window).on('load', function() {
     var apiCity = ymaps.geolocation.city;
-    var i, ii, delivery;
-    var flag = true;
-    var shopAdress = {
-            "Великий Новгород" : "ТД Русь, 1 этаж",
-            "Санкт-Петербург" : "ТРК Лиговъ, 2 этаж",
-        }
-    var deliveryAdress = {
-        'Абакан' : 'Самовывоз: ул. Чертыгашева, 126, 13 (Бесплатно)',
+    var shopAddress = { "Великий Новгород" : "ТД Русь, 1 этаж",
+            "Санкт-Петербург" : "ТРК Лиговъ, 2 этаж", };
+    var deliveryAddress = {
+'Абакан' : 'Самовывоз: ул. Чертыгашева, 126, 13 (Бесплатно)',
 'Абинск' : 'Самовывоз: пр-т Комсомольский, 110“А”/3 (Бесплатно)',
 'Адлер' : 'Самовывоз: ул. Просвещения, 118б (Бесплатно)',
 'Азов' : 'Самовывоз: ул. Измайлова, 55 (Бесплатно)',
@@ -1418,41 +1387,19 @@
 'Янино-1, Всеволожский р-он' : 'Самовывоз: ул. Новая, 11А, 18-Н (Бесплатно)',
 'Ярославль' : 'Самовывоз: Ленинградский пр-т, 47 (Бесплатно)',
 'Ярцево' : 'Самовывоз: ул. Советская, 20 (Бесплатно)',
-    }        
-   
-    if (apiCity == null) { 
-    apiCity = 'Бесплатная доставка' 
-    delivery = 'по городам России (подробности по телефону)' 
-    } else {
-    for (i in shopAdress) {
-      if (apiCity.indexOf(i) >= 0) {
-      delivery = shopAdress[i]
-      flag = false
-      break
-      }
     }
+    var delivery = shopAddress[apiCity] || deliveryAddress[apiCity] || null;
 
-    if (flag == true) {
-      for (ii in deliveryAdress) {
-        if (apiCity.indexOf(i) >= 0) {
-        delivery = deliveryAdress[ii]
-        flag = false
-        break
-        }
-      }
-    }
-   
-    if (flag == true) {
-        apiCity = 'Бесплатная доставка'
-        delivery = 'по городам России (подробности по телефону)'
-    }
+    if (!delivery) {
+    apiCity = 'Бесплатная доставка';
+    delivery = 'по городам России (подробности по телефону)';
     }
 
     $('#town').html(apiCity);
     $('#delivery').html(delivery);
     $('#town--mob').html(apiCity);
     $('#delivery--mob').html(delivery);
-    }); 
+    });
 </script>
 <script>
         (function(w,d,u){
