@@ -1,2 +1,0 @@
-# akzvosd.github.io
-Imagine
