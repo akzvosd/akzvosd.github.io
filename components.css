@@ -627,13 +627,24 @@ section img {
                 box-shadow: inset 0px -4px 8px rgb(209, 209, 209);
     }
 
+    #geoModalOpenMobile:hover {
+        text-decoration: underline;
+    }
+
     .mobile--geo::before {
         content: url(img/svg/geo.svg);
         position: absolute;
-        left: 16px;
-        -webkit-transform: translateY(45%);
-            -ms-transform: translateY(45%);
-                transform: translateY(45%);
+        left: 14px;
+        -webkit-transform: translateY(47%);
+            -ms-transform: translateY(47%);
+                transform: translateY(47%);
+    }
+
+    .mobile--geo::after {
+        content: 'Изменить';
+        font-size: 12px;
+        color: #949494;
+        text-decoration: underline;
     }
 
     .mobile--overlay {
