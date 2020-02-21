@@ -13,7 +13,7 @@ section {
 }
 
 .mainPage img {
-    width: 80%;
+    width: 60%;
 }
 
 .hero-text__mainPage {
@@ -26,6 +26,15 @@ section {
 
 .hero-text__mainPage .white {
     margin-left: 16px;
+}
+
+.hero-text__list h5 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.hero-text__list p {
+    margin-top: 0;
 }
 
 .modal img {
