@@ -244,15 +244,6 @@ ul {
     font-weight: 600;
 }
 
-.dotted {
-    border-bottom: 1px dotted white;
-}
-
-.dotted:hover {
-    border-bottom: 0;
-    cursor: pointer;
-}
-
 .button--vk {
     margin-top: 32px !important;
 }
