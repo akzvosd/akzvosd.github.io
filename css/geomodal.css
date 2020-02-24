@@ -5,6 +5,8 @@
 
 .geoModalWindow input {
     outline: none;
+    margin-top: 1rem;
+    margin-bottom: 1.1rem;
 }
 
 .geoModalWindow input:hover {
@@ -24,10 +26,6 @@
     font-weight: 500;
 }
 
-.geoModalWindow input {
-    margin: 1rem 0;
-}
-
 .geoModalWindow__footer {
         overflow-y: scroll;
         max-height: 200px;
@@ -37,8 +35,13 @@
 
 .geoModalWindow__footer--wrap {
     display: flex;
-    border-bottom: 1px solid #131313;
-    padding-bottom: 1rem;
+    border-top: 1px solid #caae6c;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.geoModalWindow__footer--wrap:nth-child(1) {
+    border-top: 0;
 }
 
 .geoModalWindow__footer--letter {
