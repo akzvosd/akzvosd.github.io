@@ -3,9 +3,25 @@
     padding: 1rem;
 }
 
+.geoModalWindow input {
+    outline: none;
+}
+
+.geoModalWindow input:hover {
+    border: 2px solid #caae6c;
+}
+
+.geoModalWindow input:focus {
+    border: 2px solid #caae6c;
+}
+
 .geoModalWindow__header {
     display: flex;
         justify-content: space-between;
+}
+
+.geoModalWindow__header h4 {
+    font-weight: 500;
 }
 
 .geoModalWindow input {
@@ -27,7 +43,7 @@
 
 .geoModalWindow__footer--letter {
     width: 30px;
-    color: #a3a3a3;
+    color: #caae6c;
     font-weight: bold;
     text-align: center;
     font-size: 21px;
