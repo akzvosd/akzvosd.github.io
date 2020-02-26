@@ -332,6 +332,11 @@ header {
   margin-top: 24px;
 }
 
+header #delivery {
+  background: #ffd164;
+  color: #131313;
+}
+
 .logotype {
   width: 80% !important;
 }

@@ -16,8 +16,12 @@ section {
   width: 60%;
 }
 
+.hero-image {
+  height: 720px !important;
+}
+
 .hero-text__mainPage {
-  top: 17%;
+  top: 19%;
 }
 
 .hero-text__mainPage h5 {
@@ -35,6 +39,8 @@ section {
 
 .hero-text__list p {
   margin-top: 0;
+  border-bottom: 1px solid white;
+  width: max-content;
 }
 
 .modal img {
