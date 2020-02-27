@@ -22,7 +22,8 @@ $(window).on('load', function() {
     $('#geoModal').hide();
   });
 
-  if (!geo) changeCity(ymaps.geolocation.city);
+  if (geo) changeCity(geo.city);
+  else changeCity(ymaps.geolocation.city);
 
   abc.split('').forEach(l => {
     cities[l] = [];
@@ -45,10 +46,16 @@ function changeCity(city) {
   if (delivery) {
     localStorage.setItem('geo', JSON.stringify({ city, delivery }));
 
+    let days = 5;
+
+    if (citiesNorthwest.indexOf(city) >= 0) days = 3;
+    else if (citiesCenter.indexOf(city) >= 0) days = 4;
+
     $('#town').html(city);
     $('#delivery').html(delivery);
     $('#town--mob').html(city);
     $('#delivery--mob').html(delivery);
+    $('.hero-text__list p').html(`Получение картины в вашем регионе от ${days} д.`);
     $('#geoModal').hide();
 
     if ($('.geoModalWindow input')[0].value !== '') {
@@ -75,7 +82,8 @@ function createGeoModal(search = false, cs = cities) {
       }
     }
   } else {
-    html = '<div class="geoModalWindow__footer--wrap"><div class="geoModalWindow__footer--letter"></div><div class="geoModalWindow__footer--city"><p>Ничего не найдено</p></div></div>';
+    html =
+      '<div class="geoModalWindow__footer--wrap"><div class="geoModalWindow__footer--letter"></div><div class="geoModalWindow__footer--city"><p>Ничего не найдено</p></div></div>';
   }
 
   $('.geoModalWindow__footer').html(search ? html : tmpHtml + html);
