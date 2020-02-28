@@ -335,6 +335,7 @@ header {
 header #delivery {
   background: #ffd164;
   color: #131313;
+  width: max-content;
 }
 
 .logotype {
@@ -571,13 +572,11 @@ section img {
 .geoModalBox {
   display: flex;
   padding: 2px 4px;
-  color: #949494;
 }
 
 .geoModalBox:hover {
   cursor: pointer;
-  color: #131313;
-  transition: 0.4s;
+  text-decoration: underline;
 }
 
 #geoModal {
@@ -897,6 +896,10 @@ section img {
     box-shadow: inset 0px -4px 8px rgb(209, 209, 209);
   }
 
+  #geoModalOpenMobile {
+    font-size: 13px;
+  }
+
   #geoModalOpenMobile:hover {
     text-decoration: underline;
   }
@@ -910,12 +913,12 @@ section img {
     transform: translateY(47%);
   }
 
-  .mobile--geo::after {
+  /* .mobile--geo::after {
     content: 'Изменить';
     font-size: 12px;
     color: #949494;
     text-decoration: underline;
-  }
+  } */
 
   .mobile--overlay {
     display: block;

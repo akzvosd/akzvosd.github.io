@@ -48,8 +48,8 @@ function changeCity(city) {
 
     let days = 5;
 
-    if (citiesNorthwest.indexOf(city) >= 0) days = 3;
-    else if (citiesCenter.indexOf(city) >= 0) days = 4;
+    if (citiesNorthwest.indexOf(city) >= 0) days = 1;
+    else if (citiesCenter.indexOf(city) >= 0) days = 3;
 
     $('#town').html(city);
     $('#delivery').html(delivery);

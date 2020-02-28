@@ -6,10 +6,16 @@ section {
   display: none;
 }
 
-.price {
-  border-bottom: 4px solid rgb(255, 224, 150);
-  padding: 2px 4px;
-  width: max-content;
+.case {
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: none;
+  margin-left: 0.5rem;
+}
+
+.smallcase {
+  text-transform: uppercase;
+  font-size: 0.7rem;
 }
 
 .mainPage img {
@@ -218,6 +224,13 @@ section {
 
   .hero-text__mainPage .white {
     margin-left: 0px;
+  }
+
+  .hero-text__list p {
+    margin-top: 1rem;
+    border-bottom: 0;
+    width: auto;
+    text-decoration: underline;
   }
 
   .style--row__mbottom {
