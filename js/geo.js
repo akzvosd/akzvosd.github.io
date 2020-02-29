@@ -34,8 +34,8 @@ $(window).on('load', function() {
 
     cities[fl].push(city);
   }
-
-  tmpHtml = $('.geoModalWindow__footer')[0].innerHTML;
+  
+  if ($('.geoModalWindow__footer')[0]) tmpHtml = $('.geoModalWindow__footer')[0].innerHTML;
 
   createGeoModal();
 });
@@ -55,10 +55,10 @@ function changeCity(city) {
     $('#delivery').html(delivery);
     $('#town--mob').html(city);
     $('#delivery--mob').html(delivery);
-    $('.hero-text__list p').html(`Получение картины в вашем регионе от ${days} д.`);
+	if ($('#delivery-days')[0]) $('#delivery-days').html(`Получение картины в вашем регионе от ${days} д.`);
     $('#geoModal').hide();
 
-    if ($('.geoModalWindow input')[0].value !== '') {
+    if ($('.geoModalWindow input')[0] && $('.geoModalWindow input')[0].value !== '') {
       $('.geoModalWindow input')[0].value = '';
 
       createGeoModal();
