@@ -162,6 +162,38 @@
     </div>
         
 <main style="padding: 0 !important">
+    <!-- geomodal -->
+    <div id="geoModal">
+        <div class="geoModalContent">
+          <div class="geoModalWindow">
+            <!-- Header -->
+            <div class="geoModalWindow__header">
+              <h4>Ваш город</h4>
+              <div id="geoModalClose">
+                <i class="material-icons">close</i>
+              </div>
+            </div>
+            <!-- Content -->
+            <input type="text" placeholder="Поиск города" class="btn" style="text-align:  left; width: 100%;" oninput="handleGeoModalInput(this.value)" />
+            <!-- Footer -->
+            <div class="geoModalWindow__footer">
+              <div class="geoModalWindow__footer--wrap">
+                <div class="geoModalWindow__footer--letter">
+                  <i class="material-icons">
+                    star
+                  </i>
+                </div>
+                <div class="geoModalWindow__footer--city">
+                  <p onclick="changeCity('Москва')">Москва</p>
+                  <p onclick="changeCity('Санкт-Петербург')">Санкт-Петербург</p>
+                  <p onclick="changeCity('Великий Новгород')">Великий Новгород</p>
+                </div>
+              </div>
+              <!-- js/geo.js (createGeoModal) вставляет сюда все остальные города -->
+            </div>
+          </div>
+        </div>
+      </div>
     <!-- hero -->
         <div class="hero-image popart" style="background-image: url(img/mult/mult-hero.jpg);">
             <div class="hero-text--style">

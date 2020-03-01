@@ -42,7 +42,7 @@
     <link rel="stylesheet" href="css/geomodal.css" />
     <link rel="stylesheet" href="css/bootstrap-grid.css">
     <link rel="stylesheet" href="css/restoration.css">
-    <link rel="stylesheet" href="cash.css">
+    <link rel="stylesheet" href="css/cash.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <title>Imagine — Доставка</title>
@@ -794,6 +794,15 @@
             </div>
         </section></footer>
    
+        <!-- modal openList список городов -->
+        <script>
+          $( "#openList" ).click(function() {
+          $( "#modal" ).show();
+          });
+          $( "#close" ).click(function() {
+          $( "#modal" ).hide();
+          });
+        </script>
         <script src="js/script.js"></script>
         <script src="js/slider.js"></script>
         <script src="js/swiper.js"></script>
