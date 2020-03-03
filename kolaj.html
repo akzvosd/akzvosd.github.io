@@ -141,13 +141,13 @@
             <div class="row align-items-center">
                 <div class="col-md-6 subheader--left">
                     <nav>
-                        <a href="index.html">Главная</a>
-                    <a href="styles.html">Портреты</a>
-                        <a href="reproductions.html">Картины</a>
-                        <a href="panno.html">Панно</a>
-                        <a href="foto.html">Фото на холсте</a>
+                        <a href="index.html" class="subheader--decoration">Главная</a>
+                        <a href="styles.html" class="subheader--decoration subheader--active">Портреты</a>
+                        <a href="reproductions.html" class="subheader--decoration">Картины</a>
+                        <a href="panno.html" class="subheader--decoration">Панно</a>
+                        <a href="foto.html" class="subheader--decoration">Фото на холсте</a>
                         <div class="dropdown">
-                            <a href="#" class="dropdown--button">Доп. услуги <i class="fa fa-caret-down"></i></a>
+                            <a href="#" class="dropdown--button subheader--decoration">Доп. услуги <i class="fa fa-caret-down"></i></a>
                             <div class="dropdown-content">
                                 <a href="restoration.html">Реставрация старых фото</a>
                                 <a href="retush.html">Ретушь</a>
@@ -159,12 +159,12 @@
                     </nav>
                 </div>
                 <div class="col-md-6 subheader--right">
-                    <nav>
+                   <nav>
                          
-                        <a href="cash.html">Оплата</a>
-                        <a href="delivery.html">Доставка</a>
-                        <a href="optom.html">Оптом</a>
-                        <a href="contacts.html">Контакты</a>
+                        <a href="cash.html" class="subheader--decoration">Оплата</a>
+                        <a href="delivery.html" class="subheader--decoration">Доставка</a>
+                        <a href="optom.html" class="subheader--decoration">Оптом</a>
+                        <a href="contacts.html" class="subheader--decoration">Контакты</a>
                     </nav>
                 </div>
             </div>
@@ -645,6 +645,31 @@
         var h = d.getElementsByTagName('script')[0];
         h.parentNode.insertBefore(s, h);
       })(window, document, 'https://cdn.bitrix24.ru/b7533283/crm/site_button/loader_5_y1jzm9.js');
+    </script>
+    <!-- calc -->
+    <script>
+        function changeFunc() {
+        var selectBox = document.getElementById("selectBox");
+        var selectV = selectBox.options[selectBox.selectedIndex].value;
+        document.getElementById("selectV").innerHTML = selectV;
+        }
+    </script>
+    <!-- accordion -->
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+            } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+            } 
+        });
+        }
     </script>
 </body>
 </html>
