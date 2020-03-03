@@ -64,7 +64,7 @@ function changeCity(city, setShowTooltipToFalse = false) {
 
     setHtml();
 	
-    if ($('#delivery-days')[0]) $('#delivery-days').html(`Изготовление картины от ${days} д.`);
+    if ($('#delivery-days')[0]) $('#delivery-days').html(`Изготовление: от ${days} д.`);
     $('#geoModal').hide();
 
     if ($('.geoModalWindow input')[0] && $('.geoModalWindow input')[0].value !== '') {
