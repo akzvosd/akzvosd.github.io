@@ -143,8 +143,10 @@
         </a>
       </div>
       <!-- гео десктоп -->
-      <div class="col" style="flex-grow: 0;">
-        <img src="img/svg/geo.svg" alt="Гео" />
+      <div class="col geoIcon" style="flex-grow: 0;">
+        <i class="material-icons">
+          place
+        </i>
       </div>
       <div class="geoModalBox" id="geoModalOpen">
         <div class="col" style="padding-left: 0px;">
@@ -193,7 +195,7 @@
     </div>
     <main>
       <!-- geomodal -->
-      <div id="geoModal">
+      <div id="geoModal" class="modal" onclick="closeModal()">
         <div class="geoModalContent">
           <div class="geoModalWindow">
             <!-- Header -->
@@ -224,26 +226,38 @@
           </div>
         </div>
       </div>
-      <!-- geomodal -->
-      <!-- hero -->
-      <div class="hero-image mainPage">
-        <div class="hero-text hero-text__mainPage">
-          <img src="img/imagine_studio.svg" alt="Логотип студии" />
-          <div class="hero-text__list">
-            <h5>Наши картины — тёплый и запоминающийся подарок для вас, ваших друзей и ваших близких!</h5>
-            <p id="delivery-days">Получение картины в вашем регионе от 3 д.</p>
-            <a href="#form"><button class="btn primary">Сделать заказ</button></a>
-            <a href="tel:+79082930097"><button class="btn white" style="background: 0; color: #fff">Позвонить</button></a>
+      <!-- priceModal -->
+      <div id="priceModal" class="modal" onclick="closeModal()">
+        <div class="geoModalContent">
+          <div class="geoModalWindow">
+            <p>
+              Стоимость портрета зависит от выбранного стиля и размера. Чтобы узнать точную стоимость, откройте любой из стилей и укажите размер картины.
+            </p>
+            <span id="priceModal--close" class="btn alternative" style="margin-top: 1rem">Понятно</span>
           </div>
         </div>
       </div>
+      <!-- hero -->
+      <div class="hero-image mainPage">
+        <div class="hero-text hero-text__mainPage">
+          <!-- <img src="img/imagine_studio.svg" alt="Логотип студии" /> -->
+          
+          <div class="hero-text__list">
+            <h3>Портрет по фото <span id="town--hero"></span></h3>
+            <p style="color: #ffd164">Предоплата потребуется только после внесения правок и утверждения эскиза</p>
+            <!-- <h5>Наши картины — тёплый и запоминающийся подарок для вас, ваших друзей и ваших близких!</h5> -->
+            <p id="delivery-days">Изготовление картины от 3 д.</p>
+            <p>Адрес: <span id="delivery--hero"></span></p>
+            <p class="price--hero modal--cursor" id="priceModal--open">Стоимость: 2290 руб.</p>
+            <a href="#form"><button class="btn primary">Отправить фотографию</button></a>
+            <a href="#top"><button class="btn white" style="background: 0; color: #fff">Стили портретов</button></a>
+          </div>
+        </div>
+        <i class="material-icons down">
+          arrow_downward
+        </i>
+      </div>
     </main>
-
-    <section style="text-align: center; margin-bottom: 0; margin-top: 48px">
-      <i class="material-icons">
-        arrow_downward
-      </i>
-    </section>
 
     <!-- примеры работ -->
     <section class="section--wide" style="margin-top: 32px !important">
@@ -809,14 +823,11 @@
       var swiper = new Swiper('.swiper-container');
     </script>
     <script>
-      $('#callmebaby').click(function() {
-        $('#modalCall').show();
+      $('#priceModal--open').click(function() {
+        $('#priceModal').show();
       });
-      $('#closeCall').click(function() {
-        $('#modalCall').hide();
-      });
-      $('#callmebabyDesk').click(function() {
-        $('#modalCall').show();
+      $('#priceModal--close').click(function() {
+        $('#priceModal').hide();
       });
     </script>
     <script>

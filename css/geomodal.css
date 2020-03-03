@@ -1,6 +1,6 @@
 .geoModalWindow {
     width: 88vh;
-    padding: 1rem;
+    padding: 1rem 2rem;
 }
 
 .geoModalWindow input {
@@ -69,6 +69,12 @@
 
 @media only screen and (max-width: 900px) { 
     .geoModalWindow {
-        width: 80vw;
+        width: 100%;
+        padding: 0.5rem 1rem;
     }
+
+    .geoModalContent {
+        width: 98%;
+    }
+
 }

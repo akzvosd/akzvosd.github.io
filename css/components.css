@@ -249,6 +249,25 @@ input + label {
   padding: 32px 0px !important;
 }
 
+.geoIcon i {
+  color: #cccccc;
+}
+
+/* .geoIcon i {
+  animation: blink;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes blink {
+  0% {
+    color: #ffe5a7;
+  }
+  100% {
+    color: #c0c0c0;
+  }
+} */
+
 #myBtn {
   display: none;
   position: fixed;
@@ -409,11 +428,9 @@ ul {
 
 .hero-text {
   position: absolute;
-  /* top: 49%;
-    left: 29%;
-    transform: translate(-50%, -50%); */
-  top: 34%;
-  left: 14%;
+  top: 49%;
+  left: 29%;
+  transform: translate(-50%, -50%); 
   color: white;
 }
 
@@ -579,21 +596,6 @@ section img {
   text-decoration: underline;
 }
 
-#geoModal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 999; /* Sit on top */
-  padding: 40px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
-  color: white;
-}
-
 #geoModalClose i {
   cursor: pointer;
   background: #cccccc;
@@ -638,7 +640,6 @@ section img {
 .modal p {
   color: white;
   z-index: 1;
-  font-size: x-large;
 }
 
 .modal small {
@@ -908,9 +909,7 @@ section img {
     content: url(../img/svg/geo.svg);
     position: absolute;
     left: 14px;
-    -webkit-transform: translateY(47%);
-    -ms-transform: translateY(47%);
-    transform: translateY(47%);
+    top: 30%;
   }
 
   /* .mobile--geo::after {

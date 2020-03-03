@@ -6,6 +6,28 @@ section {
   display: none;
 }
 
+.price--hero {
+  text-decoration: underline;
+}
+
+.price--hero:hover {
+  color: rgb(221, 221, 221);
+}
+
+#priceModal p {
+  line-height: 1.5;
+  color: #131313;
+}
+
+#priceModal a {
+  color: blue;
+  border-bottom: 1px solid blue;
+}
+
+#priceModal a:hover {
+  color: blueviolet;
+}
+
 .case {
   font-weight: 600;
   font-size: 1rem;
@@ -24,10 +46,37 @@ section {
 
 .hero-image {
   height: 720px !important;
+  position: relative;
 }
 
-.hero-text__mainPage {
-  top: 19%;
+#delivery-days {
+  margin-top: 2rem;
+}
+
+.down {
+  position: absolute;
+  bottom: 2rem; 
+  left: 50%;
+  color: #eee;
+  font-size: 3rem;
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 4px;
+  animation: down 1.2s linear infinite alternate;
+}
+
+@keyframes down {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+
+.hero-text__mainPage h3 {
+  font-size: 2.2rem;
 }
 
 .hero-text__mainPage h5 {
@@ -44,8 +93,8 @@ section {
 }
 
 .hero-text__list p {
-  margin-top: 0;
-  border-bottom: 1px solid white;
+  margin-top: 1rem;
+  color: white;
   width: max-content;
 }
 
@@ -194,6 +243,30 @@ section {
 }
 
 @media only screen and (max-width: 900px) {
+  
+  .hero-image {
+    height: 900px !important;
+  }
+  
+  .hero-text__list {
+    bottom: 2rem;
+  }
+
+  .down {
+    display: none !important;
+  }
+  
+  #priceModal p {
+    font-size: 1rem;
+  }
+
+  #priceModal a {
+    display: block;
+    width: max-content;
+    line-height: 1.9;
+    border-bottom: 0;
+  }
+
   .ka4-text {
     width: 100%;
     margin-top: 24px;
@@ -230,7 +303,6 @@ section {
     margin-top: 1rem;
     border-bottom: 0;
     width: auto;
-    text-decoration: underline;
   }
 
   .style--row__mbottom {
