@@ -112,14 +112,23 @@
             <div class="col-md-2"><a href="index.html"><img src="img/logotype.png" class="image logotype" alt="Логотип"/></a></div>
              
             <!-- гео десктоп -->
-      <div class="col" style="flex-grow: 0;">
-        <img src="img/svg/geo.svg" alt="Гео" />
+      <div class="col geoIcon" style="flex-grow: 0;">
+        <i class="material-icons">
+          place
+        </i>
       </div>
-      <div class="geoModalBox" id="geoModalOpen">
-        <div class="col" style="padding-left: 0px;">
+      <div class="tooltip">
+        <div class="geoModalBox tooltip" id="geoModalOpen">
+          <div class="col" style="padding-left: 0px;">
             <div id="town">Бесплатная доставка</div>
             <div id="delivery">по городам России (подробности по телефону)</div>
+          </div>
         </div>
+        <span class="tooltiptext" id="tooltip">
+          <p>Это ваш город?</p>
+          <div class="btn white" onclick="tooltipClose()">Да</div>
+          <div class="btn" onclick="tooltipOpen()" style="border: 1px solid white">Нет</div>
+        </span>
       </div>
       <!-- гео десктоп -->
             <div class="col" style="text-align: right;"><a  href="tel:+79082930097">+7 908 293-00-97</a></div>
@@ -506,7 +515,7 @@
                                 </div>
             </div>
 
-        <div class="modal" onclick="closeModal()">
+        <div class="modal" id="notGeoModal" onclick="closeModal()">
         </div>
     </section>
 
@@ -546,63 +555,60 @@
         </section></footer>
    
         <script src="js/script.js"></script>
-        <script src="js/slider.js"></script>
-        <script src="js/swiper.js"></script>
-        <script>
-          var swiper = new Swiper('.swiper-container');
-        </script>
-        <script>
-          $('#callmebaby').click(function() {
-            $('#modalCall').show();
-          });
-          $('#closeCall').click(function() {
-            $('#modalCall').hide();
-          });
-          $('#callmebabyDesk').click(function() {
-            $('#modalCall').show();
-          });
-        </script>
-        <script>
-          $(document).ready(function() {
-            $('.tog').click(function() {
-              $('img', this).toggle();
-              $('span', this).toggle();
-            });
-          });
-        </script>
-        <script>
-          var modal = document.querySelector('.modal');
-    
-          function openModal(imgSrc, name, size, price) {
-            var html = '<img src="' + imgSrc + '"/>';
-    
-            modal.innerHTML = html;
-            modal.style.display = 'inline-block';
-          }
-    
-          function closeModal() {
-            modal.style.display = 'none';
-          }
-        </script>
-        <script>
-          $(document).ready(function() {
-            $('#ytopen').click(function() {
-              $('#ytvideo').show();
-            });
-            $('#ytexit').click(function() {
-              $('#ytvideo').hide();
-            });
-          });
-        </script>
-        <script src="js/geo.js"></script>
-        <script>
-          (function(w, d, u) {
-            var s = d.createElement('script');
-            s.async = true;
-            s.src = u + '?' + ((Date.now() / 60000) | 0);
-            var h = d.getElementsByTagName('script')[0];
-            h.parentNode.insertBefore(s, h);
-          })(window, document, 'https://cdn.bitrix24.ru/b7533283/crm/site_button/loader_5_y1jzm9.js');
-        </script> 
+    <script src="js/slider.js"></script>
+    <script src="js/swiper.js"></script>
+    <script>
+      var swiper = new Swiper('.swiper-container');
+    </script>
+    <script>
+      $('#priceModal--open').click(function() {
+        $('#priceModal').show();
+      });
+      $('#priceModal--close').click(function() {
+        $('#priceModal').hide();
+      });
+    </script>
+    <script>
+      $(document).ready(function() {
+        $('.tog').click(function() {
+          $('img', this).toggle();
+          $('span', this).toggle();
+        });
+      });
+    </script>
+    <script>
+      var modal = document.querySelector('#notGeoModal');
+
+      function openModal(imgSrc, name, size, price) {
+        var html = '<img src="' + imgSrc + '"/>';
+
+        modal.innerHTML = html;
+        modal.style.display = 'inline-block';
+      }
+
+      function closeModal() {
+        modal.style.display = 'none';
+      }
+    </script>
+    <script>
+      $(document).ready(function() {
+        $('#ytopen').click(function() {
+          $('#ytvideo').show();
+        });
+        $('#ytexit').click(function() {
+          $('#ytvideo').hide();
+        });
+      });
+    </script>
+    <script src="js/geo.js"></script>
+    <script>
+      (function(w, d, u) {
+        var s = d.createElement('script');
+        s.async = true;
+        s.src = u + '?' + ((Date.now() / 60000) | 0);
+        var h = d.getElementsByTagName('script')[0];
+        h.parentNode.insertBefore(s, h);
+      })(window, document, 'https://cdn.bitrix24.ru/b7533283/crm/site_button/loader_5_y1jzm9.js');
+    </script>
 </body>
 </html>

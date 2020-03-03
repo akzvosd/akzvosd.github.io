@@ -112,14 +112,23 @@
             <div class="col-md-2"><a href="index.html"><img src="img/logotype.png" class="image logotype" alt="Логотип"/></a></div>
              
             <!-- гео десктоп -->
-      <div class="col" style="flex-grow: 0;">
-        <img src="img/svg/geo.svg" alt="Гео" />
+      <div class="col geoIcon" style="flex-grow: 0;">
+        <i class="material-icons">
+          place
+        </i>
       </div>
-      <div class="geoModalBox" id="geoModalOpen">
-        <div class="col" style="padding-left: 0px;">
+      <div class="tooltip">
+        <div class="geoModalBox tooltip" id="geoModalOpen">
+          <div class="col" style="padding-left: 0px;">
             <div id="town">Бесплатная доставка</div>
             <div id="delivery">по городам России (подробности по телефону)</div>
+          </div>
         </div>
+        <span class="tooltiptext" id="tooltip">
+          <p>Это ваш город?</p>
+          <div class="btn white" onclick="tooltipClose()">Да</div>
+          <div class="btn" onclick="tooltipOpen()" style="border: 1px solid white">Нет</div>
+        </span>
       </div>
       <!-- гео десктоп -->
             <div class="col" style="text-align: right;"><a  href="tel:+79082930097">+7 908 293-00-97</a></div>
