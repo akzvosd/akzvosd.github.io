@@ -19,13 +19,8 @@ section {
   color: #131313;
 }
 
-#priceModal a {
-  color: blue;
-  border-bottom: 1px solid blue;
-}
-
-#priceModal a:hover {
-  color: blueviolet;
+#priceModal--close button:nth-child(odd) {
+  margin-top: 1rem !important;
 }
 
 .case {
@@ -257,13 +252,6 @@ section {
   
   #priceModal p {
     font-size: 1rem;
-  }
-
-  #priceModal a {
-    display: block;
-    width: max-content;
-    line-height: 1.9;
-    border-bottom: 0;
   }
 
   .ka4-text {
