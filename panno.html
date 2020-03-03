@@ -163,7 +163,8 @@
 
 <main>
       <!-- geomodal -->
-      <div id="geoModal">
+      <div id="geoModal" class="modal">
+        <div style="position: absolute; top: 0; bottom: 0; left: 0; right: 0;" onclick="$('#geoModalClose').click()"></div>
         <div class="geoModalContent">
           <div class="geoModalWindow">
             <!-- Header -->
@@ -174,7 +175,13 @@
               </div>
             </div>
             <!-- Content -->
-            <input type="text" placeholder="Поиск города" class="btn" style="text-align:  left; width: 100%;" oninput="handleGeoModalInput(this.value)" />
+            <input
+              type="text"
+              placeholder="Поиск города"
+              class="btn"
+              style="text-align:  left; width: 100%;"
+              oninput="handleGeoModalInput(this.value)"
+            />
             <!-- Footer -->
             <div class="geoModalWindow__footer">
               <div class="geoModalWindow__footer--wrap">
@@ -184,9 +191,9 @@
                   </i>
                 </div>
                 <div class="geoModalWindow__footer--city">
-                  <p onclick="changeCity('Москва')">Москва</p>
-                  <p onclick="changeCity('Санкт-Петербург')">Санкт-Петербург</p>
-                  <p onclick="changeCity('Великий Новгород')">Великий Новгород</p>
+                  <p onclick="changeCity('Москва', true)">Москва</p>
+                  <p onclick="changeCity('Санкт-Петербург', true)">Санкт-Петербург</p>
+                  <p onclick="changeCity('Великий Новгород', true)">Великий Новгород</p>
                 </div>
               </div>
               <!-- js/geo.js (createGeoModal) вставляет сюда все остальные города -->

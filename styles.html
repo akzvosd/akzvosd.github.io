@@ -181,7 +181,8 @@
     </div>
     <section class="section--wide" style="margin-top: 32px !important; margin-bottom: 0 !important">
       <!-- geomodal -->
-      <div id="geoModal">
+      <div id="geoModal" class="modal">
+        <div style="position: absolute; top: 0; bottom: 0; left: 0; right: 0;" onclick="$('#geoModalClose').click()"></div>
         <div class="geoModalContent">
           <div class="geoModalWindow">
             <!-- Header -->
@@ -192,7 +193,13 @@
               </div>
             </div>
             <!-- Content -->
-            <input type="text" placeholder="Поиск города" class="btn" style="text-align:  left; width: 100%;" oninput="handleGeoModalInput(this.value)" />
+            <input
+              type="text"
+              placeholder="Поиск города"
+              class="btn"
+              style="text-align:  left; width: 100%;"
+              oninput="handleGeoModalInput(this.value)"
+            />
             <!-- Footer -->
             <div class="geoModalWindow__footer">
               <div class="geoModalWindow__footer--wrap">
@@ -202,9 +209,9 @@
                   </i>
                 </div>
                 <div class="geoModalWindow__footer--city">
-                  <!-- <p>Москва</p> -->
-                  <p onclick="changeCity('Санкт-Петербург')">Санкт-Петербург</p>
-                  <p onclick="changeCity('Великий Новгород')">Великий Новгород</p>
+                  <p onclick="changeCity('Москва', true)">Москва</p>
+                  <p onclick="changeCity('Санкт-Петербург', true)">Санкт-Петербург</p>
+                  <p onclick="changeCity('Великий Новгород', true)">Великий Новгород</p>
                 </div>
               </div>
               <!-- js/geo.js (createGeoModal) вставляет сюда все остальные города -->
@@ -389,25 +396,30 @@
       </section>
     </footer>
 
-    <script>
-      function openTab(evt, cityName) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName('tabcontent');
-        for (i = 0; i < tabcontent.length; i++) {
-          tabcontent[i].style.display = 'none';
-        }
-        tablinks = document.getElementsByClassName('tablinks');
-        for (i = 0; i < tablinks.length; i++) {
-          tablinks[i].className = tablinks[i].className.replace(' active', '');
-        }
-        document.getElementById(cityName).style.display = 'block';
-        evt.currentTarget.className += ' active';
-      }
-      document.getElementById('defaultOpen').click();
-    </script>
     <script src="js/script.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/swiper.js"></script>
     <script>
-      var modal = document.querySelector('.modal');
+      var swiper = new Swiper('.swiper-container');
+    </script>
+    <script>
+      $('#priceModal--open').click(function() {
+        $('#priceModal').show();
+      });
+      $('#priceModal--close').click(function() {
+        $('#priceModal').hide();
+      });
+    </script>
+    <script>
+      $(document).ready(function() {
+        $('.tog').click(function() {
+          $('img', this).toggle();
+          $('span', this).toggle();
+        });
+      });
+    </script>
+    <script>
+      var modal = document.querySelector('#notGeoModal');
 
       function openModal(imgSrc, name, size, price) {
         var html = '<img src="' + imgSrc + '"/>';
@@ -421,14 +433,13 @@
       }
     </script>
     <script>
-      $('#callmebaby').click(function() {
-        $('#modalCall').show();
-      });
-      $('#closeCall').click(function() {
-        $('#modalCall').hide();
-      });
-      $('#callmebabyDesk').click(function() {
-        $('#modalCall').show();
+      $(document).ready(function() {
+        $('#ytopen').click(function() {
+          $('#ytvideo').show();
+        });
+        $('#ytexit').click(function() {
+          $('#ytvideo').hide();
+        });
       });
     </script>
     <script src="js/geo.js"></script>
