@@ -9,14 +9,7 @@ if (geo) {
   else showTooltip = geo.showTooltip;
 }
 
-if (geo) {
-  $('#town').html(geo.city);
-  $('#delivery').html(geo.delivery);
-  $('#town--mob').html(geo.city);
-  $('#delivery--mob').html(geo.delivery);
-  $('#town--hero').html(geo.city);
-  $('#delivery--hero').html(geo.delivery);
-}
+if (geo) setHtml();
 
 // $(document).ready(function() {
 $(window).on('load', function() {
@@ -69,10 +62,8 @@ function changeCity(city, setShowTooltipToFalse = false) {
     if (citiesNorthwest.indexOf(city) >= 0) days = 1;
     else if (citiesCenter.indexOf(city) >= 0) days = 3;
 
-    $('#town').html(city);
-    $('#delivery').html(delivery);
-    $('#town--mob').html(city);
-    $('#delivery--mob').html(delivery);
+    setHtml();
+	
     if ($('#delivery-days')[0]) $('#delivery-days').html(`Изготовление картины от ${days} д.`);
     $('#geoModal').hide();
 
@@ -82,6 +73,15 @@ function changeCity(city, setShowTooltipToFalse = false) {
       createGeoModal();
     }
   }
+}
+
+function setHtml() {
+  $('#town').html(geo.city);
+  $('#delivery').html(geo.delivery);
+  $('#delivery--mob').html(geo.delivery);
+  $('#town--hero').html(geo.city);
+  $('#town--mob').html(geo.city);
+  $('#delivery--hero').html(geo.delivery);
 }
 
 function createGeoModal(search = false, cs = cities) {
