@@ -51,7 +51,7 @@
 
     <!-- geo -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-   <script src="https://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
     <!-- geo -->
 
     <link rel="stylesheet" href="css/components.css" />
@@ -139,7 +139,7 @@
     <header class="row align-items-center">
       <div class="col-md-2">
         <a href="index.html">
-          <img src="img/logotype.png" class="image logotype" alt="Логотип"/>
+          <img src="img/logotype.png" class="image logotype" alt="Логотип" />
         </a>
       </div>
       <!-- гео десктоп -->
@@ -149,17 +149,17 @@
         </i>
       </div>
       <div class="tooltip">
-      <div class="geoModalBox tooltip" id="geoModalOpen">
-        <div class="col" style="padding-left: 0px;">
+        <div class="geoModalBox tooltip" id="geoModalOpen">
+          <div class="col" style="padding-left: 0px;">
             <div id="town">Бесплатная доставка</div>
             <div id="delivery">по городам России (подробности по телефону)</div>
+          </div>
         </div>
-      </div>
-      <span class="tooltiptext" id="tooltip">
-        <p>Это ваш город?</p>
-        <div class="btn white" onclick="tooltipClose()">Да</div>
-        <div class="btn" onclick="tooltipOpen()" style="border: 1px solid white">Нет</div>
-      </span>
+        <span class="tooltiptext" id="tooltip">
+          <p>Это ваш город?</p>
+          <div class="btn white" onclick="tooltipClose()">Да</div>
+          <div class="btn" onclick="tooltipOpen()" style="border: 1px solid white">Нет</div>
+        </span>
       </div>
       <!-- гео десктоп -->
       <div class="col" style="text-align: right;"><a href="tel:+79082930097">+7 908 293-00-97</a></div>
@@ -202,7 +202,8 @@
     </div>
     <main>
       <!-- geomodal -->
-      <div id="geoModal" class="modal" onclick="closeModal()">
+      <div id="geoModal" class="modal">
+        <div style="position: absolute; top: 0; bottom: 0; left: 0; right: 0;" onclick="$('#geoModalClose').click()"></div>
         <div class="geoModalContent">
           <div class="geoModalWindow">
             <!-- Header -->
@@ -213,7 +214,13 @@
               </div>
             </div>
             <!-- Content -->
-            <input type="text" placeholder="Поиск города" class="btn" style="text-align:  left; width: 100%;" oninput="handleGeoModalInput(this.value)" />
+            <input
+              type="text"
+              placeholder="Поиск города"
+              class="btn"
+              style="text-align:  left; width: 100%;"
+              oninput="handleGeoModalInput(this.value)"
+            />
             <!-- Footer -->
             <div class="geoModalWindow__footer">
               <div class="geoModalWindow__footer--wrap">
@@ -223,9 +230,9 @@
                   </i>
                 </div>
                 <div class="geoModalWindow__footer--city">
-                  <p onclick="changeCity('Москва')">Москва</p>
-                  <p onclick="changeCity('Санкт-Петербург')">Санкт-Петербург</p>
-                  <p onclick="changeCity('Великий Новгород')">Великий Новгород</p>
+                  <p onclick="changeCity('Москва', true)">Москва</p>
+                  <p onclick="changeCity('Санкт-Петербург', true)">Санкт-Петербург</p>
+                  <p onclick="changeCity('Великий Новгород', true)">Великий Новгород</p>
                 </div>
               </div>
               <!-- js/geo.js (createGeoModal) вставляет сюда все остальные города -->
@@ -238,7 +245,8 @@
         <div class="geoModalContent">
           <div class="geoModalWindow">
             <p>
-              Стоимость портрета зависит от выбранного стиля и размера. Чтобы узнать точную стоимость, откройте любой из стилей и укажите размер картины.
+              Стоимость портрета зависит от выбранного стиля и размера. Чтобы узнать точную стоимость, откройте любой из стилей и укажите размер
+              картины.
             </p>
             <span id="priceModal--close" class="btn alternative" style="margin-top: 1rem">Понятно</span>
           </div>
@@ -248,7 +256,7 @@
       <div class="hero-image mainPage">
         <div class="hero-text hero-text__mainPage">
           <!-- <img src="img/imagine_studio.svg" alt="Логотип студии" /> -->
-          
+
           <div class="hero-text__list">
             <h3>Портрет по фото <span id="town--hero"></span></h3>
             <p style="color: #ffd164">Предоплата потребуется только после внесения правок и утверждения эскиза</p>
@@ -276,46 +284,46 @@
         <div class="col-md-4 modal--cursor">
           <img src="img/ex10.jpg" onclick="openModal(this.src)" class="image image--baget" style="height: 350px;" />
           <img src="img/ex10.jpg" class="image image--baget__mobile" />
-          <p class="smallcase"> Стиль <span class="case">Imagine</span> </p>
-          <p class="smallcase"> Размер <span class="case">30х40 см</span> </p>
-          <p class="smallcase"> Цена <span class="case">2990 руб.</span> </p>
+          <p class="smallcase">Стиль <span class="case">Imagine</span></p>
+          <p class="smallcase">Размер <span class="case">30х40 см</span></p>
+          <p class="smallcase">Цена <span class="case">2990 руб.</span></p>
         </div>
         <div class="col-md-4 modal--cursor">
           <img src="img/ex11.jpg" onclick="openModal(this.src)" class="image image--baget" style="height: 350px;" />
           <img src="img/ex11.jpg" class="image image--baget__mobile" />
-          <p class="smallcase"> Стиль <span class="case">Поп Арт</span></p>
-          <p class="smallcase"> Размер <span class="case">60х80 см</span></p>
-          <p class="smallcase"> Цена <span class="case">5150 руб.</span></p>
+          <p class="smallcase">Стиль <span class="case">Поп Арт</span></p>
+          <p class="smallcase">Размер <span class="case">60х80 см</span></p>
+          <p class="smallcase">Цена <span class="case">5150 руб.</span></p>
         </div>
         <div class="col-md-4 modal--cursor">
           <img src="img/ex12.jpg" onclick="openModal(this.src)" class="image image--baget" style="height: 350px;" />
           <img src="img/ex12.jpg" class="image image--baget__mobile" />
-          <p class="smallcase"> Стиль <span class="case">Поп Арт</span></p>
-          <p class="smallcase"> Размер <span class="case">30х40 см</span></p>
-          <p class="smallcase"> Цена <span class="case">3190 руб.</span></p>
+          <p class="smallcase">Стиль <span class="case">Поп Арт</span></p>
+          <p class="smallcase">Размер <span class="case">30х40 см</span></p>
+          <p class="smallcase">Цена <span class="case">3190 руб.</span></p>
         </div>
       </div>
       <div class="row">
         <div class="col-md-4 modal--cursor">
           <img src="img/ex13.jpg" onclick="openModal(this.src)" class="image image--baget" style="height: 350px;" />
           <img src="img/ex13.jpg" class="image image--baget__mobile" />
-          <p class="smallcase"> Стиль <span class="case">Imagine</span></p>
-          <p class="smallcase"> Размер <span class="case">40х60 см</span></p>
-          <p class="smallcase"> Цена <span class="case">3790 руб.</span></p>
+          <p class="smallcase">Стиль <span class="case">Imagine</span></p>
+          <p class="smallcase">Размер <span class="case">40х60 см</span></p>
+          <p class="smallcase">Цена <span class="case">3790 руб.</span></p>
         </div>
         <div class="col-md-4 modal--cursor">
           <img src="img/ex14.jpg" onclick="openModal(this.src)" class="image image--baget" style="height: 350px;" />
           <img src="img/ex14.jpg" class="image image--baget__mobile" />
-          <p class="smallcase"> Стиль <span class="case">Маслом</span></p>
-          <p class="smallcase"> Размер <span class="case">50х50 см</span></p>
-          <p class="smallcase"> Цена <span class="case">3850 руб.</span></p>
+          <p class="smallcase">Стиль <span class="case">Маслом</span></p>
+          <p class="smallcase">Размер <span class="case">50х50 см</span></p>
+          <p class="smallcase">Цена <span class="case">3850 руб.</span></p>
         </div>
         <div class="col-md-4 modal--cursor">
           <img src="img/ex15.jpg" onclick="openModal(this.src)" class="image image--baget" style="height: 350px;" />
           <img src="img/ex15.jpg" class="image image--baget__mobile" />
-          <p class="smallcase"> Стиль <span class="case">В образе</span></p>
-          <p class="smallcase"> Размер <span class="case">40х60 см</span></p>
-          <p class="smallcase"> Цена <span class="case">3790 руб.</span></p>
+          <p class="smallcase">Стиль <span class="case">В образе</span></p>
+          <p class="smallcase">Размер <span class="case">40х60 см</span></p>
+          <p class="smallcase">Цена <span class="case">3790 руб.</span></p>
         </div>
       </div>
       <div class="text--center">
@@ -338,7 +346,9 @@
                 ><img src="img/examples/example7.jpg" class="image" height="320px" />
                 <div class="style--text">
                   <h5>POP ART</h5>
-                  <small style="color: rgb(95, 95, 95);">Хотите порадовать друзей современным и уникальным подарком? Это яркий и незабываемый стиль!</small>
+                  <small style="color: rgb(95, 95, 95);"
+                    >Хотите порадовать друзей современным и уникальным подарком? Это яркий и незабываемый стиль!</small
+                  >
                   <p style="margin-top: 16px" class="price">От 2490 руб.</p>
                   <button class="btn primary style--button">Заказать</button>
                 </div>
@@ -364,7 +374,9 @@
                 ><img src="img/examples/example5.jpg" class="image" height="320px" />
                 <div class="style--text">
                   <h5>Imagine</h5>
-                  <small style="color: rgb(95, 95, 95);">Нежный и тёплый портрет в нашем фирменном стиле. Лучший подарок для дорогих и близких Вам людей!</small>
+                  <small style="color: rgb(95, 95, 95);"
+                    >Нежный и тёплый портрет в нашем фирменном стиле. Лучший подарок для дорогих и близких Вам людей!</small
+                  >
                   <p style="margin-top: 16px" class="price">От 2290 руб.</p>
                   <button class="btn primary style--button">Заказать</button>
                 </div>
@@ -405,7 +417,9 @@
                 ><img src="img/examples/example2.jpg" class="image" height="320px" />
                 <div class="style--text">
                   <h5>Акварель</h5>
-                  <small style="color: rgb(95, 95, 95);">Нежный и красочный портрет, выполненный в классической технике, сохранит Ваш образ на долгие годы!</small>
+                  <small style="color: rgb(95, 95, 95);"
+                    >Нежный и красочный портрет, выполненный в классической технике, сохранит Ваш образ на долгие годы!</small
+                  >
                   <p style="margin-top: 16px" class="price">От 2290 руб.</p>
                   <button class="btn primary style--button">Заказать</button>
                 </div>
@@ -431,7 +445,9 @@
                 ><img src="img/examples/example8.jpg" class="image" height="320px" />
                 <div class="style--text">
                   <h5>Из слов</h5>
-                  <small style="color: rgb(95, 95, 95);">Этим портретом можно сказать многое... Фотография и несколько приятных слов — прекрасный образ!</small>
+                  <small style="color: rgb(95, 95, 95);"
+                    >Этим портретом можно сказать многое... Фотография и несколько приятных слов — прекрасный образ!</small
+                  >
                   <p style="margin-top: 16px" class="price">От 1780 руб.</p>
                   <button class="btn primary style--button">Заказать</button>
                 </div>
@@ -472,7 +488,9 @@
                 ><img src="img/repro/repro7.jpg" class="image" height="320px" />
                 <div class="style--text">
                   <h5>Репродукции</h5>
-                  <small style="color: rgb(95, 95, 95);">Картины великих классиков и не только. Выберите любую картину, и мы напечатаем её на холсте!</small>
+                  <small style="color: rgb(95, 95, 95);"
+                    >Картины великих классиков и не только. Выберите любую картину, и мы напечатаем её на холсте!</small
+                  >
                   <p style="margin-top: 16px" class="price">От 790 руб.</p>
                   <button class="btn primary style--button">Заказать</button>
                 </div>
@@ -523,7 +541,10 @@
       </div>
       <div class="text--center ka4-text">
         <h3 class="examples--heading text--bold">Качество работ</h3>
-        <p>Мы не работаем с дешёвыми холстами! Мы используем только лучшие материалы и оборудование, чтобы достичь такого качества печати на холсте. <br />Убедитесь сами или читайте отзывы ниже.</p>
+        <p>
+          Мы не работаем с дешёвыми холстами! Мы используем только лучшие материалы и оборудование, чтобы достичь такого качества печати на холсте.
+          <br />Убедитесь сами или читайте отзывы ниже.
+        </p>
       </div>
       <section class="text--center ka4-margin">
         <div class="row">
@@ -574,8 +595,9 @@
               <img src="img/review_gavaza.jpg" alt="Карточка_1" class="review--card__img col-md-4" />
               <div class="card--text col-md-8">
                 <p>
-                  Решили сделать заказ друзьям на юбилей, фото на холсте, боялись что не успеем, т.к. времени оставалось всего лишь неделя. Но нам обещали что все все успеют, и не подвели. Картина пришла вовремя, мы остались довольны, а друзья в
-                  восторге, спасибо, надеюсь еще воспользуюсь вашими услугами.
+                  Решили сделать заказ друзьям на юбилей, фото на холсте, боялись что не успеем, т.к. времени оставалось всего лишь неделя. Но нам
+                  обещали что все все успеют, и не подвели. Картина пришла вовремя, мы остались довольны, а друзья в восторге, спасибо, надеюсь еще
+                  воспользуюсь вашими услугами.
                 </p>
                 <small>Валерий Гаваза, Псков</small>
               </div>
@@ -588,7 +610,8 @@
               <img src="img/review_anna.jpg" alt="Карточка_1" class="review--card__img col-md-4" />
               <div class="card--text col-md-8">
                 <p>
-                  Спасибо большое за эмоции, которые мне удалось подарить друзьям, благодаря вашему профессиональному подходу к делу. Всё чётко, быстро и качественно. Картина произвела впечатление🔥
+                  Спасибо большое за эмоции, которые мне удалось подарить друзьям, благодаря вашему профессиональному подходу к делу. Всё чётко,
+                  быстро и качественно. Картина произвела впечатление🔥
                 </p>
                 <small>Анна Иванова, Санкт-Петербург </small>
               </div>
@@ -758,7 +781,11 @@
       </section>
     </div>
 
-    <section class="form section--bg" id="form" style="margin-top: 0 !important; margin-bottom: 0 !important; background-image: url(img/form--bg.jpg);">
+    <section
+      class="form section--bg"
+      id="form"
+      style="margin-top: 0 !important; margin-bottom: 0 !important; background-image: url(img/form--bg.jpg);"
+    >
       <h3 class="text--center repro--h3"></h3>
       <div class="bitrix" style="padding-bottom: 32px !important; ">
         <script id="bx24_form_inline" data-skip-moving="true">
@@ -783,7 +810,7 @@
       </div>
     </section>
 
-    <div class="modal" onclick="closeModal()"></div>
+    <div class="modal" id="notGeoModal" onclick="closeModal()"></div>
     <footer>
       <section class="section--wide">
         <div class="row">
@@ -823,15 +850,6 @@
       </section>
     </footer>
 
-    <!-- tooltip -->
-    <script>
-      function tooltipClose() {
-        document.getElementById("tooltip").style.display = "none";
-      }
-      function tooltipOpen() {
-        document.getElementById("geoModal").style.display = "block";
-      }
-    </script>
     <script src="js/script.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/swiper.js"></script>
@@ -855,7 +873,7 @@
       });
     </script>
     <script>
-      var modal = document.querySelector('.modal');
+      var modal = document.querySelector('#notGeoModal');
 
       function openModal(imgSrc, name, size, price) {
         var html = '<img src="' + imgSrc + '"/>';

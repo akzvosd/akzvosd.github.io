@@ -2,6 +2,12 @@ var tmpHtml = '';
 var abc = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя';
 var cities = {};
 var geo = JSON.parse(localStorage.getItem('geo'));
+var showTooltip = true;
+
+if (geo) {
+  if (Object.keys(geo).indexOf('showTooltip') === -1) geo = undefined;
+  else showTooltip = geo.showTooltip;
+}
 
 if (geo) {
   $('#town').html(geo.city);
@@ -36,17 +42,27 @@ $(window).on('load', function() {
 
     cities[fl].push(city);
   }
-  
+
   if ($('.geoModalWindow__footer')[0]) tmpHtml = $('.geoModalWindow__footer')[0].innerHTML;
 
   createGeoModal();
+
+  if (showTooltip) $('#tooltip').css('visibility', 'visible');
+  else tooltipClose();
 });
 
-function changeCity(city) {
+function changeCity(city, setShowTooltipToFalse = false) {
   var delivery = shopAddress[city] || deliveryAddress[city] || null;
 
   if (delivery) {
-    localStorage.setItem('geo', JSON.stringify({ city, delivery }));
+    if (setShowTooltipToFalse) {
+      showTooltip = false;
+      tooltipClose();
+    }
+
+    geo = { city, delivery, showTooltip };
+
+    localStorage.setItem('geo', JSON.stringify(geo));
 
     let days = 5;
 
@@ -57,7 +73,7 @@ function changeCity(city) {
     $('#delivery').html(delivery);
     $('#town--mob').html(city);
     $('#delivery--mob').html(delivery);
-	if ($('#delivery-days')[0]) $('#delivery-days').html(`Изготовление картины от ${days} д.`);
+    if ($('#delivery-days')[0]) $('#delivery-days').html(`Изготовление картины от ${days} д.`);
     $('#geoModal').hide();
 
     if ($('.geoModalWindow input')[0] && $('.geoModalWindow input')[0].value !== '') {
@@ -77,7 +93,7 @@ function createGeoModal(search = false, cs = cities) {
         html += `<div class="geoModalWindow__footer--wrap"><div class="geoModalWindow__footer--letter">${l.toUpperCase()}</div><div class="geoModalWindow__footer--city">`;
 
         cs[l].forEach(city => {
-          html += `<p onclick="changeCity('${city}')">${city}</p>`;
+          html += `<p onclick="changeCity('${city}', true)">${city}</p>`;
         });
 
         html += '</div></div>';
@@ -109,4 +125,16 @@ function handleGeoModalInput(query) {
   }
 
   createGeoModal(true, cs);
+}
+
+function tooltipClose() {
+  showTooltip = false;
+  geo.showTooltip = showTooltip;
+
+  localStorage.setItem('geo', JSON.stringify(geo));
+  $('#tooltip').css('display', 'none');
+}
+
+function tooltipOpen() {
+  $('#geoModalOpen').click();
 }
