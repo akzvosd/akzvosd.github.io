@@ -55,22 +55,22 @@ section {
 
 .down {
   position: absolute;
-  bottom: 2rem; 
+  bottom: 1rem; 
   left: 50%;
   color: #eee;
   font-size: 3rem;
   border: 2px solid white;
   border-radius: 50%;
   padding: 4px;
-  animation: down 1.2s linear infinite alternate;
+  animation: down 0.8s linear infinite alternate;
 }
 
 @keyframes down {
   0% {
-    transform: scale(1);
+    margin-bottom: 1.6rem;
   }
   100% {
-    transform: scale(1.2);
+    margin-bottom: 1rem;
   }
 }
 
