@@ -83,6 +83,9 @@ hr {
   -o-object-fit: cover;
   object-fit: cover;
 }
+.geo-image {
+  box-shadow: 0 0 0 3px #ffd164;
+}
 .image--shadow {
   -webkit-box-shadow: 8px 8px 0px #ffd164;
   box-shadow: 8px 8px 0px #ffd164;
@@ -274,7 +277,7 @@ input + label {
 }
 
 .tooltip-mobile {
-	width: 100%;
+  width: 100%;
 }
 
 .tooltip .tooltiptext {
@@ -295,10 +298,10 @@ input + label {
 }
 
 #tooltipMobile {
-	display: none;
-	top: 70px;
-	transform: translateX(-50%);
-	margin: 0;
+  display: none;
+  top: 70px;
+  transform: translateX(-50%);
+  margin: 0;
 }
 
 .tooltiptext p {
@@ -913,11 +916,10 @@ section img {
   .mobile--nav .active--navbar__mobile {
     color: #131313;
   }
-  
 
-	#tooltipMobile {
-		display: block;
-	}
+  #tooltipMobile {
+    display: block;
+  }
 
   .mobile--geo {
     display: block;

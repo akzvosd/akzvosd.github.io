@@ -41,10 +41,9 @@ $(window).on('load', function() {
   createGeoModal();
 
   if (showTooltip) {
-	  $('#tooltip').css('visibility', 'visible');
-	  $('#tooltipMobile').css('visibility', 'visible');
-  }
-  else tooltipClose();
+    $('#tooltip').css('visibility', 'visible');
+    $('#tooltipMobile').css('visibility', 'visible');
+  } else tooltipClose();
 });
 
 function changeCity(city, setShowTooltipToFalse = false) {
@@ -66,9 +65,10 @@ function changeCity(city, setShowTooltipToFalse = false) {
     else if (citiesCenter.indexOf(city) >= 0) days = 3;
 
     setHtml();
-	
-	// if ($('#delivery-days')[0]) $('#delivery-days').html(`Изготовление картины от ${days} ${days === 1 ? 'дня' : 'дней'}`);
-	if ($('#delivery-days')[0]) $('#delivery-days').html(`Изготовление от ${days} ${days === 1 ? 'дня' : 'дней'}`);
+    setDeliveryGeoImage();
+
+    // if ($('#delivery-days')[0]) $('#delivery-days').html(`Изготовление картины от ${days} ${days === 1 ? 'дня' : 'дней'}`);
+    if ($('#delivery-days')[0]) $('#delivery-days').html(`Изготовление от ${days} ${days === 1 ? 'дня' : 'дней'}`);
     $('#geoModal').hide();
 
     if ($('.geoModalWindow input')[0] && $('.geoModalWindow input')[0].value !== '') {
@@ -142,4 +142,32 @@ function tooltipClose() {
 
 function tooltipOpen() {
   $('#geoModalOpen').click();
+}
+
+function setDeliveryGeoImage() {
+  var imgSrc = 'img/delivery--psk.jpg';
+  var figcaptionText = 'Псков, ТЦ «Максимус», 1 этаж';
+  var imageElements = document.querySelectorAll('section.delivery .row img');
+
+  imageElements.forEach(element => {
+    element.className = 'image';
+  });
+
+  if (citiesPartners[geo.city]) {
+    imgSrc = `img/${citiesPartners[geo.city]}.jpg`;
+    figcaptionText = `${geo.city}, ${deliveryAddress[geo.city]}`;
+    imageElements[0].className = 'image geo-image';
+  } else if (geo.city === 'Псков') {
+    imageElements[0].className = 'image geo-image';
+  } else if (geo.city === 'Санкт-Петербург') {
+    imageElements[1].className = 'image geo-image';
+  } else if (geo.city === 'Великий Новгород') {
+    imageElements[2].className = 'image geo-image';
+  }
+
+  var imgElement = $('#delivery-geo img');
+  var figcaptionElement = $('#delivery-geo figcaption');
+
+  imgElement.attr('src', imgSrc);
+  figcaptionElement.html(figcaptionText);
 }
