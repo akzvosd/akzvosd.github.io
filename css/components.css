@@ -273,6 +273,10 @@ input + label {
   display: inline-block;
 }
 
+.tooltip-mobile {
+	width: 100%;
+}
+
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 240px;
@@ -290,13 +294,20 @@ input + label {
   margin-left: -60px;
 }
 
+#tooltipMobile {
+	display: none;
+	top: 70px;
+	transform: translateX(-50%);
+	margin: 0;
+}
+
 .tooltiptext p {
   margin-top: 0;
 }
 
-.tooltip:hover .tooltiptext {
+/* .tooltip:hover .tooltiptext {
   visibility: visible;
-}
+} */
 
 #myBtn {
   display: none;
@@ -903,6 +914,11 @@ section img {
   .mobile--nav .active--navbar__mobile {
     color: #131313;
   }
+  
+
+	#tooltipMobile {
+		display: block;
+	}
 
   .mobile--geo {
     display: block;

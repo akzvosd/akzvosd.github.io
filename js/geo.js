@@ -40,7 +40,10 @@ $(window).on('load', function() {
 
   createGeoModal();
 
-  if (showTooltip) $('#tooltip').css('visibility', 'visible');
+  if (showTooltip) {
+	  $('#tooltip').css('visibility', 'visible');
+	  $('#tooltipMobile').css('visibility', 'visible');
+  }
   else tooltipClose();
 });
 
@@ -134,6 +137,7 @@ function tooltipClose() {
 
   localStorage.setItem('geo', JSON.stringify(geo));
   $('#tooltip').css('display', 'none');
+  $('#tooltipMobile').css('display', 'none');
 }
 
 function tooltipOpen() {
