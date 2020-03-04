@@ -256,20 +256,22 @@ input + label {
   color: #cccccc;
 }
 
-/* .geoIcon i {
-  animation: blink;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
+.price--hero {
+  text-decoration: underline;
 }
 
-@keyframes blink {
-  0% {
-    color: #ffe5a7;
-  }
-  100% {
-    color: #c0c0c0;
-  }
-} */
+.price--hero:hover {
+  color: rgb(221, 221, 221);
+}
+
+#priceModal p {
+  line-height: 1.5;
+  color: #131313;
+}
+
+#priceModal--close button:nth-child(odd) {
+  margin-top: 1rem !important;
+}
 
 .tooltip {
   position: relative;
@@ -670,7 +672,7 @@ section img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #eee;
+  background-color: #fff;
   color: #131313;
   border-radius: 0.5rem;
 }
@@ -699,6 +701,10 @@ section img {
 }
 
 @media only screen and (max-width: 900px) {
+  #priceModal p {
+    font-size: 1rem;
+  }
+  
   .style--card h4 {
     font-size: 2rem !important;
   }

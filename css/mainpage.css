@@ -6,23 +6,6 @@ section {
   display: none;
 }
 
-.price--hero {
-  text-decoration: underline;
-}
-
-.price--hero:hover {
-  color: rgb(221, 221, 221);
-}
-
-#priceModal p {
-  line-height: 1.5;
-  color: #131313;
-}
-
-#priceModal--close button:nth-child(odd) {
-  margin-top: 1rem !important;
-}
-
 .case {
   font-weight: 600;
   font-size: 1rem;
@@ -248,10 +231,6 @@ section {
 
   .down {
     display: none !important;
-  }
-  
-  #priceModal p {
-    font-size: 1rem;
   }
 
   .ka4-text {

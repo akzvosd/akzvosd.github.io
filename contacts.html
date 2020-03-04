@@ -41,7 +41,7 @@
     <link rel="stylesheet" href="css/geomodal.css" />
     <link rel="stylesheet" href="css/bootstrap-grid.css">
     <link rel="stylesheet" href="css/restoration.css">
-    <link rel="stylesheet" href="contacs.css">
+    <link rel="stylesheet" href="css/contacs.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <title>Imagine — Реставрация фото</title>
@@ -173,38 +173,45 @@
             </div>
     </div>
 
-    <!-- geomodal -->
-    <div id="geoModal">
-      <div class="geoModalContent">
-        <div class="geoModalWindow">
-          <!-- Header -->
-          <div class="geoModalWindow__header">
-            <h4>Ваш город</h4>
-            <div id="geoModalClose">
-              <i class="material-icons">close</i>
+   <!-- geomodal -->
+   <div id="geoModal" class="modal">
+    <div style="position: absolute; top: 0; bottom: 0; left: 0; right: 0;" onclick="$('#geoModalClose').click()"></div>
+    <div class="geoModalContent">
+      <div class="geoModalWindow">
+        <!-- Header -->
+        <div class="geoModalWindow__header">
+          <h4>Ваш город</h4>
+          <div id="geoModalClose">
+            <i class="material-icons">close</i>
+          </div>
+        </div>
+        <!-- Content -->
+        <input
+          type="text"
+          placeholder="Поиск города"
+          class="btn"
+          style="text-align:  left; width: 100%;"
+          oninput="handleGeoModalInput(this.value)"
+        />
+        <!-- Footer -->
+        <div class="geoModalWindow__footer">
+          <div class="geoModalWindow__footer--wrap">
+            <div class="geoModalWindow__footer--letter">
+              <i class="material-icons">
+                star
+              </i>
+            </div>
+            <div class="geoModalWindow__footer--city">
+              <p onclick="changeCity('Москва', true)">Москва</p>
+              <p onclick="changeCity('Санкт-Петербург', true)">Санкт-Петербург</p>
+              <p onclick="changeCity('Великий Новгород', true)">Великий Новгород</p>
             </div>
           </div>
-          <!-- Content -->
-          <input type="text" placeholder="Поиск города" class="btn" style="text-align:  left; width: 100%;" oninput="handleGeoModalInput(this.value)" />
-          <!-- Footer -->
-          <div class="geoModalWindow__footer">
-            <div class="geoModalWindow__footer--wrap">
-              <div class="geoModalWindow__footer--letter">
-                <i class="material-icons">
-                  star
-                </i>
-              </div>
-              <div class="geoModalWindow__footer--city">
-                <p onclick="changeCity('Москва')">Москва</p>
-                <p onclick="changeCity('Санкт-Петербург')">Санкт-Петербург</p>
-                <p onclick="changeCity('Великий Новгород')">Великий Новгород</p>
-              </div>
-            </div>
-            <!-- js/geo.js (createGeoModal) вставляет сюда все остальные города -->
-          </div>
+          <!-- js/geo.js (createGeoModal) вставляет сюда все остальные города -->
         </div>
       </div>
     </div>
+  </div>
 
 
     <main class="contacts">

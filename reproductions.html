@@ -218,13 +218,29 @@
             </div>
           </div>
         </div>
-      </div>  
+      </div>
+      <!-- priceModal -->
+      <div id="priceModal" class="modal" onclick="closeModal()">
+              <div class="geoModalContent">
+                <div class="geoModalWindow">
+                  <p>
+                    Стоимость репродукции зависит от выбранного размера. Чтобы узнать точную стоимость, заполните форму внизу страницы. Вам перезвонят и уточнят цену. 
+                  </p>
+                  <div id="priceModal--close" style="margin-top: 1rem">
+                    <button class="btn primary">Понятно</button>
+                    <a href="#form"><button class="btn white">Заполнить форму</button></a>
+                  </div>
+                </div>
+              </div>
+      </div>
             <div class="hero-image reproductions">
-                    <div class="hero-text">
+                    <div class="hero-text" style="width: 700px; left: 32%">
                             <div class="hero-text__list margin-top--hero-text__list">
-                                <h3>Интерьерные картины и репродукции</h3>
-                                <h5>Укажите тему или название или прикрепите фото <br> и мы изготовим идеальную картину для Вашего интерьера.</h5>
-                                <a href="#form"><button class="btn primary">Заказать репродукцию</button></a>
+                                <h3 style="line-height: 1.5;">Репродукции и интерьерные картины <span id="town--hero"></span></h3>
+                                <p id="delivery-days" style="margin-top: 2rem">Изготовление от 3 дней</p>
+                                <p>Самовывоз: <span id="delivery--hero"></span></p>
+                                <p class="modal--cursor" id="priceModal--open"><span class="price--hero">Стоимость репродукции: от 790 руб.</span> <sup>?</sup></p>
+                                <a href="#form"><button class="btn primary" style="margin-top: 3rem">Заказать репродукцию</button></a>
                             </div>
                     </div>
             </div>

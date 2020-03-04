@@ -216,14 +216,30 @@
             </div>
           </div>
         </div>
-      </div>  
+      </div>
+      <!-- pricemodal -->
+      <div id="priceModal" class="modal" onclick="closeModal()">
+        <div class="geoModalContent">
+          <div class="geoModalWindow">
+            <p>
+              Стоимость модульного панно зависит от размера и количества делений. Чтобы узнать точную стоимость, заполните форму внизу страницы. Вам перезвонят и уточнят цену.
+            </p>
+            <div id="priceModal--close" style="margin-top: 1rem">
+              <button class="btn primary">Понятно</button>
+              <a href="#form"><button class="btn white">Заполнить форму</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
             <!-- hero -->
             <div class="hero-image panno">
                     <div class="hero-text">
                             <div class="hero-text__list margin-top--hero-text__list">
-                                <h3>Модульное панно</h3>
-                                <h5>Одна картина на двух, <br> трёх или более холстах.</h5>
-                                <a href="#form"><button class="btn primary">Заказать панно</button></a>
+                                <h3>Модульное панно <span id="town--hero"></span></h3>
+                                <p id="delivery-days" style="margin-top: 2rem">Изготовление от 3 дней</p>
+                                <p>Самовывоз: <span id="delivery--hero"></span></p>
+                                <p class="modal--cursor" id="priceModal--open"><span class="price--hero">Стоимость репродукции: от ??0 руб.</span> <sup>?</sup></p>
+                                <a href="#form"><button class="btn primary" style="margin-top: 3rem">Заказать панно</button></a>
                             </div>
                     </div>
             </div>
