@@ -145,9 +145,12 @@ function tooltipOpen() {
 }
 
 function setDeliveryGeoImage() {
+  var imageElements = document.querySelectorAll('section.delivery .row img');
+  
+  if (!imageElements.length) return 0;
+  
   var imgSrc = 'img/delivery--psk.jpg';
   var figcaptionText = 'Псков, ТЦ «Максимус», 1 этаж';
-  var imageElements = document.querySelectorAll('section.delivery .row img');
 
   imageElements.forEach(element => {
     element.className = 'image';
