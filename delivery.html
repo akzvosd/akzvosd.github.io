@@ -50,12 +50,19 @@
   </head>
  <body>    
     <!-- гео мобайл -->
-    <a href="#" id="geoModalOpenMobile">
-      <div class="mobile--geo">
-        <div id="town--mob">Бесплатная доставка</div>
-        <div id="delivery--mob">по городам России (подробности по телефону)</div>
-      </div>
-    </a>
+	<div class="tooltip tooltip-mobile">
+	  <a href="#" id="geoModalOpenMobile">
+	    <div class="mobile--geo">
+		  <div id="town--mob">Бесплатная доставка</div>
+		  <div id="delivery--mob">по городам России (подробности по телефону)</div>
+		</div>
+      </a>
+	  <span class="tooltiptext" id="tooltipMobile">
+	    <p>Это ваш город?</p>
+		<div class="btn white" onclick="tooltipClose()">Да</div>
+		<div class="btn" onclick="tooltipOpen()" style="border: 1px solid white">Нет</div>
+      </span>
+    </div>
     <!-- гео мобайл -->
     <div class="mobile--header">
       <div class="row align-items-center" style="padding: 0 16px;">
@@ -114,7 +121,7 @@
             <!-- гео десктоп -->
       <div class="col geoIcon" style="flex-grow: 0;">
         <i class="material-icons">
-          place
+          near_me
         </i>
       </div>
       <div class="tooltip">

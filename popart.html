@@ -52,12 +52,19 @@
   </head>
  <body><buttonrc="img/svg/up.svg" width="24px"></div></button>   
     <!-- гео мобайл -->
-    <a href="#" id="geoModalOpenMobile">
-      <div class="mobile--geo">
-        <div id="town--mob">Бесплатная доставка</div>
-        <div id="delivery--mob">по городам России (подробности по телефону)</div>
-      </div>
-    </a>
+	<div class="tooltip tooltip-mobile">
+	  <a href="#" id="geoModalOpenMobile">
+	    <div class="mobile--geo">
+		  <div id="town--mob">Бесплатная доставка</div>
+		  <div id="delivery--mob">по городам России (подробности по телефону)</div>
+		</div>
+      </a>
+	  <span class="tooltiptext" id="tooltipMobile">
+	    <p>Это ваш город?</p>
+		<div class="btn white" onclick="tooltipClose()">Да</div>
+		<div class="btn" onclick="tooltipOpen()" style="border: 1px solid white">Нет</div>
+      </span>
+    </div>
     <!-- гео мобайл -->
     <div class="mobile--header">
         <div class="row align-items-center" style="padding: 0 16px;">
@@ -109,7 +116,7 @@
             <!-- гео десктоп -->
       <div class="col geoIcon" style="flex-grow: 0;">
         <i class="material-icons">
-          place
+          near_me
         </i>
       </div>
       <div class="tooltip">
@@ -209,7 +216,7 @@
                         <p style="margin-top: 16px">Хотите порадовать друзей современным и уникальным подарком? <br>  Этот яркий и незабываемый стиль отлично Вам подойдёт!</p>
                         <small style="color: #a6a6a6">Вы заплатите за картину только в том случае, если она вам понравится</small>
                         <br>
-                        <small style="color: #a6a6a6">Стоимость дополнительный лиц — 600 руб.</small>
+                        <small style="color: #a6a6a6">Стоимость дополнительных лиц — 600 руб.</small>
                         <p class="text--bold" style="margin-bottom: 16px; margin-top: 24px;">Популярные форматы и их стоимость</p>
                         <select class="select--price" id="selectBox" onchange="changeFunc();">
                                 <option value="Цена: 2490 руб.">20x30 см</option>
