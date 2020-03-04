@@ -124,8 +124,8 @@ a {
 .primary {
   background: #ffd164;
   border: 2px solid #ffd164;
-  -webkit-box-shadow: 0px 8px 16px rgba(255, 208, 100, 0.445);
-  box-shadow: 0px 8px 16px rgba(255, 208, 100, 0.4);
+  /* -webkit-box-shadow: 0px 8px 16px rgba(255, 208, 100, 0.445);
+  box-shadow: 0px 8px 16px rgba(255, 208, 100, 0.4); */
 }
 .primary:hover {
   background: #ffba1a;
@@ -151,8 +151,8 @@ a {
   background: #6394ff;
   border: 2px solid #6394ff;
   color: #fff;
-  -webkit-box-shadow: 2px 4px 32px rgba(99, 148, 255, 0.6);
-  box-shadow: 2px 4px 16px rgba(99, 148, 255, 0.3);
+  /* -webkit-box-shadow: 2px 4px 32px rgba(99, 148, 255, 0.6);
+  box-shadow: 2px 4px 16px rgba(99, 148, 255, 0.3); */
 }
 .alternative:hover {
   background: #3374ff;
@@ -389,7 +389,6 @@ header {
   margin: auto;
   max-width: 1400px;
   width: 100%;
-  margin-top: 24px;
 }
 
 header #delivery {
