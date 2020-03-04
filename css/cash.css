@@ -34,10 +34,6 @@ main {
        object-fit: cover;
 }
 
-.modal {
-    font-size: small;
-}
-
 @media only screen and (max-width: 900px) {
     main {
         padding-left: 16px;

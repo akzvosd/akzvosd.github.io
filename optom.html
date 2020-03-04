@@ -14,7 +14,7 @@
 <meta property="og:title" content="Imagine — Студия Картин" />
 <meta property="og:type" content="shop" />
 <meta property="og:url" content="http://imagine24.ru/" />
-<meta property="og:image" content="http://imagine24.ru/img/examples/example7.jpg" /> <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png" />
+<meta property="og:image" content="http://imagine24.ru/img/ogimage.jpg" />  <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png" />
     <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png" />
     <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png" />
     <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png" />
@@ -40,7 +40,7 @@
     <link rel="stylesheet" href="css/geomodal.css" />
     <link rel="stylesheet" href="css/bootstrap-grid.css">
     <link rel="stylesheet" href="css/restoration.css">
-    <link rel="stylesheet" href="cash.css">
+    <link rel="stylesheet" href="css/cash.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <title>Imagine — Оптом</title>
@@ -60,7 +60,7 @@
 		<div class="btn white" onclick="tooltipClose()">Да</div>
 		<div class="btn" onclick="tooltipOpen()" style="border: 1px solid white">Нет</div>
       </span>
-    </div>
+  </div>
     <!-- гео мобайл -->
     <div class="mobile--header">
       <div class="row align-items-center" style="padding: 0 16px;">
@@ -114,7 +114,7 @@
             </div>
     </div>
     
-    <header class="row align-items-center">
+    <header class="row align-items-center" style="margin-top: 0">
             <div class="col-md-2"><a href="index.html"><img src="img/logotype.png" class="image logotype" alt="Логотип"/></a></div>
              
             <!-- гео десктоп -->
@@ -173,7 +173,8 @@
     </div>
 
 <!-- geomodal -->
-<div id="geoModal">
+<div id="geoModal" class="modal">
+  <div style="position: absolute; top: 0; bottom: 0; left: 0; right: 0;" onclick="$('#geoModalClose').click()"></div>
   <div class="geoModalContent">
     <div class="geoModalWindow">
       <!-- Header -->
@@ -184,7 +185,13 @@
         </div>
       </div>
       <!-- Content -->
-      <input type="text" placeholder="Поиск города" class="btn" style="text-align:  left; width: 100%;" oninput="handleGeoModalInput(this.value)" />
+      <input
+        type="text"
+        placeholder="Поиск города"
+        class="btn"
+        style="text-align:  left; width: 100%;"
+        oninput="handleGeoModalInput(this.value)"
+      />
       <!-- Footer -->
       <div class="geoModalWindow__footer">
         <div class="geoModalWindow__footer--wrap">
@@ -194,9 +201,9 @@
             </i>
           </div>
           <div class="geoModalWindow__footer--city">
-            <p onclick="changeCity('Москва')">Москва</p>
-            <p onclick="changeCity('Санкт-Петербург')">Санкт-Петербург</p>
-            <p onclick="changeCity('Великий Новгород')">Великий Новгород</p>
+            <p onclick="changeCity('Москва', true)">Москва</p>
+            <p onclick="changeCity('Санкт-Петербург', true)">Санкт-Петербург</p>
+            <p onclick="changeCity('Великий Новгород', true)">Великий Новгород</p>
           </div>
         </div>
         <!-- js/geo.js (createGeoModal) вставляет сюда все остальные города -->
@@ -271,63 +278,63 @@
             </div>
         </section></footer>
    
-        <script src="js/script.js"></script>
-        <script src="js/slider.js"></script>
-        <script src="js/swiper.js"></script>
-        <script>
-          var swiper = new Swiper('.swiper-container');
-        </script>
-        <script>
-          $('#callmebaby').click(function() {
-            $('#modalCall').show();
-          });
-          $('#closeCall').click(function() {
-            $('#modalCall').hide();
-          });
-          $('#callmebabyDesk').click(function() {
-            $('#modalCall').show();
-          });
-        </script>
-        <script>
-          $(document).ready(function() {
-            $('.tog').click(function() {
-              $('img', this).toggle();
-              $('span', this).toggle();
-            });
-          });
-        </script>
-        <script>
-          var modal = document.querySelector('.modal');
-    
-          function openModal(imgSrc, name, size, price) {
-            var html = '<img src="' + imgSrc + '"/>';
-    
-            modal.innerHTML = html;
-            modal.style.display = 'inline-block';
-          }
-    
-          function closeModal() {
-            modal.style.display = 'none';
-          }
-        </script>
-        <script>
-          $(document).ready(function() {
-            $('#ytopen').click(function() {
-              $('#ytvideo').show();
-            });
-            $('#ytexit').click(function() {
-              $('#ytvideo').hide();
-            });
-          });
-        </script>
-        <script src="js/geo.js"></script>
-        <script>
-          (function(w, d, u) {
-            var s = d.createElement('script');
-            s.async = true;
-            s.src = u + '?' + ((Date.now() / 60000) | 0);
-            var h = d.getElementsByTagName('script')[0];
-            h.parentNode.insertBefore(s, h);
-          })(window, document, 'https://cdn.bitrix24.ru/b7533283/crm/site_button/loader_5_y1jzm9.js');
-        </script> </body>
+        <div class="modal" id="notGeoModal" onclick="closeModal()"></div>
+
+    <script src="js/script.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/swiper.js"></script>
+    <script>
+      var swiper = new Swiper('.swiper-container');
+    </script>
+    <script>
+      $('#priceModal--open').click(function() {
+        $('#priceModal').show();
+      });
+      $('#priceModal--close').click(function() {
+        $('#priceModal').hide();
+      });
+    </script>
+    <script>
+      $(document).ready(function() {
+        $('.tog').click(function() {
+          $('img', this).toggle();
+          $('span', this).toggle();
+        });
+      });
+    </script>
+    <script>
+      var modal = document.querySelector('#notGeoModal');
+
+      function openModal(imgSrc, name, size, price) {
+        var html = '<img src="' + imgSrc + '"/>';
+
+        modal.innerHTML = html;
+        modal.style.display = 'inline-block';
+      }
+
+      function closeModal() {
+        modal.style.display = 'none';
+      }
+    </script>
+    <script>
+      $(document).ready(function() {
+        $('#ytopen').click(function() {
+          $('#ytvideo').show();
+        });
+        $('#ytexit').click(function() {
+          $('#ytvideo').hide();
+        });
+      });
+    </script>
+    <script src="js/geo.js"></script>
+    <script>
+      (function(w, d, u) {
+        var s = d.createElement('script');
+        s.async = true;
+        s.src = u + '?' + ((Date.now() / 60000) | 0);
+        var h = d.getElementsByTagName('script')[0];
+        h.parentNode.insertBefore(s, h);
+      })(window, document, 'https://cdn.bitrix24.ru/b7533283/crm/site_button/loader_5_y1jzm9.js');
+    </script>
+    </body>
 </html>
