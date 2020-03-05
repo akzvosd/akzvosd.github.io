@@ -169,7 +169,8 @@ a {
   color: #131313;
 }
 .line:hover {
-  background: #1313133f;
+  background: #ffd164;
+  border: 2px solid #ffd164;
   -webkit-transition: 0.4s;
   -o-transition: 0.4s;
   transition: 0.4s;
