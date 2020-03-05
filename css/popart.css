@@ -55,7 +55,8 @@ label {
 }
 
 .counterBut {
-  background: #ccc;
+  border: 2px solid #ffeabb;
+  background: #ffeabb;
 }
 
 .fieldCount {
@@ -64,7 +65,8 @@ label {
 }
 
 .counterBut:hover {
-  background: #a6a6a6;
+  background: #ffd164;
+  border: 2px solid #ffd164;
   cursor: pointer;
 }
 
@@ -176,7 +178,8 @@ section h3 {
   }
 
   .counterBut:focus {
-    background: #a6a6a6;
+    background: #ffd164;
+    border: 2px solid #ffd164;
   }
 
   .fieldCount {
