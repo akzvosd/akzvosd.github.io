@@ -6,6 +6,11 @@
   background-size: cover;
 }
 
+.hero-text--addition {
+  width: 700px;
+  left: 32%;
+}
+
 .margin-top--hero-text__list {
   margin-top: 0;
 }
@@ -89,7 +94,7 @@
   border: 1px solid #818181;
 }
 
-select {
+select, input {
   width: 100%;
   padding: 8px 16px;
   border: 0;
@@ -171,6 +176,11 @@ input[type='file'] {
     background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url('../img/repro.jpg');
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url('../img/repro.jpg');
     background-position-x: 60%;
+  }
+
+  .hero-text--addition {
+    width: 100%;
+    left: 0;
   }
 
   .hero-text h5 {

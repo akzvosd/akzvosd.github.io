@@ -30,7 +30,7 @@
 <link rel="manifest" href="img/favicon/manifest.json" />
 <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png" />
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#ffd164" />
      
     <!-- geo -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -41,7 +41,7 @@
     <link rel="stylesheet" href="css/bootstrap-grid.css">
     <link rel="stylesheet" href="css/restoration.css">
     <link rel="stylesheet" href="css/baget.css">
-    <link rel="stylesheet" href="package.css">
+    <link rel="stylesheet" href="css/package.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <title>Imagine — Упаковка</title>
@@ -275,7 +275,6 @@
                         <img src="img/package/kraft7.jpg" class="image image--baget__mobile">
                         <p class="text--bold">Олени</p>
                         <p>Белый бант</p>
-    
                     </div>
                 </div>
 
@@ -456,66 +455,64 @@
                     <a href="https://www.instagram.com/imagine.1971/" style="display: inline;"><img src="img/svg/instagramsquare.svg" alt="Логотип ВК" width="48px"></a>
                 </div>
             </div>
-        </section></footer>
+        </section>
+      </footer>
    
-        <script src="js/script.js"></script>
-        <script src="js/slider.js"></script>
-        <script src="js/swiper.js"></script>
-        <script>
-          var swiper = new Swiper('.swiper-container');
-        </script>
-        <script>
-          $('#callmebaby').click(function() {
-            $('#modalCall').show();
+      <script src="js/script.js"></script>
+      <script src="js/slider.js"></script>
+      <script src="js/swiper.js"></script>
+      <script>
+        var swiper = new Swiper('.swiper-container');
+      </script>
+      <script>
+        $('#priceModal--open').click(function() {
+          $('#priceModal').show();
+        });
+        $('#priceModal--close').click(function() {
+          $('#priceModal').hide();
+        });
+      </script>
+      <script>
+        $(document).ready(function() {
+          $('.tog').click(function() {
+            $('img', this).toggle();
+            $('span', this).toggle();
           });
-          $('#closeCall').click(function() {
-            $('#modalCall').hide();
+        });
+      </script>
+      <script>
+        var modal = document.querySelector('#notGeoModal');
+  
+        function openModal(imgSrc, name, size, price) {
+          var html = '<img src="' + imgSrc + '"/>';
+  
+          modal.innerHTML = html;
+          modal.style.display = 'inline-block';
+        }
+  
+        function closeModal() {
+          modal.style.display = 'none';
+        }
+      </script>
+      <script>
+        $(document).ready(function() {
+          $('#ytopen').click(function() {
+            $('#ytvideo').show();
           });
-          $('#callmebabyDesk').click(function() {
-            $('#modalCall').show();
+          $('#ytexit').click(function() {
+            $('#ytvideo').hide();
           });
-        </script>
-        <script>
-          $(document).ready(function() {
-            $('.tog').click(function() {
-              $('img', this).toggle();
-              $('span', this).toggle();
-            });
-          });
-        </script>
-        <script>
-          var modal = document.querySelector('.modal');
-    
-          function openModal(imgSrc, name, size, price) {
-            var html = '<img src="' + imgSrc + '"/>';
-    
-            modal.innerHTML = html;
-            modal.style.display = 'inline-block';
-          }
-    
-          function closeModal() {
-            modal.style.display = 'none';
-          }
-        </script>
-        <script>
-          $(document).ready(function() {
-            $('#ytopen').click(function() {
-              $('#ytvideo').show();
-            });
-            $('#ytexit').click(function() {
-              $('#ytvideo').hide();
-            });
-          });
-        </script>
-        <script src="js/geo.js"></script>
-        <script>
-          (function(w, d, u) {
-            var s = d.createElement('script');
-            s.async = true;
-            s.src = u + '?' + ((Date.now() / 60000) | 0);
-            var h = d.getElementsByTagName('script')[0];
-            h.parentNode.insertBefore(s, h);
-          })(window, document, 'https://cdn.bitrix24.ru/b7533283/crm/site_button/loader_5_y1jzm9.js');
-        </script>
+        });
+      </script>
+      <script src="js/geo.js"></script>
+      <script>
+        (function(w, d, u) {
+          var s = d.createElement('script');
+          s.async = true;
+          s.src = u + '?' + ((Date.now() / 60000) | 0);
+          var h = d.getElementsByTagName('script')[0];
+          h.parentNode.insertBefore(s, h);
+        })(window, document, 'https://cdn.bitrix24.ru/b7533283/crm/site_button/loader_5_y1jzm9.js');
+      </script>
   </body>
 </html>

@@ -7,3 +7,7 @@
           transform: translate(-50%, -50%);
   width: 60%;
 }
+
+.col-md-4:hover img {
+  box-shadow: 0 0 0 4px #ffd164;
+}
