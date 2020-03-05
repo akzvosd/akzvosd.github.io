@@ -226,8 +226,9 @@
                         <small style="color: #a6a6a6">Вы заплатите за картину только в том случае, если она вам понравится</small>
                         <br>
                         <small style="color: #a6a6a6">Стоимость дополнительных лиц — 500 руб.</small>
-                        <p class="text--bold" style="margin-bottom: 16px; margin-top: 24px;">Популярные форматы и их стоимость</p>
-                        <select class="select--price" id="selectBox" onchange="changeFunc();">
+                        
+                        <label for="selectBox">Популярные форматы и их стоимость</label>
+                        <select class="select--price" id="selectBox" name="selectBox" onchange="changeFunc();">
                                 <option value="Цена: 2290 руб.">20x30 см</option>
                                 <option value="Цена: 2990 руб.">30x40 см</option>
                                 <option value="Цена: 3790 руб.">40x60 см</option>
@@ -235,8 +236,12 @@
                                 <option value="Цена: 7800 руб.">80x120 см</option>
                                 <option value="Для расчёта стоимости <br>нажмите «Заказать» и заполните форму">Другой размер</option>
                         </select>
-                        <label for="x" style="display: block; margin-top: 1rem">Количество лиц</label>
-                        <input type="number" class="select--price" id="x" name="x" min="1" max="100" placeholder="1">
+                        <div class="counter">
+                            <label for="x">Количество лиц</label>
+                            <button type="button" class="but counterBut dec">-</button>
+                            <input type="text" class="field fieldCount" value="1" data-min="1" data-max="20" id="x" name="x">
+                            <button type="button" class="but counterBut inc">+</button>
+                          </div>
                         <h5 id="selectV" style="margin-top: 16px; font-weight: 500;">Цена: 2290 руб.</h5>
                         <a href="#form"><button class="btn primary">Сделать заказ</button></a>
                     </div>
@@ -682,5 +687,7 @@
         });
         }
     </script>
+    <!-- calc counter -->
+    <script src="js/counter.js"></script>
 </body>
 </html>

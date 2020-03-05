@@ -32,6 +32,42 @@
   margin-top: 32px;
 }
 
+.counter {
+  margin-top: 1rem;
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.counter button {
+  margin-top: 0;
+}
+
+.counterBut, .fieldCount {
+  border: 0;
+  padding: 0.5rem !important;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.counterBut {
+  background: #ccc;
+}
+
+.fieldCount {
+  text-align: center;
+  border: 2px solid #ccc;
+}
+
+.counterBut:hover {
+  background: #a6a6a6;
+  cursor: pointer;
+}
+
 .style--container {
   margin: auto;
   margin-top: 32px;
@@ -129,5 +165,21 @@ section h3 {
 
   .section--bg {
     padding: 0;
+  }
+
+  .counter .dec {
+    margin-bottom: 8px !important;
+  }
+
+  .counter .inc {
+    margin-top: 8px !important;
+  }
+
+  .counterBut:focus {
+    background: #a6a6a6;
+  }
+
+  .fieldCount {
+    width: 100%;
   }
 }

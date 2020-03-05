@@ -94,7 +94,7 @@
   border: 1px solid #818181;
 }
 
-select, input {
+select {
   width: 100%;
   padding: 8px 16px;
   border: 0;
