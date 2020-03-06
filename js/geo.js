@@ -66,6 +66,7 @@ function changeCity(city, setShowTooltipToFalse = false) {
 
     setHtml();
     setDeliveryGeoImage();
+    setDeliveryMessage();
 
     // if ($('#delivery-days')[0]) $('#delivery-days').html(`Изготовление картины от ${days} ${days === 1 ? 'дня' : 'дней'}`);
     if ($('#delivery-days')[0]) $('#delivery-days').html(`Изготовление от ${days} ${days === 1 ? 'дня' : 'дней'}`);
@@ -146,9 +147,9 @@ function tooltipOpen() {
 
 function setDeliveryGeoImage() {
   var imageElements = document.querySelectorAll('section.delivery .row img');
-  
+
   if (!imageElements.length) return 0;
-  
+
   var imgSrc = 'img/delivery--psk.jpg';
   var figcaptionText = 'Псков, ТЦ «Максимус», 1 этаж';
 
@@ -173,4 +174,17 @@ function setDeliveryGeoImage() {
 
   imgElement.attr('src', imgSrc);
   figcaptionElement.html(figcaptionText);
+}
+
+function setDeliveryMessage() {
+  var deliveryMessageElement = $('#delivery--message');
+
+  if (!deliveryMessageElement[0]) return 0;
+
+  var message = 'Бесплатная доставка по городам России.<br>Укажите свой город, чтобы получить более точную информацию, либо обратитесь по телефону.';
+
+  if (citiesNorthwest.indexOf(geo.city) >= 0) message = 'Доставка не потребуется. Мы изготовим картину в Вашем городе.';
+  else if (citiesCenter.indexOf(geo.city) >= 0) message = 'Подробности по телефону.';
+
+  deliveryMessageElement.html(message);
 }
