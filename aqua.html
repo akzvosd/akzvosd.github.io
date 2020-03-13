@@ -59,6 +59,7 @@
     <link rel="stylesheet" href="css/review.css" />
     <link rel="stylesheet" href="css/baget.css" />
     <link rel="stylesheet" href="css/accordion.css" />
+    <link rel="stylesheet" href="css/stylecalc.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <title>Imagine — Акварель</title>
@@ -243,31 +244,35 @@
       <div class="hero-image popart" style="background-image: url(img/aqua/aqua-hero.jpg); background-position-x: 15%;">
         <div class="hero-text--style">
           <div class="hero-text__list hero-text__listShadow">
-            <h3>Портрет в стиле «Акварель»</h3>
-            <p>
-              Тёплый и красочный портрет, выполненный в классической <br />
-              технике, сохранит Ваш образ на долгие годы!
-            </p>
-            <small style="color: #a6a6a6">Вы заплатите за картину только в том случае, если она вам понравится</small>
-            <br />
-            <small style="color: #a6a6a6">Стоимость дополнительных лиц — <span id="facePrice">500</span> руб.</small>
-
-            <label for="selectBox">Популярные форматы и их стоимость</label>
-            <select class="select--price" id="selectBox" name="selectBox" onchange="setSizePrice(this)">
-              <option value="2290">20x30 см</option>
-              <option value="2990">30x40 см</option>
-              <option value="3790">40x60 см</option>
-              <option value="4950">60х80 см</option>
-              <option value="7800">80x120 см</option>
-              <option value="-1">Другой размер</option>
-            </select>
-            <div class="counter">
-              <label for="x">Количество лиц</label>
-              <button type="button" class="but counterBut dec">-</button>
-              <input type="text" class="field fieldCount" value="1" data-min="1" data-max="20" id="x" name="x" />
-              <button type="button" class="but counterBut inc">+</button>
+            <h2 class="text--bold">Портрет в стиле «Акварель»</h2>
+              <p>
+                Тёплый и красочный портрет, выполненный <br>в классической технике!
+              </p>
+            <div class="row">
+              <div class="col-md-6 style-col-padding-off">
+                <label for="selectBox">Популярные форматы</label>
+                <select class="select--price" id="selectBox" name="selectBox" name="selectBox" onchange="setSizePrice(this)">
+                    <option value="2290">20x30 см</option>
+                    <option value="2990">30x40 см</option>
+                    <option value="3790">40x60 см</option>
+                    <option value="4950">60х80 см</option>
+                    <option value="7800">80x120 см</option>
+                    <option value="-1">Другой размер</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <div class="counter">
+                  <label for="x">Количество лиц (>1)</label>
+                  <button type="button" class="but counterBut dec">-</button>
+                  <input type="text" class="field fieldCount" value="1" data-min="1" data-max="20" id="x" name="x" />
+                  <button type="button" class="but counterBut inc">+</button>
+                </div>
+              </div>
             </div>
-            <h5 id="selectV" style="margin-top: 16px; font-weight: 500;">Цена: 2290 руб.</h5>
+
+            <h5 id="selectV">Цена: 2290 руб.</h5>
+            <small style="color: #a6a6a6">Вы заплатите за картину только в том случае, если она вам понравится</small><br/>
+            <small style="color: #a6a6a6">Стоимость дополнительных лиц (более одного) — <span id="facePrice">500</span> руб.</small><br />
             <a href="#form"><button class="btn primary">Сделать заказ</button></a>
           </div>
         </div>

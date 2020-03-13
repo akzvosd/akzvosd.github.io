@@ -45,6 +45,7 @@
     <link rel="stylesheet" href="css/review.css">
     <link rel="stylesheet" href="css/baget.css">
     <link rel="stylesheet" href="css/accordion.css">
+    <link rel="stylesheet" href="css/stylecalc.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <title>Imagine — Мульт-герой</title>
@@ -221,21 +222,34 @@
         <div class="hero-image popart" style="background-image: url(img/mult/mult-hero.jpg);">
             <div class="hero-text--style">
                     <div class="hero-text__list ">
-                        <h3>Портрет «Мульт-герой»</h3>
-                        <p>Выберите свой любимый мультфильм и фотографию, <br>и наши художники реализуют Ваши фантазии на холсте!</p>
-                        <small style="color: #a6a6a6">Вы заплатите за картину только в том случае, если она вам понравится</small>
-                        <br>
-                        <small style="color: #a6a6a6">Стоимость дополнительных лиц — 1000 руб.</small>
-                        <p class="text--bold" style="margin-bottom: 16px; margin-top: 24px;">Популярные форматы и их стоимость</p>
-                        <select class="select--price" id="selectBox" onchange="changeFunc();">
-                                <option value="Цена: 3290P">20x30 см</option>
-                                <option value="Цена: 3990P">30x40 см</option>
-                                <option value="Цена: 4790P">40x60 см</option>
-                                <option value="Цена: 5950P">60х80 см</option>
-                                <option value="Цена: 8800P">80x120 см</option>
-                                <option value="Для расчёта стоимости <br>нажмите «Заказать» и заполните форму">Другой размер</option>
-                        </select>
-                        <h5 id="selectV" style="margin-top: 16px; font-weight: 500;">Цена: 3290 руб.</h5>
+                        <h2 class="text--bold">Портрет «Мульт-герой»</h2>
+                        <p>Портрет в стилистике вашего любимого мультфильма. <br /> Наши художники повторят любую рисовку!</p>
+
+                        <div class="row">
+                            <div class="col-md-6 style-col-padding-off">
+                                <label for="selectBox">Популярные форматы</label>
+                                <select class="select--price" id="selectBox" name="selectBox" onchange="setSizePrice(this)">
+                                        <option value="3290">20x30 см</option>
+                                        <option value="3990">30x40 см</option>
+                                        <option value="4790">40x60 см</option>
+                                        <option value="5950">60х80 см</option>
+                                        <option value="8800">80x120 см</option>
+                                        <option value="-1">Другой размер</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 style-col-padding-off">
+                                <div class="counter">
+                                    <label for="x">Количество лиц (>1)</label>
+                                    <button type="button" class="but counterBut dec">-</button>
+                                    <input type="text" class="field fieldCount" value="1" data-min="1" data-max="20" id="x" name="x" />
+                                    <button type="button" class="but counterBut inc">+</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h5 id="selectV">Цена: 3290 руб.</h5>
+                        <small style="color: #a6a6a6">Вы заплатите за картину только в том случае, если она вам понравится</small><br/>
+                        <small style="color: #a6a6a6">Стоимость дополнительных лиц (более одного) — <span id="facePrice">1000</span> руб.</small><br />
                         <a href="#form"><button class="btn primary">Сделать заказ</button></a>
                     </div>
             </div>
@@ -648,6 +662,8 @@
             } 
         });
         }
-    </script>    
+    </script>
+    <!-- calc -->
+    <script src="js/counter.js"></script>
 </body>
 </html>

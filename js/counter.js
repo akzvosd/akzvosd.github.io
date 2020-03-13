@@ -72,7 +72,7 @@ function setFaces(value) {
 }
 
 function calcPrice() {
-  if (sizePrice === -1) return $('#selectV').html('Для расчёта стоимости <br>нажмите «Заказать» и заполните форму');
+  if (sizePrice === -1) return $('#selectV').html('Для расчёта стоимости <br>нажмите «Сделать заказ»<br> и заполните форму');
 
   totalPrice = sizePrice + additionalFaces * facePrice;
 

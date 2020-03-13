@@ -268,7 +268,7 @@
           <!-- <img src="img/imagine_studio.svg" alt="Логотип студии" /> -->
 
           <div class="hero-text__list">
-            <h3>Портрет по фото <span id="town--hero"></span></h3>
+            <h3 class="text--bold">Портрет по фото <span id="town--hero"></span></h3>
             <p style="color: #ffd164">Предоплата потребуется только после внесения правок и утверждения эскиза</p>
             <!-- <h5>Наши картины — тёплый и запоминающийся подарок для вас, ваших друзей и ваших близких!</h5> -->
             <p id="delivery-days">Изготовление от 3 дней</p>
@@ -578,9 +578,10 @@
     <section class="youtube--video text--center">
       <h3 style="margin-bottom: 24px;" class="text--bold">Как сделать заказ</h3>
       <img src="img/yt.png" alt="youtube видео" id="ytopen" class="img-yt modal--cursor" width="70%" />
-      <div class="modal" id="ytvideo" onclick="closeModal()">
+      <div id="ytvideo" class="modal" onclick="closeModal()">
         <iframe width="80%" class="youtube--desktop" src="https://www.youtube.com/embed/qENMvCLRbQg" style="border: 0"> </iframe>
         <iframe width="100%" class="youtube--mobile" src="https://www.youtube.com/embed/lmq20ABQdlg" style="border: 0"> </iframe>
+        <button id="ytexit" class="btn white" style="margin: auto; display: block;">Закрыть</button>
       </div>
     </section>
     <!-- reviews -->
@@ -902,8 +903,8 @@
           $('#ytvideo').show();
         });
         $('#ytexit').click(function() {
-          $('#ytvideo').hide();
-        });
+           $('#ytvideo').hide();
+         });
       });
     </script>
     <script src="js/geo.js"></script>
