@@ -14,6 +14,13 @@
     border: 4px solid #ffd164;
 } */
 
+/* .reviewSocialButton::before {
+    content: url('../img/svg/vklogo.svg');
+    margin-right: 4px;
+    top: 5px;
+} */
+
+
 .review--card {
     width: 100%;
     max-width: 812px;

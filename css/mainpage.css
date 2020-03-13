@@ -14,6 +14,14 @@
   font-size: 0.7rem;
 }
 
+.smallcase--width {
+  display: inline-block;
+  width: 64px;
+  color: #a7873d;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+}
+
 .mainPage img {
   width: 60%;
 }
