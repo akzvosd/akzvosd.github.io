@@ -578,10 +578,11 @@
     <section class="youtube--video text--center">
       <h3 style="margin-bottom: 24px;" class="text--bold">Как сделать заказ</h3>
       <img src="img/yt.png" alt="youtube видео" id="ytopen" class="img-yt modal--cursor" width="70%" />
-      <div id="ytvideo" class="modal" onclick="closeModal()">
+      <div id="ytvideo" class="modal">
+		<div style="position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: -1;" onclick="$('#ytvideo').hide()"></div>
         <iframe width="80%" class="youtube--desktop" src="https://www.youtube.com/embed/qENMvCLRbQg" style="border: 0"> </iframe>
         <iframe width="100%" class="youtube--mobile" src="https://www.youtube.com/embed/lmq20ABQdlg" style="border: 0"> </iframe>
-        <button id="ytexit" class="btn white" style="margin: auto; display: block;">Закрыть</button>
+        <!-- <button id="ytexit" class="btn white" style="margin: auto; display: block;">Закрыть</button> -->
       </div>
     </section>
     <!-- reviews -->
