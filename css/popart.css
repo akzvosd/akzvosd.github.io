@@ -4,6 +4,15 @@
   background-position-x: 40%;
 }
 
+.popartWidth {
+  width: 28vw;
+  min-width: 400px;
+}
+
+.heroTextWidth {
+  width: 77%;
+}
+
 .modal img {
   position: absolute;
   top: 50%;
@@ -29,7 +38,7 @@
 }
 
 .hero-text__list button {
-  margin-top: 32px;
+  margin-top: 24px;
 }
 
 .style-col-padding-off {
@@ -104,6 +113,8 @@ section h3 {
   padding-right: 0;
 }
 
+
+
 @media only screen and (max-width: 900px) {
   .popart {
     background-image: url('../img/examples/example7_hero.jpg');
@@ -112,9 +123,22 @@ section h3 {
     margin-bottom: 360px;
   }
 
+  .popart-width {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .heroTextWidth {
+    width: 100%;
+  }
+
   .hero-text--style {
     top: 50%;
     z-index: 2;
+  }
+
+  .hero-text--style h2 {
+    font-size: 27px;
   }
 
   .style--slide2 {

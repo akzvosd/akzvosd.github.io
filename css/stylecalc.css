@@ -80,6 +80,7 @@ label {
   text-align: center;
   border: 1px solid #ccc;
   width: 50%;
+  pointer-events: none;
 }
 
 .counterBut:hover {
@@ -89,10 +90,25 @@ label {
 
 #selectV {
   margin-top: 16px;
-  margin-bottom: 24px;
+}
+
+#facePrice {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#delivery-days {
+  display: inline-block;
+  margin-left: 16px;
 }
 
 @media only screen and (max-width: 900px) { 
+  #delivery-days {
+  display: block;
+  margin-left: 0;
+  }
   .select--price {
     width: 100%
   }

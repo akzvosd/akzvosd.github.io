@@ -222,13 +222,14 @@
       </div>
     <!-- hero -->
         <div class="hero-image popart" style="background-image: url(img/maslom/maslom-hero.jpg);">
-            <div class="hero-text--style">
+            <div class="hero-text--style popartWidth">
                     <div class="hero-text__list hero-text__listShadow">
                         <h2 class="text--bold">Портрет в стиле «Маслом»</h2>
-                        <p>Настоящая классика живописи! <br>Изысканный подарок на любой праздник!</p>
+                        <p class="heroTextWidth">Настоящая классика живописи! Изысканный подарок на любой праздник!</p>
 
-                        <div class="row">
-                            <div class="col-md-6 style-col-padding-off">
+                        <small id="town--hero"></small> <small id="delivery-days"></small>
+            <div class="row">
+              <div class="col-md-6 style-col-padding-off">
                                 <label for="selectBox">Популярные форматы</label>
                                 <select class="select--price" id="selectBox" name="selectBox" onchange="setSizePrice(this)">
                                 <option value="2290">20x30 см</option>
@@ -241,18 +242,19 @@
                             </div>
                             <div class="col-md-6 style-col-padding-off">
                                 <div class="counter">
-                                <label for="x">Количество лиц (>1)</label>
+                                <label for="x">Количество лиц</label>
                                 <button type="button" class="but counterBut dec">-</button>
-                                <input type="text" class="field fieldCount" value="1" data-min="1" data-max="20" id="x" name="x" />
+                                <input type="text" class="field fieldCount" value="1" data-min="1" data-max="30" id="x" name="x" />
                                 <button type="button" class="but counterBut inc">+</button>
                                 </div>
                             </div>
                         </div>
 
                         <h5 id="selectV">Цена: 2290 руб.</h5>
-                        <small style="color: #a6a6a6">Вы заплатите за картину только в том случае, если она вам понравится</small><br/>
-                        <small style="color: #a6a6a6">Стоимость дополнительных лиц (более одного) — <span id="facePrice">400</span> руб.</small><br />
+                        <small style="color: #858585">Предоплата после согласования эскиза.</small><br/>
                         <a href="#form"><button class="btn primary">Сделать заказ</button></a>
+                        <!-- Прайс дополнительных лиц -->
+                        <span id="facePrice">400</span>
                     </div>
             </div>
         </div>

@@ -220,13 +220,13 @@
       </div>
     <!-- hero -->
         <div class="hero-image popart" style="background-image: url(img/loveis/loveis-hero.jpg); background-position-x: 18%;">
-            <div class="hero-text--style">
+            <div class="hero-text--style popartWidth">
                     <div class="hero-text__list hero-text__listShadow">
                         <h2 class="text--bold">Портрет в стиле Love is...</h2>
-                        <p>Романтичный и недорогой подарок в стиле<br> комиксов из всемирно известных конфеток</p>
-
-                        <div class="row">
-                            <div class="col-md-6 style-col-padding-off">
+                        <p class="heroTextWidth">Романтичный и недорогой подарок в стиле комиксов из всемирно известных конфеток</p>
+                        <small id="town--hero"></small> <small id="delivery-days"></small>
+            <div class="row">
+              <div class="col-md-6 style-col-padding-off">
                                 <label for="selectBox">Популярные форматы</label>
                                 <select class="select--price" id="selectBox" name="selectBox" onchange="setSizePrice(this)">
                                         <option value="1090">20x30 см</option>
@@ -239,17 +239,17 @@
                             </div>
                             <div class="col-md-6 style-col-padding-off">
                                 <div class="counter">
-                                    <label for="x">Количество лиц (>1)</label>
+                                    <label for="x">Количество лиц</label>
                                     <button type="button" class="but counterBut dec">-</button>
-                                    <input type="text" class="field fieldCount" value="1" data-min="1" data-max="20" id="x" name="x" />
+                                    <input type="text" class="field fieldCount" value="1" data-min="1" data-max="30" id="x" name="x" />
                                     <button type="button" class="but counterBut inc">+</button>
                                 </div>
                             </div>
                         </div>
                         <h5 id="selectV">Цена: 1090 руб.</h5>
-                        <small style="color: #a6a6a6">Вы заплатите за картину только в том случае, если она вам понравится</small><br/>
-                        <small style="color: #a6a6a6">Стоимость дополнительных лиц (более одного) — <span id="facePrice">300</span> руб.</small><br />
+                        <small style="color: #858585">Предоплата после согласования эскиза.</small><br/>
                         <a href="#form"><button class="btn primary">Сделать заказ</button></a>
+                        <span id="facePrice">300</span>
                     </div>
             </div>
         </div>

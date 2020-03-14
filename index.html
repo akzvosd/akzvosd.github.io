@@ -769,6 +769,7 @@
         <h5>Получите готовый портрет в наших фирменных отделах <br />или в пункте выдачи возле Вашего дома</h5>
         <div class="delivery--button">
           <a href="delivery.html"><button class="btn line">Подробнее о доставке</button></a>
+          <button class="btn line" id="GMO2">Изменить город</button>
         </div>
         <div class="row" style="margin-top: 40px;">
           <div class="col-md-4 col-md-4__leftZero" id="delivery-geo">
@@ -867,6 +868,11 @@
     <script src="js/swiper.js"></script>
     <script>
       var swiper = new Swiper('.swiper-container');
+    </script>
+    <script>
+      $('#GMO2').click(function() {
+        $('#geoModal').show();
+      });
     </script>
     <script>
       $('#priceModal--open').click(function() {
