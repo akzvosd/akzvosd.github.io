@@ -48,36 +48,36 @@ $(window).on('load', function() {
 
 function changeCity(city, setShowTooltipToFalse = false) {
   var delivery = shopAddress[city] || deliveryAddress[city] || null;
-
-  if (delivery) {
-    if (setShowTooltipToFalse) {
-      showTooltip = false;
-      tooltipClose();
-    }
-
-    geo = { city, delivery, showTooltip };
-
-    localStorage.setItem('geo', JSON.stringify(geo));
-
-    let days = 5;
-
-    if (citiesNorthwest.indexOf(city) >= 0) days = 1;
-    else if (citiesCenter.indexOf(city) >= 0) days = 3;
-
-    setHtml();
-    setDeliveryGeoImage();
-    setDeliveryMessage();
-
-    // if ($('#delivery-days')[0]) $('#delivery-days').html(`Изготовление картины от ${days} ${days === 1 ? 'дня' : 'дней'}`);
-    if ($('#delivery-days')[0]) $('#delivery-days').html(`Изготовление от ${days} ${days === 1 ? 'дня' : 'дней'}`);
-    $('#geoModal').hide();
-
-    if ($('.geoModalWindow input')[0] && $('.geoModalWindow input')[0].value !== '') {
-      $('.geoModalWindow input')[0].value = '';
-
-      createGeoModal();
-    }
+  
+  if (!delivery) {
+    city = 'Санкт-Петербург';
+    delivery = shopAddress[city];
   }
+
+	if (setShowTooltipToFalse) tooltipClose();
+
+	geo = { city, delivery, showTooltip };
+
+	localStorage.setItem('geo', JSON.stringify(geo));
+
+	let days = 5;
+
+	if (citiesNorthwest.indexOf(city) >= 0) days = 1;
+	else if (citiesCenter.indexOf(city) >= 0) days = 3;
+
+	setHtml();
+	setDeliveryGeoImage();
+	setDeliveryMessage();
+
+	// if ($('#delivery-days')[0]) $('#delivery-days').html(`Изготовление картины от ${days} ${days === 1 ? 'дня' : 'дней'}`);
+	if ($('#delivery-days')[0]) $('#delivery-days').html(`Изготовление от ${days} ${days === 1 ? 'дня' : 'дней'}`);
+	$('#geoModal').hide();
+
+	if ($('.geoModalWindow input')[0] && $('.geoModalWindow input')[0].value !== '') {
+	  $('.geoModalWindow input')[0].value = '';
+
+	  createGeoModal();
+	}
 }
 
 function setHtml() {
