@@ -116,6 +116,11 @@ a {
   border: 2px solid black;
   font-size: 18px;
 }
+.btnBig {
+  padding: 1rem 2rem;
+  margin-top: 1rem;
+}
+
 .btn,
 .w3-button {
   -webkit-touch-callout: none;
@@ -535,12 +540,6 @@ section img {
   text-align: center;
 }
 
-.button--center button {
-  padding: 16px 24px;
-  font-size: 18px;
-  margin: 8px 0 0px 0;
-}
-
 .mobile-bottom-32 {
   margin-bottom: 32px;
 }
@@ -793,9 +792,6 @@ section img {
     font-size: 42px;
     line-height: 1;
   }
-  .button--center {
-    padding: 0 16px;
-  }
   header {
     display: none !important;
   }
@@ -891,11 +887,6 @@ section img {
     display: none;
   }
 
-  .button--center button {
-    font-size: 14px;
-    font-weight: 600;
-  }
-
   /* menu */
   .mobile--header {
     display: block;
@@ -925,7 +916,7 @@ section img {
     display: block;
     position: relative;
     width: 100%;
-    padding: 24px 0 32px 48px;
+    padding: 12px 0 14px 48px;
     background: #eeeeee;
     -webkit-box-shadow: inset 0px -4px 8px rgb(209, 209, 209);
     box-shadow: inset 0px -4px 8px rgb(209, 209, 209);

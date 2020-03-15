@@ -67,7 +67,7 @@
 }
 .review--card__img {
     width: 100%;
-    max-width: 240px;
+    max-width: 200px;
     margin: auto;
 }
 
@@ -78,8 +78,8 @@
          text-align: center;
          padding: 32px 16px;
      }
-     .review--card img {
-         margin-bottom: 16px;
+     .review--card__img {
+        margin-bottom: 16px;
      }
      .review .col-md-6 {margin-bottom: 32px;}
      .review--card p {margin-top:8px;}
