@@ -768,12 +768,6 @@ section img {
   .col-md-4__bottom32 {
     margin-bottom: 32px;
   }
-  h3 {
-    font-size: xx-large;
-  }
-  h4 {
-    font-size: x-large;
-  }
   section {
     width: 100%; /* в мобильной версии перевести до 100% */
     max-width: 100%;
