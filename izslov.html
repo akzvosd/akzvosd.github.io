@@ -219,17 +219,17 @@
         </div>
       </div>
       <!-- covid19 -->
-        <section class="section--bg" style="margin-top: 0; margin-bottom: 0; padding: 0.8rem 0 0.6rem 0; background: #ffd164; color: #131313">
-          <section class="section--wide" style="margin-top: 0; margin-bottom: 0;">
-            <div class="row align-items-center">
+         <section id="COVID" class="section--bg" style="margin-top: 0; margin-bottom: 0; padding: 0.8rem 0 0.6rem 0; background: #ffd164; color: #131313">
+          <section class="section--wide" style="margin-top: 0; margin-bottom: 0; cursor: pointer;" id="closeCOVID">
+            <div class="row align-items-center covid19">
               <div class="col-md-auto">
                 <img src="covidicon.svg" alt="covid icon" width="64px">
               </div>
-              <div class="col-md-7">
+              <div class="col-md-10">
                 <p><span class="text--bold">Защита от COVID-19!</span><br>Мы заботимся о Вашем здоровье, поэтому доставка до двери теперь бесплатная.</p>
               </div>
-              <div class="col-md-3" style="margin-bottom: 0;">
-                <a href="delivery.html" class="btn white">Подробнее о доставке</a>
+              <div class="col">
+                <i class="material-icons" style="cursor: pointer;" id="closeCOVID">close</i>
               </div>
             </div>
           </section>
@@ -626,6 +626,11 @@
       });
       $('#priceModal--close').click(function() {
         $('#priceModal').hide();
+      });
+    </script>
+    <script>
+      $('#closeCOVID').click(function() {
+        $('#COVID').hide();
       });
     </script>
     <script>
