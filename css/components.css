@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+.covid19 {
+  font-size: 1.1rem;
+}
+
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
 html,
 body {
@@ -404,6 +408,12 @@ header {
 }
 
 header #delivery {
+  background: #ffd164;
+  color: #131313;
+  width: max-content;
+}
+
+header #deliveryCOVID19 {
   background: #ffd164;
   color: #131313;
   width: max-content;
