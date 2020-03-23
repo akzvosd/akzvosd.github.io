@@ -707,6 +707,10 @@ section img {
   #priceModal p {
     font-size: 1rem;
   }
+
+  .covid19 {
+    text-align: center;
+  }
   
   .style--card h4 {
     font-size: 2rem !important;
