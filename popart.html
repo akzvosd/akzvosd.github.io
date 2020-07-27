@@ -51,7 +51,7 @@
     <title>Imagine — Pop Art</title>
 <script src="data/addresses.js"></script>
   </head>
- <body><buttonrc="img/svg/up.svg" width="24px"></div></button>   
+ <body><button src="img/svg/up.svg" width="24px"></div></button>   
     <!-- гео мобайл -->
 	<div class="tooltip tooltip-mobile">
 	  <a href="#" id="geoModalOpenMobile">
@@ -246,12 +246,11 @@
               <div class="col-md-6 style-col-padding-off">
                                 <label for="selectBox">Популярные форматы</label>
                                 <select class="select--price" id="selectBox" name="selectBox" onchange="setSizePrice(this)">
-                                <option value="2290 руб.">20x30 см (20%)</option>
-                                <option value="2450 руб.">30x40 см (25%)</option>
-                                <option value="2850 руб.">40x60 см (30%)</option>
-                                <option value="3430 руб.">60х80 см (35%)</option>
-                                <option value="4850 руб.">80x120 см (40%)</option>
-                                <option value="-1">Другой размер</option>
+                                  <option value="20,30"></option>
+                                  <option value="30,40"></option>
+                                  <option value="40,60"></option>
+                                  <option value="60,80"></option>
+                                  <option value="80,120"></option>
                                 </select>
                             </div>
                             <div class="col-md-6 style-col-padding-off">
@@ -263,7 +262,7 @@
                                 </div>
                             </div>
                         </div>
-                        <h5><span class="line-through">2490 руб.</span><span id="selectV">2290 руб.</span></h5>
+                        <h5><span class="line-through" id="selectPV">2490 руб.</span><span id="selectV">2290 руб.</span></h5>
                         <!-- <h5 id="selectV">Цена: 2290 руб.</h5> -->
                         <small style="color: #858585">Предоплата после согласования эскиза.</small> <br />
                         <span id="facePrice">600</span>
@@ -673,7 +672,10 @@
         });
         }
     </script>
+
     <!-- calc -->
+    <script> var style = 'Pop Art'; </script>
     <script src="js/counter.js"></script>
+
 <script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script> </body>
 </html>
