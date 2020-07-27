@@ -226,7 +226,7 @@
                 <img src="img/svg/gift.svg" alt="covid icon" width="100px">
               </div>
               <div class="col-md-10">
-                <p><span class="text--bold">Нам 4 года!</span><br>Две недели скидок до 50% на <u>все</u> заказы!</p>
+                <p style="font-size: 1.3rem;"><span class="text--bold">Нам 4 года!</span><br>Две недели скидок до 50% на <u>все</u> заказы!</p>
               </div>
               <div class="col">
                 <i class="material-icons" style="cursor: pointer;" id="closeCOVID">close</i>
@@ -244,12 +244,11 @@
               <div class="col-md-6 style-col-padding-off">
                                 <label for="selectBox">Популярные форматы</label>
                                 <select class="select--price" id="selectBox" name="selectBox" onchange="setSizePrice(this)">
-                                        <option value="1580">20x30 см (20%)</option>
-                                        <option value="1740">30x40 см (25%)</option>
-                                        <option value="2140">40x60 см (30%)</option>
-                                        <option value="2720">60х80 см (35%)</option>
-                                        <option value="4140">80x120 см (40%)</option>
-                                        <option value="-1">Другой размер</option>
+                                  <option value="20,30"></option>
+                                  <option value="30,40"></option>
+                                  <option value="40,60"></option>
+                                  <option value="60,80"></option>
+                                  <option value="80,120"></option>
                                 </select>
                             </div>
                             <div class="col-md-6 style-col-padding-off">
@@ -261,8 +260,8 @@
                                 </div>
                             </div>
                         </div>   
-
-                        <h5 id="selectV">Цена: 1580 руб.</h5>
+                        <h5><span class="line-through" id="selectPV">1780 руб.</span><span id="selectV">1580 руб.</span></h5>
+                        <!-- <h5 id="selectV">Цена: 1580 руб.</h5> -->
                         <small style="color: #858585">Предоплата после согласования эскиза.</small><br/>
                         <a href="#form"><button class="btn primary">Сделать заказ</button></a>
                         <span id="facePrice">400</span>
@@ -701,6 +700,7 @@
         }
     </script>
     <!-- calc -->
+    <script> var style = 'Портрет из слов'; </script>
     <script src="js/counter.js"></script>
 <script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script> </body>
 </html>
