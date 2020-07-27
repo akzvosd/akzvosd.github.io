@@ -1,0 +1,23 @@
+.change--image {
+  display: none;
+}
+@media only screen and (max-width: 900px) {
+  .change--image {
+    display: block;
+    background-image: url(../img/examples/example7.jpg);
+    width: 100%;
+    height: 420px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 8px;
+  }
+
+  .popart--image:active {
+    background-image: url(../img/examples/example7_x.jpg);
+  }
+
+  .popart--image:active {
+    background-image: url(../img/examples/example7_x.jpg);
+  }
+}

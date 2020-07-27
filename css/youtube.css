@@ -1,0 +1,26 @@
+/* youtube */
+.youtube--video iframe{
+    height: 870px; 
+    border-top: 24px solid #6394FF;
+    border-bottom: 24px solid #6394FF;
+}
+.youtube--video h3 {
+    margin-bottom: 16px;
+}
+.youtube--mobile {
+    display: none;
+}
+
+
+@media only screen and (max-width: 900px) {
+/*youtube*/
+     .youtube--video iframe {height: 294px; border-top: 0px;}
+     .youtube--video h3 {margin-bottom: 32px;}
+     .youtube--desktop {
+         display: none;
+     }
+     .youtube--mobile {
+         display: block;
+         height: 420px !important;
+     }
+}
