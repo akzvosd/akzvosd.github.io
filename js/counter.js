@@ -133,13 +133,17 @@ var opt;
 function setSizePrice(e) {
   opt = e;
 
-  var size = opt.value.split(',');
-  var data = sizes[size[0]][size[1]];
-  var price = Math.round((data[0] - data[0] * (data[1] / 100)) / 10) * 10 + styles[style];
-  // var sale = Math.round((1 - price / (data[0] + styles[style])) * 100);
+  if (e.value !== '-1') {
+    var size = opt.value.split(',');
+    var data = sizes[size[0]][size[1]];
+    var price = Math.round((data[0] - data[0] * (data[1] / 100)) / 10) * 10 + styles[style];
+    // var sale = Math.round((1 - price / (data[0] + styles[style])) * 100);
 
-  // sizePrice = Math.floor(data[0] + styles[style] - (data[0] + styles[style]) * (sale / 100));
-  sizePrice = price;
+    // sizePrice = Math.floor(data[0] + styles[style] - (data[0] + styles[style]) * (sale / 100));
+    sizePrice = price;
+  } else {
+    sizePrice = -1;
+  }
 
   calcPrice(e);
 }
