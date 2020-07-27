@@ -244,12 +244,11 @@
               <div class="col-md-6 style-col-padding-off">
                                 <label for="selectBox">Популярные форматы</label>
                                 <select class="select--price" id="selectBox" name="selectBox" onchange="setSizePrice(this)">
-                                        <option value="890">20x30 см (20%)</option>
-                                        <option value="1050">30x40 см (25%)</option>
-                                        <option value="1450">40x60 см (30%)</option>
-                                        <option value="2230">60х80 см (35%)</option>
-                                        <option value="3450">80x120 см (40%)</option>
-                                        <option value="-1">Другой размер</option>
+                                    <option value="20,30"></option>
+                                    <option value="30,40"></option>
+                                    <option value="40,60"></option>
+                                    <option value="60,80"></option>
+                                    <option value="80,120"></option>
                                 </select>
                             </div>
                             <div class="col-md-6 style-col-padding-off">
@@ -261,7 +260,8 @@
                                 </div>
                             </div>
                         </div>
-                        <h5 id="selectV">Цена: 890 руб.</h5>
+                        <h5><span class="line-through" id="selectPV">1090 руб.</span><span id="selectV">890 руб.</span></h5>
+                        <!-- <h5 id="selectV">Цена: 890 руб.</h5> -->
                         <small style="color: #858585">Предоплата после согласования эскиза.</small><br/>
                         <a href="#form"><button class="btn primary">Сделать заказ</button></a>
                         <span id="facePrice">300</span>
@@ -403,7 +403,8 @@
                                         <img src="img/examples/example5.jpg" alt="Портрет" class="image offer--image">
                                         <div class="offer--text">
                                             <h5>Imagine</h5>
-                                            <p>от 2290 Р</p>
+                                            <p><span class="line-through">от 2290 руб.</span> <span>от 2090 руб.</span></p>
+                                            <span class="sale">Cкидки от -9% до -50%</span>
                                         </div>
                                         </a>
                                     </div>
@@ -414,7 +415,8 @@
                                         <img src="img/examples/example2.jpg" alt="Портрет в стиле Pop Art #1" class="image offer--image">
                                         <div class="offer--text">
                                             <h5>Акварель</h5>
-                                            <p>от 2290 Р</p>
+                                            <p><span class="line-through">от 2290 руб.</span> <span>от 2090 руб.</span></p>
+                                            <span class="sale">Cкидки от -9% до -50%</span>
                                         </div>
                                         </a>
                                     </div>
@@ -425,7 +427,8 @@
                                     <img src="img/examples/example8.jpg" alt="Портрет в стиле Pop Art #1" class="image offer--image">
                                     <div class="offer--text">
                                         <h5>Из слов</h5>
-                                        <p>от 1780 Р </p>
+                                        <p><span class="line-through">от 1780 руб.</span> <span>от 1580 руб.</span></p>
+                                        <span class="sale">Cкидки от -9% до -50%</span>
                                     </div>
                                     </a>
                                 </div>
@@ -436,7 +439,7 @@
                                 <img src="img/sertifikat_x.jpg" alt="Портрет в стиле Pop Art #1" class="image offer--image">
                                 <div class="offer--text">
                                     <h5>Cертификат</h5>
-                                    <p>на 3000 Р</p>
+                                    <p>на 3000 руб.</p>
                                 </div>
                                 </a>
                             </div>
@@ -713,6 +716,7 @@
         }
     </script>
     <!-- calc -->
+    <script> var style = 'Love is...'; </script>
     <script src="js/counter.js"></script>
 <script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script> </body>
 </html>
