@@ -76,5 +76,5 @@ function calcPrice() {
 
   totalPrice = sizePrice + additionalFaces * facePrice;
 
-  $('#selectV').html(`Цена: ${totalPrice} руб.`);
+  $('#selectV').html(`${totalPrice} руб.`);
 }

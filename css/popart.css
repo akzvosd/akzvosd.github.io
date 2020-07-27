@@ -23,6 +23,12 @@
   margin-left: 4px;
 }
 
+.line-through {
+  text-decoration: line-through;
+  font-size: 0.8rem;
+  color: #a6a6a6;
+}
+
 .modal img {
   position: absolute;
   top: 50%;
