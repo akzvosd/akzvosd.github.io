@@ -181,7 +181,7 @@ function setDeliveryMessage() {
 
   if (!deliveryMessageElement[0]) return 0;
 
-  var message = 'Бесплатная доставка по городам России.<br>Укажите свой город, чтобы получить более точную информацию, либо обратитесь по телефону.';
+  var message = 'Доставка по городам России.<br>Укажите свой город, чтобы получить более точную информацию, либо обратитесь по телефону.';
 
   if (citiesNorthwest.indexOf(geo.city) >= 0) message = 'Мы изготовим картину в Вашем городе.';
   else if (citiesCenter.indexOf(geo.city) >= 0) message = 'Подробности по телефону.';
