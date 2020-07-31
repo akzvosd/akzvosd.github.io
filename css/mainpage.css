@@ -2,7 +2,7 @@
   display: none;
 }
 
-.case {
+/* .case {
   font-weight: 600;
   font-size: 1rem;
   text-transform: none;
@@ -34,7 +34,7 @@
   font-weight: bold;
   font-size: 0.8rem;
   padding: 0 4px 0 4px;
-}
+} */
 
 .mainPage img {
   width: 60%;
@@ -203,13 +203,6 @@
   position: relative;
   height: 240px;
   overflow: hidden;
-}
-
-.style--text .price {
-  text-decoration: line-through;
-  color: #a6a6a6;
-  font-size: 0.9rem;
-  margin-right: 8px;
 }
 
 .style--button {

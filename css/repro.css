@@ -20,7 +20,7 @@
 }
 
 .repro--table th, td {
-  padding: 4px 8px;
+  padding: 4px 8px 2px 8px;
 }
 
 .repro--table .line-through {
@@ -36,7 +36,6 @@
 .repro--table .table--header {
   background: #ffd164;
   color: #131313;
-  padding: 4px 8px;
   border: 1px solid #ffd164;
   width: max-content;
   margin: 0 auto;
