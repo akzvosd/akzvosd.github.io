@@ -29,7 +29,7 @@
 }
 
 .repro--table table, th, td {
-  border: 1px solid #131313;
+  border: 1px solid #a6a6a6;
   border-collapse: collapse;
 }
 
@@ -44,8 +44,16 @@
 }
 
 .repro--table .table--subheader {
-  background: #ffebbd;
-  color: #131313;
+  background: #dcdcdc;
+  color: #727272;
+  font-weight: 600;
+  font-size: 0.7rem;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+}
+
+.rub {
+  font-size: 0.6rem;
 }
 
 .margin-top--hero-text__list {
@@ -207,7 +215,12 @@ input[type='file'] {
   }
 
   .repro--table table {
-    margin-bottom: 32px;
+    margin-bottom: 64px;
+    font-size: 0.8rem;
+  }
+
+  .repro--table td {
+    width: min-content;
   }
 
   .hero-text--addition {
