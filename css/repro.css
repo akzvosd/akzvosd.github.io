@@ -30,7 +30,6 @@
 
 .repro--table table, th, td {
   border: 1px solid #131313;
-  border-radius: 8px;
   border-collapse: collapse;
 }
 
