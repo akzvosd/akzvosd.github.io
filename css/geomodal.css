@@ -1,0 +1,83 @@
+.geoModalWindow {
+  width: 88vh;
+  padding: 1rem 2rem;
+}
+
+.geoModalWindow input {
+  outline: none;
+  margin-top: 1rem;
+  margin-bottom: 1.1rem;
+}
+
+.geoModalWindow input:hover {
+  border: 2px solid #caae6c;
+}
+
+.geoModalWindow input:focus {
+  border: 2px solid #caae6c;
+}
+
+.geoModalWindow__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.geoModalWindow__header h4 {
+  font-weight: 500;
+}
+
+.geoModalWindow__footer {
+  overflow-y: scroll;
+  max-height: 200px;
+  width: 100%;
+  line-height: 2rem;
+}
+
+.geoModalWindow__footer--wrap {
+  display: flex;
+  border-top: 1px solid #caae6c;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.geoModalWindow__footer--wrap:nth-child(1) {
+  border-top: 0;
+}
+
+.geoModalWindow__footer--letter {
+  width: 30px;
+  color: #caae6c;
+  font-weight: bold;
+  text-align: center;
+  font-size: 21px;
+}
+
+.geoModalWindow__footer--city {
+  margin-left: 1rem;
+}
+
+.geoModalWindow__footer--city p {
+  margin: 0px 0px !important;
+  color: #5f5f5f;
+}
+
+.geoModalWindow__footer--city p:hover {
+  text-decoration: underline;
+  color: #131313;
+  cursor: pointer;
+}
+
+#geoModal:hover {
+  cursor: auto !important;
+}
+
+@media only screen and (max-width: 900px) {
+  .geoModalWindow {
+    width: 100%;
+    padding: 0.5rem 1rem;
+  }
+
+  .geoModalContent {
+    width: 98%;
+  }
+}

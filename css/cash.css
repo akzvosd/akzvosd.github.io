@@ -1,0 +1,58 @@
+main .col-md-4 {
+    padding-left: 0 !important;
+}
+
+main .col-md-3 {
+    padding-left: 0 !important;
+}
+
+main {
+    padding: 64px 0 72px 0;
+}
+
+.row {
+    margin-top: 32px;
+}
+
+.delivery--youtube {
+    width: 100%;
+    height: 630px;
+}
+
+.oferta--text {
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.oferta--text p {
+    margin-bottom: 16px;
+}
+
+.image--delivery {
+    height: 240px;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+
+@media only screen and (max-width: 900px) {
+    main {
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+
+    main .col-md-3 {
+        margin-bottom: 32px;
+    }
+
+    .image--delivery {
+        height: 320px !important;
+        -o-object-fit: cover;
+           object-fit: cover;
+    }
+
+    .delivery--h3 {
+        line-height: 1;
+    }
+}
