@@ -952,16 +952,24 @@ section img {
   .mobile--geo {
     display: block;
     position: relative;
-    width: 100%;
+    /* width: 100%; */
     padding: 12px 14px;
+    margin: 0px 8px 8px 8px;
     background: #eeeeee;
+    border-radius: 8px;
     /* -webkit-box-shadow: inset 0px -4px 8px rgb(209, 209, 209);
     box-shadow: inset 0px -4px 8px rgb(209, 209, 209); */
   }
 
+  .mobile--geo .row {
+    margin-top: 8px;
+  }
+
   .mobile--geo .btn {
     padding: 0px;
-    width: 48%;
+    width: 98%;
+    font-size: 14px;
+    padding: 4px 0px;
   }
 
   /* .mobile--geo span:last-child {
