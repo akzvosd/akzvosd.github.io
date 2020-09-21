@@ -85,26 +85,6 @@
         </div>
       </div>
     </div>
-    <!-- гео мобайл -->
-    <div class="tooltip tooltip-mobile">
-      <a href="#" id="geoModalOpenMobile">
-        <div class="mobile--geo">
-          <span id="town--mob">Санкт-Петербург</span>,
-          <span id="delivery--mob">Доставка до двери</span>
-          <div class="row">
-            <div class="col"><div class="btn primary">Верно</div></div>
-            <div class="col"><div class="btn">Другой город</div></div>
-          </div>
-          <!-- <span>Изменить</span> -->
-        </div>
-      </a>
-      <span class="tooltiptext" id="tooltipMobile">
-        <p>Это ваш город?</p>
-        <div class="btn white" onclick="tooltipClose()">Да</div>
-        <div class="btn" onclick="tooltipOpen()" style="border: 1px solid white">Нет</div>
-      </span>
-    </div>
-    <!-- гео мобайл -->
     <div class="mobile--nav">
       <nav class="row justify-content-between" style="margin-top: 0">
         <a href="styles.html" class="active--navbar__mobile">Портреты</a>
@@ -148,7 +128,26 @@
         </div>
       </div>
     </div>
-
+    <!-- гео мобайл -->
+    <div class="tooltip tooltip-mobile" id="tooltip tooltip-mobile">
+     
+        <div class="mobile--geo" id="mobileGeo">
+          <span id="town--mob">Санкт-Петербург</span>,
+          <span id="delivery--mob">Доставка до двери</span>
+          <div class="row">
+            <div class="col"><div class="btn primary" onclick="closeMobileGeo()">Верно</div></div>
+            <div class="col"><div class="btn" id="geoModalOpenMobile">Выбрать другой город</div></div>
+          </div>
+          <!-- <span>Изменить</span> -->
+        </div>
+      
+      <span class="tooltiptext" id="tooltipMobile">
+        <p>Это ваш город?</p>
+        <div class="btn white" onclick="tooltipClose()">Да</div>
+        <div class="btn" onclick="tooltipOpen()" style="border: 1px solid white">Нет</div>
+      </span>
+    </div>
+    <!-- гео мобайл -->
     <header class="row align-items-center">
       <div class="col-md-2">
         <a href="index.html">
@@ -215,20 +214,18 @@
     </div>
 
      <!--   -->
-        <section id="COVID" class="section--bg covid--section">
-          <section class="section--wide" style="margin-top: 0; margin-bottom: 0; cursor: pointer;" id="closeCOVID">
-            <div class="row align-items-center  ">
+        <section id="COVID" class="section--bg covid--section"  style="margin-top: 0; margin-bottom: 0; cursor: pointer; position: relative;">
+          <div class="covid--section__width" id="closeCOVID">
+            <div class="row align-items-center">
               <div class="col-md-1 col-3">
                 <img src="img/svg/gift.svg" alt="covid icon" class="covid--image">
               </div>
-              <div class="col-md-10 col-8">
+              <div class="col-md-10 col-9">
                 <p style="font-size: 1.3rem;"><span class="text--bold">Нам 4 года!</span><br>Две недели скидок до 50% на <u>все</u> заказы!</p>
               </div>
-              <div class="col-md-1 col-1">
-                <i class="material-icons" style="cursor: pointer;" id="closeCOVID">close</i>
-              </div>
             </div>
-          </section>
+            <i class="material-icons" id="closeCOVID">close</i>
+          </div>
         </section>
 
     <main>
@@ -901,7 +898,8 @@
       </section>
     </footer>
 
-    <script src="chto.js"></script>
+    <script src="js/chto.js"></script>
+    <script src="js/geo.js"></script>
     <script src="js/script.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/swiper.js"></script> 
@@ -919,11 +917,6 @@
       });
       $('#priceModal--close').click(function() {
         $('#priceModal').hide();
-      });
-    </script>
-    <script>
-      $('#closeCOVID').click(function() {
-        $('#COVID').hide();
       });
     </script>
     <script>
@@ -963,7 +956,6 @@
          });
       });
     </script>
-    <script src="js/geo.js"></script>
     <script>
       (function(w, d, u) {
         var s = d.createElement('script');

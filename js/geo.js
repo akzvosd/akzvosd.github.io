@@ -139,6 +139,7 @@ function tooltipClose() {
   localStorage.setItem('geo', JSON.stringify(geo));
   $('#tooltip').css('display', 'none');
   $('#tooltipMobile').css('display', 'none');
+  console.log('loh pidr');
 }
 
 function tooltipOpen() {
@@ -187,4 +188,9 @@ function setDeliveryMessage() {
   else if (citiesCenter.indexOf(geo.city) >= 0) message = 'Подробности по телефону.';
 
   deliveryMessageElement.html(message);
+}
+
+
+function closeMobileGeo() {
+  document.getElementById("mobileGeo").style.display = "none";
 }

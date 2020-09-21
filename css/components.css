@@ -16,6 +16,18 @@
   color: #fff !important;
 }
 
+.covid--section__width {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.covid--section .material-icons {
+  top: 40% !important;
+  cursor: pointer; 
+  position: absolute; 
+  right: 176px;
+}
+
 .covid--image {
   width: 100px;
 }
@@ -717,15 +729,28 @@ section img {
 }
 
 @media only screen and (max-width: 900px) {
+  .covid--section {
+    border-radius: 8px;
+    margin: 4px 8px 8px 8px !important;
+    width: auto;
+  }
   .covid--section p {
     font-size: 1rem !important;
   }
-  .covid--section i {
+  .covid--section .material-icons {
     font-size: 16px;
     opacity: 0.6;
+    top: 8px !important;
+    cursor: pointer; 
+    position: absolute; 
+    right: 8px;
   }
   .covid--section img {
-    width: 90%;
+    width: 80%;
+  }
+  .covid--section .col-3 {
+    display: flex; 
+    justify-content: center;
   }
   .mobile--header img {
     width: 24px;  
@@ -933,12 +958,12 @@ section img {
   }
   .mobile--nav {
     display: block;
-    background: #ffd164;
     padding: 12px 18px;
     color: #13131346;
     font-size: 13px;
     font-weight: 600;
     text-transform: uppercase;
+    border-bottom: 2px solid #ffd164;
   }
 
   .mobile--nav .active--navbar__mobile {
@@ -954,7 +979,7 @@ section img {
     position: relative;
     /* width: 100%; */
     padding: 12px 14px;
-    margin: 0px 8px 8px 8px;
+    margin: 8px 8px 4px 8px;
     background: #eeeeee;
     border-radius: 8px;
     /* -webkit-box-shadow: inset 0px -4px 8px rgb(209, 209, 209);
@@ -962,14 +987,16 @@ section img {
   }
 
   .mobile--geo .row {
-    margin-top: 8px;
+    margin-top: 12px;
+  }
+
+  .mobile--geo .col:first-child {
+    padding-right: 4px;
   }
 
   .mobile--geo .btn {
-    padding: 0px;
-    width: 98%;
+    width: 100%;
     font-size: 14px;
-    padding: 4px 0px;
   }
 
   /* .mobile--geo span:last-child {
@@ -977,13 +1004,13 @@ section img {
     opacity: 0.4;
   } */
 
-  #geoModalOpenMobile {
+  /* #geoModalOpenMobile {
     font-size: 13px;
   }
 
   #geoModalOpenMobile:hover {
     text-decoration: underline;
-  }
+  } */
 
   /* .mobile--geo::before {
     content: url(../img/svg/geo.svg);
