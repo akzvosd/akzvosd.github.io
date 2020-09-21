@@ -41,8 +41,8 @@ $(window).on('load', function() {
   createGeoModal();
 
   if (showTooltip) {
-    $('#tooltip').css('visibility', 'visible');
-    $('#tooltipMobile').css('visibility', 'visible');
+    $('.tooltip').css('visibility', 'visible');
+    $('.tooltipMobile').css('visibility', 'visible');
   } else tooltipClose();
 });
 
@@ -137,8 +137,8 @@ function tooltipClose() {
   geo.showTooltip = showTooltip;
 
   localStorage.setItem('geo', JSON.stringify(geo));
-  $('#tooltip').css('display', 'none');
-  $('#tooltipMobile').css('display', 'none');
+  $('.tooltip').css('display', 'none');
+  $('.tooltipMobile').css('display', 'none');
   console.log('loh pidr');
 }
 
