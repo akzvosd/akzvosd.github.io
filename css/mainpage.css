@@ -2,6 +2,13 @@
   display: none;
 }
 
+.hero-block {
+  background: white;
+  color: black;
+  padding: 4px;
+  border-radius: 4px;
+}
+
 /* .case {
   font-weight: 600;
   font-size: 1rem;
@@ -282,7 +289,6 @@
   }
 
   .hero-text__list p {
-    margin-top: 1rem;
     border-bottom: 0;
     width: auto;
   }

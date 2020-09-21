@@ -67,7 +67,7 @@ function changeCity(city, setShowTooltipToFalse = false) {
 	setDeliveryMessage();
 
 	// if ($('#delivery-days')[0]) $('#delivery-days').html(`Изготовление картины от ${days} ${days === 1 ? 'дня' : 'дней'}`);
-	if ($('#delivery-days')[0]) $('#delivery-days').html(`Изготовление от ${days} ${days === 1 ? 'дня' : 'дней'}`);
+	if ($('#delivery-days')[0]) $('#delivery-days').html(`от ${days} ${days === 1 ? 'дня' : 'дней'}`);
 	$('#geoModal').hide();
 
 	if ($('.geoModalWindow input')[0] && $('.geoModalWindow input')[0].value !== '') {

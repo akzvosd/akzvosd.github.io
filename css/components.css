@@ -543,10 +543,6 @@ ul {
   margin-top: 32px !important;
 }
 
-.hero-text p {
-  margin-top: 1rem;
-}
-
 .hero-text button {
   margin-top: 1.5rem;
   padding: 16px 48px;
@@ -729,6 +725,9 @@ section img {
 }
 
 @media only screen and (max-width: 900px) {
+  body {
+    font-size: 14px;
+  }  
   .covid--section {
     border-radius: 8px;
     margin: 4px 8px 8px 8px !important;
@@ -935,9 +934,6 @@ section img {
     bottom: 8%;
     padding: 0 16px 0 16px;
     width: 100%;
-  }
-  .hero-text p {
-    margin-top: 1rem;
   }
   .hero-text button {
     margin-top: 1.5rem;
