@@ -19,9 +19,6 @@ $(window).on('load', function() {
   $('#geoModalOpenMobile').click(function() {
     $('#geoModal').show();
   });
-  $('#geoModalClose').click(function() {
-    $('#geoModal').hide();
-  });
 
   if (geo) changeCity(geo.city);
   else changeCity(ymaps.geolocation.city);
