@@ -128,26 +128,6 @@
         </div>
       </div>
     </div>
-    <!-- гео мобайл -->
-    <div class="tooltip tooltip-mobile" id="tooltip tooltip-mobile">
-     
-        <div class="mobile--geo" id="mobileGeo">
-          <span id="town--mob">Санкт-Петербург</span>,
-          <span id="delivery--mob">Доставка до двери</span>
-          <div class="row">
-            <div class="col"><div class="btn primary" onclick="tooltipClose()">Верно</div></div>
-            <div class="col"><div class="btn" id="geoModalOpenMobile">Выбрать другой город</div></div>
-          </div>
-          <!-- <span>Изменить</span> -->
-        </div>
-      
-      <span class="tooltiptext" id="tooltipMobile">
-        <p>Это ваш город?</p>
-        <div class="btn white" onclick="tooltipClose()">Да</div>
-        <div class="btn" onclick="tooltipOpen()" style="border: 1px solid white">Нет</div>
-      </span>
-    </div>
-    <!-- гео мобайл -->
     <header class="row align-items-center">
       <div class="col-md-2">
         <a href="index.html">
@@ -181,6 +161,25 @@
         </a>
       </div>
     </header>
+        <!-- гео мобайл -->
+        <div class="tooltip tooltip-mobile xyn" id="tooltip tooltip-mobile">
+          <div class="mobile--geo" id="mobileGeo">
+            <span id="town--mob">Санкт-Петербург</span>,
+            <span id="delivery--mob">Доставка до двери</span>
+            <div class="row">
+              <div class="col"><div class="btn primary" onclick="closemg()">Верно</div></div>
+              <div class="col"><div class="btn" id="geoModalOpenMobile">Выбрать другой город</div></div>
+            </div>
+            <!-- <span>Изменить</span> -->
+      </div>
+        
+        <span class="tooltiptext" id="tooltipMobile">
+          <p>Это ваш город?</p>
+          <div class="btn white" onclick="tooltipClose()">Да</div>
+          <div class="btn" onclick="tooltipOpen()" style="border: 1px solid white">Нет</div>
+        </span>
+      </div>
+      <!-- гео мобайл -->
     <div class="subheader" role="navigation" aria-label="Main">
       <div class="row align-items-center">
         <div class="col-md-6 subheader--left">
@@ -284,45 +283,26 @@
         </div>
       </div>
     </main>
-    <section class="section--bg jumbo">
-      <section>
-        <div class="row align-items-center">
-          <div class="col-md-6">
-            <img src="img/heroherohero.jpg" class="image jumbo-img" alt="Девушка с портретом">
-          </div>
-          <div class="col-md-6">
-            <h2 class="text--bold">Портрет по фото <span id="town--hero">Санкт-Петербург</span></h2>
-            <p>Предоплата потребуется только после внесения правок и утверждения эскиза</p>
-            <span id="delivery-days" class="jumbo-block">от 1 дня</span>
-            <span id="delivery--hero" class="jumbo-block">Доставим до двери</span>
-            <span class="modal--cursor jumbo-block" id="priceModal--open"><span class="price--hero">от 2090 руб.</span> <sup>?</sup></span>
-            <br/>
-            <div class="jumbo-btn">
-              <a href="#form"><button class="btn primary">Отправить фотографию</button></a>
-              <a href="#top"><button class="btn stili">Стили портретов</button></a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </section>
-    
-    <!-- <div class="hero-image mainPage">
+   
+    <div class="hero-image mainPage">
       <div class="hero-text hero-text__mainPage">
         <div class="hero-text__list">
           <h3 class="text--bold">Портрет по фото <span id="town--hero">Санкт-Петербург</span></h3>
-          <p style="color: #ffd164">Предоплата потребуется только после внесения правок и утверждения эскиза</p>
-          <span id="delivery-days" class="hero-block">от 1 дня</span>
-          <span id="delivery--hero" class="hero-block">Доставим до двери</span>
-          <span class="modal--cursor hero-block" id="priceModal--open"><span class="price--hero">от 2090 руб.</span> <sup>?</sup></span>
+          <p class="hero-text__quote">Предоплата потребуется только после внесения правок и утверждения эскиза</p>
+          <span id="delivery-days" class="hero-block">от 1 дня</span>,
+          <span id="delivery--hero" class="hero-block">Доставим до двери</span>,
+          <span class="modal--cursor hero-block" id="priceModal--open"><span class="price--hero">от 2090 руб.</span></span>
           <br/>
-          <a href="#form"><button class="btn primary">Отправить фотографию</button></a>
-          <a href="#top"><button class="btn white" style="background: 0; color: #fff">Стили портретов</button></a>
+          <div class="row">
+            <div class="col-6"><a href="#form"><button class="btn primary hero-btn">Отправить фотографию</button></a></div>
+            <div class="col-6"><a href="#top"><button class="btn white hero-btn">Стили портретов</button></a></div>
+          </div>
         </div>
       </div>
       <i class="material-icons down">
         arrow_downward
       </i>
-    </div> -->
+    </div>
 
     <!-- примеры работ -->
     <section class="section--wide" style="margin-top: 32px !important">

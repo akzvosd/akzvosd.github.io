@@ -19,6 +19,9 @@ $(window).on('load', function() {
   $('#geoModalOpenMobile').click(function() {
     $('#geoModal').show();
   });
+  $('#geoModalClose').click(function() {
+    $('#geoModal').hide();
+  });
 
   if (geo) changeCity(geo.city);
   else changeCity(ymaps.geolocation.city);
@@ -38,8 +41,8 @@ $(window).on('load', function() {
   createGeoModal();
 
   if (showTooltip) {
-    $('.tooltip').css('visibility', 'visible');
-    $('.tooltipMobile').css('visibility', 'visible');
+    $('#tooltip').css('display', 'block');
+    $('#tooltipMobile').css('display', 'none');
   } else tooltipClose();
 });
 
@@ -134,10 +137,10 @@ function tooltipClose() {
   geo.showTooltip = showTooltip;
 
   localStorage.setItem('geo', JSON.stringify(geo));
-  $('.tooltip').css('display', 'none');
-  $('.tooltipMobile').css('display', 'none');
-  console.log('loh pidr');
+  $('#tooltip').css('display', 'none');
+  $('#tooltipMobile').css('display', 'none');
 }
+
 
 function tooltipOpen() {
   $('#geoModalOpen').click();
@@ -187,7 +190,7 @@ function setDeliveryMessage() {
   deliveryMessageElement.html(message);
 }
 
-
-function closeMobileGeo() {
-  document.getElementById("mobileGeo").style.display = "none";
+var mg = document.querySelector('.xyn');
+function closemg() {
+  mg.style.display = 'none';
 }
