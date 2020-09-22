@@ -227,6 +227,12 @@
   margin-bottom: 32px;
 }
 
+.hero-text button {
+  margin-top: 1.5rem;
+  padding: 16px 48px;
+  color: #131313;
+}
+
 @media only screen and (max-width: 1400px) {
   .style--text {
     height: auto;
@@ -290,6 +296,9 @@
   transform: translate(0, 0);
   color: white;
 }
+.hero-text__quote {
+  margin-top: 0;
+}
 .hero-text img {
   position: absolute;
   width: 100%;
@@ -300,17 +309,19 @@
   margin-top: 5rem;
   position: absolute;
   bottom: 8%;
-  padding: 0 8px;
+  padding: 8px;
   border-radius: 16px;
-  margin-left: 16px;
-  margin-right: 16px;
+  margin-left: 8px;
+  margin-right: 8px;
   background: #131313;
   color: #fff;
 }
-/* .hero-text button {
-  margin-top: 1.5rem;
+ .hero-text button {
+  margin-top: 0.7rem;
   color: #131313;
-} */
+  width: 98%;
+  font-size: 0.7rem;
+} 
   
   .hero-text__list {
     bottom: 2rem;
@@ -318,6 +329,8 @@
 
   .hero-text__mainPage h3 {
     font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   .down {
@@ -343,7 +356,7 @@
   }
 
   .hero-text__mainPage {
-    top: 0;
+    top: 50px;
   }
 
   .hero-text__mainPage h5 {
