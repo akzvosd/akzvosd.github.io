@@ -250,7 +250,8 @@
 @media only screen and (max-width: 900px) {
   
  .hero-image {
-  background-image: -webkit-gradient(
+  display: none;
+  /* background-image: -webkit-gradient(
       linear,
       left top,
       left bottom,
@@ -267,7 +268,7 @@
   height: 400px;
   background-position: right;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
 }
 .hero-text {
   text-align: left;
@@ -305,12 +306,26 @@
   top: 8%;
   padding: 0 32px 0 32px;
 }
+.hero-mobile {
+  margin-top: 8px;
+}
+.hero-mobile--img {
+  background: red;
+  height: 300px;
+  margin-left: 8px;
+  margin-right: 8px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  background: url(../img/heroherohero.jpg);
+  background-size: cover;
+  background-position: center;
+}
 .hero-text__list {
-  margin-top: 5rem;
-  position: absolute;
-  bottom: 8%;
-  padding: 8px;
-  border-radius: 16px;
+  margin-top: 0;
+  position: relative;
+  padding: 16px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
   margin-left: 8px;
   margin-right: 8px;
   background: #131313;

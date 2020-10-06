@@ -716,7 +716,7 @@ section img {
   }  
   .covid--section {
     border-radius: 8px;
-    margin: 4px 8px 8px 8px !important;
+    margin: 8px !important;
     width: auto;
   }
   .covid--section p {

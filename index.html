@@ -72,6 +72,7 @@
 <script type="text/javascript">!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://vk.com/js/api/openapi.js?168",t.onload=function(){VK.Retargeting.Init("VK-RTRG-515057-gWywC"),VK.Retargeting.Hit()},document.head.appendChild(t)}();</script><noscript><img src="https://vk.com/rtrg?p=VK-RTRG-515057-gWywC" style="position:fixed; left:-999px;" alt=""/></noscript>
 </head>
   <body>
+    <!-- mobile header -->
     <div class="mobile--header">
       <div class="row align-items-center" style="padding: 0 16px;">
         <div class="col">
@@ -85,6 +86,7 @@
         </div>
       </div>
     </div>
+    <!-- mobile nav -->
     <div class="mobile--nav">
       <nav class="row justify-content-between" style="margin-top: 0">
         <a href="styles.html" class="active--navbar__mobile">Портреты</a>
@@ -93,6 +95,7 @@
         <a href="foto.html">Печать</a>
       </nav>
     </div>
+
     <div id="myNav" class="mobile--overlay">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
       <div class="mobile--overlay-content">
@@ -128,6 +131,8 @@
         </div>
       </div>
     </div>
+
+    <!-- header -->
     <header class="row align-items-center">
       <div class="col-md-2">
         <a href="index.html">
@@ -161,7 +166,9 @@
         </a>
       </div>
     </header>
-        <!-- гео мобайл -->
+       
+    
+    <!-- гео мобайл -->
         <div class="tooltip tooltip-mobile xyn" id="tooltip tooltip-mobile">
           <div class="mobile--geo" id="mobileGeo">
             <span id="town--mob">Санкт-Петербург</span>,
@@ -179,7 +186,8 @@
           <div class="btn" onclick="tooltipOpen()" style="border: 1px solid white">Нет</div>
         </span>
       </div>
-      <!-- гео мобайл -->
+
+    <!-- subheader -->
     <div class="subheader" role="navigation" aria-label="Main">
       <div class="row align-items-center">
         <div class="col-md-6 subheader--left">
@@ -212,8 +220,8 @@
       </div>
     </div>
 
-     <!--   -->
-        <section id="COVID" class="section--bg covid--section"  style="margin-top: 0; margin-bottom: 0; cursor: pointer; position: relative;">
+    <!-- covid -->
+    <section id="COVID" class="section--bg covid--section"  style="margin-top: 0; margin-bottom: 0; cursor: pointer; position: relative;">
           <div class="covid--section__width" id="closeCOVID">
             <div class="row align-items-center">
               <div class="col-md-1 col-3">
@@ -225,7 +233,7 @@
             </div>
             <i class="material-icons" id="closeCOVID">close</i>
           </div>
-        </section>
+    </section>
 
     <main>
       <!-- geomodal -->
@@ -284,6 +292,7 @@
       </div>
     </main>
    
+    <!-- hero -->
     <div class="hero-image mainPage">
       <div class="hero-text hero-text__mainPage">
         <div class="hero-text__list">
@@ -302,6 +311,22 @@
       <i class="material-icons down">
         arrow_downward
       </i>
+    </div>
+
+    <div class="hero-mobile">
+      <div class="hero-mobile--img"></div>
+      <div class="hero-text__list">
+        <h3 class="text--bold">Портрет по фото <span id="town--hero">Санкт-Петербург</span></h3>
+        <p class="hero-text__quote">Предоплата потребуется только после внесения правок и утверждения эскиза</p>
+        <span id="delivery-days" class="hero-block">от 1 дня</span> <br/>
+        <span id="delivery--hero" class="hero-block">Доставим до двери</span> <br/>
+        <span class="modal--cursor hero-block" id="priceModal--open"><span class="price--hero">от 2090 руб.</span></span>
+        <br/>
+        <div class="row">
+          <div class="col-6"><a href="#form"><button class="btn primary hero-btn">Отправить фотографию</button></a></div>
+          <div class="col-6"><a href="#top"><button class="btn white hero-btn">Стили портретов</button></a></div>
+        </div>
+      </div>
     </div>
 
     <!-- примеры работ -->
@@ -364,6 +389,7 @@
         </a>
       </div>
     </section>
+    
     <!-- стили -->
     <section class="section--bg" id="top" style="margin-bottom: 0px !important;">
       <section class="section--wide" style="margin-top: 0 !important; margin-bottom: 0 !important;">
@@ -555,6 +581,7 @@
         </div>
       </section>
     </section>
+    
     <!-- качество работ -->
     <section class="section--bg" style="background: #6394FF; color: white; margin-top: 0px !important">
       <h2 class="text--bold text--center">Качество работ</h2>
@@ -607,6 +634,7 @@
         </a>
       </section>
     </section>
+    
     <!-- youtube -->
     <section class="youtube--video text--center">
       <h2 style="margin-bottom: 24px;" class="text--bold">Как сделать заказ</h2>
@@ -618,6 +646,7 @@
         <!-- <button id="ytexit" class="btn white" style="margin: auto; display: block;">Закрыть</button> -->
       </div>
     </section>
+    
     <!-- reviews -->
     <section class="section--bg">
       <div class="review section--wide" style="margin: auto;">
@@ -683,6 +712,7 @@
         </div>
       </div>
     </section>
+    
     <!-- до после -->
     <section class="text--center">
       <h2 class="text--bold" style="margin-bottom: 32px;">До и После</h2>
@@ -739,6 +769,7 @@
         </div>
       </div>
     </section>
+    
     <!-- process -->
     <section class="section--bg" style="margin-bottom: 0;">
       <div class="section--wide process review" style="margin: auto;">
@@ -773,7 +804,7 @@
               <div class="card--text col-md-8">
                 <h3 class="process--h3">3 шаг</h3>
                 <p class="text--bold">Согласуйте эскиз</p>
-                <p>Вы можете вносить правки прежде, чем картина будет изготовлена.</p>
+                <p>Вы можете вносить правки прежде, чем картина напечатана на холсте.</p>
               </div>
             </div>
           </div>
@@ -795,6 +826,7 @@
         </div>
       </div>
     </section>
+    
     <!-- delivery -->
     <div class="section--bg delivery--bg__yellow">
       <section class="section--wide delivery" style="margin-bottom: 0;">
@@ -857,6 +889,7 @@
     </section>
 
     <div class="modal" id="notGeoModal" onclick="closeModal()"></div>
+    
     <footer>
       <section class="section--wide">
         <div class="row">
