@@ -91,10 +91,6 @@
   color: #ffd164;
 }
 
-.hero-text__mainPage .white {
-  margin-left: 16px;
-}
-
 .hero-text__list h5 {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -182,10 +178,6 @@
 
 .examples .btn {
   margin-top: 32px;
-}
-
-.style--row__mbottom {
-  margin-bottom: 32px;
 }
 
 .style--col {
@@ -309,10 +301,7 @@
   margin-top: 5rem;
   position: absolute;
   bottom: 8%;
-  padding: 8px;
-  border-radius: 16px;
-  margin-left: 8px;
-  margin-right: 8px;
+  padding: 16px;
   background: #131313;
   color: #fff;
 }

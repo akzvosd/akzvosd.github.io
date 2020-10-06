@@ -7,31 +7,6 @@
   font-size: 1.1rem;
 }
 
-/* covid */
-.covid--section {
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-  padding: 0.8rem 0 0.6rem 0 !important;
-  background: #6394FF !important;
-  color: #fff !important;
-}
-
-.covid--section__width {
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-.covid--section .material-icons {
-  top: 40% !important;
-  cursor: pointer; 
-  position: absolute; 
-  right: 176px;
-}
-
-.covid--image {
-  width: 100px;
-}
-
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
 html,
 body {
@@ -322,7 +297,7 @@ input + label {
   position: absolute;
   z-index: 1;
   top: 100%;
-  left: 50%;
+  /* left: 50%; */
   margin-left: -60px;
 }
 
@@ -417,78 +392,6 @@ input + label {
   background-color: #3e8e41;
 }
 
-header {
-  margin: auto;
-  max-width: 1400px;
-  width: 100%;
-  margin-top: 24px;
-}
-
-header #delivery {
-  background: #ffd164;
-  color: #131313;
-  width: max-content;
-}
-
-header #delivery  {
-  background: #ffd164;
-  color: #131313;
-  width: max-content;
-}
-
-.logotype {
-  width: 80% !important;
-}
-
-.subheader {
-  border: 1px solid #e1e1e1;
-  height: 54px;
-  line-height: 48px;
-  white-space: nowrap;
-  margin-top: 16px;
-}
-
-.subheader a {
-  text-decoration: none;
-  -webkit-transition: 0.2s;
-  -o-transition: 0.2s;
-  transition: 0.2s;
-  font-size: 14px;
-  font-weight: 500;
-}
-
-.subheader--decoration {
-  color: #808080;
-}
-
-.subheader--decoration:hover {
-  color: #131313;
-  text-decoration: underline;
-}
-
-.subheader .subheader--active {
-  text-decoration: underline;
-  color: #131313;
-}
-
-.subheader .row {
-  max-width: 1400px;
-  width: 100%;
-  margin: auto;
-}
-
-.subheader--right {
-  text-align: right;
-}
-
-.subheader--right a {
-  margin-left: 16px;
-}
-
-.subheader--left a {
-  margin-right: 16px;
-}
-
 ul {
   margin-left: 1rem;
 }
@@ -545,8 +448,6 @@ section {
   width: 100%; /* в мобильной версии перевести до 100% */
   max-width: 80%;
   margin: auto;
-  margin-top: 80px;
-  margin-bottom: 80px;
 }
 
 section img {
@@ -566,8 +467,6 @@ section img {
   max-width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 64px;
-  padding-bottom: 64px;
 }
 
 .section--wide {
@@ -600,14 +499,6 @@ section img {
 }
 
 /* header delivery */
-.col-md-3__leftZero {
-  padding-left: 0 !important;
-}
-
-.col-md-4__leftZero {
-  padding-left: 0 !important;
-}
-
 .image--baget__mobile {
   display: none;
 }
@@ -713,35 +604,12 @@ section img {
 @media only screen and (max-width: 900px) {
   body {
     font-size: 14px;
-  }  
-  .covid--section {
-    border-radius: 8px;
-    margin: 4px 8px 8px 8px !important;
-    width: auto;
-  }
-  .covid--section p {
-    font-size: 1rem !important;
-  }
-  .covid--section .material-icons {
-    font-size: 16px;
-    opacity: 0.6;
-    top: 8px !important;
-    cursor: pointer; 
-    position: absolute; 
-    right: 8px;
-  }
-  .covid--section img {
-    width: 80%;
-  }
-  .covid--section .col-3 {
-    display: flex; 
-    justify-content: center;
   }
   .mobile--header img {
     width: 24px;  
   }
   .header--logo__mobile {
-    width: 80% !important;
+    width: 100% !important;
   }
   
   #priceModal p {
@@ -823,12 +691,8 @@ section img {
     margin-bottom: 32px;
   }
   section {
-    width: 100%; /* в мобильной версии перевести до 100% */
-    max-width: 100%;
+    width: auto;
     padding: 0 8px;
-  }
-  section .col-md-4 {
-    padding: 0;
   }
   .mobile--heading {
     display: block;
@@ -841,9 +705,6 @@ section img {
   }
   header {
     display: none !important;
-  }
-  .subheader {
-    display: none;
   }
   button {
     width: 100%;
@@ -874,12 +735,17 @@ section img {
   }
   .mobile--nav {
     display: block;
-    padding: 12px 18px;
+    padding: 8px 0px;
     color: #13131346;
     font-size: 13px;
     font-weight: 600;
     text-transform: uppercase;
     border-bottom: 2px solid #ffd164;
+  }
+
+  .mobile--nav nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .mobile--nav .active--navbar__mobile {

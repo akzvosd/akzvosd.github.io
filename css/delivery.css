@@ -2,7 +2,6 @@
 .delivery {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
-    padding: 0 16px !important;
     color: white;
 }
 
@@ -31,10 +30,6 @@
 }
 
 .delivery--button {
-    margin-bottom: 32px;
-}
-
-.delivery h5 {
     margin-bottom: 32px;
 }
 
