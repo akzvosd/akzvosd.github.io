@@ -318,25 +318,31 @@
       <div class="hero-text__list">
         <h3 class="text--bold">Портрет по фото <span id="town--hero">Санкт-Петербург</span></h3>
         <p class="hero-text__quote">Предоплата потребуется только после внесения правок и утверждения эскиза</p>
-        <div id="delivery-days">
+        <div class="row align-items-center">
+          <div class="col-1">
+            <span class="material-icons">access_time</span>
+          </div>
+          <div class="col-11" id="delivery-days" style="padding-left: 8px;">от 1 дня</div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-1">
             <span class="material-icons">
-            access_time
-            </span> 
-            от 1 дня
-        </div>
-        <div id="delivery--hero">
-          <span class="material-icons">
             local_shipping
-          </span>
-          Доставим до двери
+            </span>
+          </div>
+          <div class="col-11" id="delivery--hero" style="padding-left: 8px;">Доставим до двери</div>
         </div>
-        <div class="modal--cursor" id="priceModal--open">
-        <span class="material-icons">
-          attach_money
-        </span>  
-        <span class="price--hero">
-          от 2090 руб.
-        </span>
+        <div class="modal--cursor row align-items-center" id="priceModal--open">
+        <div class="col-1">
+          <span class="material-icons">
+            attach_money
+          </span>  
+        </div>
+        <div class="col-11" style="padding-left: 8px;">
+          <span class="price--hero">
+            от 2090 руб.
+          </span>
+        </div>
         </div>
         <div class="row" style="margin-top: 1rem">
           <div class="col-6"><a href="#form"><button class="btn primary hero-btn">Отправить фото</button></a></div>
