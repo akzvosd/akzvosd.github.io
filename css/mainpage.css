@@ -423,9 +423,8 @@
     margin: 0;
   }
 
-  .examples--mobile__text span {
-    display: block;
-    text-align: center;
+  .examples--mobile img {
+    height: 300px;
   }
 
   .examples--heading {
