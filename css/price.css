@@ -38,3 +38,11 @@
     font-size: 0.8rem;
     padding: 0 4px 0 4px;
   }
+
+
+  @media only screen and (max-width: 900px) {
+    .case {
+      font-size: 14px;
+      margin: 0;
+    }
+  }

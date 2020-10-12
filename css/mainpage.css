@@ -180,6 +180,10 @@
   margin-bottom: 0;
 }
 
+.examples--mobile {
+  display: none;
+}
+
 .examples .btn {
   margin-top: 32px;
 }
@@ -405,6 +409,23 @@
 
   .style--row__mbottom {
     margin-bottom: 0px;
+  }
+
+  .examples {
+    display: none;
+  }
+  
+  .examples--mobile {
+    display: block;
+  }
+
+  .examples--mobile p {
+    margin: 0;
+  }
+
+  .examples--mobile__text span {
+    display: block;
+    text-align: center;
   }
 
   .examples--heading {

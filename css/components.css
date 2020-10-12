@@ -604,6 +604,10 @@ section img {
   padding-left: 0 !important;
 }
 
+.leftZero {
+  padding-left: 0 !important;
+}
+
 .col-md-4__leftZero {
   padding-left: 0 !important;
 }
@@ -803,9 +807,6 @@ section img {
     padding: 8px;
   }
 
-  .image--baget {
-    display: none;
-  }
   .image--baget__mobile {
     display: block;
     height: 360px;
