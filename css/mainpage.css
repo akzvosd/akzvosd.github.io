@@ -192,6 +192,10 @@
   margin-bottom: 32px;
 }
 
+.style--row_mbottom .col-md-3 {
+  position: relative;
+}
+
 .style--col {
   background: white;
   border-radius: 1rem;
@@ -213,6 +217,22 @@
   position: relative;
   height: 240px;
   overflow: hidden;
+}
+
+.style--label {
+  position: absolute;
+  top: 0px;
+  border-top-left-radius: 8px;
+  width: max-content;
+  height: 20px;
+  line-height: 20px;
+  white-space: nowrap;
+  font-weight: 500;
+  font-size: 12px;
+  text-align: center;
+  background: #3374ff;
+  color: white;
+  padding: 0 8px;
 }
 
 .style--button {
