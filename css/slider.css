@@ -113,11 +113,27 @@
   .toggle-switch-2 {
     position: absolute;
     top: 16px;
-    right: 16px;
+    right: 14px;
     background-image: url(../img/svg/toggle2.svg);
     background-repeat: no-repeat;
     background-size: cover;
     width: 65px;
     height: 34.4px;
   }
+
+  .pulse {
+  animation: pulse-animation 2s infinite;
+  border-radius: 32px;
+  }
+
+  @keyframes pulse-animation {
+    0% {
+      box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.3);
+    }
+    100% {
+      box-shadow: 0 0 0 16px rgba(0, 0, 0, 0);
+    }
+  }
+
+
 }

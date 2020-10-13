@@ -721,7 +721,10 @@ section img {
 @media only screen and (max-width: 900px) {
   body {
     font-size: 14px;
-  }  
+  }
+  .mobile-hide {
+    display: none !important;
+  }
   .covid--section {
     border-radius: 8px;
     margin: 8px !important;
