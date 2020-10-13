@@ -241,6 +241,31 @@
   display: none;
 }
 
+.scrollmenu {
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.scrollmenu img {
+  width: 90%;;
+  height: 300px;
+  object-fit: cover;
+  margin-left: 8px;
+  border-radius: 0.5rem;
+}
+
+.scrollmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+.scrollmenu a:hover {
+  background-color: #777;
+}
+
 @media only screen and (max-width: 1400px) {
   .style--text {
     height: auto;
@@ -322,7 +347,7 @@
   margin: 8px;
 }
 .hero-mobile button {
-  font-size: 14px;
+  font-size: 12px;
 }
 #delivery-days {
   margin-top: 0;
@@ -417,6 +442,20 @@
   
   .examples--mobile {
     display: block;
+    padding: 0 4px !important;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .examples--mobile h4 {
+    font-weight: 600;
+    background: #ffd164;
+    width: min-content;
+    margin: 0 auto;
+  }
+
+  .examples--mobile .text--center {
+    margin-bottom: 16px;
   }
 
   .examples--mobile p {
@@ -424,7 +463,7 @@
   }
 
   .examples--mobile img {
-    height: 300px;
+    height: 240px;
   }
 
   .examples--heading {

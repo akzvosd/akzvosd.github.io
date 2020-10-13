@@ -332,21 +332,21 @@
           </div>
           <div class="col-11" id="delivery--hero" style="padding-left: 8px;">Доставим до двери</div>
         </div>
-        <div class="modal--cursor row align-items-center" id="priceModal--open">
+        <div class="modal--cursor row align-items-center" id="priceModal--open__mob">
         <div class="col-1">
           <span class="material-icons">
             attach_money
           </span>  
         </div>
         <div class="col-11" style="padding-left: 8px;">
-          <span class="price--hero">
+          <span class="price--hero" id="priceModal--open">
             от 2090 руб.
           </span>
         </div>
         </div>
         <div class="row" style="margin-top: 1rem">
-          <div class="col-6"><a href="#form"><button class="btn primary hero-btn">Отправить фото</button></a></div>
-          <div class="col-6" style="padding-left: 8px;"><a href="#top"><button class="btn hero-btn">Стили портретов</button></a></div>
+          <div class="col-6 leftZero rightZero"><a href="#form"><button class="btn primary hero-btn">Отправить фото</button></a></div>
+          <div class="col-6 rightZero"  ><a href="#top"><button class="btn hero-btn">Стили портретов</button></a></div>
         </div>
       </div>
     </div>
@@ -406,54 +406,49 @@
       </div>
     </section>
     
+
     <section class="examples--mobile">
+      <div class="text--center">
+        <h4>Примеры</h4>
+        <p>Наши счастливые заказчики</p>
+      </div>
       <div class="row">
-        <div class="col-6">
-          <img src="img/ex10.jpg" class="image" alt="Imagine" />
+        <div class="col-6 leftZero" style="padding-right: 2px;">
+          <img src="img/ex10.jpg" loading="eager" class="image" alt="Imagine" onclick="openModal(this.src)" />
           <div class="examples--mobile__text">
-            <p class="smallcase">
-              <span class="smallcase--width">Стиль</span> <span class="case">Imagine</span>
-            </p>
-            <p class="smallcase">
-              <span class="smallcase--width">Размер</span> <span class="case">40х60 см</span>
-            </p>
-            <p class="smallcase">
-              <span class="smallcase--width">Цена</span>
-              <span class="case">2650 руб.</span>
-              <span class="sale">-30%</span>
-            </p>
+            <div>
+              <span class="case">Imagine, </span> <span class="case">40х60 см</span>
+            </div>
+            <div style="margin-top: 4px;">
+              <span class="case">2650 руб.</span>  <span class="line-through">5000 руб.</span> <span class="sale">-30%</span>
+            </div>
           </div>
         </div>
-        <div class="col-6">
-          <img src="img/ex11.jpg" class="image" alt="Imagine" />
-          <p class="smallcase">
-            <span class="smallcase--width">Стиль</span> <span class="case">Imagine</span>
-          </p>
-          <p class="smallcase">
-            <span class="smallcase--width">Размер</span> <span class="case">40х60 см</span>
-          </p>
-          <p class="smallcase">
-            <span class="smallcase--width">Цена</span>
-            <span class="case">2650 руб.</span>
-            <span class="sale">-30%</span>
-          </p>
+        <div class="col-6 leftZero" style="padding-right: 2px;">
+          <img src="img/ex11.jpg" class="image" alt="Imagine" alt="Imagine" onclick="openModal(this.src)" />
+          <div class="examples--mobile__text">
+            <div>
+              <span class="case">Imagine, </span> <span class="case">40х60 см</span>
+            </div>
+            <div style="margin-top: 4px;">
+              <span class="case">2650 руб.</span>  <span class="line-through">5000 руб.</span> <span class="sale">-30%</span>
+            </div>
+          </div>
         </div>
+      </div> 
+    </section>
+
+    <section class="examples--mobile">
+      <div class="text--center">
+        <h4>Галерея</h4>
       </div>
-      <div class="row">
-        <div class="col">
-
-        </div>
-        <div class="col">
-
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-
-        </div>
-        <div class="col">
-
-        </div>
+      <div class="scrollmenu">
+        <img src="img/main/main-s.jpg" alt="Картина «Маслом»" class="image" onclick="openModal(this.src)" >
+        <img src="img/main/main1-s.jpg" alt="Картина «Маслом»" class="image" onclick="openModal(this.src)" >
+        <img src="img/main/main4-s.jpg" alt="Картина «Маслом»" class="image" onclick="openModal(this.src)" >
+        <img src="img/main/main5-s.jpg" alt="Картина «Маслом»" class="image" onclick="openModal(this.src)" >
+        <img src="img/main/main2-s.jpg" alt="Картина «Маслом»" class="image" onclick="openModal(this.src)" >
+        <img src="img/main/main3-s.jpg" alt="Картина «Маслом»" class="image" onclick="openModal(this.src)" >
       </div>
     </section>
 
@@ -1022,6 +1017,12 @@
         $('#priceModal').show();
       });
       $('#priceModal--close').click(function() {
+        $('#priceModal').hide();
+      });
+      $('#priceModal--open__mob').click(function() {
+        $('#priceModal').show();
+      });
+      $('#priceModal--close__mob').click(function() {
         $('#priceModal').hide();
       });
     </script>

@@ -608,6 +608,10 @@ section img {
   padding-left: 0 !important;
 }
 
+.rightZero {
+  padding-right: 0 !important;
+}
+
 .col-md-4__leftZero {
   padding-left: 0 !important;
 }
