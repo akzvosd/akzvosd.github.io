@@ -308,7 +308,7 @@ input + label {
 
 .tooltip-mobile {
   width: 100%;
-  display: none;
+  display: block;
 }
 
 .tooltip .tooltiptext {
@@ -327,7 +327,7 @@ input + label {
 }
 
 #tooltipMobile {
-  display: none;
+  display: block;
   top: 70px;
   transform: translateX(-50%);
   margin: 0;
@@ -718,6 +718,10 @@ section img {
   display: none;
 }
 
+#tooltipMobile {
+  display: none;
+}
+
 @media only screen and (max-width: 900px) {
   body {
     font-size: 14px;
@@ -897,7 +901,7 @@ section img {
   }
 
   #tooltipMobile {
-    display: block;
+    display: none;
   }
 
   .mobile--geo {
