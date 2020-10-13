@@ -566,8 +566,8 @@ section img {
   max-width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 64px;
-  padding-bottom: 64px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .section--wide {
@@ -831,6 +831,8 @@ section img {
     width: 100%; /* в мобильной версии перевести до 100% */
     max-width: 100%;
     padding: 0 8px;
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
   section .col-md-4 {
     padding: 0;

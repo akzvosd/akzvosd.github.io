@@ -246,11 +246,19 @@
   white-space: nowrap;
 }
 
+.scrollmenu::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollmenu {
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+}
+
 .scrollmenu img {
   width: 90%;;
   height: 300px;
   object-fit: cover;
-  margin-left: 8px;
   border-radius: 0.5rem;
 }
 
@@ -361,6 +369,18 @@
   background-size: cover;
   background-position: center;
 }
+.hero-mobile--yellowBlock {
+  background: #ffd164;
+  width: max-content;
+  padding: 4px;
+  border-radius: 4px; 
+  margin-bottom: 8px;
+}
+.yellowBlock_second {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
 .hero-text__list {
   margin-top: 0;
   position: relative;
