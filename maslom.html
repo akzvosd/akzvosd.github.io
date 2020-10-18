@@ -249,34 +249,7 @@
                 <h2 class="text--bold">Портрет в стиле «Маслом»</h2>
                 <p class="heroTextWidth">Настоящая классика живописи! Изысканный подарок на любой праздник!</p>
                 <small id="town--hero" class="text--bold"></small> <small id="delivery-days" class="text--bold"></small>
-                <div class="row">
-                    <div class="col-md-6 style-col-padding-off">
-                        <label for="selectBox">Популярные форматы</label>
-                        <select class="select--price" id="selectBox" name="selectBox" onchange="setSizePrice(this)">
-                        <option value="20,30"></option>
-                        <option value="30,40"></option>
-                        <option value="40,60"></option>
-                        <option value="60,80"></option>
-                        <option value="80,120"></option>
-                        </select>
-                    </div>
-                    <div class="col-md-6 style-col-padding-off">
-                        <div class="counter">
-                            <label for="x"">Количество лиц</label>
-                            <div class="row justify-content-between">
-                                <button type="button" class="but counterBut dec" style="display: inline-block;">-</button>
-                                <input type="text" class="field fieldCount" value="1" data-min="1" data-max="30" id="x" name="x" style="display: inline-block;" />
-                                <button type="button" class="but counterBut inc" style="display: inline-block;">+</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <h5><span class="line-through" id="selectPV">2490 руб.</span><span id="selectV">2290 руб.</span></h5>
-                <!-- <h5><span class="line-through" id="selectPV">2490 руб.</span><span id="selectV">2290 руб.</span></h5> -->
-                <small style="color: #858585">Предоплата после согласования эскиза.</small><br/>
-                <a href="#form"><button class="btn primary">Сделать заказ</button></a>
-                <!-- Прайс дополнительных лиц -->
-                <span id="facePrice">400</span>
+                <div class="calculator-place-mobile"></div>
           </div>
         </div>
 
@@ -286,32 +259,35 @@
                         <h2 class="text--bold">Портрет в стиле «Маслом»</h2>
                         <p class="heroTextWidth">Настоящая классика живописи! Изысканный подарок на любой праздник!</p>
                         <small id="town--hero" class="text--bold"></small> <small id="delivery-days" class="text--bold"></small>
-                        <div class="row">
-                            <div class="col-md-6 style-col-padding-off">
-                                <label for="selectBox">Популярные форматы</label>
-                                <select class="select--price" id="selectBox" name="selectBox" onchange="setSizePrice(this)">
-                                <option value="20,30"></option>
-                                <option value="30,40"></option>
-                                <option value="40,60"></option>
-                                <option value="60,80"></option>
-                                <option value="80,120"></option>
-                                </select>
-                            </div>
-                            <div class="col-md-6 style-col-padding-off">
-                                <div class="counter">
-                                    <label for="x">Количество лиц</label>
-                                    <button type="button" class="but counterBut dec">-</button>
-                                    <input type="text" class="field fieldCount" value="1" data-min="1" data-max="30" id="x" name="x" />
-                                    <button type="button" class="but counterBut inc">+</button>
+                        <div class="calculator-place-desktop">
+                          <div class="calculator">
+                            <div class="row">
+                                <div class="col-md-6 style-col-padding-off">
+                                    <label for="selectBox">Популярные форматы</label>
+                                    <select class="select--price" id="selectBox" name="selectBox" onchange="setSizePrice(this)">
+                                    <option value="20,30"></option>
+                                    <option value="30,40"></option>
+                                    <option value="40,60"></option>
+                                    <option value="60,80"></option>
+                                    <option value="80,120"></option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 style-col-padding-off">
+                                    <div class="counter">
+                                        <label for="x">Количество лиц</label>
+                                        <button type="button" class="but counterBut dec" style="display: inline-block;">-</button>
+                                        <input type="text" class="field fieldCount" value="1" data-min="1" data-max="30" id="x" name="x" style="display: inline-block;" />
+                                        <button type="button" class="but counterBut inc" style="display: inline-block;">+</button>
+                                    </div>
                                 </div>
                             </div>
+                            <h5><span class="line-through" id="selectPV">2490 руб.</span><span id="selectV">2290 руб.</span></h5>
+                            <small style="color: #858585">Предоплата после согласования эскиза.</small><br/>
+                            <a href="#form"><button class="btn primary">Сделать заказ</button></a>
+                            <!-- Прайс дополнительных лиц -->
+                            <span id="facePrice">400</span>
+                          </div>
                         </div>
-                        <h5><span class="line-through" id="selectPV">2490 руб.</span><span id="selectV">2290 руб.</span></h5>
-                        <!-- <h5><span class="line-through" id="selectPV">2490 руб.</span><span id="selectV">2290 руб.</span></h5> -->
-                        <small style="color: #858585">Предоплата после согласования эскиза.</small><br/>
-                        <a href="#form"><button class="btn primary">Сделать заказ</button></a>
-                        <!-- Прайс дополнительных лиц -->
-                        <span id="facePrice">400</span>
                     </div>
             </div>
         </div>

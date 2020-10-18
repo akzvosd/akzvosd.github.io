@@ -131,12 +131,6 @@ var additionalFaces = 0;
 var totalPrice = 0;
 var opt;
 
-var sizePrice1 = 0;
-var facePrice1 = parseInt($('#facePrice1').html());
-var additionalFaces1 = 0;
-var totalPrice1 = 0;
-var opt1;
-
 function setSizePrice(e) {
   opt = e;
 
@@ -202,6 +196,29 @@ function initSelect() {
   select.innerHTML += '<option value="-1">Другой размер</option>';
 
   calcPrice();
+  
+  onResize();
 }
 
 initSelect();
+
+$(window).resize(onResize);
+
+function onResize() {
+  var calculatorDiv = document.querySelector('.calculator');
+  var place;
+  var prevPlace;
+  
+  if (window.innerWidth <= 900) {
+    prevPlace = document.querySelector('.calculator-place-desktop');
+    place = document.querySelector('.calculator-place-mobile');
+  } else {
+    prevPlace = document.querySelector('.calculator-place-mobile');
+    place = document.querySelector('.calculator-place-desktop');
+  }
+  
+  if (prevPlace.childNodes.length) {
+    var node = prevPlace.childNodes.length === 3 ? prevPlace.childNodes[1] : prevPlace.childNodes[0];
+    place.appendChild(node);
+  }
+}
