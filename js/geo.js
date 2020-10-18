@@ -71,6 +71,9 @@ function changeCity(city, setShowTooltipToFalse = false) {
 
 	// if ($('#delivery-days')[0]) $('#delivery-days').html(`Изготовление картины от ${days} ${days === 1 ? 'дня' : 'дней'}`);
 	if ($('#delivery-days')[0]) $('#delivery-days').html(`от ${days} ${days === 1 ? 'дня' : 'дней'}`);
+  $('#geoModal').hide();
+  
+  if ($('#delivery-days1')[0]) $('#delivery-days1').html(`от ${days} ${days === 1 ? 'дня' : 'дней'}`);
 	$('#geoModal').hide();
 
 	if ($('.geoModalWindow input')[0] && $('.geoModalWindow input')[0].value !== '') {
@@ -85,8 +88,10 @@ function setHtml() {
   $('#delivery').html(geo.delivery);
   $('#delivery--mob').html(geo.delivery);
   $('#town--hero').html(geo.city);
+  $('#town--hero1').html(geo.city);
   $('#town--mob').html(geo.city);
   $('#delivery--hero').html(geo.delivery);
+  $('#delivery--hero1').html(geo.delivery);
 }
 
 function createGeoModal(search = false, cs = cities) {

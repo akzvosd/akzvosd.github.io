@@ -261,7 +261,7 @@
   display: none;
 }
 
-.scrollmenu {
+/* .scrollmenu {
   overflow: auto;
   white-space: nowrap;
 }
@@ -292,7 +292,7 @@
 
 .scrollmenu a:hover {
   background-color: #777;
-}
+} */
 
 @media only screen and (max-width: 1400px) {
   .style--text {
@@ -491,12 +491,7 @@
     margin-bottom: 40px;
   }
 
-  .examples--mobile h4 {
-    font-weight: 600;
-    background: #ffd164;
-    width: min-content;
-    margin: 0 auto;
-  }
+
 
   .examples--mobile .text--center {
     margin-bottom: 16px;
