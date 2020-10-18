@@ -122,21 +122,43 @@
   }
 
   .pulse {
-  animation: pulse-animation 2s ease-in-out infinite alternate;
+  animation: pulse-animation 1s ease-in-out infinite alternate;
   border-radius: 32px;
   }
 
   @keyframes pulse-animation {
     0% {
-      box-shadow: 0 0 0 0px rgba(255, 209, 100, 0);
-      transform: scale(1.0);
+      transform: rotate(0deg);
+    }
+    10% {
+      transform: rotate(10deg);
+    }
+    20% {
+      transform: rotate(-10deg);
+    }
+    30% {
+      transform: rotate(0deg);
+    }
+    40% {
+      transform: rotate(10deg);
+    }
+    50% {
+      transform: rotate(-10deg);
+    }
+    60% {
+      transform: rotate(0deg);
     }
     70% {
-      box-shadow: 0 0 0 16px rgba(255, 209, 100, .3);
+      transform: rotate(10deg);
+    }
+    80% {
+      transform: rotate(-10deg);
+    }
+    90% {
+      transform: rotate(0deg);
     }
     100% {
-      box-shadow: 0 0 0 0px rgba(255, 209, 100,.6);
-      transform: scale(1.15);
+      transform: rotate(10deg);
     }
   }
 

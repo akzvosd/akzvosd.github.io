@@ -131,6 +131,12 @@ var additionalFaces = 0;
 var totalPrice = 0;
 var opt;
 
+var sizePrice1 = 0;
+var facePrice1 = parseInt($('#facePrice1').html());
+var additionalFaces1 = 0;
+var totalPrice1 = 0;
+var opt1;
+
 function setSizePrice(e) {
   opt = e;
 

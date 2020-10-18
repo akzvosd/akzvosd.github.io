@@ -112,23 +112,7 @@ label {
   .select--price {
     width: 100%
   }
-  .counter .dec {
-    margin-bottom: 8px !important;
-  }
-
-  .counter .inc {
-    margin-top: 8px !important;
-  }
-
-  .counter button {
-    width: 100%;
-  }
-
   .counterBut:focus {
     border-color: #888;
-  }
-
-  .fieldCount {
-    width: 100%;
   }
 }

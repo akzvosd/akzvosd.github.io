@@ -722,9 +722,16 @@ section img {
   display: none;
 }
 
+.desktop-hide {
+  display: none;
+}
+
 @media only screen and (max-width: 900px) {
   body {
     font-size: 14px;
+  }
+  .desktop-hide {
+    display: block;
   }
   .mobile-hide {
     display: none !important;
@@ -752,9 +759,9 @@ section img {
     display: flex; 
     justify-content: center;
   }
-  .mobile--header img {
+  /* .mobile--header img {
     width: 24px;  
-  }
+  } */
   .header--logo__mobile {
     width: 80% !important;
   }

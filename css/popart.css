@@ -36,6 +36,7 @@
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  height: 90%;
 }
 
 .hero-text__list {
@@ -116,10 +117,6 @@ section h3 {
   padding-left: 32px;
 }
 
-.information {
-  margin-bottom: 136px;
-}
-
 .information h3 {
   margin-bottom: 32px;
 }
@@ -137,13 +134,48 @@ section h3 {
 
 @media only screen and (max-width: 900px) {
   .popart {
-    background-image: url('../img/examples/example7_hero.jpg');
-    background-size: cover;
-    background-position-x: 20%;
-    margin-bottom: 380px;
+    background: white !important;
   }
 
-  .popart-width {
+  .hero-mobile {
+    display: block;
+    margin-top: 8px;
+    -webkit-box-shadow: 2px 3px 4px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 2px 3px 4px 1px rgba(0,0,0,0.2);
+    box-shadow: 2px 3px 4px 1px rgba(0,0,0,0.2);
+    border-radius: 16px;
+    margin: 8px;
+  }
+  #delivery-days {
+    margin-top: 0;
+  }
+  .hero-mobile--img {
+    background: red;
+    height: 300px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    background: url(../img/heroherohero.jpg);
+    background-size: cover;
+    background-position: center;
+    background-position-x: 13%;
+  }
+
+  .hero-text--style {
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+
+  .hero-text__list {
+    border: 0;
+  }
+
+  .hero-text__list h2 {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .popartWidth {
     width: 100%;
     min-width: 100%;
   }
