@@ -45,6 +45,7 @@
     <link rel="stylesheet" href="css/panno.css">
     <link rel="stylesheet" href="css/bootstrap-grid.css">
     <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/popart.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <title>Imagine — Панно</title>
@@ -53,19 +54,7 @@
   </head>
  <body>    
     <!-- гео мобайл -->
-	<div class="tooltip tooltip-mobile">
-	  <a href="#" id="geoModalOpenMobile">
-	    <div class="mobile--geo">
-		  <div id="town--mob">Санкт-Петербург</div>
-          <div id="delivery--mob">Доставим до двери</div>
-		</div>
-      </a>
-	  <span class="tooltiptext" id="tooltipMobile">
-	    <p>Это ваш город?</p>
-		<div class="btn white" onclick="tooltipClose()">Да</div>
-		<div class="btn" onclick="tooltipOpen()" style="border: 1px solid white">Нет</div>
-      </span>
-    </div>
+	 
     <!-- гео мобайл -->
     <div class="mobile--header">
       <div class="row align-items-center" style="padding: 0 16px;">
@@ -144,7 +133,24 @@
       <!-- гео десктоп -->
             <div class="col" style="text-align: right;"><a  href="tel:+79992002272">+7 (999) 200-22-72</a></div>
             <div class="col-md-auto"  >  <a href="https://bitrix24public.com/b24-vrm86j.bitrix24.ru/form/6_ne_nashli_chto_iskali/zk0a9o/"><button class="btn line" id="callmebaby">Заказать звонок</button></a></div>
-    </header>
+     </header>
+
+    <div class="tooltip tooltip-mobile xyn" id="tooltip tooltip-mobile">
+        <div class="mobile--geo" id="mobileGeo">
+          <span id="town--mob">Санкт-Петербург</span>,
+          <span id="delivery--mob">Доставка до двери</span>
+          <div class="row">
+            <div class="col"><div class="btn primary" onclick="closemg()">Верно</div></div>
+            <div class="col"><div class="btn" id="geoModalOpenMobile">Выбрать другой город</div></div>
+          </div>
+          <!-- <span>Изменить</span> -->
+    </div>
+	  <span class="tooltiptext" id="tooltipMobile">
+	    <p>Это ваш город?</p>
+		<div class="btn white" onclick="tooltipClose()">Да</div>
+		<div class="btn" onclick="tooltipOpen()" style="border: 1px solid white">Нет</div>
+      </span>
+    </div>
     <div class="subheader" role="navigation" aria-label="Main">
             <div class="row align-items-center">
                 <div class="col-md-6 subheader--left">
@@ -179,21 +185,19 @@
     </div>
 
  <!--   -->
-         <section id="COVID" class="section--bg" style="margin-top: 0; margin-bottom: 0; padding: 0.8rem 0 0.6rem 0; background: #6394FF; color: #fff">
-          <section class="section--wide" style="margin-top: 0; margin-bottom: 0; cursor: pointer;" id="closeCOVID">
-            <div class="row align-items-center  ">
-              <div class="col-md-auto">
-                <img src="img/svg/gift.svg" alt="covid icon" width="100px">
+         <section id="COVID" class="section--bg covid--section"  style="margin-top: 0; margin-bottom: 0; cursor: pointer; position: relative;">
+            <div class="covid--section__width" id="closeCOVID">
+              <div class="row align-items-center">
+                <div class="col-md-1 col-3">
+                  <img src="img/svg/gift.svg" alt="covid icon" class="covid--image">
+                </div>
+                <div class="col-md-10 col-9">
+                  <p style="font-size: 1.3rem;"><span class="text--bold">Нам 4 года!</span><br>Две недели скидок до 50% на <u>все</u> заказы!</p>
+                </div>
               </div>
-              <div class="col-md-10">
-                <p style="font-size: 1.3rem;"><span class="text--bold">Нам 4 года!</span><br>Две недели скидок до 50% на <u>все</u> заказы!</p>
-              </div>
-              <div class="col">
-                <i class="material-icons" style="cursor: pointer;" id="closeCOVID">close</i>
-              </div>
+              <i class="material-icons" id="closeCOVID">close</i>
             </div>
-          </section>
-        </section>
+      </section>
 
     <main>      
       <!-- geomodal -->
@@ -249,15 +253,28 @@
           </div>
         </div>
       </div>
+
+      <div class="hero-mobile">
+        <div class="hero-mobile--img" style="background-image: url(img/panno/panno.jpg); background-position: 82%;"></div>
+        <div class="hero-text__list desktop-hide">
+            <h2 class="text--bold">Модульное панно</h2>
+            <small id="town--hero"></small> 
+            <br> 
+            <small id="delivery-days"></small>
+            <br>
+            <small class="price--hero">от 590 руб.</small>
+            <a href="#form"><button class="btn primary" style="margin-top: 1rem; color: #131313;">Заказать панно</button></a>
+        </div>
+      </div>
                
-            <div class="hero-image panno">
+            <div class="hero-image panno mobile-hide">
                     <div class="hero-text hero-text--addition">
-                            <div class="hero-text__list margin-top--hero-text__list">
+                            <div class="hero-text__list margin-top--hero-text__list" style="border: 0; background: 0; color: white">
                                 <h2 class="text--bold">Модульное панно <span id="town--hero"></span></h2>
                                 <p id="delivery-days" style="margin-top: 2rem">Изготовление от 3 дней</p>
                                 <p id="delivery--hero"></p>
                                 <p class="modal--cursor" id="priceModal--open"><span class="price--hero">Стоимость репродукции: от 1690 руб.</span> <sup>?</sup></p>
-                                <a href="#form"><button class="btn primary" style="margin-top: 3rem">Заказать панно</button></a>
+                                <a href="#form"><button class="btn primary" style="margin-top: 3rem; color: #131313;">Заказать панно</button></a>
                             </div>
                     </div>
             </div>
@@ -338,8 +355,8 @@
     <div class="row" style="margin-top: 16px">
         <div class="col-md-6">
             <div class="review--card row align-items-center">
-                <img src="img/review_peteenyova.jpg" alt="Карточка_1" class="review--card__img col-md-4">
-                <div class="card--text col-md-8">   
+                <img src="img/review_peteenyova.jpg" alt="Карточка_1" class=" review--card__img col-md-4 col-3">
+                <div class="card--text col-md-8 col-9">   
                     <p>Было очень приятно общаться, очень заботливые, внимательные и ответственные люди работают в студии. Спасибо!</p>
                     <small  >Марина Петренёва, Великий Новгород</small>
                 </div>    
@@ -347,8 +364,8 @@
         </div>
         <div class="col-md-6">
             <div class="review--card row align-items-center">
-                    <img src="img/review_kudrova.jpg" alt="Карточка_1" class="review--card__img col-md-4">
-                    <div class="card--text col-md-8">   
+                    <img src="img/review_kudrova.jpg" alt="Карточка_1" class=" review--card__img col-md-4 col-3">
+                    <div class="card--text col-md-8 col-9">   
                         <p>Спасибо за то, что вы есть! Всё быстро, качественно, доступно. Рекомендуем.... С уважением к вашему труду)</p>
                         <small  >Светлана Кудрова, Демянск</small>
                     </div>    
@@ -358,8 +375,8 @@
     <div class="row" style="margin-top: 16px">
                     <div class="col-md-6">
                         <div class="review--card row align-items-center">
-                            <img src="img/review_vorobey.jpg" alt="Карточка_1" class="review--card__img col-md-4">
-                            <div class="card--text col-md-8">   
+                            <img src="img/review_vorobey.jpg" alt="Карточка_1" class=" review--card__img col-md-4 col-3">
+                            <div class="card--text col-md-8 col-9">   
                                 <p>Хорошая картина получилась, учитывают все пожелания, и приемлемые цены</p>
                                 <small  >Евгений Воробьев, Санкт-Петербург</small>
                             </div>    
@@ -367,8 +384,8 @@
                     </div>
                     <div class="col-md-6">
                         <div class="review--card row align-items-center">
-                                <img src="img/review_pahom.jpg" alt="Карточка_1" class="review--card__img col-md-4">
-                                <div class="card--text col-md-8">   
+                                <img src="img/review_pahom.jpg" alt="Карточка_1" class=" review--card__img col-md-4 col-3">
+                                <div class="card--text col-md-8 col-9">   
                                     <p>Спасибо большое студии за картину, все сделали быстро и очень качественно. Всем советую, не пожалеете.</p>
                                     <small  >Надежда Пахомова, Пролетарий</small>
                                 </div>    

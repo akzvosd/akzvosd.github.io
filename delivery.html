@@ -164,7 +164,24 @@
           ><button class="btn line" id="callmebaby">Заказать звонок</button></a
         >
       </div>
-    </header>
+     </header>
+
+    <div class="tooltip tooltip-mobile xyn" id="tooltip tooltip-mobile">
+        <div class="mobile--geo" id="mobileGeo">
+          <span id="town--mob">Санкт-Петербург</span>,
+          <span id="delivery--mob">Доставка до двери</span>
+          <div class="row">
+            <div class="col"><div class="btn primary" onclick="closemg()">Верно</div></div>
+            <div class="col"><div class="btn" id="geoModalOpenMobile">Выбрать другой город</div></div>
+          </div>
+          <!-- <span>Изменить</span> -->
+    </div>
+	  <span class="tooltiptext" id="tooltipMobile">
+	    <p>Это ваш город?</p>
+		<div class="btn white" onclick="tooltipClose()">Да</div>
+		<div class="btn" onclick="tooltipOpen()" style="border: 1px solid white">Нет</div>
+      </span>
+    </div>
     <div class="subheader" role="navigation" aria-label="Main">
       <div class="row align-items-center">
         <div class="col-md-6 subheader--left">

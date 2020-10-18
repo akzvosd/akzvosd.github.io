@@ -506,9 +506,8 @@ ul {
 
 .hero-text {
   position: absolute;
-  top: 49%;
-  left: 29%;
-  transform: translate(-50%, -50%);
+  top: 32%;
+  left: 10vw;
   color: white;
 }
 
