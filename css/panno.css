@@ -45,6 +45,10 @@ form {
     background-position-x: 55%;
   }
 
+  .panno--row .col-md-6 {
+    margin-bottom: 40px !important;
+  }
+
   .image--panno {
     width: 100%;
   }

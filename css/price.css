@@ -41,6 +41,10 @@
 
 
   @media only screen and (max-width: 900px) {
+    .price {
+      margin-top: 4px;
+    }
+    
     .case {
       font-size: 14px;
       margin: 0;

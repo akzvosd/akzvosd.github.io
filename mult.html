@@ -71,7 +71,7 @@
     </div>
     <div class="mobile--nav">
         <nav class="row justify-content-between" style="margin-top: 0">
-             <a  href="index.html" class="active--navbar__mobile">Портреты</a>
+            <a  href="index.html" class="active--navbar__mobile">Портреты</a>
             <a href="reproductions.html">Картины</a>
             <a href="panno.html">Панно</a>
             <a href="foto.html">Печать</a>
@@ -241,9 +241,16 @@
       <div class="hero-mobile">
         <div class="hero-mobile--img" style="background-image: url(img/mult/mult-hero.jpg); background-position-x: 0%;"></div>
         <div class="hero-text__list desktop-hide">
-            <h2 class="text--bold">Портрет «Мульт-герой»</h2>
+            <h2 class="text--bold">Портрет «Мульт-герой»<br/><span id="town--hero1"></span></h2>
+            <div class="yellowBlock">
+              <span class="material-icons">access_time</span>
+              <span id="delivery-days1" style="margin-left: 4px;">от 1 дня</span>
+            </div>
+            <div class="yellowBlock">
+              <span class="material-icons">local_shipping</span>
+              <span id="delivery--hero1" style="margin-left: 4px;">Доставим до двери</span>
+            </div>
             <p class="heroTextWidth">Портрет в стилистике любимого мультфильма. Наши художники повторят любую рисовку!</p>
-            <small id="town--hero" class="text--bold"></small> <small id="delivery-days" class="text--bold"></small>
             <div class="calculator-place-mobile"></div>
         </div>
       </div>
@@ -252,9 +259,16 @@
         <div class="hero-image popart mobile-hide" style="background-image: url(img/mult/mult-hero.jpg);">
             <div class="hero-text--style popartWidth">
                     <div class="hero-text__list ">
-                        <h2 class="text--bold">Портрет «Мульт-герой»</h2>
+                        <h2 class="text--bold">Портрет «Мульт-герой»<br/><span id="town--hero"></span></h2>
+                        <div class="yellowBlock">
+                          <span class="material-icons">access_time</span>
+                          <span id="delivery-days" class="hero-block" style="margin-top: 0; margin-left: 8px">от 1 дня</span>
+                        </div>
+                        <div class="yellowBlock">
+                            <span class="material-icons">local_shipping</span>
+                            <span id="delivery--hero" class="hero-block" style="margin-top: 0; margin-left: 8px">Доставим до двери</span>
+                        </div>
                         <p class="heroTextWidth">Портрет в стилистике любимого мультфильма. Наши художники повторят любую рисовку!</p>
-                        <small id="town--hero" class="text--bold"></small> <small id="delivery-days" class="text--bold"></small>
               <div class="calculator-place-desktop">
               <div class="calculator">
               <div class="row">
@@ -295,8 +309,8 @@
         <div class="tog">
                 <span class="toggle-switch-1 pulse"></span>
                 <span class="toggle-switch-2" style="display: none;"></span>
-                <img src="img/examples/example3.jpg" class="image" style="height: 420px;">
-                <img src="img/examples/example3_x.jpg" class="image" style="display:none;height: 420px;">
+                <img src="img/examples/example3.jpg" class="image" style="height: 320px;">
+                <img src="img/examples/example3_x.jpg" class="image" style="display:none;height: 320px;">
             </div>
     <div class="style--container">
             <div class="slider--mouse">Проведите мышкой</div>
@@ -335,25 +349,25 @@
 <!-- галерея -->
 <section class="section--wide text--center">
         <h3 class="text--bold">Галерея</h3>
-        <div class="row" style="margin-bottom: 16px;">
-                <div class="col-md-3">
+        <div class="row popart-row-margin-bottom">
+                <div class="col-md-3 col-6 leftZero_mob">
                     <img src="img/mult/mult3.jpg"
-                    onclick="openModal(this.src)" class="image image--baget" style="height: 320px;">
+                    onclick="openModal(this.src)" class="image image--baget">
                     
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 col-6 rightZero_mob">
                     <img src="img/mult/mult4.jpg"
-                    onclick="openModal(this.src)" class="image image--baget" style="height: 320px;">
+                    onclick="openModal(this.src)" class="image image--baget">
                     
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 col-6 leftZero_mob">
                     <img src="img/mult/mult5.jpg"
-                    onclick="openModal(this.src)" class="image image--baget" style="height: 320px;">
+                    onclick="openModal(this.src)" class="image image--baget">
                     
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 col-6 rightZero_mob">
                     <img src="img/mult/mult6.jpg"
-                    onclick="openModal(this.src)" class="image image--baget" style="height: 320px;">
+                    onclick="openModal(this.src)" class="image image--baget">
                     
                 </div>
         </div>

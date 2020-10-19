@@ -258,12 +258,19 @@
       <div class="hero-mobile">
         <div class="hero-mobile--img" style="background-image: url(img/repro.jpg); background-position: center;"></div>
         <div class="hero-text__list desktop-hide">
-            <h2 class="text--bold">Репродукции и интерьерные картины</h2>
-            <small id="town--hero"></small> 
-            <br> 
-            <small id="delivery-days"></small>
-            <br>
-            <small class="price--hero">от 590 руб.</small>
+            <h2 class="text--bold">Репродукции и интерьерные картины <br><span id="town--hero1"></span></h2>
+            <div class="yellowBlock">
+              <span class="material-icons">access_time</span>
+              <span id="delivery-days1" style="margin-left: 8px;">от 1 дня</span>
+            </div>
+            <div class="yellowBlock" style="margin-top: 4px">
+              <span class="material-icons">local_shipping</span>
+              <span id="delivery--hero1" style="margin-left: 8px;">Доставим до двери</span>
+            </div>
+            <div class="yellowBlock" style="margin-top: 4px">
+              <span class="material-icons">attach_money</span>
+              <span class="yellowBlock_second" style="margin-left: 8px;">от 590 руб.</span>
+            </div>
             <a href="#form"><button class="btn primary" style="margin-top: 1rem; color: #131313;">Заказать репродукцию</button></a>
         </div>
       </div>
@@ -272,9 +279,18 @@
                     <div class="hero-text hero-text--addition">
                             <div class="hero-text__list margin-top--hero-text__list" style="border: 0; background: 0; color: white">
                                 <h2 style="line-height: 1.5;" class="text--bold">Репродукции и интерьерные картины <span id="town--hero"></span></h2>
-                                <p id="delivery-days" style="margin-top: 2rem">Изготовление от 3 дней</p>
-                                <p id="delivery--hero"></p>
-                                <p class="modal--cursor" id="priceModal--open"><span class="price--hero">Стоимость репродукции: от 590 руб.</span> <sup>?</sup></p>
+                                <div class="row items-align-center" style="margin-top: 16px;">
+                                  <span class="material-icons">access_time</span>
+                                  <span id="delivery-days" class="hero-block" style="margin-top: 0; margin-left: 8px">от 1 дня</span>
+                                </div>
+                                <div class="row items-align-center" style="margin-top: 8px;">
+                                  <span class="material-icons">local_shipping</span>
+                                  <span id="delivery--hero" class="hero-block" style="margin-top: 0; margin-left: 8px">Доставим до двери</span>
+                                </div>
+                                <div class="row items-align-center" style="margin-top: 8px;">
+                                  <span class="material-icons">attach_money</span>
+                                  <span class="modal--cursor hero-block" id="priceModal--open" style="margin-left: 8px;"><span class="price--hero">от 590 руб.</span></span>
+                                </div>
                                 <a href="#form"><button class="btn primary" style="margin-top: 3rem; color: #131313;">Заказать репродукцию</button></a>
                             </div>
                     </div>
@@ -283,50 +299,58 @@
 <!-- репродукции -->
 <section class="section--wide">
     <div class="row">
-            <div class="col-md-4 modal--cursor">
-                <img src="img/repro/repro4.jpg" onclick="openModal(this.src)" class="image image--baget image--shadow" style="height: 320px;">
+            <div class="col-md-4 col-6 modal--cursor">
+                <img src="img/repro/repro4.jpg" onclick="openModal(this.src)" class="image image--baget image--shadow">
   
                 <div class="price">
                   <p class="smallcase"> <span class="smallcase--width">Размер</span> <span class="case">80 × 100</span></p>
                   <p class="smallcase"> <span class="smallcase--width">Цена</span> <span class="case line-through">5080 руб.</span> <span class="case" style="margin-right: 8px;">2540 руб</span> <span class="sale">-50%</span></p>
                 </div>
             </div>
-            <div class="col-md-4 modal--cursor">
-                <img src="img/repro/repro6.jpg" onclick="openModal(this.src)" class="image image--baget image--shadow" style="height: 320px;">
+            <div class="col-md-4 col-6 modal--cursor">
+                <img src="img/repro/repro6.jpg" onclick="openModal(this.src)" class="image image--baget image--shadow">
   
                 <div class="price">
                   <p class="smallcase"> <span class="smallcase--width">Размер</span> <span class="case">60 × 90</span></p>
                   <p class="smallcase"> <span class="smallcase--width">Цена</span> <span class="case line-through">3770 руб.</span> <span class="case" style="margin-right: 8px;">1890 руб.</span> <span class="sale">-50%</span></p>
                 </div>
             </div>
-            <div class="col-md-4 modal--cursor">
-                <img src="img/repro/repro5.jpg" onclick="openModal(this.src)" class="image image--baget image--shadow" style="height: 320px;">
+            <div class="col-md-4 col-6 modal--cursor">
+                <img src="img/repro/repro5.jpg" onclick="openModal(this.src)" class="image image--baget image--shadow">
   
                 <div class="price">
                   <p class="smallcase"> <span class="smallcase--width">Размер</span> <span class="case">50 × 100 </span></p>
                   <p class="smallcase"> <span class="smallcase--width">Цена</span> <span class="case line-through">3710 руб.</span> <span class="case" style="margin-right: 8px;">1860 руб.</span> <span class="sale">-50%</span></p>
                 </div>
             </div>
+            <div class="col-md-4 col-6 modal--cursor desktop-hide">
+              <img src="img/repro/repro.jpg" onclick="openModal(this.src)" class="image image--baget image--shadow">
+
+              <div class="price">
+                <p class="smallcase"> <span class="smallcase--width">Размер</span> <span class="case">30 × 60</span></p>
+                <p class="smallcase"> <span class="smallcase--width">Цена</span> <span class="case line-through">1660 руб.</span> <span class="case" style="margin-right: 8px;">830 руб.</span> <span class="sale">-50%</span></p>
+              </div>
+          </div>
     </div>
     <div class="row">
-            <div class="col-md-4 modal--cursor">
-                <img src="img/repro/repro.jpg" onclick="openModal(this.src)" class="image image--baget image--shadow" style="height: 320px;">
+            <div class="col-md-4 col-6 modal--cursor mobile-hide">
+                <img src="img/repro/repro.jpg" onclick="openModal(this.src)" class="image image--baget image--shadow">
 
                 <div class="price">
                   <p class="smallcase"> <span class="smallcase--width">Размер</span> <span class="case">30 × 60</span></p>
                   <p class="smallcase"> <span class="smallcase--width">Цена</span> <span class="case line-through">1660 руб.</span> <span class="case" style="margin-right: 8px;">830 руб.</span> <span class="sale">-50%</span></p>
                 </div>
             </div>
-            <div class="col-md-4 modal--cursor">
-                <img src="img/repro/repro3.jpg" onclick="openModal(this.src)" class="image image--baget image--shadow" style="height: 320px;">
+            <div class="col-md-4 col-6 modal--cursor">
+                <img src="img/repro/repro3.jpg" onclick="openModal(this.src)" class="image image--baget image--shadow">
   
                 <div class="price">
                   <p class="smallcase"> <span class="smallcase--width">Размер</span> <span class="case">60 × 90</span></p>
                   <p class="smallcase"> <span class="smallcase--width">Цена</span> <span class="case line-through">3770 руб.</span> <span class="case" style="margin-right: 8px;">1890 руб.</span> <span class="sale">-50%</span></p>
                 </div>
             </div>
-            <div class="col-md-4 modal--cursor">
-                <img src="img/repro/repro7.jpg" onclick="openModal(this.src)" class="image image--baget image--shadow" style="height: 320px;">
+            <div class="col-md-4 col-6 modal--cursor">
+                <img src="img/repro/repro7.jpg" onclick="openModal(this.src)" class="image image--baget image--shadow">
   
                 <div class="price">
                   <p class="smallcase"><span class="case">Оптовый заказ</span></p>
@@ -611,22 +635,22 @@
 <section class="section--wide">
             <h3 class="text--center repro--h3">Как мы это делаем?</h3>  
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-3 col-6">
                     <img src="img/svg/repro1.svg" alt="Картина в компьютере" class="image image--repro__svg">
                     <h5 class="text--center" style="margin-bottom: 0;"><span style="background: #FFD164;">1. Оцифровка</span></h5>
                     <p class="text--center">Мы подбираем для вас изображение и переводим его в цифровой формат нужного качества.</p> 
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 col-6">
                     <img src="img/svg/repro2.svg" alt="Пример репродукции Ван Гог" class="image image--repro__svg">
                     <h5 class="text--center" style="margin-bottom: 0;"><span style="background: #FFD164;">2. Печать</span></h5>
                     <p class="text--center">Печатаем изображение на натуральном хлопковом холсте и натягиваем на подрамник из сосны. Устанавливаем крепление.</p> 
                 </div> 
-                <div class="col-md-3">
+                <div class="col-md-3 col-6">
                     <img src="img/svg/repro3.svg" alt="Пример" class="image image--repro__svg">
                     <h5 class="text--center" style="margin-bottom: 0;"><span style="background: #FFD164;">3. Оформление</span></h5>
                     <p class="text--center">По вашему желанию оформим картину в багетную раму, покроем лаком или обернём в подарочную упаковку</p>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 col-6">
                     <img src="img/svg/repro4.svg" alt="Пример" class="image image--repro__svg">
                     <h5 class="text--center" style="margin-bottom: 0;"><span style="background: #FFD164;">4. Доставка</span></h5>
                     <p class="text--center">Надёжно упаковываем картину перед отправкой в толстые листы гофрокартона и воздушно-пузырьковую плёнку и отправляем в ваш город!</p>

@@ -90,6 +90,8 @@ label {
 
 #selectV {
   margin-top: 16px;
+  background: #ffd164;
+  width: max-content;
 }
 
 #facePrice {

@@ -130,11 +130,43 @@ section h3 {
   padding-right: 0;
 }
 
+.popart-row-margin-bottom {
+  margin-bottom: 16px;
+}
 
+.yellowBlock {
+    background: #131313;
+    color: white;
+    width: max-content;
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 36px;
+    font-size: 14px;
+}
+
+.yellowBlock:nth-child(odd) {
+  margin-top: 8px;
+}
 
 @media only screen and (max-width: 900px) {
   .popart {
     background: white !important;
+  }
+
+  section h3 {
+    margin-bottom: 20px !important;
+  }
+
+  .yellowBlock {
+    font-size: 12px;
+    height: 28px;
+  }
+
+  .yellowBlock .material-icons {
+    font-size: 20px;
   }
 
   .hero-mobile {
@@ -200,7 +232,10 @@ section h3 {
 
   .col-md-3 {
     margin-top: 0 !important;
-    margin-bottom: 16px;
+  }
+
+  .popart-row-margin-bottom {
+    margin-bottom: 0;
   }
 
   .mobile-bottom {
@@ -209,5 +244,17 @@ section h3 {
 
   .section--bg {
     padding: 0;
+  }
+
+  .modal img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    height: unset;
+    width: 98%;
+    object-fit: cover;
   }
 }
