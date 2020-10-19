@@ -11,6 +11,10 @@
     cursor: pointer;
 }
 
+.img-real-size {
+    object-fit: contain !important;
+}
+
 .text--yellow {
     width: 100% !important;
 }

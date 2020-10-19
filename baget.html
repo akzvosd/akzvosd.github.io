@@ -4,11 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(56317726, "init",{clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true});
-</script>
- <noscript><div><img src="https://mc.yandex.ru/watch/56317726" style="position:absolute; left:-9999px;" alt="" /></div></noscript><meta name="description" content="Imagine — Студия Картин. Больше, чем подарок. Доставка По России.">
+<meta name="description" content="Imagine — Студия Картин. Больше, чем подарок. Доставка По России.">
 <meta name="keywords" content="картины, портреты, imagine, imagine24, pop art, dream art, маслом, доставка по россии, самовывоз, мульт-герой">
 <meta name="author" content="Imagine — Студия Картин">
 <meta property="og:title" content="Imagine — Студия Картин" />
@@ -31,26 +27,29 @@
 <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffd164" />
-     
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/geomodal.css" />
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/restoration.css">
+    <link rel="stylesheet" href="css/baget.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<title>Imagine — Багет</title>
+	<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+	(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(56317726, "init",{clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true});
+	</script>
+	<noscript><div><img src="https://mc.yandex.ru/watch/56317726" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+	 
     <!-- geo -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
    <script src="https://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
     <!-- geo -->
-     <link rel="stylesheet" href="css/components.css" />
-    <link rel="stylesheet" href="css/geomodal.css" />
-    <link rel="stylesheet" href="css/bootstrap-grid.css">
-    <link rel="stylesheet" href="css/sertifikat.css">
-    <link rel="stylesheet" href="css/repro.css">
-    <link rel="stylesheet" href="css/popart.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <title>Imagine — Сертификаты</title>
 <script src="data/addresses.js"></script>
-<script type="text/javascript">!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://vk.com/js/api/openapi.js?168",t.onload=function(){VK.Retargeting.Init("VK-RTRG-515057-gWywC"),VK.Retargeting.Hit()},document.head.appendChild(t)}();</script><noscript><img src="https://vk.com/rtrg?p=VK-RTRG-515057-gWywC" style="position:fixed; left:-999px;" alt=""/></noscript>
   </head>
  <body>    
     <!-- гео мобайл -->
-	 
+	
     <!-- гео мобайл -->
     <div class="mobile--header">
       <div class="row align-items-center" style="padding: 0 16px;">
@@ -129,24 +128,27 @@
       <!-- гео десктоп -->
             <div class="col" style="text-align: right;"><a  href="tel:+79992002272">+7 (999) 200-22-72</a></div>
             <div class="col-md-auto"  >  <a href="https://bitrix24public.com/b24-vrm86j.bitrix24.ru/form/6_ne_nashli_chto_iskali/zk0a9o/"><button class="btn line" id="callmebaby">Заказать звонок</button></a></div>
-     </header>
-
+    </header>
+    
+    <!-- гео мобайл -->
     <div class="tooltip tooltip-mobile xyn" id="tooltip tooltip-mobile">
-        <div class="mobile--geo" id="mobileGeo">
-          <span id="town--mob">Санкт-Петербург</span>,
-          <span id="delivery--mob">Доставка до двери</span>
-          <div class="row">
-            <div class="col"><div class="btn primary" onclick="closemg()">Верно</div></div>
-            <div class="col"><div class="btn" id="geoModalOpenMobile">Выбрать другой город</div></div>
-          </div>
-          <!-- <span>Изменить</span> -->
+      <div class="mobile--geo" id="mobileGeo">
+        <span id="town--mob">Санкт-Петербург</span>,
+        <span id="delivery--mob">Доставка до двери</span>
+        <div class="row">
+          <div class="col"><div class="btn primary" onclick="closemg()">Верно</div></div>
+          <div class="col"><div class="btn" id="geoModalOpenMobile">Выбрать другой город</div></div>
+        </div>
+        <!-- <span>Изменить</span> -->
     </div>
-	  <span class="tooltiptext" id="tooltipMobile">
-	    <p>Это ваш город?</p>
-		<div class="btn white" onclick="tooltipClose()">Да</div>
-		<div class="btn" onclick="tooltipOpen()" style="border: 1px solid white">Нет</div>
-      </span>
+    
+    <span class="tooltiptext" id="tooltipMobile">
+      <p>Это ваш город?</p>
+      <div class="btn white" onclick="tooltipClose()">Да</div>
+      <div class="btn" onclick="tooltipOpen()" style="border: 1px solid white">Нет</div>
+    </span>
     </div>
+    
     <div class="subheader" role="navigation" aria-label="Main">
             <div class="row align-items-center">
                 <div class="col-md-6 subheader--left">
@@ -161,8 +163,8 @@
                             <div class="dropdown-content">
                                 <a href="restoration.html">Реставрация старых фото</a>
                                 <a href="retush.html">Ретушь</a>
-                                <a href="sertifikat.html" class="dropdown-content--active">Сертификаты</a>
-                                <a href="baget.html">Багет</a>
+                                <a href="sertifikat.html">Сертификаты</a>
+                                <a href="baget.html" class="dropdown-content--active"   >Багет</a>
                                 <a href="package.html">Упаковка</a>
                             </div>
                         </div>
@@ -179,7 +181,22 @@
             </div>
     </div>
 
-    <main style="padding-bottom: 64px;">  
+     <!--   -->
+    <section id="COVID" class="section--bg covid--section"  style="margin-top: 0; margin-bottom: 0; cursor: pointer; position: relative;">
+      <div class="covid--section__width" id="closeCOVID">
+        <div class="row align-items-center">
+          <div class="col-md-1 col-3">
+            <img src="img/svg/gift.svg" alt="covid icon" class="covid--image">
+          </div>
+          <div class="col-md-10 col-9">
+            <p style="font-size: 1.3rem;"><span class="text--bold">Нам 4 года!</span><br>Две недели скидок до 50% на <u>все</u> заказы!</p>
+          </div>
+        </div>
+        <i class="material-icons" id="closeCOVID">close</i>
+      </div>
+    </section>
+
+    <main>      
       <!-- geomodal -->
       <div id="geoModal" class="modal">
         <div style="position: absolute; top: 0; bottom: 0; left: 0; right: 0;" onclick="$('#geoModalClose').click()"></div>
@@ -219,168 +236,182 @@
           </div>
         </div>
       </div>
-              <!--   -->
-              <section id="COVID" class="section--bg covid--section"  style="margin-top: 0; margin-bottom: 0; cursor: pointer; position: relative;">
-          <div class="covid--section__width" id="closeCOVID">
-            <div class="row align-items-center">
-              <div class="col-md-1 col-3">
-                <img src="img/svg/gift.svg" alt="covid icon" class="covid--image">
-              </div>
-              <div class="col-md-10 col-9">
-                <p style="font-size: 1.3rem;"><span class="text--bold">Нам 4 года!</span><br>Две недели скидок до 50% на <u>все</u> заказы!</p>
-              </div>
-            </div>
-            <i class="material-icons" id="closeCOVID">close</i>
-          </div>
-    </section> 
+        <h1>Багет</h1>
+        <h5>Цена указана за метр изделия с учётом работы багетчика.</h5>
+        <p>Для точного расчёта и уточнения наличия данного багета, заполните форму или обратитесь по телефону выше. Цвет багета на фотографии может отличаться от реального цвета багета, в связи с особенностью настройки цветопередачи Вашего монитора.</p>
+    </main>
 
-    <div class="hero-mobile desktop-hide">
-      <div class="hero-mobile--img" style="background: url(img/sertifikat_x.jpg); background-position: 70% 20%;
-      background-size: cover;"></div>
-      <div class="hero-text__list">
-            <h3 class="text--bold">Подарочные сертификаты <br> <span id="town--hero1">Санкт-Петербург</span></h3>
-            <p class="hero-text__quote">Наш сертификат — настоящее произведение искусства. Выполнен на холсте и натянут на подрамник 20х30см.</p>
-            <div class="yellowBlock">
-                <span class="material-icons">access_time</span>
-                <span id="delivery-days1" style="margin-left: 8px;">от 1 дня</span>
-            </div>
-            <div class="yellowBlock" style="margin-top: 8px">
-              <span class="material-icons">local_shipping</span>
-              <span id="delivery--hero1" style="margin-left: 8px;">Доставим до двери</span>
-            </div>
-          <div class="yellowBlock">
-            <span class="material-icons">attach_money</span>
-            <span style="margin-left: 8px;">от 1000 руб.</span>
-          </div>
-          <button class="btn primary" style="margin-top: 32px"><a href="#form">Заказать сертификат</a></button>
-    </div>
-    </div>
+    <section>
+        <h4 class="text--yellow" style="margin: 8px 0; !important">Премиум</h4>
+        <div class="row baget--row" style="margin-bottom: 16px !important;">
+            <div class="col-md-3 col-md-3__top40 modal--cursor col-6">
+                <img src="img/baget/baget1.jpg"
+                onclick="openModal(this.src, 'Премиум - Золото', 'Ширина 5.8 см / Высота 3.7 см',2400)" class="image image--baget img-real-size">
 
-        <!-- hero -->
-            <div class="hero-image sertifikat mobile-hide">
-                    <div class="hero-text" style="top: 20%;">
-                            <div class="hero-text__list margin-top--hero-text__list" style="background: 0; padding: 0; color: unset; border: 0;">
-                                <h3 class="text--bold">Подарочные сертификаты <br> <span id="town--hero">Санкт-Петербург</span></h3>
-                                <h5>Наш сертификат — настоящее произведение искусства. <br>Выполнен на холсте и натянут на подрамник 20х30см.</h5>
-                                <div class="row items-align-center" style="margin-top: 16px;">
-                                  <span class="material-icons">access_time</span>
-                                  <span id="delivery-days" class="hero-block" style="margin-top: 0; margin-left: 8px">от 1 дня</span>
-                                </div>
-                                <div class="row items-align-center" style="margin-top: 8px;">
-                                  <span class="material-icons">local_shipping</span>
-                                  <span id="delivery--hero" class="hero-block" style="margin-top: 0; margin-left: 8px">Доставим до двери</span>
-                                </div>
-                                <div class="row items-align-center" style="margin-top: 8px;">
-                                  <span class="material-icons">attach_money</span>
-                                  <span class="modal--cursor hero-block" id="priceModal--open" style="margin-left: 8px;"><span class="price--hero">от 1000 руб.</span></span>
-                                </div>
-                                <button class="btn primary" style="margin-top: 32px"><a href="#form">Заказать сертификат</a></button>
-                            </div>
-                    </div>
+                <p class="text--bold">Премиум (Золото)</p>
+                <small>Ширина 5,8 см / Высота 3,7 см</small>
+                <p>Р2,400</p>
             </div>
-</main>
-
-    <section style="margin-top:0">
-        <div class="sertifikat--text">
-            <h3 class="text--center text--bold">Выберите сертификат</h3>
-            <p class="text--center">Любой из сертификатов может быть использован в качестве скидки от суммы заказа.</p>
-        </div>
-        <div class="row">
-            <div class="col-md-3">
-                <img src="img/sert1.jpg" alt="сертификат на Р1000" class="image">
-                <a href="#form"><button class="btn line sertifikat--button">Заказать сертификат</button></a>
-                <h5 class="text--bold">1000 <small>руб.</small></h5>
-                <p>— Картина на холсте А4</p>
-                <p>— Реставрация или оцветнение старых фото</p>
-                <p style="margin-top: 16px">Скидка 1000 <small>руб.</small> на любой заказ</p>
-            </div>
-            <div class="col-md-3">
-                <img src="img/sert2.jpg" alt="сертификат на Р1000" class="image">
-                <a href="#form"><button class="btn line sertifikat--button">Заказать сертификат</button></a>
-                <h5 class="text--bold">2000 <small>руб.</small></h5>
-                <p>— Картина на холсте 40х50</p>
-                <p>— Портрет Love is 30х40</p>
-                <p>— Портрет из слов на холсте 20х30</p>
-                <p style="margin-top: 16px">Скидка 2000 <small>руб.</small> на любой заказ</p>
-            </div>
-            <div class="col-md-3">
-                <img src="img/sert3.jpg" alt="сертификат на Р1000" class="image">
-                <a href="#form"><button class="btn line sertifikat--button">Заказать сертификат</button></a>
-                <h5 class="text--bold">3000 <small>руб.</small></h5>
-                <p>— Картина на холсте 50х70</p>
-                <p>— Модульное панно 40х85</p>
-                <p>— Портрет в любом из наших стилей 30х40</p>
-                <p>— Портрет Поп-арт 20х30</p>
-                <p style="margin-top: 16px">Скидка 3000 <small>руб.</small> на любой заказ</p>
-            </div>
-            <div class="col-md-3">
-                <img src="img/sert5.jpg" alt="сертификат на Р1000" class="image">
-                <a href="#form"><button class="btn line sertifikat--button">Заказать сертификат</button></a>
-                <h5 class="text--bold">5000 <small>руб.</small></h5>
-                <p>— Картина на холсте 80х100</p>
-                <p>— Репродукция в багете 50х70</p>
-                <p>— Модульное панно 60х90</p>
-                <p>— Портрет Поп-Арт 50х70</p>
-                <p>— Портрет в стиле Мульт-герой 40х60</p>
-                <p>— Портрет в любом другом нашем стиле 60х80</p>
-                <p style="margin-top: 16px">Скидка 5000 <small>руб.</small> на любой заказ</p>
-            </div>
-        </div>
-    </section>
+            <div class="col-md-3 col-md-3__top40 modal--cursor col-6">
+                  <img src="img/baget/baget24.jpg"
+                  onclick="openModal(this.src, 'Обычный (Коричневый)', 'Ширина 6,3 см / Высота 2,9 см', 1700)" class="image image--baget img-real-size">
     
-    <section class="section--bg form" id="form">
-            <section class="bitrix" style="margin-top: 0px; padding: 0px">
-                    <script id="bx24_form_inline" data-skip-moving="true">
-                            (function(w,d,u,b){w['Bitrix24FormObject']=b;w[b] = w[b] || function(){arguments[0].ref=u;
-                                    (w[b].forms=w[b].forms||[]).push(arguments[0])};
-                                    if(w[b]['forms']) return;
-                                    var s=d.createElement('script');s.async=1;s.src=u+'?'+(1*new Date());
-                                    var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
-                            })(window,document,'https://b24-vrm86j.bitrix24.ru/bitrix/js/crm/form_loader.js','b24form');
-                    
-                            b24form({"id":"21","lang":"ru","sec":"ohqrd7","type":"inline"});
-                    </script>                    
-            <!-- <h3 class="text--center repro--h3">Заказать сертификат</h3>
-            <div id="photo" class="tabcontent" style="display: block;">
-                <form action="/action_page.php" class="form--repro">
-                    <div class="form--repro__item">
-                        <label for="sertikifat--select">Выберите сертифкат</label>
-                        <select name="sertikifat--select" id="sertikifat--select">
-                            <option value="1000">Р1000</option>
-                            <option value="2000">Р2000</option>
-                            <option value="3000">Р3000</option>
-                            <option value="5000">Р5000</option>
-                        </select>
-                    </div>
-                    <div class="form--repro__item">
-                        <label for="name">Как вас зовут</label>
-                        <input type="text" id="name" name="user_name" placeholder="Вася" required>
-                    </div>
-                    <div class="form--repro__item">
-                        <label for="tel">Номер телефона</label>
-                        <input type="tel" id="tel" name="tel" placeholder="+7 900 100 20 10" required>
-                    </div>
-                    <div class="form--repro__item">
-                        <label for="email">E-mail</label>
-                        <input type="email" id="email" name="email" placeholder="imagine@mail.ru" required>
-                    </div>
-                    <input type="submit" class="btn alternative" style="box-shadow: 0 0 0;" value="Отправить заявку">
-                </form>
-            </div> -->
-        </section>
+                  <p class="text--bold">Премиум (Коричневый)</p>
+                  <small>Ширина 6,3 см / Высота 2,9 см</small>
+                  <p>Р1,500</p>
+            </div>
+            <div class="col-md-3 col-md-3__top40 modal--cursor col-6">
+                <img src="img/baget/baget15.jpg" 
+                onclick="openModal(this.src, 'Выступающий (Белый)', 'Ширина 6 см / Высота 4,2 см', 1500)" class="image image--baget img-real-size">
+  
+                <p class="text--bold">Премиум (Белый)</p>
+                <small>Ширина 6 см / Высота 4,2 см</small>
+                <p>Р1,500</p>
+            </div>
+            <div class="col-md-3 col-md-3__top40 modal--cursor col-6">
+              <img src="img/baget/baget5.jpg"
+              onclick="openModal(this.src, 'Премиум (Серебряный)', 'Ширина 8,5 см / Высота 4 см', 1600)" class="image image--baget img-real-size">
+              <p class="text--bold">Премиум (Серебряный)</p>
+              <small>Ширина 8,5 см / Высота 4 см</small>
+              <p>Р1600</p>
+          </div>
+        </div>
+        
+        <h4 class="text--yellow" style="margin: 8px 0; !important">Классика</h4>
+        <div class="row baget--row" style="margin-bottom: 16px !important;">
+            <div class="col-md-3 col-md-3__top40 modal--cursor col-6">
+                <img src="img/baget/baget8.jpg"
+                onclick="openModal(this.src, 'Классика (Коричневый)', 'Ширина 4,2 см / Высота 2,7 см',1060)" class="image image--baget img-real-size">
+
+                <p class="text--bold">Классика (Коричневый)</p>
+                <small>Ширина 4,2 см / Высота 2,7 см</small>
+                <p>Р1,060</p>
+            </div>
+            <div class="col-md-3 col-md-3__top40 modal--cursor col-6">
+                    <img src="img/baget/baget11.jpg" 
+                    onclick="openModal(this.src, 'Классика Узкий (Бордовый)', 'Ширина 3,2 см / Высота 2,3 см', 700)" class="image image--baget img-real-size">
+      
+                    <p class="text--bold">Классика Узкий (Бордовый)</p>
+                    <small>Ширина 3,2 см / Высота 2,3 см</small>
+                    <p>Р700</p>
+            </div>
+            <div class="col-md-3 col-md-3__top40 modal--cursor col-6">
+              <img src="img/baget/baget12.jpg" onclick="openModal(this.src, 'Классика Узкий (Приглушённое золото)', 'Ширина 3,2 см / Высота 2,3 см',700)" class="image image--baget img-real-size">
+
+              <p class="text--bold">Классика Узкий (Приглушённое золото)</p>
+              <small>Ширина 3,2 см / Высота 2,3 см</small>
+              <p>Р700</p>
+            </div> 
+        </div>
+        <!-- ! -->
+         
+        <h4 class="text--yellow" style="margin: 8px 0; !important">Обычный</h4>
+        <div class="row baget--row" style="margin-bottom: 16px !important;">
+            <div class="col-md-3 col-md-3__top40 modal--cursor col-6">
+                <img src="img/baget/baget16.jpg"
+                onclick="openModal(this.src, 'Обычный (Охра)', 'Ширина 3 см / Высота 2,6 см',700)" class="image image--baget img-real-size">
+  
+                <p class="text--bold">Обычный (Охра)</p>
+                <small>Ширина 3 см / Высота 2,6 см</small>
+                <p>Р700</p>
+            </div>
+            <div class="col-md-3 col-md-3__top40 modal--cursor col-6">
+                <img src="img/baget/baget18.jpg" 
+                onclick="openModal(this.src, 'Обычный (Золото)', 'Ширина 5,2 см / Высота 2,7 см', 1200)" class="image image--baget img-real-size">
+  
+                <p class="text--bold">Обычный (Золото)</p>
+                <small>Ширина 5,2 см / Высота 2,7 см</small>
+                <p>Р1,200</p>
+            </div>
+            <div class="col-md-3 col-md-3__top40 modal--cursor col-6">
+              <img src="img/baget/baget20.jpg"
+              onclick="openModal(this.src, 'Обычный (Белый)', 'Ширина 4,4 см / Высота 2 см', 1200)" class="image image--baget img-real-size">
+
+              <p class="text--bold">Обычный (Белый)</p>
+              <small>Ширина 4,4 см / Высота 2 см</small>
+              <p>Р1200</p>
+          </div>
+          <div class="col-md-3 col-md-3__top40 modal--cursor col-6">
+            <img src="img/baget/baget21.jpg"
+            onclick="openModal(this.src, 'Обычный (Белый с золотом)', 'Ширина 3,1 см / Высота 2,4 см',600)" class="image image--baget img-real-size">
+            <p class="text--bold">Обычный (Белый с золотом)</p>
+            <small>Ширина 3,1 см / Высота 2,4 см</small>
+            <p>Р600</p>
+        </div>
+        </div>
+        <!-- ! -->
+        <div class="row baget--row" style="margin-bottom: 16px !important;">
+              <div class="col-md-3 col-md-3__top40 modal--cursor col-6">
+                <img src="img/baget/baget22.jpg" onclick="openModal(this.src, 'Обычный (Коричневый с серебром)', 'Ширина 3,1 см / Высота 2,4 см',600)" class="image image--baget img-real-size">
+  
+                <p class="text--bold">Обычный (Коричневый с серебром)</p>
+                <small>Ширина 3,1 см / Высота 2,4 см</small>
+                <p>Р600</p>
+					</div>
+					<div class="col-md-3 col-md-3__top40 modal--cursor col-6">
+							<img src="img/baget/baget23.jpg"
+							onclick="openModal(this.src, 'Обычный (Жёлтый)', 'Ширина 3,5 см / Высота 1,9 см',600)" class="image image--baget img-real-size">
+
+							<p class="text--bold">Обычный (Жёлтый)</p>
+							<small>Ширина 3,5 см / Высота 1,9 см</small>
+							<p>Р400</p>
+						</div>
+        </div>
+        <!-- ! -->
+
+            <h4 class="text--yellow" style="margin: 8px 0; !important">Узкий</h4>
+            <div class="row baget--row" style="margin-bottom: 16px !important;">
+                <div class="col-md-3 col-md-3__top40 modal--cursor col-6">
+                    <img src="img/baget/baget26.jpg"
+                    onclick="openModal(this.src, 'Узкий (Цвет: Слоновая кость)', 'Ширина 2,5 см / Высота 2,3 см', 480)" class="image image--baget img-real-size">
+      
+                    <p class="text--bold">Узкий (Цвет: Слоновая кость)</p>
+                    <small>Ширина 2,5 см / Высота 2,3 см</small>
+                    <p>Р480</p>
+                </div>
+                <div class="col-md-3 col-md-3__top40 modal--cursor col-6">
+                  <img src="img/baget/baget29.jpg"
+                  onclick="openModal(this.src, 'Узкий (Серый)', 'Ширина 2,5 см / Высота 2,3 см', 480)" class="image image--baget img-real-size">
+    
+                  <p class="text--bold">Узкий (Серый)</p>
+                  <small>Ширина 2,5 см / Высота 2,3 см</small>
+                  <p>Р480</p>
+              </div>
+            </div>
+
+            <h4 class="text--yellow" style="margin: 8px 0; !important">Плоский</h4>
+            <div class="row baget--row">
+              <div class="col-md-3 col-md-3__top40 modal--cursor col-6">
+              <img src="img/baget/baget32.jpg" onclick="openModal(this.src, 'Плоский (Коричневый)', 'Ширина 4,3 см / Высота 1,2 см', 560)" class="image image--baget img-real-size">
+
+              <p class="text--bold">Плоский (Коричневый)</p>
+              <small>Ширина 4,3 см / Высота 1,2 см</small>
+              <p>Р560</p>
+            </div>
+            <div class="col-md-3 col-md-3__top40 modal--cursor col-6">
+              <img src="img/baget/baget33.jpg" onclick="openModal(this.src, ' Плоский (Серый)', 'Ширина 4,3 см / Высота 1,2 см', 560)" class="image image--baget img-real-size">
+
+              <p class="text--bold">Плоский (Серый)</p>
+              <small>Ширина 4,3 см / Высота 1,2 см</small>
+              <p>Р560 </p>
+            </div>
+            </div>
+
+        <div class="modal" id="notGeoModal" onclick="closeModal()">
+        </div>
     </section>
 
-     
-           <footer><section class="section--wide">
+     <footer>
+        <section class="section--wide">
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-3 col-md-3__top40 modal--cursor col-6">
                     <a class="text--bold" href="#">Картины</a>
                     <a href="index.html">Портреты по фото</a>
                     <a href="foto.html">Печать фото на холсте</a>
                     <a href="reproductions.html">Картины</a>
                     <a href="panno.html">Модульное панно</p>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 col-md-3__top40 modal--cursor col-6">
                     <a class="text--bold" href="#">Доп. услуги</a>
                     <a href="restoration.html">Реставрация старых фото</a>
                     <a href="retush.html">Ретушь</a>
@@ -389,7 +420,7 @@
                     <a href="baget.html">Багет</a>
                     <a href="package.html">Упаковка</a>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 col-md-3__top40 modal--cursor col-6">
                     <a class="text--bold">Остальное</a>
                     <a href="cash.html">Оплата</a>
                     <a href="delivery.html">Доставка</a>
@@ -398,7 +429,7 @@
                     <a href="oferta.html">Публичная оферта</a>
                     <a href="props.html">Реквизиты</a>
                 </div>
-                <div class="col-md-3 footer--social">
+                <div class="col-md-3 col-md-3__top40 modal--cursor col-6 footer--social">
                     <a href="https://vk.com/imagine71" style="display: inline;"><img src="img/svg/vksquare.svg" alt="Логотип ВК" width="48px"></a>
                     <a href="https://www.instagram.com/imagine.1971/" style="display: inline;"><img src="img/svg/instagramsquare.svg" alt="Логотип ВК" width="48px"></a>
                 </div>
