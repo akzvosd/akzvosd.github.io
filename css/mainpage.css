@@ -57,28 +57,6 @@
   margin-top: 2rem;
 }
 
-.down {
-  position: absolute;
-  bottom: 2rem; 
-  left: 50%;
-  color: #eee;
-  font-size: 3rem;
-  border: 2px solid white;
-  border-radius: 50%;
-  padding: 4px;
-  animation: down 0.8s linear infinite alternate;
-}
-
-@keyframes down {
-  0% {
-    margin-bottom: 1.6rem;
-  }
-  100% {
-    margin-bottom: 1rem;
-  }
-}
-
-
  .hero-text__mainPage h3 {
   font-size: 2.2rem;
 }

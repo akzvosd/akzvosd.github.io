@@ -41,6 +41,7 @@
     <link rel="stylesheet" href="css/bootstrap-grid.css">
     <link rel="stylesheet" href="css/sertifikat.css">
     <link rel="stylesheet" href="css/repro.css">
+    <link rel="stylesheet" href="css/popart.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <title>Imagine — Сертификаты</title>
@@ -79,7 +80,7 @@
                 <div class="mobile--overlay__main" style="margin-bottom: 32px;">
                 <p>Основное</p>
                     <a href="index.html">Главная</a>
-                    <a href="styles.html">Портреты</a>
+                    <a href="index.html">Портреты</a>
                     <a href="reproductions.html">Картины</a>
                     <a href="panno.html">Панно</a>
                     <a href="foto.html">Фото на холсте</a>
@@ -219,28 +220,61 @@
         </div>
       </div>
               <!--   -->
-              <section id="COVID" class="section--bg" style="margin-top: 0; margin-bottom: 0; padding: 0.8rem 0 0.6rem 0; background: #6394FF; color: #fff">
-                <section class="section--wide" style="margin-top: 0; margin-bottom: 0; cursor: pointer;" id="closeCOVID">
-                  <div class="row align-items-center  ">
-                    <div class="col-md-auto">
-                      <img src="img/svg/gift.svg" alt="covid icon" width="100px">
-                    </div>
-                    <div class="col-md-10">
-                      <p style="font-size: 1.3rem;"><span class="text--bold">Нам 4 года!</span><br>Две недели скидок до 50% на <u>все</u> заказы!</p>
-                    </div>
-                    <div class="col">
-                      <i class="material-icons" style="cursor: pointer;" id="closeCOVID">close</i>
-                    </div>
-                  </div>
-                </section>
-              </section> 
+              <section id="COVID" class="section--bg covid--section"  style="margin-top: 0; margin-bottom: 0; cursor: pointer; position: relative;">
+          <div class="covid--section__width" id="closeCOVID">
+            <div class="row align-items-center">
+              <div class="col-md-1 col-3">
+                <img src="img/svg/gift.svg" alt="covid icon" class="covid--image">
+              </div>
+              <div class="col-md-10 col-9">
+                <p style="font-size: 1.3rem;"><span class="text--bold">Нам 4 года!</span><br>Две недели скидок до 50% на <u>все</u> заказы!</p>
+              </div>
+            </div>
+            <i class="material-icons" id="closeCOVID">close</i>
+          </div>
+    </section> 
+
+    <div class="hero-mobile desktop-hide">
+      <div class="hero-mobile--img" style="background: url(img/sertifikat_x.jpg); background-position: 70% 20%;
+      background-size: cover;"></div>
+      <div class="hero-text__list">
+            <h3 class="text--bold">Подарочные сертификаты <br> <span id="town--hero1">Санкт-Петербург</span></h3>
+            <p class="hero-text__quote">Наш сертификат — настоящее произведение искусства. Выполнен на холсте и натянут на подрамник 20х30см.</p>
+            <div class="yellowBlock">
+                <span class="material-icons">access_time</span>
+                <span id="delivery-days1" style="margin-left: 8px;">от 1 дня</span>
+            </div>
+            <div class="yellowBlock" style="margin-top: 8px">
+              <span class="material-icons">local_shipping</span>
+              <span id="delivery--hero1" style="margin-left: 8px;">Доставим до двери</span>
+            </div>
+          <div class="yellowBlock">
+            <span class="material-icons">attach_money</span>
+            <span style="margin-left: 8px;">от 1000 руб.</span>
+          </div>
+          <button class="btn primary" style="margin-top: 32px"><a href="#form">Заказать сертификат</a></button>
+    </div>
+    </div>
+
         <!-- hero -->
-            <div class="hero-image sertifikat">
-                    <div class="hero-text">
-                            <div class="hero-text__list margin-top--hero-text__list">
-                                <h3>Подарочные сертификаты</h3>
+            <div class="hero-image sertifikat mobile-hide">
+                    <div class="hero-text" style="top: 20%;">
+                            <div class="hero-text__list margin-top--hero-text__list" style="background: 0; padding: 0; color: unset; border: 0;">
+                                <h3 class="text--bold">Подарочные сертификаты <br> <span id="town--hero">Санкт-Петербург</span></h3>
                                 <h5>Наш сертификат — настоящее произведение искусства. <br>Выполнен на холсте и натянут на подрамник 20х30см.</h5>
-                                <a href="#form"><button class="btn primary">Заказать сертификат</button></a>
+                                <div class="row items-align-center" style="margin-top: 16px;">
+                                  <span class="material-icons">access_time</span>
+                                  <span id="delivery-days" class="hero-block" style="margin-top: 0; margin-left: 8px">от 1 дня</span>
+                                </div>
+                                <div class="row items-align-center" style="margin-top: 8px;">
+                                  <span class="material-icons">local_shipping</span>
+                                  <span id="delivery--hero" class="hero-block" style="margin-top: 0; margin-left: 8px">Доставим до двери</span>
+                                </div>
+                                <div class="row items-align-center" style="margin-top: 8px;">
+                                  <span class="material-icons">attach_money</span>
+                                  <span class="modal--cursor hero-block" id="priceModal--open" style="margin-left: 8px;"><span class="price--hero">от 1000 руб.</span></span>
+                                </div>
+                                <button class="btn primary" style="margin-top: 32px"><a href="#form">Заказать сертификат</a></button>
                             </div>
                     </div>
             </div>
@@ -255,41 +289,41 @@
             <div class="col-md-3">
                 <img src="img/sert1.jpg" alt="сертификат на Р1000" class="image">
                 <a href="#form"><button class="btn line sertifikat--button">Заказать сертификат</button></a>
-                <h5 class="text--bold">Р1000</h5>
+                <h5 class="text--bold">1000 <small>руб.</small></h5>
                 <p>— Картина на холсте А4</p>
                 <p>— Реставрация или оцветнение старых фото</p>
-                <p style="margin-top: 16px">Скидка Р1000 на любой заказ</p>
+                <p style="margin-top: 16px">Скидка 1000 <small>руб.</small> на любой заказ</p>
             </div>
             <div class="col-md-3">
                 <img src="img/sert2.jpg" alt="сертификат на Р1000" class="image">
                 <a href="#form"><button class="btn line sertifikat--button">Заказать сертификат</button></a>
-                <h5 class="text--bold">Р2000</h5>
+                <h5 class="text--bold">2000 <small>руб.</small></h5>
                 <p>— Картина на холсте 40х50</p>
                 <p>— Портрет Love is 30х40</p>
                 <p>— Портрет из слов на холсте 20х30</p>
-                <p style="margin-top: 16px">Скидка Р2000 на любой заказ</p>
+                <p style="margin-top: 16px">Скидка 2000 <small>руб.</small> на любой заказ</p>
             </div>
             <div class="col-md-3">
                 <img src="img/sert3.jpg" alt="сертификат на Р1000" class="image">
                 <a href="#form"><button class="btn line sertifikat--button">Заказать сертификат</button></a>
-                <h5 class="text--bold">Р3000</h5>
+                <h5 class="text--bold">3000 <small>руб.</small></h5>
                 <p>— Картина на холсте 50х70</p>
                 <p>— Модульное панно 40х85</p>
                 <p>— Портрет в любом из наших стилей 30х40</p>
                 <p>— Портрет Поп-арт 20х30</p>
-                <p style="margin-top: 16px">Скидка Р3000 на любой заказ</p>
+                <p style="margin-top: 16px">Скидка 3000 <small>руб.</small> на любой заказ</p>
             </div>
             <div class="col-md-3">
                 <img src="img/sert5.jpg" alt="сертификат на Р1000" class="image">
                 <a href="#form"><button class="btn line sertifikat--button">Заказать сертификат</button></a>
-                <h5 class="text--bold">Р5000</h5>
+                <h5 class="text--bold">5000 <small>руб.</small></h5>
                 <p>— Картина на холсте 80х100</p>
                 <p>— Репродукция в багете 50х70</p>
                 <p>— Модульное панно 60х90</p>
                 <p>— Портрет Поп-Арт 50х70</p>
                 <p>— Портрет в стиле Мульт-герой 40х60</p>
                 <p>— Портрет в любом другом нашем стиле 60х80</p>
-                <p style="margin-top: 16px">Скидка Р5000 на любой заказ</p>
+                <p style="margin-top: 16px">Скидка 5000 <small>руб.</small> на любой заказ</p>
             </div>
         </div>
     </section>

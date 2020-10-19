@@ -156,6 +156,10 @@ section h3 {
     background: white !important;
   }
 
+  .offer--card {
+    margin-bottom: 12px;
+  }
+
   section h3 {
     margin-bottom: 20px !important;
   }
