@@ -67,13 +67,11 @@
 }
 .review--card__img {
     width: 100%;
-    max-width: 200px;
     margin: auto;
 }
 
 @media only screen and (max-width: 900px) {
 /* review */
-
      .review--card {
         min-height: unset;
         font-size: 14px;
