@@ -786,6 +786,9 @@ section img {
     margin: 8px !important;
     width: auto;
   }
+  .covid--section__width .row {
+    height: 80px;
+  }
   .covid--section p {
     font-size: 1rem !important;
   }
