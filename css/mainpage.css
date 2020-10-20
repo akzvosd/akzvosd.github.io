@@ -309,6 +309,16 @@
   background-repeat: no-repeat;
   background-size: cover; */
 }
+
+.modal img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: auto;
+  width: 99%;
+}
+
 .process--image {
   width: 12vh !important;
   margin: 0 auto !important;
@@ -364,7 +374,7 @@
 }
 .hero-mobile--img {
   background: red;
-  height: 300px;
+  height: 340px;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
   background: url(../img/heroherohero.jpg);

@@ -760,9 +760,7 @@ section img {
   body {
     font-size: 14px;
   }
-  .bitrix iframe {
-    height: 800px !important;
-  }
+  
   .image--shadow {
     -webkit-box-shadow: unset;
     box-shadow: unset;

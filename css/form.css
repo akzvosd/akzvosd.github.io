@@ -1,0 +1,26 @@
+.form {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: white;
+    background-color: rgb(14, 50, 129);
+    background-image: url(../img/form--bg.jpg);
+  }
+  
+.form h3 {
+    color: white;
+  }
+  
+.form .btn {
+    margin-top: 8px;
+  }
+
+  @media only screen and (max-width: 900px) {
+    .form {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        background-image: none;
+        background-color: #ffd164;
+      }
+  }
+
+  

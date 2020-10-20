@@ -150,22 +150,6 @@ section h3 {
   margin-bottom: 16px;
 }
 
-.form {
-  margin-top: 0;
-  margin-bottom: 0;
-  color: white;
-  background-color: rgb(14, 50, 129);
-  background-image: url(../img/form--bg.jpg);
-}
-
-.form h3 {
-  color: white;
-}
-
-form .btn {
-  margin-top: 8px;
-}
-
 input[type='file'] {
   border: 0;
   margin: 0;
@@ -233,11 +217,6 @@ input[type='file'] {
   .form--repro {
     margin: auto;
     width: 100%;
-  }
-
-  .form {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
   }
 
   .form--repro__item input {

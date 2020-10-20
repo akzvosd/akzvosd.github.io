@@ -462,7 +462,7 @@ section img {
     .style--card h4 {
         font-size: 2rem !important;
     }
-
+    
     .style {margin-bottom: 0;}
     .style--card__input input {margin-bottom: 16px;}
     .style--card button + .secondary {margin-left: 0px;}
