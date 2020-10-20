@@ -801,7 +801,7 @@ section img {
     right: 8px;
   }
   .covid--section img {
-    width: 80%;
+    width: 100%;
   }
   .covid--section .col-3 {
     display: flex; 
