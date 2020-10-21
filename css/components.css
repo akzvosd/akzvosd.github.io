@@ -785,6 +785,7 @@ section img {
     border-radius: 8px;
     margin: 8px !important;
     width: auto;
+    overflow: hidden;
   }
   .covid--section__width .row {
     height: 80px;
@@ -801,7 +802,7 @@ section img {
     right: 8px;
   }
   .covid--section img {
-    width: 100%;
+    width: 80%;
   }
   .covid--section .col-3 {
     display: flex; 
