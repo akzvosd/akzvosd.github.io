@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 * {
   margin: 0;
   padding: 0;
@@ -119,7 +126,8 @@ hr {
   object-fit: cover;
 }
 .geo-image {
-  box-shadow: 0 0 0 6px #fff;
+  -webkit-box-shadow: 0 0 0 6px #fff;
+          box-shadow: 0 0 0 6px #fff;
 }
 .image--shadow {
   -webkit-box-shadow: 8px 8px 0px #ffd164;
@@ -280,6 +288,8 @@ input + label {
 
 .style--card h4:hover {
   background: #ffd164;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
 }
 
@@ -335,7 +345,9 @@ input + label {
 #tooltipMobile {
   display: block;
   top: 70px;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
   margin: 0;
 }
 
@@ -412,7 +424,17 @@ input + label {
   border: 2px solid white;
   border-radius: 50%;
   padding: 4px;
-  animation: down 0.8s linear infinite alternate;
+  -webkit-animation: down 0.8s linear infinite alternate;
+          animation: down 0.8s linear infinite alternate;
+}
+
+@-webkit-keyframes down {
+  0% {
+    margin-bottom: 1.6rem;
+  }
+  100% {
+    margin-bottom: 1rem;
+  }
 }
 
 @keyframes down {
@@ -454,12 +476,16 @@ header {
 header #delivery {
   background: #ffd164;
   color: #131313;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
 }
 
 header #delivery  {
   background: #ffd164;
   color: #131313;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
 }
 
@@ -521,8 +547,8 @@ ul {
 }
 
 .hero-image {
-  background-image: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.7))), url('../img/hero.jpg');
   background-image: -o-linear-gradient(right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url('../img/hero.jpg');
+  background-image: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.7))), url('../img/hero.jpg');
   background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url('../img/hero.jpg');
   height: 640px;
   background-position: right;
@@ -684,6 +710,8 @@ section img {
 }
 
 .geoModalBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 2px 4px;
 }
@@ -724,7 +752,9 @@ section img {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   background-color: #fff;
   color: #131313;
   border-radius: 0.5rem;
@@ -813,8 +843,12 @@ section img {
     height: 64px;
   }
   .covid--section .col-3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex; 
-    justify-content: center;
+    -webkit-box-pack: center; 
+        -ms-flex-pack: center; 
+            justify-content: center;
   }
   /* .mobile--header img {
     width: 24px;  
