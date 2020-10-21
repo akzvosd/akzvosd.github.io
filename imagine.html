@@ -241,10 +241,8 @@
          <section id="COVID" class="section--bg covid--section"  style="margin-top: 0; margin-bottom: 0; cursor: pointer; position: relative;">
             <div class="covid--section__width" id="closeCOVID">
               <div class="row align-items-center">
-                <div class="col-md-1 col-3 text--center">
-                  <img src="img/svg/gift.svg" alt="covid icon" class="covid--image">
-                </div>
-                <div class="col-md-10 col-8">
+              <div class="col-md-1 col-3 covid--image"></div>
+              <div class="col-md-11 col-8">
                   <p style="font-size: 1.3rem;"><span class="text--bold">Нам 4 года!</span><br>Две недели скидок до 50% на <u>все</u> заказы!</p>
                 </div>
               </div>
@@ -752,5 +750,13 @@
     <!-- calc -->
     <script> var style = 'Imagine'; </script>
     <script src="js/counter.js"></script>
-<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script> </body>
+<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script> <script>
+(function(w, d, s, h, id) {
+    w.roistatProjectId = id; w.roistatHost = h;
+    var p = d.location.protocol == "https:" ? "https://" : "http://";
+    var u = /^.*roistat_visit=[^;]+(.*)?$/.test(d.cookie) ? "/dist/module.js" : "/api/site/1.0/"+id+"/init?referrer="+encodeURIComponent(d.location.href);
+    var js = d.createElement(s); js.charset="UTF-8"; js.async = 1; js.src = p+h+u; var js2 = d.getElementsByTagName(s)[0]; js2.parentNode.insertBefore(js, js2);
+})(window, document, 'script', 'cloud.roistat.com', 'ce5ae819cc3119dbe9ac205226fe6881');
+</script>
+</body>
 </html>
