@@ -1,0 +1,19 @@
+.modal img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 60%;
+}
+
+.col-md-4:hover img {
+  box-shadow: 0 0 0 4px #ffd164;
+}
+
+@media only screen and (max-width: 900px) {
+  .modal img {
+    width: 100%;
+  }
+}
