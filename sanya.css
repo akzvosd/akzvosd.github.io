@@ -49,4 +49,9 @@ h1 {
 		font-size: 1.5rem;
 		line-height: 1.5;
 	}
+
+	img {
+		top: 60%;
+		left: 10%;
+	}
 }
