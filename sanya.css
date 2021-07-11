@@ -32,9 +32,9 @@ img:hover {
 } */
 
 .image {
-	position: absolute;
+	/* position: absolute;
 	top: 40%;
-	left: 20%;
+	left: 20%; */
 	background-image: url(photo1.jpg);
 	background-size: cover;
 	width: 300px;
@@ -43,13 +43,11 @@ img:hover {
 	animation-duration: 60s;
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
+	margin-left: 90px;
+	margin-top: 50px;
 }
 
 .image:hover {
-	background-image: url(sasha.jpg);
-}
-
-.image:active {
 	background-image: url(sasha.jpg);
 }
 
@@ -71,20 +69,31 @@ h1 {
 		margin-bottom: 64px;
 	}
 
-	a {
-		font-size: 1.5rem;
-		line-height: 1.5;
+	h1 {
+		line-height: 100%;
 	}
 
-	img {
+	a {
+		font-size: 1.2rem;
+		line-height: 2.5;
+	}
+
+	.text a {
+		font-size: 1rem;
+		line-height: 1;
+	}
+
+	/* img {
 		top: 60%;
 		left: 10%;
 		width: 150px;
+	} */
+
+	.image:active {
+		background-image: url(sasha.jpg);
 	}
 
 	.image {
-		top: 75%;
-		left: 35%;
 		width: 200px;
 		height: 200px;
 	}
