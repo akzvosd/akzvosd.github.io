@@ -49,6 +49,10 @@ img:hover {
 	background-image: url(sasha.jpg);
 }
 
+.image:active {
+	background-image: url(sasha.jpg);
+}
+
 @keyframes rotate {
 	from { 
 	 transform: rotate(0deg);
@@ -76,5 +80,12 @@ h1 {
 		top: 60%;
 		left: 10%;
 		width: 150px;
+	}
+
+	.image {
+		top: 65%;
+		left: 35%;
+		width: 200px;
+		height: 200px;
 	}
 }
