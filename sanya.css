@@ -32,9 +32,6 @@ img:hover {
 } */
 
 .image {
-	/* position: absolute;
-	top: 40%;
-	left: 20%; */
 	background-image: url(photo1.jpg);
 	background-size: cover;
 	width: 300px;
@@ -43,8 +40,6 @@ img:hover {
 	animation-duration: 60s;
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
-	margin-left: 90px;
-	margin-top: 50px;
 }
 
 .image:hover {
@@ -85,12 +80,6 @@ h1 {
 		font-size: 1rem;
 		line-height: 1;
 	}
-
-	/* img {
-		top: 60%;
-		left: 10%;
-		width: 150px;
-	} */
 
 	.image:active {
 		background-image: url(sasha.jpg);
