@@ -1,16 +1,126 @@
 * {
 	margin: 0;
-	padding: 10px;
+	padding: 0;
   }
 
+@font-face {
+	font-family: "DrukWide";
+	font-style: bold;
+	src: url(font/DrukWideCy-Bold-Desktop.otf);
+}
+
+@font-face {
+	font-family: "Suisse";
+	src: url(font/SuisseIntl-Regular.otf);
+}
+
 body {
-	font-family: Arial, Helvetica, sans-serif;
-	line-height: 160%;
-	background: rgb(20, 20, 20);
-	color:rgb(235, 235, 235);
+	font-family: "Suisse";
+	line-height: 150%;
+	margin-top: 25px;
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+}
+
+header {
+	grid-column-start: 1;
+	grid-column-end: 13;
+  }
+
+footer {
+	grid-column-start: 4;
+	grid-column-end: 13;
+	padding-top: 100px;
+	padding-bottom: 50px;
+	color: #999999;
+	font-size: 0.7rem;
+	line-height: 120%;
+}
+
+header p {
+	margin-top: 8px;
+	line-height: 120%;
+}
+
+.sidebar {
+	margin-top: 150px;
+	position: fixed;
 }
 
 h1 {
+	font-family: "DrukWide";
+	text-transform: uppercase;
+	line-height: 80%;
+}
+
+h2 {
+	font-family: "DrukWide";
+	text-transform: uppercase;
+	margin-bottom: 16px;
+}
+
+.content {
+	grid-column-start: 4;
+	grid-column-end: 13;
+	padding-top: 60px;
+}
+
+.top-m-60 {
+	margin-top: 60px;
+}
+
+.top-m-16 {
+	margin-top: 16px;
+}
+
+.start {
+	width: 60%
+}
+
+.basics--grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 16px;
+}
+
+.card img {
+	max-width: 100%;
+}
+
+.button {
+	background: #EBEBEB;
+	border-radius: 32px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 18px 24px;
+}
+
+.button:hover {
+	background: #d1d1d1;
+	cursor: pointer;
+	transition: 0.4s;
+}
+
+.active {
+	background: #219EBC;
+	color: white;
+	cursor: pointer;
+}
+
+.active:hover {
+	background: #219EBC;
+	color: white;
+}
+
+
+/* h1 {
 	margin-bottom: 16px;
 }
 
@@ -34,4 +144,4 @@ a {
 	a {
 		line-height: 2.5;
 	}
-}
+} */
