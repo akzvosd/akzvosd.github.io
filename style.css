@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 14px sans-serif;
+}
+
+.container {
+  margin: 30px;
+  /* width: 50%; */
+}
+
+/* .perestanovka-item {
+} */
+
+.perestanovka-item-content {
+  position: relative;
+  padding: 10px;
+  background: #fff;
+}
+
+.perestanovka-item-content img {
+  display: block;
+  max-width: 100%;
+}
+
+.perestanovka-item-content img + img {
+  margin-top: 10px;
+}
+
+.perestanovka-item-content p,
+.perestanovka-item-content ul li {
+  font-size: 14px;
+}
+
+.perestanovka-item-content img + p {
+  margin-top: 10px;
+}
+
+.perestanovka-item-content ul {
+  list-style-type: none;
+}
+
+.perestanovka-item-content ul > li:before {
+  content: '-';
+  margin-right: 10px;
+}
