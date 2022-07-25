@@ -5,11 +5,29 @@
 }
 
 body {
-  font: 14px sans-serif;
+  font: 12px sans-serif;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.header-grid {
+  display: grid;
+  grid-template-columns: 20% 40% 30% 10%;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 50px;
 }
 
 .container {
-  margin: 30px;
+  margin: 0px;
   /* width: 50%; */
 }
 
@@ -33,7 +51,7 @@ body {
 
 .perestanovka-item-content p,
 .perestanovka-item-content ul li {
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .perestanovka-item-content img + p {
