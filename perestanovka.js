@@ -78,7 +78,7 @@ const perestanovka = (containerId, perfectWidth, initialColumnsNumber, params) =
   };
 
   resizeItems();
-  shuffleItemsOrder();
+  // shuffleItemsOrder();
   setTimeout(locateItems, 1000 / 2);
 
   window.onresize = () => {
