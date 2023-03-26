@@ -26,17 +26,8 @@ a:hover {
   margin-bottom: 50px;
 }
 
-.container {
-  margin: 0px;
-  /* width: 50%; */
-}
-
-/* .perestanovka-item {
-} */
-
 .perestanovka-item-content {
   position: relative;
-  padding: 10px;
   background: #fff;
 }
 
