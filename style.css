@@ -13,17 +13,25 @@ a {
   text-decoration: none;
 }
 
+section img {
+  width: 100%;
+}
+
 a:hover {
   text-decoration: underline;
 }
 
 .header-grid {
   display: grid;
-  grid-template-columns: 20% 40% 30% 10%;
+  grid-template-columns: 30% 35% 25% 10%;
   margin-top: 10px;
   margin-left: 10px;
   margin-right: 10px;
   margin-bottom: 50px;
+}
+
+.pad {
+  padding-right: 40px;
 }
 
 .container {
