@@ -8,6 +8,34 @@ body {
   font: 12px sans-serif;
 }
 
+@keyframes appear {
+  0% {opacity: 0%;}
+  100% {opacity: 100%;}
+}
+
+.name {
+  animation-name: appear;
+  animation-duration: 1s;
+}
+
+.header-grid {
+  display: grid;
+  grid-template-columns: 30% 35% 25% 10%;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 50px;
+  animation-name: appear;
+  animation-duration: 1s;
+}
+
+.container {
+  margin: 0px;
+  animation-name: appear;
+  animation-duration: 2s;
+  /* width: 50%; */
+}
+
 a {
   color: black;
   text-decoration: none;
@@ -21,22 +49,8 @@ a:hover {
   text-decoration: underline;
 }
 
-.header-grid {
-  display: grid;
-  grid-template-columns: 30% 35% 25% 10%;
-  margin-top: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 50px;
-}
-
 .pad {
   padding-right: 40px;
-}
-
-.container {
-  margin: 0px;
-  /* width: 50%; */
 }
 
 /* .perestanovka-item {
