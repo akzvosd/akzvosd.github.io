@@ -5,35 +5,94 @@
 }
 
 body {
-  font: 12px sans-serif;
+  font-size: 10px;
+  font-family: "Neue Haas Unica W1G";
+  line-height: 110%;
 }
 
-@keyframes appear {
-  0% {opacity: 0%;}
-  100% {opacity: 100%;}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-.name {
-  animation-name: appear;
-  animation-duration: 1s;
+.animation-block {
+  opacity: 0; 
+  animation: fade 2s ease forwards; 
+  animation-delay: calc(var(--delay) * 1s);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
+  margin-top: 10px;
+  margin-bottom: 60px;
+}
+
+.grid img {
+  display: block;
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+.grid .block {
+  margin-bottom: 16px;
+}
+
+.grid a {
+  text-decoration: underline;
 }
 
 .header-grid {
   display: grid;
-  grid-template-columns: 30% 35% 25% 10%;
-  margin-top: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 50px;
-  animation-name: appear;
-  animation-duration: 1s;
+  grid-template-columns: 25% 30% 25% 20%;
+  margin-top: 30px;
+  margin-bottom: 60px;
+  margin-left: 4px;
+  margin-right: 4px;
 }
 
 .container {
   margin: 0px;
-  animation-name: appear;
-  animation-duration: 2s;
   /* width: 50%; */
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.modal-content {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+@keyframes zoom {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 a {
@@ -49,14 +108,14 @@ a:hover {
   text-decoration: underline;
 }
 
-.pad {
-  padding-right: 40px;
+video {
+  width: 100%;
 }
 
 /* .perestanovka-item {
 } */
 
-.perestanovka-item-content {
+/* .perestanovka-item-content {
   position: relative;
   padding: 10px;
   background: #fff;
@@ -88,3 +147,11 @@ a:hover {
   content: '-';
   margin-right: 10px;
 }
+
+.perestanovka-item-content video {
+  margin-bottom: 10px;
+}
+
+.perestanovka-item-content a {
+  text-decoration: underline;
+} */
