@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 10px;
+  font-family: "Neue Haas Unica W1G";
+  line-height: 110%;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animation-block {
+  opacity: 0; 
+  animation: fade 2s ease forwards; 
+  animation-delay: calc(var(--delay) * 1s);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
+  margin-top: 10px;
+  margin-bottom: 60px;
+}
+
+.grid img {
+  display: block;
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+.grid .block {
+  margin-bottom: 16px;
+}
+
+.grid a {
+  text-decoration: underline;
+}
+
+.header-grid {
+  display: grid;
+  grid-template-columns: 25% 30% 25% 20%;
+  margin-top: 30px;
+  margin-bottom: 60px;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.container {
+  margin: 0px;
+  /* width: 50%; */
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.modal-content {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+@keyframes zoom {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+section img {
+  width: 100%;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+video {
+  width: 100%;
+}
+
+/* .perestanovka-item {
+} */
+
+/* .perestanovka-item-content {
+  position: relative;
+  padding: 10px;
+  background: #fff;
+}
+
+.perestanovka-item-content img {
+  display: block;
+  max-width: 100%;
+}
+
+.perestanovka-item-content img + img {
+  margin-top: 10px;
+}
+
+.perestanovka-item-content p,
+.perestanovka-item-content ul li {
+  font-size: 12px;
+}
+
+.perestanovka-item-content img + p {
+  margin-top: 10px;
+}
+
+.perestanovka-item-content ul {
+  list-style-type: none;
+}
+
+.perestanovka-item-content ul > li:before {
+  content: '-';
+  margin-right: 10px;
+}
+
+.perestanovka-item-content video {
+  margin-bottom: 10px;
+}
+
+.perestanovka-item-content a {
+  text-decoration: underline;
+} */
