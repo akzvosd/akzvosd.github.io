@@ -6,23 +6,13 @@
 
 body {
   font-size: 10px;
-  font-family: "Neue Haas Unica W1G";
+  font-family: Pragramtica Regular;
   line-height: 110%;
 }
 
-@keyframes fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.animation-block {
-  opacity: 0; 
-  animation: fade 2s ease forwards; 
-  animation-delay: calc(var(--delay) * 1s);
+@font-face {
+  font-family: Pragramtica Regular;
+  src: url(Pragmatica-Book.ttf);
 }
 
 .grid {
